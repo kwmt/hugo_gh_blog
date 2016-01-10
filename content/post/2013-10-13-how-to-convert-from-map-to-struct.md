@@ -18,7 +18,7 @@ tags:
   - struct
 
 ---
-## reflect pkgを使った方法 {.section}
+## reflect pkgを使った方法
 
 最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（<a href="http://bit.ly/1axEplM" target="_blank">参考リンク</a>）
 
@@ -32,7 +32,7 @@ tags:
 
 <!--more-->
 
-## encoding/json pkgを使った方法 {.section}
+## encoding/json pkgを使った方法
 
 ただちょっとこれだと扱いにくくて(MapToStructの中身を修正すれば扱いやすくなるかもしれないですが)、パフォーマンスを気にしなければ、mapを一旦JSONにして、そのJSONをstructにするという方法が扱いやすいということを教えてもらいました。
 
@@ -44,13 +44,13 @@ tags:
 
 <http://play.golang.org/p/Kd7TRoRG5w>
 
-## ライブラリmapstructureを使う方法 {.section}
+## ライブラリmapstructureを使う方法
 
 <a href="https://github.com/mitchellh/mapstructure" target="_blank">https://github.com/mitchellh/mapstructure</a>
   
 mapstructure.Decode関数を使えばよさげ。
 
-## 補足：mapから map[string]interface{}に変換する方法 {.section}
+## 補足：mapから map[string]interface{}に変換する方法
 
 最初は、MapToStructの第一引数にmap\[string\]\[\]stringをそのまま渡してて、valueのところがスライスだったらだめなのかな？と思ってましたが、map[string]interface{}に変換すればいいだけってのを教えてもらって、次のような変換で解決しました。
 
@@ -65,7 +65,7 @@ for k, v := range mm {
 }
 </pre>
 
-## 補足：個人的なきっかけ {.section}
+## 補足：個人的なきっかけ
 
 <pre class="go">var r *http.Request
 r.Form (= url.Values = map[string][]string)
@@ -73,7 +73,7 @@ r.Form (= url.Values = map[string][]string)
 
 POSTリクエストがきた時のr.Formを構造体に一時的に格納したいのですが、格納先の構造体のフィールドがやたら多い場合、一個ずつ格納するのが面倒だなというのがきっかけでした。
 
-## 参考 {.section}
+## 参考
 
   * <a href="https://groups.google.com/forum/#!topic/golang-nuts/2PCtqxyirVE" target="_blank">how to convert map to struct &#8211; Google グループ</a>
   * <a href="http://bit.ly/1axEplM" target="_blank">Ideone.com &#8211; XWtlo &#8211; Online Go Compiler &#038; Debugging Tool</a>（これはGo1以前のソースなのでそのままでは動かない）

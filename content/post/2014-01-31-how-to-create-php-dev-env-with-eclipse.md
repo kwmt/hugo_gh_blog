@@ -13,7 +13,7 @@ tags:
   - PHP
 
 ---
-## vagrantのインストール {.section}
+## vagrantのインストール
 
 参考サイト
   
@@ -148,7 +148,7 @@ enable=1→0に変更
 <pre class="go">yum info --enablerepo=remi php 
 </pre>
 
-## PHPインストール {.section}
+## PHPインストール
 
 ようやくphpのインストール(phpに関連するものも)
 
@@ -206,7 +206,7 @@ date.timezone = Asia/Tokyo
 <pre class="go">sudo service httpd restart
 </pre>
 
-## MySQLをインストール {.section}
+## MySQLをインストール
 
 <pre class="go">$ sudo yum install -y --enablerepo=remi mysql-server
 </pre>
@@ -276,7 +276,7 @@ Server version: 5.5.36 MySQL Community Server (GPL) by Remi
   
 と5.5がインストールされていることを確認
 
-## cakephpからMySQLを使えるように設定する {.section}
+## cakephpからMySQLを使えるように設定する
 
 データベースを作成する
 

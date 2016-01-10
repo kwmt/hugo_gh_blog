@@ -24,7 +24,7 @@ Pythonの <a href="http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Dra
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
 golang-nuts MLでいろいろ教えていただきました。
   

@@ -19,6 +19,6 @@ categories:
 
 以上。
 
-## 参考 {.section}
+## 参考
 
 <a href="https://github.com/berkshelf/vagrant-berkshelf/issues/212" target="_blank">Could not determine Berks version. v3.0.0</a>

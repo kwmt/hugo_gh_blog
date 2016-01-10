@@ -15,7 +15,7 @@ tags:
 ---
 環境：Mac OS X 10.7.5
 
-## 問題 {.section}
+## 問題
 
 PILを使って、jpgファイルをオープンして、オープンしたファイルに対してアクセスしようとすると（今回の場合、getpixelの部分）、下記のような「decoder jpeg not available」というエラーがでる。
 
@@ -32,7 +32,7 @@ raise IOError("decoder %s not available" % decoder_name)
 IOError: decoder jpeg not available
 </pre>
 
-## 確認 {.section}
+## 確認
 
 libjpegが入ってないから？ということをtwitterで教えて頂き、インストールされているか確認したところ入ってなさげ。
 
@@ -45,7 +45,7 @@ libjpegが入ってないから？ということをtwitterで教えて頂き、
 %
 </pre>
 
-## 対策 {.section}
+## 対策
 
   1. libjpegをソースからインストールする
 <pre class="go"><a href="http://www.ijg.org/files/jpegsrc.v8c.tar.gz">http://www.ijg.org/files/jpegsrc.v8c.tar.gz</a>をダウンロードして解凍
@@ -62,7 +62,7 @@ libjpegが入ってないから？ということをtwitterで教えて頂き、
   3. 最初の問題が起こったpythonプログラムを再実行
 エラーが出なくなった。
 
-## 参考 {.section}
+## 参考
 
 Python Imaging Library (PIL) Decoder jpeg not available — how to fix?
 :   <a href="http://apple.stackexchange.com/questions/59718/python-imaging-library-pil-decoder-jpeg-not-available-how-to-fix/59719#59719" target="_blank">http://apple.stackexchange.com/questions/59718/python-imaging-library-pil-decoder-jpeg-not-available-how-to-fix/59719#59719</a>

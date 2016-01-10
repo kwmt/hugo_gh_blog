@@ -15,7 +15,7 @@ tags:
   - net/smtp
 
 ---
-## 最初に {.section}
+## 最初に
 
 Go言語でのメール送信方法について、[SMTP(ポート25番)を使った方法][1]と[Gmailを使ってメールを送信する方法(SMTP over TLS)][2]をメモしておこうと思います。
 
@@ -43,7 +43,7 @@ Go言語でのメール送信方法について、[SMTP(ポート25番)を使っ
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
   * <a href="http://bit.ly/1dFcSBs" target="_blank">SendingMail &#8211; go-wiki &#8211; Using the smtp package to send an email.</a>
   * <a href="http://www.puni.net/~mimori/smtp/ref.html" target="_blank">SMTPコマンドリファレンス</a>

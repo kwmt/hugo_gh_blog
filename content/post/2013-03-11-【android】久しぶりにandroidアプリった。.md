@@ -20,7 +20,7 @@ tags:
   
 ということで、基本的にはググればわかるので、ここでは今回やったキーワードだけ残しておくメモです。
 
-## トグルボタンを使うには？ {.section}
+## トグルボタンを使うには？
 
 <pre class="go">android.widget.ToggleButton</pre>
 
@@ -38,12 +38,12 @@ if (isChecked){
 }
 </pre>
 
-## プリファレンスは？ {.section}
+## プリファレンスは？
 
 <pre class="go">android.content.SharedPreferences
 android.preference.PreferenceActivity</pre>
 
-## 音声認識させるには？ {.section}
+## 音声認識させるには？
 
 ### 標準ダイアログが出る
 
@@ -60,12 +60,12 @@ android.preference.PreferenceActivity</pre>
 
 ※ダイアログは出ないが、ピコっていう音はなる。
 
-## 一定間隔で処理するには？ {.section}
+## 一定間隔で処理するには？
 
 <pre class="go">java.util.Timer
 java.util.TimerTask</pre>
 
-## ウィジェットを実装するには？ {.section}
+## ウィジェットを実装するには？
 
 <pre class="go">android.appwidget.AppWidgetManager　を継承したクラス(ここでWidgetProvider)を作成
 onUpdateでServiceを継承したクラス(ここではWidgetService)をstartService</pre>
@@ -93,11 +93,11 @@ android:resource=&quot;@xml/widget_provider&quot; /&gt;
   
 作成中の自分のプロジェクト（myproject）の中で自分でHOGEHOGEを定義しておき、「HOGEHOGEになったら、ある処理をする」という具合に実装する。
 
-## 画像を繰り返すには？ {.section}
+## 画像を繰り返すには？
 
 <pre class="go">android:tileMode="repeat"</pre>
 
-## 最後に {.section}
+## 最後に
 
 上記をキーワードにググれば分かるはず。と自分に言い残してみる。
   

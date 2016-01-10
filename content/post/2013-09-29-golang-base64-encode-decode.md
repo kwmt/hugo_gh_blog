@@ -29,6 +29,6 @@ tags:
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
   * <a href="http://golang.org/pkg/encoding/base64/" target="_blank">encoding/base64パッケージ</a>

@@ -15,7 +15,7 @@ tags:
   - Twitter
 
 ---
-## はじめに {.section}
+## はじめに
 
 ひさびさTwitterをつかってアプリつくろうと思って<a href="https://dev.twitter.com/" target="_blank">ディベロッパーサイト</a>に行ったら、fabric?????とか出てきてなんじゃこれ？と思って調べてたら、10/22(現地時間)に発表されたTwitterのモバイル向け新SDKとやららしい。
 
@@ -25,11 +25,11 @@ tags:
 
 ということで、Android StudioでFabric SDKのセットアップしてから、ツイートできるようになるまでを書いてみようと思います。
 
-## Android版Fabricの公式サイト {.section}
+## Android版Fabricの公式サイト
 
 <a href="https://dev.twitter.com/twitter-kit/android" target="_blank">https://dev.twitter.com/twitter-kit/android</a>
 
-## 確認したバージョン {.section}
+## 確認したバージョン
 
 <pre class="go">Android Studio：0.9.2
 Fabric SDK：1.0.1
@@ -37,13 +37,13 @@ Fabric SDK：1.0.1
 
 <!--more-->
 
-## アプリの登録 {.section}
+## アプリの登録
 
 <a href="https://apps.twitter.com/" target="_blank">https://apps.twitter.com/</a>
   
 これは普通に登録するだけ（今までどおり）
 
-## Fabric SDKのセットアップ {.section}
+## Fabric SDKのセットアップ
 
 IDEプラグインをダウンロードすることもできるみたいだが、Gradleを使っているなら、build.gradleに書くだけで済ませたい。
 
@@ -88,7 +88,7 @@ IDEプラグインをダウンロードすることもできるみたいだが�
  }
 </pre>
 
-## API KEYとAPI Secretを追加する {.section}
+## API KEYとAPI Secretを追加する
 
 <a href="https://dev.twitter.com/twitter-kit/android/integrate" target="_blank" class="broken_link">https://dev.twitter.com/twitter-kit/android/integrate</a> に「Add API Key and Build Secret」があるが、<project>/app/crashlytics.properties にAPI KEYとAPI Secretを書きます。
 
@@ -151,7 +151,7 @@ crashlytics.propertiesに書いたKEYとSECRETの使い方に関しては、下�
 
 ※AndroidManifest.xmlに`android:name=".App"`を追加することを忘れないこと。
 
-## Twitterでログインする {.section}
+## Twitterでログインする
 
 <a href="https://dev.twitter.com/twitter-kit/android/twitter-login" target="_blank">https://dev.twitter.com/twitter-kit/android/twitter-login</a>
 
@@ -180,7 +180,7 @@ mTwitterLoginButton.setCallback(new Callback&lt;TwitterSession>() {
 }	
 </pre>
 
-## TwitterのREST APIを使う {.section}
+## TwitterのREST APIを使う
 
 <a href="https://dev.twitter.com/twitter-kit/android/api" target="_blank">https://dev.twitter.com/twitter-kit/android/api</a>
 
@@ -227,6 +227,6 @@ private void tweet(String message) {
 
 この`tweet`メソッドを呼びたいタイミングで呼べばツイートできます。
 
-## おわりに {.section}
+## おわりに
 
 以上で、Fabric SDKのセットアップからツイートまでを書きましたが、<a href="https://dev.twitter.com/twitter-kit/android/tweetui" target="_blank">TweetUi Kit</a>や <a href="https://dev.twitter.com/twitter-kit/android/compose" target="_blank">TweetComposer Kit</a>なるものがあったり、電話番号を使ってサインインする<a href="https://dev.twitter.com/twitter-kit/android/digits" target="_blank">Digits</a>なるものがあるみたいですね。

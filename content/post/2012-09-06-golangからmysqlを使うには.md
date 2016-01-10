@@ -11,7 +11,7 @@ tags:
   - Go言語
 
 ---
-## まえおき {.section}
+## まえおき
 
 今回はMacにMySQLをインストールして、golangからアクセスしてみます。 
 
@@ -25,7 +25,7 @@ golangからMySQLにかぎらずデータベースにアクセスするライブ
 
 ここでは、[mymysql][2]というライブラリを使ってmysqlにアクセスしてみます。 
 
-## 準備 {.section}
+## 準備
 
 まずは、mymysqlをインストールしましょう。 
 
@@ -49,7 +49,7 @@ mysql> set password for mymysqltestuser@localhost = password("TestPassw9");
 Query OK, 0 rows affected (0.00 sec)
 </pre>
 
-## サンプルを編集して実行して確認する {.section}
+## サンプルを編集して実行して確認する
 
 次にmymysqlのサンプルを編集して実行してみます。サンプルの場所は 
 

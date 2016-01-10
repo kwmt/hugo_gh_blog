@@ -16,7 +16,7 @@ tags:
   - unicode/utf8
 
 ---
-## 文字数をカウントしたい！ {.section}
+## 文字数をカウントしたい！
 
 そう思ってすぐ思いついたのは、stringsパッケージの<a href="http://golang.org/pkg/strings/#Count" target="_blank">Count</a>関数。
 

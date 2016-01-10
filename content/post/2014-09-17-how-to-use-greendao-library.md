@@ -14,7 +14,7 @@ tags:
   - greenDao
 
 ---
-## はじめに {.section}
+## はじめに
 
 AndroidのORMライブラリについて調べてみてまして、ORMLite、Active Android、greenDaoが有名のようです。
 
@@ -22,7 +22,7 @@ ORMLite、Active Androidは、アノテーションを使っていて、greenDao
   
 アノテーションはリフレクションに依存しているため、特にAndroidデバイスにおいては、パフォーマンスに影響出ますので、greenDaoを使おうかと思います。([参考1][1]などをみますと、パフォーマンスにクリティカルに影響があるアプリでなければどれつかっても良さそうですが・・・）
 
-## 使い方としては、 {.section}
+## 使い方としては、
 
 ２ステップ必要で、１ステップ目は、モデル定義しgreendao-generatorでコードを自動生成します。(普通のjava)
   
@@ -42,7 +42,7 @@ ORMLite、Active Androidは、アノテーションを使っていて、greenDao
   
 <a href="http://bit.ly/YRdS3A" target="_blank">Documentation | greenDAO – Android ORM for SQLite</a> 
 
-## 参考 {.section}
+## 参考
 
 <li id="sanko">
   <a href="http://bit.ly/1wBwKBn" target="_blank">Androidで使えるOR Mapper: ORMLite « LINE Engineers&#8217; Blog</a>

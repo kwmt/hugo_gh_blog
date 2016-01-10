@@ -20,7 +20,7 @@ tags:
   
 <!--more-->
 
-## FizzBuzz {.section}
+## FizzBuzz
 
 <div class="oembed-gist">
   <noscript>
@@ -40,11 +40,11 @@ case i % 15 == 0:
 
 って書いてエラー出たので、あれ？ってなってた。
 
-## ワードカウント {.section}
+## ワードカウント
 
 課題のワードカウントは、解答例見ちゃって、`map`の使い方でふむふむとおもった。
 
-## その日付は何日目？ {.section}
+## その日付は何日目？
 
 <div class="oembed-gist">
   <noscript>
@@ -54,7 +54,7 @@ case i % 15 == 0:
 
 `time`パッケージはうるう年も考えてあるからラク。testコードは書いてないけど、まぁいいか。
 
-## オライリーの総額計算 {.section}
+## オライリーの総額計算
 
 <div class="oembed-gist">
   <noscript>

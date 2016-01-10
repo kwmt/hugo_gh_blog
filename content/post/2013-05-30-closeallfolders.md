@@ -16,7 +16,7 @@ tags:
   - windows
 
 ---
-## 問題 {.section}
+## 問題
 
 知り合いから次のような質問がありました。 
 
@@ -30,7 +30,7 @@ Windows XPまではCtrlを押しながら、マウスで開いてるフォルダ
 
 <a href="http://kwmt27.net/index.php/2013/05/30/closeallfolders/win7closefolder/" rel="attachment wp-att-656"><img src="http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder.png" alt="win7closefolder" width="305" height="236" class="alignnone size-full wp-image-656" srcset="http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder-300x232.png 300w, http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder.png 305w" sizes="(max-width: 305px) 100vw, 305px" /></a>
 
-## 解決 {.section}
+## 解決
 
 一発で削除する方法を探してみましたが、[個別に選択できる機能がないマイクロソフトの人が回答しています][1]（この書き方はホントにわかってるの？と思うような書き方だけど） 
 

@@ -15,11 +15,11 @@ tags:
 ---
 サンプルプロジェクトは、<a href="https://github.com/kwmt/volleysample" target="_blank">github</a>におきました。
 
-## Androidプロジェクトを新規作成する {.section}
+## Androidプロジェクトを新規作成する
 
 Android StudioでNew Projectを作成する (例プロジェクト名：VolleySample)
 
-## volleyプロジェクトを追加する {.section}
+## volleyプロジェクトを追加する
 
 volleyプロジェクトを作成したAndroidプロジェクトにsubmoduleとして追加・設定する
 
@@ -81,7 +81,7 @@ volleyの SDK build tools revisionを19.1.0に修正する
 <pre class="go">Error:The SDK Build Tools revision (19.0.0) is too low for project ':modules:volley'. Minimum required is 19.1.0
 </pre>
 
-## Volleyを使ってみる {.section}
+## Volleyを使ってみる
 
 この記事 <a href="http://bit.ly/1n8SAca" target="_blank">Android working with Volley Library</a> を参考にvolleyを使ってみます。
 
@@ -164,7 +164,7 @@ volleyの SDK build tools revisionを19.1.0に修正する
 
 こんな感じでlogcatに出ていれば使えています。
 
-## エラーハンドリング {.section}
+## エラーハンドリング
 
 先ほどの`request`メソッドに書いてますが、正常にレスポンスが返ってくれば`onResponse`が呼ばれます。では、エラーの場合はどうなるのか？それは`onErrorResponse`が呼ばれます。上記のコードでは、ログ出力しているだけですが、エラーハンドリングする必要が出てくると思います。その時は、下記のようにして、それぞれに対応する処理を書いてあげれば良いです。
 
@@ -178,7 +178,7 @@ volleyの SDK build tools revisionを19.1.0に修正する
     }
 </pre>
 
-## 参考 {.section}
+## 参考
 
 ・<a href="http://bit.ly/1iXgweq" target="_blank">Android Studio で Volley を使う &#8211; ひだまりソケットは壊れない</a>
   

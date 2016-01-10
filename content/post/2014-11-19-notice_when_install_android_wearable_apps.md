@@ -17,6 +17,6 @@ tags:
 
 リリースキーを使って署名している場合は、自動的にインストールされます。
 
-## 参考 {.section}
+## 参考
 
 <a href="https://developer.android.com/training/wearables/apps/creating.html#Install" target="_blank">Install the Wearable App</a>

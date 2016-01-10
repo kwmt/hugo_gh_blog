@@ -10,19 +10,19 @@ tags:
   - polymer
 
 ---
-## はじめに {.section}
+## はじめに
 
 <a href="https://sites.google.com/site/devfestjapan/" target="_blank">Google I/O報告会 2015 東京会場</a>のブレイクアウトセッションの中でWebコンポーネントの作り方をライブコーディングで紹介して頂きまして、一緒に実際にやって、はじめての自分にとってはすっごくわかりやすくて面白かったので残しておこうとメモ。（公開してもいいことは確認済みです）
 
 当日は、下記の前提がインストールされてなかったので動かすところはできませんでしたが、いまこの記事を書きながら実際に動かしてみています。
 
-## 前提 {.section}
+## 前提
 
   1. <a href="http://qiita.com/oreo3@github/items/eb790fc091aa28af8d33" target="_blank">npmをインストールする</a>
   2. <a href="http://qiita.com/oreo3@github/items/eb790fc091aa28af8d33" target="_blank">Bowerをインストールする</a>
   3. `$HOME/polymer/devfest`ディレクトリがあるとします。
 
-## 前提の補足 {.section}
+## 前提の補足
 
 **`$ nodebrew install latest`でソースからインストールしたが、`node -v`などと打つと`command not found: node`と言われた時の対処法**
   
@@ -47,7 +47,7 @@ v0.12.5
 v0.12.5
 </pre>
 
-## Webコンポーネントの作り方(ここからライブコーディングでした) {.section}
+## Webコンポーネントの作り方(ここからライブコーディングでした)
 
 <!--more-->
 

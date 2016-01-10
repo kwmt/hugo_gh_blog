@@ -12,7 +12,7 @@ tags:
 ---
 新しくVMwareをインストールして、<a href="http://www.ubuntulinux.jp/products/JA-Localized/download" target="_blank">Ubuntu11.10 日本語Remix CDイメージをダウンロード</a>して、<a href="http://source.android.com/source/initializing.html" target="_blank">これ</a>を見ながらICSのビルド環境を構築して、makeしたときにエラーが出たのでエラーの内容と対策をメモります。 
 
-## 最初に出たエラー {.section}
+## 最初に出たエラー
 
 エラー内容
 :   host C++: obbtool <= frameworks/base/tools/obbtool/Main.cpp :0:0: error: "\_FORTIFY\_SOURCE" redefined [-Werror] :0:0: note: this is the location of the previous definition cc1plus: all warnings being treated as errors make: \*** [out/host/linux-x86/obj/EXECUTABLES/obbtool_intermediates/Main.o] Error 1 
@@ -36,7 +36,7 @@ tags:
 参考
 :   <a href="http://e-xiao.blogspot.com/2011/10/resolve-build-errors-for-android-234.html" target="_blank">http://e-xiao.blogspot.com/2011/10/resolve-build-errors-for-android-234.html</a>
 
-## 次に出たエラー {.section}
+## 次に出たエラー
 
 エラー内容
 :   host Executable: adb (out/host/linux-x86/obj/EXECUTABLES/adb_intermediates/adb)
@@ -72,7 +72,7 @@ tags:
   
     の「Installing required packages」のタイミングで、入れ忘れてただけ。 
 
-## 最後に出たエラー {.section}
+## 最後に出たエラー
 
 エラー内容
 :   Install: out/host/linux-x86/bin/llvm-link

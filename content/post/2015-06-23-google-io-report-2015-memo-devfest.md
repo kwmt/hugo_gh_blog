@@ -13,7 +13,7 @@ categories:
 
 <a href="https://sites.google.com/site/devfestjapan/2015summer/agenda" target="_blank">アジェンダが公開されてた</a>
 
-## 全体の流れメモ {.section}
+## 全体の流れメモ
 
 ### 全体
 
@@ -151,7 +151,7 @@ pod try
   * ToolCold→ツールバーを大きめにうまく隠して
   * TooRight→モバイル、Webも前部に対応
 
-## 東京会場でのセッション２つ {.section}
+## 東京会場でのセッション２つ
 
   * Polymerのライブコーディング
   * Google鈴木さんからのマテリアルデザインに関する補足
@@ -176,7 +176,7 @@ Polymerの話は別記事にする予定なので、以下は、マテリアル�
   * Generalの選択肢とし、いいところどりでいいと思うby鈴木さん
   * 色を変えること　とガイドラインを解釈して自分たちでガイドラインを作るといいんじゃないby安藤幸央さん
 
-## material design libraryの使い方 {.section}
+## material design libraryの使い方
 
 Google 公式のAndroid Blogよりも下のほうがわかりやすいらしい。
   
@@ -186,7 +186,7 @@ Google 公式のAndroid Blogよりも下のほうがわかりやすいらしい�
   
 <a href="https://medium.com/google-developers" target="_blank">https://medium.com/google-developers</a>
 
-## いちばん印象的だったこと {.section}
+## いちばん印象的だったこと
 
 やはり、この質問がいちばん記憶にあるし、大事なことだとおもう。
   
@@ -204,7 +204,7 @@ Tumbler使用者からすると、FAB(Floating Action Button)が出てくるま�
   * [How Google Finally Got Design | Co.Design | business + design][3]
   * [Slack Concept for Android – Mobile app by Nik][4]
 
-## Twitterの#devfest {.section}
+## Twitterの#devfest
 
 <a href="https://twitter.com/hashtag/devfest?src=hash&vertical=default&f=tweets" target="_blank">https://twitter.com/hashtag/devfest?src=hash&vertical=default&f=tweets</a>
 

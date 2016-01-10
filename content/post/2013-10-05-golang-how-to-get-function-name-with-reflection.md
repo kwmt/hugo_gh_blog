@@ -24,7 +24,7 @@ tags:
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
   * <a href="http://bit.ly/1a0Zfsp" target="_blank">reflection &#8211; How to get the name of a function in Go? &#8211; Stack Overflow</a>
   * <a href="http://bit.ly/1fWdHYS" target="_blank" class="broken_link">goken/goken08-reflect.md at master · goken/goken</a>

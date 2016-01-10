@@ -19,7 +19,7 @@ tags:
 ---
 archive/zipパッケージの使い方
 
-## golang編 {.section}
+## golang編
 
 <div class="oembed-gist">
   <noscript>
@@ -33,7 +33,7 @@ archive/zipパッケージの使い方
   
 ※引数の数字はchannel.zipにreadme.txtに書いてある。
 
-## python編 {.section}
+## python編
 
 <div class="oembed-gist">
   <noscript>
@@ -41,6 +41,6 @@ archive/zipパッケージの使い方
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
 <a href="http://golang.org/pkg/archive/zip/" target="_blank">http://golang.org/pkg/archive/zip/</a>

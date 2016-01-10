@@ -14,7 +14,7 @@ GDD 2011 のDevQuizに初めてチャレンジしました。
   
 スライドパズルは・・・ですが、AndroidのAIDLの問題は解けたのでそれについて書きたいと思います。
 
-## 問題の概要 {.section}
+## 問題の概要
 
 以下のAIDLで定義されているサービスを持つAndroid アプリケーションを配布します。
   
@@ -28,7 +28,7 @@ String getCode();
 
 ※AIDL（Android Interface Definition Language）とは、IDLの一種で、プロセス間通信行うためのものです。 
 
-## 準備 {.section}
+## 準備
 
 Androidプロジェクトを作成する。このとき、パッケージ名は配布アプリケーションと一緒じゃないといけない。
   
@@ -42,14 +42,14 @@ IQuizService.aidl ファイルをsrcに作成し、上のコードをコピペ�
 
 これで準備は完了。後はプログラム書くだけ。 
 
-## 方針は、 {.section}
+## 方針は、
 
   1. アクティビティでボタンを押す→自分のサービスにバインド→配布アプリケーションと通信
   2. LogCatに答えを出す
 
 以上
 
-## Activity {.section}
+## Activity
 
 <pre class="brush: java; title: ; notranslate" title="">package com.google.android.apps.gddquiz;
 // import は省略
@@ -111,7 +111,7 @@ Log.d("AnsCode",ans); // 答えをLogCatに出力
 }
 </pre>
 
-## Service {.section}
+## Service
 
 bindService()で自分のサービスにバインドし、そこから配布されたアプリケーションにアクセスする。Class名にTestが付いてるけど、気にしない。
 
@@ -136,7 +136,7 @@ return null;
 }
 </pre>
 
-## マニフェスト {.section}
+## マニフェスト
 
 serviceタグを記述する。
 

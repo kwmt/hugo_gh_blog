@@ -13,14 +13,14 @@ tags:
   - xcode
 
 ---
-## 現象 {.section}
+## 現象
 
 TableViewなどのViewをcontrol押しながら、ヘッダーファイルにドラッグしても、うんともすんともないことがある。
 
-## 原因 {.section}
+## 原因
 
 ViewControllerとクラスが対応付けがされてないため。
 
-## 対処 {.section}
+## 対処
 
 ViewControllerを選択し、&#8221;Show the identity inspection&#8221;をクリックし、Custom Classで対応付けたいクラスを選択する。

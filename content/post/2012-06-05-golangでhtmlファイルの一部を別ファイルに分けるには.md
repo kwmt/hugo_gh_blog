@@ -13,7 +13,7 @@ tags:
   - Go言語
 
 ---
-## まえおき {.section}
+## まえおき
 
 <a href="http://kwmt27.net/index.php/2012/05/24/golang%e3%81%a7twitter%e3%81%ae%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%a9%e3%82%a4%e3%83%b3%e3%82%92%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6%e3%81%ab%e8%a1%a8%e7%a4%ba%e3%81%95%e3%81%9b%e3%81%a6%e3%81%bf/" title="golangでTwitterのタイムラインをブラウザに表示させてみた。" target="_blank">前回のエントリー</a>で、「`template.ParseFiles()`の引数には、
   
@@ -23,7 +23,7 @@ tags:
   
 具体的にどうしたらよいかをまとめておこうと思います。 
 
-## どうしたいのか {.section}
+## どうしたいのか
 
 前回と同じHTMLですが、このファイルを`main.html`としましょう。 
 
@@ -58,7 +58,7 @@ tags:
 
 <!--more-->
 
-## 対策 {.section}
+## 対策
 
 まず内容の部分は`<div class="tl">`から`</div>`までなので、それを切り取り別ファイルに移動しましょう。
   
@@ -120,7 +120,7 @@ t.Execute(w, tweets)
 
 基本的には以上が書きたかったことです。が、もうちょっとだけ。 
 
-## `{{tempalte "content" .}}`の`.(dot)`について {.section}
+## `{{tempalte "content" .}}`の`.(dot)`について
 
 上記で「今回の場合だとこの`"content"`のあとに `.(dot)`が必要になります。」
   
@@ -163,7 +163,7 @@ table,td {border: solid; border-collapse: collapse;}
 
 以上です。 
 
-## 参考 {.section}
+## 参考
 
 text/templateパッケージ
 :   <http://golang.org/pkg/text/template/>

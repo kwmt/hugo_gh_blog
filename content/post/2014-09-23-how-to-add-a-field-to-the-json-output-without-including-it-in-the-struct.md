@@ -14,7 +14,7 @@ tags:
   - Go言語
 
 ---
-## はじめに {.section}
+## はじめに
 
 JSONを返したい場合、定義済みの構造体に対して`json.Marshal`とかして、JSONにしていたのですが、下記の`Book`構造体の例だと、返せるフィールドは`Title,Author`だけになってしまいます。
 
@@ -31,7 +31,7 @@ fmt.Fprintf(w, string(response))
 
 <!--more-->
 
-## 方法 {.section}
+## 方法
 
 基本的には、<a href="http://stackoverflow.com/questions/23045884/can-i-use-marshaljson-to-add-arbitrary-fields-to-a-json-encoding-in-golang" target="_blank">stackoverflow</a>に書いてありますので、参考くださいなんですが、下記のような感じです。
 
@@ -64,13 +64,13 @@ func (b Book) MarshalJSON() ([]byte, error) {
 }
 </pre>
 
-## 仕組みとしては(簡単に) {.section}
+## 仕組みとしては(簡単に)
 
 この場合、`Book`は`Marshaler`インターフェースを実装したことになります。(<a href="http://golang.org/src/pkg/encoding/json/encode.go?h=MarshalJSON#L191" target="_blank">Marshalerインターフェース</a>)
 
 これによって、<a href="http://golang.org/src/pkg/encoding/json/encode.go#L356" target="_blank">Marshalerインターフェースを実装しているなら</a>、`marshalerEncoder`がコールされ、<a href="http://golang.org/src/pkg/encoding/json/encode.go#L414" target="_blank"><code>MarshalJSON</code>がコールされます。</a>
 
-## 配列の各要素に追加したい場合も同様で、 {.section}
+## 配列の各要素に追加したい場合も同様で、
 
 つまり次のような場合、
 

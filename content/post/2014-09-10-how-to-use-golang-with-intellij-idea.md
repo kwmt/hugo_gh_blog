@@ -22,7 +22,7 @@ tags:
 
 <!--more-->
 
-## 1.Plugin(Go language(golang.org) support plugin)をインストール {.section}
+## 1.Plugin(Go language(golang.org) support plugin)をインストール
 
 ①Intellij IDEAを起動 -> Welcome to Intellij IDEAConfigure -> Plugin ->　Browse repositories&#8230;をクリック
   
@@ -30,7 +30,7 @@ tags:
 
 <img class="aligncenter size-thumbnail wp-image-1266" alt="intellij_golang_plugin_01" src="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-396x300.png" width="396" height="300" srcset="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-396x300.png 396w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-300x227.png 300w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-1024x775.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-624x472.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-900x681.png 900w" sizes="(max-width: 396px) 100vw, 396px" />
 
-## 2.SDKを設定 {.section}
+## 2.SDKを設定
 
 ①Configure -> Project Defaults -> Project Structureをクリック
   
@@ -38,16 +38,16 @@ tags:
 
 <img class="aligncenter size-thumbnail wp-image-1267" alt="intellij_golang_plugin_02" src="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_02-394x300.png" width="394" height="300" srcset="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_02-394x300.png 394w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_02.png 732w" sizes="(max-width: 394px) 100vw, 394px" />
 
-## 3.Goプロジェクトを新規作成する {.section}
+## 3.Goプロジェクトを新規作成する
 
 New Projectから「Go」を選択 -> Next -> Next -> プロジェクト名(たとえば、hello)を入力 -> Finishを押すと、`Hello world!`を出力する`src/hello.go`ができます。 
 
-## 4.実行する {.section}
+## 4.実行する
 
 ファイルを右クリックして、「Run &#8216;hello.go&#8217;」をクリックすれば、実行できます。 
 
 ただ、Goプロジェクト全体を実行するには、どうしたらいいのかな。。。Run -> Run Configurationの&#8221;Arguments:&#8221;に、リンクしたいファイルを指定すれば実行できるけど、いちいち指定しないとダメなのか？また分かったら更新します。 
 
-## 参考 {.section}
+## 参考
 
 ・<a href="http://bit.ly/1orlCPC" target="_blank">go-lang-idea-plugin</a>

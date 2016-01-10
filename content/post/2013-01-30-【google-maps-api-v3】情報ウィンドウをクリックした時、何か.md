@@ -10,13 +10,13 @@ categories:
   - Google Maps API
 
 ---
-## はじめに {.section}
+## はじめに
 
 Google Maps API v3を触っていて、マーカーをクリックしたときに何か処理させる方法は結構書かれているのですが、
   
 情報ウィンドウ(google.maps.InfoWindow())をクリックした時に何か処理させる方法が日本語ではあまり見つけれれなかったので、メモします。 
 
-## したいこと {.section}
+## したいこと
 
 ここで一番やりたいことはタイトルどおりですが、下記のプログラムで何をしたいかを書いておくと、 
 
@@ -32,7 +32,7 @@ Google Maps API v3を触っていて、マーカーをクリックしたとき�
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
 上記のプログラムは、[stackoverflow][1]をめっちゃ参考にしてます。このstackoverflowではInfoBoxの例もあります。InfoBoxとは、情報ウィンドウのように吹き出しタイプではなくて、
   

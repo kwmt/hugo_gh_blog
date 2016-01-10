@@ -20,13 +20,13 @@ Dartの基本的な文法を話してくれるスピーカーが雪の影響で�
 
 型はあるけど、実行時に型情報を捨てている。
 
-## Dartとは {.section}
+## Dartとは
 
 Googleが開発したプログラミング言語
   
 JavaScriptに置き換わるブラウザ組み込みのスクリプト言語を目指して開発された
 
-## 開発環境 {.section}
+## 開発環境
 
 DartEditor
   
@@ -34,7 +34,7 @@ EclipseベースのIDE
 
 DartでHello World
 
-## Dartの動作環境 {.section}
+## Dartの動作環境
 
 ・DartVM搭載のブラウザで直接動作
     
@@ -42,7 +42,7 @@ Dart1.1はJSより25％高速
   
 ・&#8221;dart2js&#8221;でJSに変換して動かす
 
-## Dartの歴史 {.section}
+## Dartの歴史
 
 2011年10月Dart発表(early preview)
   
@@ -94,7 +94,7 @@ DartEditorに統合されており、簡単に利用することができる(yam
 
 New Fileは意外と賢い。入力したファイルタイプでひながたを作ってくれる。たとえば、a.htmlとかするとhtmlのひな形入りのファイルを作ってくれる
 
-## dart:html {.section}
+## dart:html
 
 DOM操作を行うためののライブラリ。
   
@@ -114,13 +114,13 @@ HTML要素のイベントハンドラはStreamで提供されます。
   
 Streamとは、連続するデータを扱う枠組みです。dart:asyncのライブラリの紹介時に説明
 
-## dart:io {.section}
+## dart:io
 
 ファイル、ソケット、HTTP、プロセスなどをサポートするサーバーアプリケーション向けのライブラリ。
   
 ブラウザベースでは動かない
 
-## dart:async {.section}
+## dart:async
 
 非同期処理を行うためのライブラリでFutureやStreamなどが含まれる。
 
@@ -144,7 +144,7 @@ Dartはシングルスレッドのモデル。
   
 EventQueueの内容をEventLoopが順次実行していく。
 
-## Isolate {.section}
+## Isolate
 
 デバッガやStackTraceで見かけるIsolateとはいったい何か？
   

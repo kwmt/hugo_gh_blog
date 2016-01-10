@@ -23,6 +23,6 @@ tags:
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
   * <a href="https://github.com/goken/goken/blob/master/goken08-reflect/goken08-reflect.md" target="_blank">Go研 Vol.8</a>

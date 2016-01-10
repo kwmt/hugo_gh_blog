@@ -10,7 +10,7 @@ categories:
   - golang
 
 ---
-## はじめに {.section}
+## はじめに
 
 2012/04/15に東海GTUG主催の
   
@@ -48,7 +48,7 @@ GAE/Goチームができてたので、そちらに惹かれ
 Python 2.7.1
 </pre></p> 
 
-## Google App Engine SDK for Goをダウンロード {.section}
+## Google App Engine SDK for Goをダウンロード
 
 下記のURLからSDKをダウンロードします。
   
@@ -86,7 +86,7 @@ csh系だと、
 <pre class="go">setenv PATH /path/to/google_appengine:$PATH
 </pre>
 
-## 短いメッセージを表示するだけのアプリケーションを作ります {.section}
+## 短いメッセージを表示するだけのアプリケーションを作ります
 
 `myapp`という名前のディレクトリを作成して、`myapp`の下に`hello`というディレクトリを作成します。
   
@@ -134,7 +134,7 @@ script:_go_app
 
 のようなエラーが出ます。`hello`ディレクトリの配下に`hello.go`を移動させて解決。 
 
-## アプリケーションの実行 {.section}
+## アプリケーションの実行
 
 次のコマンドで、作成したアプリケーションの実行ができます。 
 
@@ -156,7 +156,7 @@ Running application&#8230;とでたらサーバーが起動。`http://localhost:
   
 `http://localhost:8080`のリロードでOKです。 
 
-## データベースのデータを削除するには {.section}
+## データベースのデータを削除するには
 
 [
   
@@ -173,7 +173,7 @@ Running application&#8230;とでたらサーバーが起動。`http://localhost:
   
 サーバーをControl-Cでシャットダウンしてください。 
 
-## デプロイするには {.section}
+## デプロイするには
 
 Goアプリケーションをデプロイするには、`app.yaml`の`application`を、
   
@@ -202,7 +202,7 @@ pbsrc="http://androg.up.seesaa.net/image/Storage_Scheme.png"
 class="PopBoxImageSmall"
 onclick="Pop(this,100,'PopBoxImageLarge');" /> 
 
-## emacsのシンタックスハイライトを設定する {.section}
+## emacsのシンタックスハイライトを設定する
 
 Goのソースの`misc`(GOROOT/misc)ディレクトリにemacsや、vimなどの
   

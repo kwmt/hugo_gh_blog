@@ -28,7 +28,7 @@ htmlファイルでは、次のように記述します。
 []Hotelsの0番目の要素は{{index .Hotels 0}}です。 // Hotels[0]と同じ意味です。
 </pre>
 
-## 参考 {.section}
+## 参考
 
 text/templateパッケージのFunctions
 :   <http://golang.org/pkg/text/template/#hdr-Functions>

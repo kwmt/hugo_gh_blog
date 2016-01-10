@@ -33,7 +33,7 @@ tags:
   
 <a href="http://golang.org/doc/go1.1#reflect" target="_blank">http://golang.org/doc/go1.1#reflect</a>
 
-## 参考 {.section}
+## 参考
 
   * <a href="http://bit.ly/1fWdHYS" target="_blank" class="broken_link">goken/goken08-reflect.md at master · goken/goken</a>
   * <a href="http://golang.org/pkg/reflect/#Value.Convert" target="_blank">http://golang.org/pkg/reflect/#Value.Convert</a>

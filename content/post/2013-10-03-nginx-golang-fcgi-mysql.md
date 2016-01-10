@@ -17,7 +17,7 @@ tags:
   - Nginx
 
 ---
-## はじめに {.section}
+## はじめに
 
 下記の記事をみたら分かりやすいかもしれませんが、英語なので、実際にやった方法も交えてメモしておこうと思います。（似てるところもありますが、翻訳ではありません。）
   
@@ -39,7 +39,7 @@ Nginxを使うか使わないかは、こちらの<a href="http://stackoverflow.
   
 データベースとしては、MySQLを使いたいと思います。
 
-## 使用環境 {.section}
+## 使用環境
 
 <pre class="go">サーバOS:CentOS release 6.4
 Webサーバ:nginx-1.4.1
@@ -103,7 +103,7 @@ export PATH=/usr/local/nginx/sbin:$PATH
 
 次に、Nginxの設定に行きたいところですが、インストールを終わらせてしまいましょう。
 
-## 2.Go Toolsをインストール {.section}
+## 2.Go Toolsをインストール
 
 基本的には本家サイトの<a href="http://golang.org/doc/install" target="_blank">Getting Started</a>をみてください。
 
@@ -117,11 +117,11 @@ export PATH=/usr/local/nginx/sbin:$PATH
   
 こちらもお勧めです。(Linux,Macのみ対応しています。)
 
-## 3.MySQLをインストールする {.section}
+## 3.MySQLをインストールする
 
 ググりましょう。
 
-## 4.Nginxの設定をする {.section}
+## 4.Nginxの設定をする
 
 FastCGIを使うには、locationディレクティブに次のような感じで設定するようです。
   
@@ -163,7 +163,7 @@ Basic認証を掛ける方法は、<a href="http://bit.ly/17eWMgm" target="_blan
 # nignx -s stop   //停止
 </pre>
 
-## 5.Go言語プログラムをFastCGIとして動かすためには {.section}
+## 5.Go言語プログラムをFastCGIとして動かすためには
 
 何も出力しませんが、localhost:9000で接続要求を待ってくれます。この&#8221;9000&#8243;はNginx側の設定の9000と合わせる必要があります。
 
@@ -185,7 +185,7 @@ func main(){
   
 > そのゴルーチンはリクエストを解釈し、リクエストに応答する`handler`をコールします。`l`(エル)が`nil`の場合、`Serve`関数は、`os.Stdin`からの接続を受け入れます。`handler`が`nil`の場合、`http.DefaultServeMux`が使われます。 
 
-## 6.Go言語からMySQLを使うには {.section}
+## 6.Go言語からMySQLを使うには
 
 ドライバを下記からインストールする必要があります。
   
@@ -205,7 +205,7 @@ func main(){
   
 <a href="http://kwmt27.net/index.php/2012/09/06/golang%e3%81%8b%e3%82%89mysql%e3%82%92%e4%bd%bf%e3%81%86%e3%81%ab%e3%81%af/" title="golangからMySQLを使うには" target="_blank">golangからMySQLを使うには</a>
 
-## 補足：mysqlから取得した日本語が文字化けする件 {.section}
+## 補足：mysqlから取得した日本語が文字化けする件
 
 ※Mac OSのみかもしれない.
   
@@ -248,13 +248,13 @@ default-character-set=utf8
   
 [fedora15 mysql5.5 default-character-setが原因で起動できない][1]
 
-## 補足：Go言語でクロスコンパイルするには {.section}
+## 補足：Go言語でクロスコンパイルするには
 
 まだ試したことないですが、とりあえずメモがてら。ためして何か分かったら更新するかもです。
   
 <a href="http://bit.ly/1g3egQA" target="_blank">Go言語でクロスコンパイルする &#8211; memoメモ</a>
 
-## おわりに {.section}
+## おわりに
 
 これでひとまずNginx+golang(fcgi)+MySQLの環境が整ったとおもいますので、あとは
   
@@ -262,7 +262,7 @@ default-character-set=utf8
   
 のような記事を読むと良いと思います。
 
-## 参考リンク {.section}
+## 参考リンク
 
   * <a href="http://mwholt.blogspot.jp/2013/05/writing-go-golang-web-app-with-nginx.html" target="_blank">Writing a Go (&#8220;golang&#8221;) Web App with nginx, FastCGI, MySQL, JSON</a>
   * <a href="http://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not" title="Webserver for Go (golang) webservices: using NGINX or not?" target="_blank">Stackoverflow:Webserver for Go (golang) webservices: using NGINX or not?</a>

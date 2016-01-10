@@ -19,7 +19,7 @@ tags:
 ---
 compress/bzip2の使い方
 
-## golang編 {.section}
+## golang編
 
 <div class="oembed-gist">
   <noscript>
@@ -31,7 +31,7 @@ bzip2.NewReaderするだけで復元できるのですね。
   
 関数名が少し微妙な気もするけど、まぁいいか。
 
-## python編 {.section}
+## python編
 
 <div class="oembed-gist">
   <noscript>
@@ -39,6 +39,6 @@ bzip2.NewReaderするだけで復元できるのですね。
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
 <a href="http://golang.org/pkg/compress/bzip2/" target="_blank">http://golang.org/pkg/compress/bzip2/</a>

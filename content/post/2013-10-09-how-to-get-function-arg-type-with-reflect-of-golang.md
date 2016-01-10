@@ -21,7 +21,7 @@ tags:
   </noscript>
 </div>
 
-## 参考 {.section}
+## 参考
 
   * <a href="http://bit.ly/1fWdHYS" target="_blank" class="broken_link">goken/goken08-reflect.md at master · goken/goken</a>
   * <a href="http://golang.org/src/pkg/reflect/type.go?#L157" target="_blank">http://golang.org/src/pkg/reflect/type.go?#L157</a>
