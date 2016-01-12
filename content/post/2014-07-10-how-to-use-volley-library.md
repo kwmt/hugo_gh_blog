@@ -23,13 +23,13 @@ Android StudioでNew Projectを作成する (例プロジェクト名：VolleySa
 
 volleyプロジェクトを作成したAndroidプロジェクトにsubmoduleとして追加・設定する
 
-  1. 作成したプロジェクトに移動してgit init
+  1.作成したプロジェクトに移動してgit init
 <pre class="go">$ cd VolleySample
 $ git init
 </pre>
 
-  2. 必要なら.gitignoreに追加してコミット
-  3. volleyプロジェクトを追加する
+  2.必要なら.gitignoreに追加してコミット
+  3.volleyプロジェクトを追加する
 <!--more-->
 
 <pre class="go">$ git submodule add https://android.googlesource.com/platform/frameworks/volley modules/volley
@@ -52,7 +52,7 @@ $ git init
 +Subproject commit 0e406xxxxxxxx
 </pre>
 
-  4. setting.gradleに、volleyプロジェクト追加した時のパスを追加する
+  4.setting.gradleに、volleyプロジェクト追加した時のパスを追加する
 <pre class="go">$ git diff
 --- a/settings.gradle
 +++ b/settings.gradle
@@ -61,19 +61,19 @@ $ git init
 +include ':app',':modules:volley'
 </pre>
 
-  5. volleyを使いたいプロジェクトにvolleyの依存設定を追加
+  5.volleyを使いたいプロジェクトにvolleyの依存設定を追加
 <pre class="go">$ git diff
 --- a/app/build.gradle
 +++ b/app/build.gradle
 @@ -21,4 +21,5 @@ android {
- 
  dependencies {
      compile fileTree(dir: 'libs', include: ['*.jar'])
 +    compile project(':modules:volley')
  }
 </pre>
 
-  6. 以下はvolleyがアップデートされるまでに必要な対応
+  6.以下はvolleyがアップデートされるまでに必要な対応
+  
 volleyの SDK build tools revisionを19.1.0に修正する
 
 本来は上記の依存設定まででいいはずだが、それだけだと下記のエラーが出るので仕方がなさそう
