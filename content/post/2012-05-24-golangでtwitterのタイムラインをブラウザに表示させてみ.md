@@ -17,9 +17,7 @@ tags:
 
 Andrew Gerrandさんのgithubはgolangの宝の宝庫。その中に
   
-[
-  
-https://github.com/nf/gotweet][1]{.broken_link}というTwitter APIを使うサンプルがあったので（2013/04/07追加 リポジトリが削除されてました）、
+[https://github.com/nf/gotweet][1]{.broken_link}というTwitter APIを使うサンプルがあったので（2013/04/07追加 リポジトリが削除されてました）、
   
 参考にさせてもらって、それに[GAEのチュートリアル][2]をあわせて、
   
@@ -61,7 +59,7 @@ READMEには、ドキュメントを読んでください、と書いていま�
   
 （まだ軽くしか読んでないので、いずれちゃんと読みます。。） 
 
-<pre class="terminal">godoc github.com/mrjones/oauth | less
+<pre class="terminal">% godoc github.com/mrjones/oauth | less
 </pre>
 
 実際にTwitterAPIを使用する際は、
@@ -80,7 +78,7 @@ JSONデータのたくさんのパラメータから、type structで取得し�
   
 そのパラメータのみ取得できます。（取得したいデータを絞り込むことができます） 
 
-<pre class="brush: golang; title: ; notranslate" title="">// 取得したいパラメータをstructで記述
+<pre class="go">// 取得したいパラメータをstructで記述
 // 参考 https://dev.twitter.com/docs/api/1/get/statuses/mentions
 type TweetObject struct{
     Created_at string
@@ -102,7 +100,7 @@ type UserObject struct{
   
 コメント参照。 
 
-<pre class="brush: golang; title: ; notranslate" title="">resp, err := consumer.Get(url,nil, &atoken) //TimelineをGetしてrespに格納
+<pre class="go">resp, err := consumer.Get(url,nil, &atoken) //TimelineをGetしてrespに格納
 w.Header().Add("Content-type","text/html charset=utf-8") // ヘッダー追加
 body, err := ioutil.ReadAll(resp.Body) //respを読み込んでbodyに格納
 var tweets []TweetObject // 実体を宣言
@@ -133,7 +131,7 @@ gotweet_changeプロジェクトであれば、`gotweet_change/template/tweet.ht
 
 さて、`tweet.html`の中身は以下のようになっています。 
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;!DOCTYPE html&gt;
+<pre class="go">&lt;!DOCTYPE html&gt;
 &lt;html lang="ja"&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8"&gt;
@@ -178,9 +176,7 @@ jsonのUnmarshalについて参考にしたgist
 :   <https://gist.github.com/775526>
 
 Templateについて参考にしたgolang_guestbook
-:   [
-  
-    https://bitbucket.org/IanLewis/golang_guestbook/src/ece99a50ddfa/templates/base.html][7]
+:   [https://bitbucket.org/IanLewis/golang_guestbook/src/ece99a50ddfa/templates/base.html][7]
 
  [1]: https://github.com/nf/gotweet
  [2]: http://androg.seesaa.net/article/267361381.html
