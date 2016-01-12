@@ -15,11 +15,7 @@ tags:
   - reflect
 
 ---
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6895772">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6895772 >}}
 
 <a href="http://play.golang.org/p/gvadP4k1Bo" target="_blank">http://play.golang.org/p/gvadP4k1Bo</a>
 

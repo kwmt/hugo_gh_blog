@@ -18,11 +18,8 @@ tags:
 ---
 <a href="http://golang.org/pkg/reflect/" target="_blank">&#8220;reflect&#8221;</a>パッケージだけでは取得できないようで、<a href="http://golang.org/pkg/runtime/" target="_blank">&#8220;runtime&#8221;</a>パッケージの`<a href="http://golang.org/pkg/runtime/#FuncForPC" target="_blank">FuncForPC</a>`という関数を使うようです。
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6840466">Gist</a>.
-  </noscript>
-</div>
+
+{{< gist 6840466 >}}
 
 ## 参考
 

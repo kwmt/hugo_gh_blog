@@ -89,11 +89,7 @@ volleyの SDK build tools revisionを19.1.0に修正する
 
 ### まずApplicationを継承したAppControllerを作成します
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/5bb307d224a5d7324890">Gist</a>.
-  </noscript>
-</div>
+{{<gist 5bb307d224a5d7324890>}}
 
 ここでは画像は扱っていません。
 

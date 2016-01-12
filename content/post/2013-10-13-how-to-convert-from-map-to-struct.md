@@ -22,11 +22,8 @@ tags:
 
 最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（<a href="http://bit.ly/1axEplM" target="_blank">参考リンク</a>）
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6938201">Gist</a>.
-  </noscript>
-</div>
+
+{{< gist 6938201 >}}
 
 <a href="http://play.golang.org/p/5Inl2jO7zL" target="_blank">http://play.golang.org/p/5Inl2jO7zL</a>
 
@@ -36,11 +33,7 @@ tags:
 
 ただちょっとこれだと扱いにくくて(MapToStructの中身を修正すれば扱いやすくなるかもしれないですが)、パフォーマンスを気にしなければ、mapを一旦JSONにして、そのJSONをstructにするという方法が扱いやすいということを教えてもらいました。
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6950666">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6950666 >}}
 
 <http://play.golang.org/p/Kd7TRoRG5w>
 

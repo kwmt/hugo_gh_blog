@@ -17,11 +17,7 @@ tags:
 ---
 リフレクションを使って、構造体フィールドの値を取得するには？
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6792088">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6792088 >}}
 
 <a href="http://play.golang.org/p/Tp5S6AVDB8" target="_blank">http://play.golang.org/p/Tp5S6AVDB8</a>
 

@@ -18,11 +18,7 @@ tags:
 ---
 Pythonの <a href="http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line" target="_blank">http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line</a> のようなことしたい
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/5971850">Gist</a>.
-  </noscript>
-</div>
+{{< gist 5971850 >}}
 
 ## 参考
 

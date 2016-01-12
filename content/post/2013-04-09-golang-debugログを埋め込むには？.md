@@ -15,12 +15,8 @@ tags:
 ---
 たまたまgolang.orgのコードみてたら、debugログの書き方が良い感じだったので、忘れないようにメモ。
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/5345379">Gist</a>.
-  </noscript>
-</div>
+{{< gist 5345379 >}}
 
-## 参考  {.section}
+## 参考
 
   * <http://golang.org/src/pkg/net/mail/message.go>

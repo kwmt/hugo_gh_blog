@@ -15,11 +15,7 @@ tags:
   - reflect
 
 ---
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6895428">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6895428 >}}
 
 ## 参考
 

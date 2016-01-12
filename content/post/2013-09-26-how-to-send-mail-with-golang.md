@@ -29,19 +29,11 @@ Go言語でのメール送信方法について、[SMTP(ポート25番)を使っ
 
 ## SMTP(ポート25番)を使った方法 {#smtp.section}
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6699756">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6699756 >}}
 
 ## Gmailを使ってメールを送信する方法(SMTP over TLS) {#smtpovertls.section}
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6680028">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6680028 >}}
 
 ## 参考
 

@@ -21,11 +21,7 @@ compress/bzip2の使い方
 
 ## golang編
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6043517">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6043517 >}}
 
 bzip2.NewReaderするだけで復元できるのですね。
   
@@ -33,11 +29,7 @@ bzip2.NewReaderするだけで復元できるのですね。
 
 ## python編
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6043549">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6043549 >}}
 
 ## 参考
 

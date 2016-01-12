@@ -23,19 +23,12 @@ tags:
 
 node.jsをインストールし、使えることを確認した後、ウェブアプリケーションフレームワークであるexpressをインストールして動かしてみるところまで。 
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/5568311">Gist</a>.
-  </noscript>
-</div>
+
+{{< gist 5568311 >}}
 
 ## nodemonをインストールしておくと便利
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/5568366">Gist</a>.
-  </noscript>
-</div>
+{{< gist 5568366 >}}
 
 ## expressのハンズオンの記録はこっちに置いた。
 

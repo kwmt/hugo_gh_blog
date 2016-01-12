@@ -21,25 +21,17 @@ archive/zipパッケージの使い方
 
 ## golang編
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6040283">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6040283 >}}
 
 下記で実行できる
   
-% go run archive_zip.go 90052
+<pre class="terminal">% go run archive_zip.go 90052</pre>
   
 ※引数の数字はchannel.zipにreadme.txtに書いてある。
 
 ## python編
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6040265">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6040265 >}}
 
 ## 参考
 

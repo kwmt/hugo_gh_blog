@@ -18,11 +18,7 @@ tags:
 ---
 分かりやすい言葉が思いつかなかったのすが、関数の引数をオプション的に扱うというのは、関数の引数をとってもとならなくても良いように関数を定義することです。それには`<a href="http://golang.org/ref/spec#Passing_arguments_to_..._parameters" target="_blank">...</a>`パラメータを使うと良さそうです。
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6840821">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6840821 >}}
 
 <a href="http://play.golang.org/p/kRLQLIWkxN" target="_blank">http://play.golang.org/p/kRLQLIWkxN</a>
   

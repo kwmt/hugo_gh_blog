@@ -24,11 +24,8 @@ tags:
   
 まずは下記のコードを見て下さい。(golang.orgの[Example][2]の訳です) 
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/5186898">Gist</a>.
-  </noscript>
-</div>
+
+{{< gist 5186898 >}}
 
 上記のコードは、$TMPDIR/template+suffixというディレクトリに、T0.tmpl, T1.tmpl, T2.tmpl という３つのファイルがあった時（このコードではテスト用に作成していますが）、パターン(pattern)を 
 
@@ -49,11 +46,7 @@ tags:
 
 これを回避するには、`template.New("T1.tmpl")`でテンプレートを生成して、その生成されたテンプレートに対して、`ParseGlob(patter)`とします。具体的には次のようにします。 
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/ea763b80b01d39db67f5">Gist</a>.
-  </noscript>
-</div>
+{{< gist ea763b80b01d39db67f5 >}}
 
 これは、たとえばテンプレートファイルとして、main.tmpl、header.tmpl、footer.tmplというファイルがあるとき、パターンを &#8220;*.tmpl&#8221;としてParseGlobすると、生成されたテンプレート名はfooter.tmplになり、main.tmplをテンプレートとしたいときに有効です。（このサンプルは[こちら][3]） 
 

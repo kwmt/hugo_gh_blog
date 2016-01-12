@@ -23,11 +23,7 @@ tags:
   
 <!--more-->
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6750943">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6750943 >}}
 
 ## 参考
 

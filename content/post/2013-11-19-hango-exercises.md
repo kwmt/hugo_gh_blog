@@ -22,11 +22,9 @@ tags:
 
 ## FizzBuzz
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/7540879">Gist</a>.
-  </noscript>
-</div>
+{{< gist 7540879>}}
+<!--TODO: こんな感じにしたい-->
+<!--{{< gist id="7540879" file="fizzbuzz.go">}}-->
 
 `switch`のあと何も書かなかったら、`true`っての忘れてた。
   
@@ -46,21 +44,15 @@ case i % 15 == 0:
 
 ## その日付は何日目？
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/7540879">Gist</a>.
-  </noscript>
-</div>
+<!--TODO: こんな感じにしたい-->
+<!--{{< gist id="7540879" file="dayofyear.go">}}-->
 
 `time`パッケージはうるう年も考えてあるからラク。testコードは書いてないけど、まぁいいか。
 
 ## オライリーの総額計算
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/7540879">Gist</a>.
-  </noscript>
-</div>
+<!--TODO: こんな感じにしたい-->
+<!--{{< gist id="7540879" file="oreillybook.go">}}-->
 
 goroutineとchannelを使ってやってみたけど、終了処理がなんか微妙な気がするので、もっといい方法あれば教えてください。
 

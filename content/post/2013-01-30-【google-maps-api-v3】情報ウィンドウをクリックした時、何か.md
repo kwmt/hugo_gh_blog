@@ -26,11 +26,7 @@ Google Maps API v3を触っていて、マーカーをクリックしたとき�
 
 と、こんな感じです。 
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/5280009">Gist</a>.
-  </noscript>
-</div>
+{{< gist 5280009 >}}
 
 ## 参考
 

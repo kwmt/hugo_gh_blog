@@ -17,11 +17,7 @@ tags:
 ---
 リフレクションを使って、構造体フィールドの値を変更するには？
 
-<div class="oembed-gist">
-  <noscript>
-    View the code on <a href="https://gist.github.com/kwmt/6792127">Gist</a>.
-  </noscript>
-</div>
+{{< gist 6792127 >}}
 
 ## 参考
 
