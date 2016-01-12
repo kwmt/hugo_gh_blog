@@ -15,6 +15,7 @@ tags:
   - reflect
 
 ---
+{{< gist 6895177 >}} 
 <div class="oembed-gist">
   <noscript>
     View the code on <a href="https://gist.github.com/kwmt/6895177">Gist</a>.
