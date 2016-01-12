@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-crisp"]
+	path = themes/hugo-theme-crisp
+	url = git@github.com:kwmt/hugo-theme-crisp.git
