@@ -10,8 +10,8 @@ deploy:
     - script:
         name: install curl
         code: |
-            sudo apt-get update
-            sudo apt-get install curl
+            sudo apt-get -y update
+            sudo apt-get -y install curl
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         domain: kwmt27.net
