@@ -16,6 +16,7 @@ deploy:
   after-steps:
     - sherzberg/slack-notify:
         subdomain: kwmt27
+        token: $SLACK_TOKEN
         url: $SLACK_URL
         channel: "#githubpages"
         username: wercker
