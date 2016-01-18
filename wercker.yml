@@ -5,11 +5,6 @@ build:
         version: "0.15"
         theme: hugo-theme-crisp
         flags: --buildDrafts=true
-  after-steps:
-    - sherzberg/slack-notify:
-        subdomain: kwmt27
-        token: $SLACK_TOKEN
-        channel: "#githubpages"
 deploy:
   steps:
     - install-packages:
@@ -18,3 +13,8 @@ deploy:
         token: $GIT_TOKEN
         domain: kwmt27.net
         basedir: public
+  after-steps:
+    - sherzberg/slack-notify:
+        subdomain: kwmt27
+        token: $SLACK_TOKEN
+        channel: "#githubpages"
