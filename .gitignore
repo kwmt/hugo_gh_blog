@@ -1,0 +1,13 @@
+# https://github.com/spf13/hugo/blob/master/.gitignore
+hugo
+docs/public*
+/.idea
+hugo.exe
+*.test
+*.prof
+nohup.out
+cover.out
+*.swp
+*.swo
+.DS_Store
+*~
