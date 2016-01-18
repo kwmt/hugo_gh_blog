@@ -7,8 +7,11 @@ build:
         flags: --buildDrafts=true
 deploy:
   steps:
-    - install-packages:
-        packages: git ssh-client
+    - script:
+        name: install curl
+        code: |
+            sudo apt-get update
+            sudo apt-get install curl
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         domain: kwmt27.net
