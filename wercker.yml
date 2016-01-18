@@ -13,3 +13,8 @@ deploy:
         token: $GIT_TOKEN
         domain: kwmt27.net
         basedir: public
+ after-steps:
+    - sherzberg/slack-notify:
+        subdomain: wercker
+        token: $SLACK_TOKEN
+        channel: general
