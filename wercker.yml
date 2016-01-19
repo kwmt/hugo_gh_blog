@@ -7,8 +7,8 @@ build:
         version: "0.15"
         theme: hugo-theme-crisp
         flags: --buildDrafts=true
-  after-steps:
-    - wantedly/pretty-slack-notify:
+    after-steps:
+    - lotustm/slack-notify:
         webhook_url: $SLACK_WEBHOOK_URL
         channel: githubpages
 deploy:
