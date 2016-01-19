@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image on Androg</title>
+    <link>kwmt27.net/tags/image/</link>
+    <description>Recent content in Image on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 11 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>#golang 座標点となるリストからその座標点間に線を引くには？</title>
+      <link>/kwmt27.net/index.php/2013/07/11/draw-line-from-list/</link>
+      <pubDate>Thu, 11 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/07/11/draw-line-from-list/</guid>
+      <description>
+
+&lt;p&gt;Pythonの &lt;a href=&#34;http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line&#34;&gt;http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line&lt;/a&gt;&lt;/a&gt; のようなことしたい&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/5971850.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:6ac3962824d0b1ca6ed62e4b345652c4&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;golang-nuts MLでいろいろ教えていただきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/xyO1FpegElE&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/xyO1FpegElE&#34;&gt;https://groups.google.com/forum/#!topic/golang-nuts/xyO1FpegElE&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あと、image/drawのサンプルをpushしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/golang-samples/image/blob/master/draw/main.go&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/golang-samples/image/blob/master/draw/main.go&#34;&gt;https://github.com/golang-samples/image/blob/master/draw/main.go&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

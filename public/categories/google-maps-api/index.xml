@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Maps Api on Androg</title>
+    <link>kwmt27.net/categories/google-maps-api/</link>
+    <description>Recent content in Google Maps Api on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 30 Jan 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/categories/google-maps-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>【Google Maps API v3】情報ウィンドウをクリックした時、何か処理させるには？</title>
+      <link>/kwmt27.net/index.php/2013/01/30/google-maps-api-v3%E6%83%85%E5%A0%B1%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%9F%E6%99%82%E4%BD%95%E3%81%8B/</link>
+      <pubDate>Wed, 30 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/01/30/google-maps-api-v3%E6%83%85%E5%A0%B1%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%9F%E6%99%82%E4%BD%95%E3%81%8B/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:d18858ff950790d327edb24ad481ed3c&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;Google Maps API v3を触っていて、マーカーをクリックしたときに何か処理させる方法は結構書かれているのですが、&lt;/p&gt;
+
+&lt;p&gt;情報ウィンドウ(google.maps.InfoWindow())をクリックした時に何か処理させる方法が日本語ではあまり見つけれれなかったので、メモします。&lt;/p&gt;
+
+&lt;h2 id=&#34;したいこと:d18858ff950790d327edb24ad481ed3c&#34;&gt;したいこと&lt;/h2&gt;
+
+&lt;p&gt;ここで一番やりたいことはタイトルどおりですが、下記のプログラムで何をしたいかを書いておくと、&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;マップのロード時に複数の地点（ここでは4地点）にマーカーを置く&lt;/li&gt;
+&lt;li&gt;それぞれのマーカーをクリックすると、情報ウィンドウを表示させる&lt;/li&gt;
+&lt;li&gt;情報ウィンドウに書かれている文字列をクリックすると、そのクリックした位置の周りがよく見えるようにある程度ズームする&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;と、こんな感じです。&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/5280009.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:d18858ff950790d327edb24ad481ed3c&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;上記のプログラムは、&lt;a href=&#34;http://stackoverflow.com/questions/12102598/trigger-event-with-infowindow-or-infobox-on-click-google-map-api-v3&#34;&gt;stackoverflow&lt;/a&gt;をめっちゃ参考にしてます。このstackoverflowではInfoBoxの例もあります。InfoBoxとは、情報ウィンドウのように吹き出しタイプではなくて、&lt;/p&gt;
+
+&lt;p&gt;単なる四角のテキストボックスのようなものを作れるライブラリです。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Google Maps APIでGoogle Mapを表示させるには</title>
+      <link>/kwmt27.net/index.php/2011/12/17/google-maps-api%E3%81%A7google-map%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link>
+      <pubDate>Fri, 16 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2011/12/17/google-maps-api%E3%81%A7google-map%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
+      <description>&lt;p&gt;とりあえず、以下をheadで読み込んでおいて、&lt;/p&gt;
+
+&lt;pre class=&#34;brush: xml; title: ; notranslate&#34; title=&#34;&#34;&gt;&amp;lt;script type=&#34;text/javascript&#34;
+src=&#34;http://maps.google.com/maps/api/js?sensor=true&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;詳しいことは、以下を参考にするメモ、&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Google Maps JavaScript API V3 &amp;#8211; 基本&amp;lt;/dt?&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&#34;http://code.google.com/intl/ja/apis/maps/documentation/javascript/basics.html&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;&lt;a href=&#34;http://code.google.com/intl/ja/apis/maps/documentation/javascript/basics.html&#34;&gt;http://code.google.com/intl/ja/apis/maps/documentation/javascript/basics.html&lt;/a&gt;&lt;/a&gt; &lt;/dl&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;特にチュートリアルが分かりやすい。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

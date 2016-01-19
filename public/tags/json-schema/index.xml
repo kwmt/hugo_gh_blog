@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json Schema on Androg</title>
+    <link>kwmt27.net/tags/json-schema/</link>
+    <description>Recent content in Json Schema on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 11 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/json-schema/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WEB&#43;DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んだ。</title>
+      <link>/kwmt27.net/index.php/2014/09/11/read_webdbpress_about_webapi_design/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/09/11/read_webdbpress_about_webapi_design/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-225x300.jpg&#34; alt=&#34;WEB+DB PRESS Vol.82&#34; width=&#34;225&#34; height=&#34;300&#34; class=&#34;alignleft size-thumbnail wp-image-1288&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-225x300.jpg 225w, http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-768x1024.jpg 768w&#34; sizes=&#34;(max-width: 225px) 100vw, 225px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;WEB+DB PRESS Vol.82&lt;/a&gt;を買いました。Go言語が載ってるからという理由で買いましたが、「Web APIデザインの鉄則」という特集があって、おもしろそうなのでよんでみました。&lt;/p&gt;
+
+&lt;h2 id=&#34;第1章-web-apiの基礎知識:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第1章 Web APIの基礎知識&lt;/h2&gt;
+
+&lt;p&gt;この特集ではメッセージ形式をJSONとするRESTful APIの設計について書かれていますが、REST以外のスタイルにRPCなどもあるのに、なぜRESTful APIにするのかを、基礎から丁寧に書いてくれています。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、RESTfulなWeb APIをここでは、ROA(Resource Oriented Architecture)に沿って設計することと定義しています。&lt;/p&gt;
+
+&lt;h2 id=&#34;第2章-リソース設計:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第2章 リソース設計&lt;/h2&gt;
+
+&lt;p&gt;「Eメール送信を行うためのAPI」を題材としています。その題材を元に、リソースに含まれるフィールドをどのように定義するか、その定義をどうやって明文化するかが書かれています。おすすめは、&lt;a href=&#34;http://json-schema.org/&#34; target=&#34;_blank&#34;&gt;JSON Schema&lt;/a&gt;という手法を用いることだとそうです。JSON Schemaを使いながら、題材に必要なリソースを定義していっています。&lt;/p&gt;
+
+&lt;p&gt;語彙を決めるのには先人の知恵（&lt;a href=&#34;http://schema.org/Person&#34;&gt;schema.org&lt;/a&gt;や &lt;a href =&#34;http://www.opensearch.org/Specifications/OpenSearch/1.1&#34; target=&#34;_blank&#34;&gt;OpenSeacrh&lt;/a&gt;) などを参考にするとよいとのことです。&lt;/p&gt;
+
+&lt;h2 id=&#34;第3章-インターフェース設計:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第3章 インターフェース設計&lt;/h2&gt;
+
+&lt;p&gt;ここでは、エンドポイントURI・HTTPメソッド・クエリパラメータを定めていきます。第2章で作成したJSON Shemaによる定義に追加していきます。&lt;/p&gt;
+
+&lt;p&gt;「新しいリソースを作成するエンドポイント」や「すでに存在するリソースを削除するエンドポイント」のそれぞれに対して、どのような要件で作成するかが解説されています。「HTTPメソッドの選び方」も詳しく書いてあります。&lt;/p&gt;
+
+&lt;h2 id=&#34;第4章-エラー表現とドキュメント:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第4章 エラー表現とドキュメント&lt;/h2&gt;
+
+&lt;p&gt;「エラーがなぜ起こったのか」「どのようにすればそれを解決できるか」を機械がわかるような仕組みにするために、エラー表現をどのように決めていくかについて説明されています。&lt;/p&gt;
+
+&lt;p&gt;また、文書だけでは説明できない部分は図を書いたりしますが、その図を作成する&lt;a href=&#34;http://plantuml.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;Plant UML&lt;/a&gt;というツールを紹介しています。&lt;/p&gt;
+
+&lt;h2 id=&#34;感想:7d0d31d6910888acfe6deb790b41df08&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;Web APIの設計について非常に勉強になりました。知らないツールなどもあったので、積極的につかっていきたいと思う。&lt;/p&gt;
+
+&lt;div class=&#34;amazlet-box&#34; style=&#34;margin-bottom:0px;&#34;&gt;
+  &lt;div class=&#34;amazlet-image&#34; style=&#34;float:left;margin:0px 12px 1px 0px;&#34;&gt;
+    &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/61gSqezYgPL._SL160_.jpg&#34; alt=&#34;WEB+DB PRESS Vol.82&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  
+
+&lt;p&gt;&lt;div class=&#34;amazlet-info&#34; style=&#34;line-height:120%; margin-bottom: 10px&#34;&gt;
+    &lt;div class=&#34;amazlet-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;
+      &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;WEB+DB PRESS Vol.82&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;div class=&amp;quot;amazlet-powered-date&amp;quot; style=&amp;quot;font-size:80%;margin-top:5px;line-height:120%&amp;quot;&amp;gt;
+    posted with &amp;lt;a href=&amp;quot;http://www.amazlet.com/&amp;quot; title=&amp;quot;amazlet&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;amazlet&amp;lt;/a&amp;gt; at 14.09.11
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-detail&amp;quot;&amp;gt;
+  山口 徹 Jxck 佐々木 大輔 横路 隆 加来 純一 山本 伶 大平 武志 米川 健一 坂本 登史文 若原 祥正 和久田 龍 平栗 遵宜 伊藤 直也 佐藤 太一 高橋 俊幸 海野 弘成 五嶋 壮晃 佐藤 歩 吉村 総一郎 橋本 翔 舘野 祐一 中島 聡 渡邊 恵太 はまちや2 竹原 河合 宜文 &amp;lt;br /&amp;gt;技術評論社 &amp;lt;br /&amp;gt;売り上げランキング: 663
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-sub-info&amp;quot; style=&amp;quot;float: left;&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;amazlet-link&amp;quot; style=&amp;quot;margin-top: 5px&amp;quot;&amp;gt;
+    &amp;lt;a href=&amp;quot;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&amp;quot; name=&amp;quot;amazletlink&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Amazon.co.jpで詳細を見る&amp;lt;/a&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;amazlet-footer&#34; style=&#34;clear: left&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

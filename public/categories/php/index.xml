@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on Androg</title>
+    <link>kwmt27.net/categories/php/</link>
+    <description>Recent content in Php on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 31 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>VagrantでPHP開発環境構築方法</title>
+      <link>/kwmt27.net/index.php/2014/01/31/how-to-create-php-dev-env-with-eclipse/</link>
+      <pubDate>Fri, 31 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/01/31/how-to-create-php-dev-env-with-eclipse/</guid>
+      <description>
+
+&lt;h2 id=&#34;vagrantのインストール:7f8a3f2caf98ab1830b66868f23d6315&#34;&gt;vagrantのインストール&lt;/h2&gt;
+
+&lt;p&gt;参考サイト&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://qiita.com/inouet@github/items/b36638adc2b5772db457&#34;&gt;http://qiita.com/inouet@github/items/b36638adc2b5772db457&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;vagrantインストール&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;VirtualBox を公式サイトからインストール
+※VirtualBoxはインストール済みの為、ここでは作業してない&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Boxの追加
+&lt;pre class=&#34;go&#34;&gt;vagrant box add centos64 &lt;a href=&#34;http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box&#34;&gt;http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box&lt;/a&gt;
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;仮想マシンを作る
+&lt;pre class=&#34;go&#34;&gt;$ mkdir -p ~/Vagrant/CentOS64
+$ cd ~/Vagrant/CentOS64
+$ vagrant init centos64
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;仮想マシンを起動する
+&lt;pre class=&#34;go&#34;&gt;$ vagrant up
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;仮想マシンへ接続
+&lt;pre class=&#34;go&#34;&gt;$ vagrant ssh
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ネットワークの設定
+&lt;pre class=&#34;go&#34;&gt;$ vim Vagrantfile&lt;/p&gt;
+
+&lt;h1 id=&#34;config-vm-network-private-network-ip-192-168-33-10:7f8a3f2caf98ab1830b66868f23d6315&#34;&gt;config.vm.network :private_network, ip: &amp;ldquo;192.168.33.10&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;↑ ここのコメントアウトを削除
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;vagrant のリロード
+&lt;pre class=&#34;go&#34;&gt;$ vagrant reload
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;これで、192.168.33.10 というIPでアクセスできる&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;cent os6からは下記をいれておくと何か早くなる設定
+&lt;pre class=&#34;go&#34;&gt;sudo vi /etc/resolv.conf
+options single-request-reopen
+&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ファイアーウォールを切る
+ローカルの開発環境なので、必要がないため。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo service iptables stop
+&lt;/pre&gt;
+
+&lt;p&gt;再起動したときに有効にならないようにする&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo chkconfig iptables off
+&lt;/pre&gt;
+
+&lt;p&gt;Webサーバーが入っているか確認&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ yum list installed  |grep httpd
+&lt;/pre&gt;
+
+&lt;p&gt;入っていないので、インストール&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo yum install -y httpd
+&lt;/pre&gt;
+
+&lt;p&gt;Webサーバを立ち上げる&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo service httpd start
+&lt;/pre&gt;
+
+&lt;p&gt;OSを再起動した後も立ち上がるように設定する&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo chkconfig httpd on
+&lt;/pre&gt;
+
+&lt;p&gt;Webサーバーが立ち上がっているかブラウザで確認する&lt;/p&gt;
+
+&lt;p&gt;デフォルトのIPアドレス&lt;a href=&#34;http://192.168.33.10/にアクセスしてApacheが見えたらOK&#34;&gt;http://192.168.33.10/にアクセスしてApacheが見えたらOK&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;FTPファイル転送ツールを使いたい。&lt;/p&gt;
+
+&lt;p&gt;vagrantユーザーでアクセスできるようにしたい&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo chown -R vagrant:vagrant /var/www/html/
+&lt;/pre&gt;
+
+&lt;p&gt;くわしくはこちら&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dotinstall.com/lessons/basic_local_development_v2/24805&#34;&gt;http://dotinstall.com/lessons/basic_local_development_v2/24805&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hostsファイルを編集することで、IPアドレスを文字で表せるようにする&lt;/p&gt;
+
+&lt;p&gt;Hosterというツールを使った&lt;/p&gt;
+
+&lt;p&gt;セット名:hoge&lt;/p&gt;
+
+&lt;p&gt;ホスト名：dev.hoge.com&lt;/p&gt;
+
+&lt;p&gt;IPアドレス:192.168.33.10&lt;/p&gt;
+
+&lt;p&gt;有効化する&lt;/p&gt;
+
+&lt;p&gt;PhpStormからサーバーに接続&lt;/p&gt;
+
+&lt;p&gt;Tools &amp;gt; Deployment &amp;gt; ConfigrationからSFTPの設定をして、&lt;/p&gt;
+
+&lt;p&gt;Tools &amp;gt; Deployment &amp;gt; Browse Remote Hostとすると、&lt;/p&gt;
+
+&lt;p&gt;右側にサーバー側のツリーが表示される。&lt;/p&gt;
+
+&lt;p&gt;PHPをインストール&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ yum info php
+&lt;/pre&gt;
+
+&lt;p&gt;versionが最新ではないので、epelとremiをインストールする&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+sudo rpm -Uvh epel-release-6-8.noarch.rpm
+sudo rpm -Uvh remi-release-6.rpm
+&lt;/pre&gt;
+
+&lt;p&gt;epelの設定&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;sudo vi /etc/yum.repos.d/epel.repo
+enable=1→0に変更
+&lt;/pre&gt;
+
+&lt;p&gt;これでphpの最新バージョンがインストールできるとこを確認&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;yum info --enablerepo=remi php 
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;phpインストール:7f8a3f2caf98ab1830b66868f23d6315&#34;&gt;PHPインストール&lt;/h2&gt;
+
+&lt;p&gt;ようやくphpのインストール(phpに関連するものも)&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;sudo yum --enablerepo=remi install -y php php-devel php-mysql php-mbstring php-gd
+&lt;/pre&gt;
+
+&lt;p&gt;php.iniの設定&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;sudo vi /etc/php.ini
+&lt;/pre&gt;
+
+&lt;p&gt;・error_logを追加&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;error_log = /var/log/php.log 
+&lt;/pre&gt;
+
+&lt;p&gt;・mbstringのlanguageをJapanseで有効化&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;;mbstring.language = Japanese
+mbstring.language = Japanese
+&lt;/pre&gt;
+
+&lt;p&gt;・internalをUTF-8に変更と有効化&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;;mbstring.internal_encoding = EUC-JP
+mbstring.internal_encoding = UTF-8
+&lt;/pre&gt;
+
+&lt;p&gt;・http_inputはautoで有効化&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;;mbstring.http_input = auto
+mbstring.http_input = auto
+&lt;/pre&gt;
+
+&lt;p&gt;・detect_orderはautoで有効化&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;;mbstring.detect_order = auto
+mbstring.detect_order = auto
+&lt;/pre&gt;
+
+&lt;p&gt;・expose_php = OnをOffに&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;expose_php = On
+expose_php = Off
+&lt;/pre&gt;
+
+&lt;p&gt;・timezoneをAsia/Tokyoにして有効化&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;;date.timezone = 
+date.timezone = Asia/Tokyo
+&lt;/pre&gt;
+
+&lt;p&gt;以上の設定を有効にするには、httpdを再起動する&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;sudo service httpd restart
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;mysqlをインストール:7f8a3f2caf98ab1830b66868f23d6315&#34;&gt;MySQLをインストール&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo yum install -y --enablerepo=remi mysql-server
+&lt;/pre&gt;
+
+&lt;p&gt;設定&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo vi /etc/my.cnf
+&lt;/pre&gt;
+
+&lt;pre class=&#34;go&#34;&gt;[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+
+#下の部分を追加
+character_set_server=utf8
+default-storage-engine=InnoDB
+innodb_file_per_table
+[mysql]
+default-character-set=utf8
+[mysqldump]
+default-character-set=utf8
+&lt;/pre&gt;
+
+&lt;p&gt;MySQLを起動&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo service mysqld start
+&lt;/pre&gt;
+
+&lt;p&gt;mysqld起動時にfailedして、/var/log/mysqld.logに下記が出ていたら&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;140706  7:06:08 [Note] Plugin &#39;FEDERATED&#39; is disabled.
+/usr/libexec/mysqld: Table &#39;mysql.plugin&#39; doesn&#39;t exist
+140706  7:06:08 [ERROR] Can&#39;t open the mysql.plugin table. Please run mysql_upgrade to create it.
+&lt;/pre&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo mysql_install_db
+&lt;/pre&gt;
+
+&lt;p&gt;を実行する&lt;/p&gt;
+
+&lt;p&gt;これで立ち上がるが、いろいろ設定する必要がある（書いてある）&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ /usr/bin/mysql_secure_installation
+&lt;/pre&gt;
+
+&lt;p&gt;を実行する&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Enter current password for root (enter for none):enter
+Set root password? [Y/n] Y
+パスワードを適当に設定
+そのほかの設定はデフォルトのEnterで。
+&lt;/pre&gt;
+
+&lt;p&gt;再起動時もスタートするように設定&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ sudo chkconfig mysqld on
+&lt;/pre&gt;
+
+&lt;p&gt;確認&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ mysql -u root -p
+&lt;/pre&gt;
+
+&lt;p&gt;さっき設定したパスワード&lt;/p&gt;
+
+&lt;p&gt;Server version: 5.5.36 MySQL Community Server (GPL) by Remi&lt;/p&gt;
+
+&lt;p&gt;と5.5がインストールされていることを確認&lt;/p&gt;
+
+&lt;h2 id=&#34;cakephpからmysqlを使えるように設定する:7f8a3f2caf98ab1830b66868f23d6315&#34;&gt;cakephpからMySQLを使えるように設定する&lt;/h2&gt;
+
+&lt;p&gt;データベースを作成する&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ mysql -u root -p
+mysql&gt; create database dev_cakephp;
+mysql&gt; grant all on dev_cakephp.* to dbuser@localhost identified by &#39;xxxxxxxxxx&#39;;
+&lt;/pre&gt;
+
+&lt;p&gt;これらの設定でcakephpを設定する&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;% cd app/Config/
+% cp database.php.default database.php
+&lt;/pre&gt;
+
+&lt;p&gt;以下のlogin,password,databaseを変更する。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;class DATABASE_CONFIG {
+
+    public $default = array(
+        &#39;datasource&#39; =&gt; &#39;Database/Mysql&#39;,
+        &#39;persistent&#39; =&gt; false,
+        &#39;host&#39; =&gt; &#39;localhost&#39;,
+        &#39;login&#39; =&gt; &#39;dbuser&#39;,
+        &#39;password&#39; =&gt; &#39;xxxxxxxxxx&#39;,
+        &#39;database&#39; =&gt; &#39;dev_cakephp&#39;,
+        &#39;prefix&#39; =&gt; &#39;&#39;,
+        //&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+    );
+&lt;/pre&gt;
+
+&lt;p&gt;DocumentRootにアップロードしたら、ブラウザを更新し、&lt;/p&gt;
+
+&lt;p&gt;CakePHP is able to connect to the database.&lt;/p&gt;
+
+&lt;p&gt;となったらOK。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

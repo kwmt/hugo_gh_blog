@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日記 on Androg</title>
+    <link>kwmt27.net/categories/%E6%97%A5%E8%A8%98/</link>
+    <description>Recent content in 日記 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 31 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2015年の振り返り</title>
+      <link>/kwmt27.net/index.php/2015/12/31/looking-back-2015/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2015/12/31/looking-back-2015/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2014/12/31/looking-back-2014/&#34;&gt;昨年&lt;/a&gt;に引き続き、今年で3回目の振り返りを書いておこう。&lt;/p&gt;
+
+&lt;h1 id=&#34;ふりかえり:358e3db2c96119b492c97adba527f811&#34;&gt;ふりかえり&lt;/h1&gt;
+
+&lt;h2 id=&#34;仕事:358e3db2c96119b492c97adba527f811&#34;&gt;仕事&lt;/h2&gt;
+
+&lt;h3 id=&#34;開発:358e3db2c96119b492c97adba527f811&#34;&gt;開発&lt;/h3&gt;
+
+&lt;p&gt;2014年半ばぐらいからはじまった新規iOSアプリ案件(Tアプリ)。この案件からswiftで開発し始めました。たしかswift1.0だったかな。&lt;/p&gt;
+
+&lt;p&gt;このときはswiftが初めてだったし、iOSもこの案件の前にobjcでpush通知周りをちょろっと書いたぐらいだったので、昨年の今の時期も仕事していましたね。コミット履歴を見ると、12/31にプルリクエストしていたので。まぁIT業界はそんなもんかなｗ&lt;/p&gt;
+
+&lt;p&gt;で、2015年3月ぐらいまでの3.5ヶ月は、このTアプリをやっていました。API・デザイン・アプリがほぼ同時に開発をすすめるような体制でした。このプロジェクトは最初、確認がうまくできてなくて、結構手戻りが発生してしまいましたね。再度認識合わせして取り戻した感じでした。無事開発は終了したものの、クライアント様の都合で世の中に出ていないので、紹介できない。。。&lt;/p&gt;
+
+&lt;p&gt;3月半ばから4月半ばぐらいの1ヶ月間は、別の新規iOSアプリ案件(Gアプリ)を作成させて頂きました。これは1ヶ月プロジェクトではなかったのですが、次の案件が予定されていたため、それまでなら可能ということでお引き受けしました。このプロジェクトは、デザイン・APIはすでに終わってからのアプリ開発という体制でした。これはこれでAPIの開発が終わってるので、I/F決まってるしアプリ開発しやすいのしやすかったのですが、APIが使いにくいなどの要望を伝えにくかったなぁという印象でした。&lt;/p&gt;
+
+&lt;p&gt;4月半ばぐらいからは6月半ばぐらいまでの2ヶ月間は、Android案件(新規ではなく引き継ぎ)(Mアプリ)をやらせていただきました。&lt;/p&gt;
+
+&lt;p&gt;アプリはアプリだったのですが、携帯端末ではなく、セットトップボックスに入ったAndroidアプリの開発でした。携帯端末とは異なる入力IFで知識の幅が増えましたね。あと2枚の画面(Activity)を順番を変えたのですが、自分で作るときはそのあたりもできるだけ考慮したいなと思いました。&lt;/p&gt;
+
+&lt;p&gt;6月後半から12月後半まではAndroidアプリ(新規)(Aアプリ)を担当させていただきました。デザインは先行して進めているものの、APIとアプリは同時スタートという体制でした。はじめて社内で同じ案件でAPIとアプリを作成するということで、社内でIF部分は調整しやすかったかなぁと思いました。9月頃から同じサービスのiOSアプリ開発もはじまりました。他の方が担当してくださったのですが、プルリクエストレビューなどはしていましたね。&lt;/p&gt;
+
+&lt;p&gt;プルリクエストレビューで思い出しましたが、6月ぐらいからまた別のiOSアプリ案件(Pアプリ)もスタートして、こちらはほんの少し書いただけで、プルリクエストレビューが主でした。なので6月から12月までは3案件同時並行した時期が続きました。&lt;/p&gt;
+
+&lt;p&gt;12月後半は、iOSアプリ案件なのですが、今回はアプリ開発ではなくAPI開発を担当させて頂いてます。なぜかGo言語でw個人的にはテンション上がってますが、この2年間APIを使う側で作る側は慣れてないのと、Go言語触ってたのは1年前にJSONを返すMockをちょろっと作ったぐらいで忘れてる部分が多く時間がかかってしまいますが、使う側の経験を活かして、使いやすいAPIになるようにがんばっていきたいです。&lt;/p&gt;
+
+&lt;h3 id=&#34;講師業:358e3db2c96119b492c97adba527f811&#34;&gt;講師業&lt;/h3&gt;
+
+&lt;p&gt;また1月末から6月末までの週1回開催された&lt;a href=&#34;http://osaka.techinstitute.jp&#34;&gt;Tech InstituteというAndroidアプリ開発者養成講座&lt;/a&gt;の講師も担当させて頂きました。講師が数名いてメイン1人とサブ2,3人という構成で、メイン2回、サブを3回担当しました。教えるってほんと難しかった。。けど、人になにかを教えるって楽しかったです。&lt;/p&gt;
+
+&lt;h2 id=&#34;プライベート:358e3db2c96119b492c97adba527f811&#34;&gt;プライベート&lt;/h2&gt;
+
+&lt;p&gt;といってもあまり仕事に関係のないのは抜いてるが、勉強会に参加したりしたのを次ごとにリストにまとめてみた。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1月
+
+&lt;ul&gt;
+&lt;li&gt;LPICレベル1技術解説無料セミナー&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2月
+
+&lt;ul&gt;
+&lt;li&gt;Go on Android勉強会(Goの環境ではまってた)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;3月
+
+&lt;ul&gt;
+&lt;li&gt;第5回 淀川国際ハーフマラソン&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;5月
+
+&lt;ul&gt;
+&lt;li&gt;東京出張&lt;/li&gt;
+&lt;li&gt;UIKit Frameworkを読む会を開催&lt;/li&gt;
+&lt;li&gt;英会話教室に行き始める&lt;/li&gt;
+&lt;li&gt;PHPカンファレンス&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;6月
+
+&lt;ul&gt;
+&lt;li&gt;GitHub創業者が来日 GitHub User Meetup Osaka&lt;/li&gt;
+&lt;li&gt;2泊3日開発合宿(滋賀)&lt;/li&gt;
+&lt;li&gt;Android祭り(東京)&lt;/li&gt;
+&lt;li&gt;GoogleIO報告会(東京)&lt;/li&gt;
+&lt;li&gt;GoCon(東京)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;7月
+
+&lt;ul&gt;
+&lt;li&gt;7月から英会話を毎日コースに変更&lt;/li&gt;
+&lt;li&gt;AndroidWearハッカソン&lt;/li&gt;
+&lt;li&gt;オフィスでたこパ&lt;/li&gt;
+&lt;li&gt;後半に英会話教室を辞めて、オンライン英会話に変更&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;8月
+
+&lt;ul&gt;
+&lt;li&gt;プレゼン勉強会&lt;/li&gt;
+&lt;li&gt;AndroidTV勉強会(発表した)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;9月
+
+&lt;ul&gt;
+&lt;li&gt;第2回【関西ITベンチャー】開発ツール チラ見せ♡ナイト@大阪※増席しました！（立ち見あり）&lt;/li&gt;
+&lt;li&gt;第63回 Cocoa勉強会関西&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;10月
+
+&lt;ul&gt;
+&lt;li&gt;第１回 関西golang勉強会&lt;/li&gt;
+&lt;li&gt;TOEIC受験&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;11月
+
+&lt;ul&gt;
+&lt;li&gt;ちょっと触ってみるGo言語ハンズオン&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;12月
+
+&lt;ul&gt;
+&lt;li&gt;合宿(滋賀)&lt;/li&gt;
+&lt;li&gt;TOEIC受験&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今年は英語に力いれてみました。話すのはまだまだだし、英語の歌は何言ってるかわからんけど、普通の会話なら聞き取れるようになったかなぁ。TOEICも50点上がってた。来年も引き続きつづけよう！&lt;/p&gt;
+
+&lt;h1 id=&#34;今年の目標はどうだった:358e3db2c96119b492c97adba527f811&#34;&gt;今年の目標はどうだった？&lt;/h1&gt;
+
+&lt;p&gt;ハーフは１回でたのでよかったかな。&lt;/p&gt;
+
+&lt;p&gt;貯金できてないな。。&lt;/p&gt;
+
+&lt;p&gt;仕事は少しは丁寧に進めれるようになったかなぁ&lt;/p&gt;
+
+&lt;h1 id=&#34;来年の目標:358e3db2c96119b492c97adba527f811&#34;&gt;来年の目標&lt;/h1&gt;
+
+&lt;p&gt;投資をやる！引き落とし型の投資信託をはじめるよ！（必ずやる）&lt;/p&gt;
+
+&lt;p&gt;マラソンもハーフぐらいは出ておきたい&lt;/p&gt;
+
+&lt;p&gt;ホノルルマラソンに出たい&lt;/p&gt;
+
+&lt;p&gt;英会話続ける&lt;/p&gt;
+
+&lt;p&gt;ファイナンシャルプランナー受験するか&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ:358e3db2c96119b492c97adba527f811&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;今年もお世話になったみなさまありがとうございました。来年も引き続きよろしくお願いします。（ってこのまとめ、去年のまとめといっしょやんｗ）&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Google I/O報告会 2015 参加メモ #devfest</title>
+      <link>/kwmt27.net/index.php/2015/06/23/google-io-report-2015-memo-devfest/</link>
+      <pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2015/06/23/google-io-report-2015-memo-devfest/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/devfestjapan/&#34; target=&#34;_blank&#34;&gt;Google I/O報告会 2015(会場:サイバーエージェント(渋谷マークシティ13F)&lt;/a&gt;に行ってきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/devfestjapan/2015summer/agenda&#34; target=&#34;_blank&#34;&gt;アジェンダが公開されてた&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;全体の流れメモ:7594fce3acbf9ff470786da04bd10d27&#34;&gt;全体の流れメモ&lt;/h2&gt;
+
+&lt;h3 id=&#34;全体:7594fce3acbf9ff470786da04bd10d27&#34;&gt;全体&lt;/h3&gt;
+
+&lt;p&gt;DevFestの歴史&lt;/p&gt;
+
+&lt;p&gt;2各会場の紹介&lt;/p&gt;
+
+&lt;p&gt;Keynote Androidはぬいて説明&lt;/p&gt;
+
+&lt;p&gt;会場MosconeWest&lt;/p&gt;
+
+&lt;p&gt;派手さな感じで楽しかった&lt;/p&gt;
+
+&lt;p&gt;すっごい寒かった&lt;/p&gt;
+
+&lt;p&gt;8回目SF&lt;/p&gt;
+
+&lt;p&gt;セッション数がヘリ、コミュニケーション重要視&lt;/p&gt;
+
+&lt;p&gt;Androidの話題が多い、デザイン多い&lt;/p&gt;
+
+&lt;p&gt;クラウド少ない→別のイベントになるんじゃないかと予想&lt;/p&gt;
+
+&lt;p&gt;Lobby公園のような感じ&lt;/p&gt;
+
+&lt;p&gt;コミュニケーションできるような。充電ステーションでみんあが集まて会話が生まれる感じ&lt;/p&gt;
+
+&lt;p&gt;exiii $300&lt;/p&gt;
+
+&lt;p&gt;おみやげはメインでなく、コミュニケーションメイン&lt;/p&gt;
+
+&lt;p&gt;キーノートはいま使える現実的な物。&lt;/p&gt;
+
+&lt;p&gt;DESIGN to DE$IGN デザインはビジネス&lt;/p&gt;
+
+&lt;h3 id=&#34;android:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Android&lt;/h3&gt;
+
+&lt;p&gt;M developer previewの略？ｗ&lt;/p&gt;
+
+&lt;p&gt;指紋認証 Fingerprint&lt;/p&gt;
+
+&lt;p&gt;サンプルは github google&lt;/p&gt;
+
+&lt;p&gt;全データはデフォルトでバックアップされる&lt;/p&gt;
+
+&lt;p&gt;細かくも設定できる。&lt;/p&gt;
+
+&lt;p&gt;Doze&lt;/p&gt;
+
+&lt;p&gt;しばらくさわってない端末はdozeモード へ&lt;/p&gt;
+
+&lt;p&gt;App stanby&lt;/p&gt;
+
+&lt;p&gt;しばらくさわっていないアプリはidleモード&lt;/p&gt;
+
+&lt;p&gt;※しばらくはどれくらい？はわからない。&lt;/p&gt;
+
+&lt;p&gt;Icons in Notifications:Icon.createWidthBitmapで生成できる&lt;/p&gt;
+
+&lt;p&gt;Textの範囲指定&lt;/p&gt;
+
+&lt;p&gt;App Links&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Webページとアプリとの関係性を明確にする。&lt;/li&gt;
+&lt;li&gt;自分のアプリが優先的に。&lt;/li&gt;
+&lt;li&gt;Sylus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;フラッシュだけを使うことがカメラを使わずにできるようになった。&lt;/p&gt;
+
+&lt;p&gt;AlphaOptimaization&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;いままでよりもいい感じで透明Viewを使える&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;MIDIのAPI追加&lt;/p&gt;
+
+&lt;p&gt;ストレージ&lt;/p&gt;
+
+&lt;p&gt;ART:runtime stats&lt;/p&gt;
+
+&lt;p&gt;Ambient Mode&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;できるだCPU稼働率をゼロにするモード&lt;/li&gt;
+&lt;li&gt;manifest&lt;/li&gt;
+&lt;li&gt;WakerLockとWearable supportlibraryの２つが前提でsetAmibentEnabeledの一行だけ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;App Invite&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;紹介するときsetDeppLinkでインテント作って&lt;/li&gt;
+&lt;li&gt;紹介されたとき、リファラーがついてれればOK&lt;/li&gt;
+&lt;li&gt;マニフェストにintentfilterを追加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;App Indexing&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google検索で、アプリがあればアプリを紹介してくれる。&lt;/li&gt;
+&lt;li&gt;マニフェストに関係があるドメインを禁輸しておく。&lt;/li&gt;
+&lt;li&gt;すべての検索でひっかかてもうっとおしので、robot.txtに相当する機能がある。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Android Wear&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Maps API Watchで使える機能
+
+&lt;ul&gt;
+&lt;li&gt;モバイルと一緒onMapReadyとかFragmentManagerからmapを取得&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Materialデザイン&lt;/p&gt;
+
+&lt;p&gt;EmptyState&lt;/p&gt;
+
+&lt;p&gt;MaterialShowcase&lt;/p&gt;
+
+&lt;p&gt;各APIのFrameworkがCocoaPodsに対応&lt;/p&gt;
+
+&lt;p&gt;pod try&lt;/p&gt;
+
+&lt;h3 id=&#34;maps:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Maps&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Don&amp;#8217;t ping too much&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t ping on the minute&lt;/li&gt;
+&lt;li&gt;ランダムな秒数をおいてサーバーに問い合わせなさい&lt;/li&gt;
+&lt;li&gt;定期的な問い合わせだと、複数人からのアクセスで同時にサーバーアクセスが行くので重い&lt;/li&gt;
+&lt;li&gt;ランダムで他の人と合わないように問い合わせをするといいよ。&lt;/li&gt;
+&lt;li&gt;apikeyをアプリに入れないように。&lt;/li&gt;
+&lt;li&gt;サーバーを通してapiキーを取得してね。&lt;/li&gt;
+&lt;li&gt;iOSのGoogle Map SDK for iOS version1.10&lt;/li&gt;
+&lt;li&gt;Objc/Swift対応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;materialデザイン:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Materialデザイン&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;全てに適用　VRもTVもAutoも。&lt;/li&gt;
+&lt;li&gt;でざいん 統一感、使いやすい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ブランディング:7594fce3acbf9ff470786da04bd10d27&#34;&gt;ブランディング&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;自社のブランドにするには？Googleっぽくなく。→ペルソナを明らかに。必要なところに。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Too hot→無理にハンバーガメニューを使わなくていい&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ToolCold→ツールバーを大きめにうまく隠して&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;TooRight→モバイル、Webも前部に対応&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;東京会場でのセッション２つ:7594fce3acbf9ff470786da04bd10d27&#34;&gt;東京会場でのセッション２つ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Polymerのライブコーディング&lt;/li&gt;
+&lt;li&gt;Google鈴木さんからのマテリアルデザインに関する補足&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Polymerの話は別記事にする予定なので、以下は、マテリアルデザインについてのメモ。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FABは必ず必要ではない&lt;/li&gt;
+&lt;li&gt;カードViewを必ずしも使う必要がない。セカンダリアクションが期待されてしまうため、アクションが残念。&lt;/li&gt;
+&lt;li&gt;FABは右下に置かなくていい&lt;/li&gt;
+&lt;li&gt;アニメーションについて
+
+&lt;ul&gt;
+&lt;li&gt;早い段階でアニメーション設計を考えていたほうがいい。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;portlaitとlandscape&lt;/li&gt;
+&lt;li&gt;画面内で完結するようにするのもいい&lt;/li&gt;
+&lt;li&gt;Viewの階層は一番低いレイヤーから考えるとよい。FABが一番上。&lt;/li&gt;
+&lt;li&gt;色紙を使うといい　ペーパープロトタイピング&lt;/li&gt;
+&lt;li&gt;material design award&lt;/li&gt;
+&lt;li&gt;ガイドラインは絶対じゃない。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;マテリアルデザインってグーグルっぽくなるけど、どうしたらいいん？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;開発者が楽になったり、ユーザーが期待する動きに期待&lt;/li&gt;
+&lt;li&gt;Generalの選択肢とし、いいところどりでいいと思うby鈴木さん&lt;/li&gt;
+&lt;li&gt;色を変えること　とガイドラインを解釈して自分たちでガイドラインを作るといいんじゃないby安藤幸央さん&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;material-design-libraryの使い方:7594fce3acbf9ff470786da04bd10d27&#34;&gt;material design libraryの使い方&lt;/h2&gt;
+
+&lt;p&gt;Google 公式のAndroid Blogよりも下のほうがわかりやすいらしい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/ribot-labs/exploring-the-new-android-design-support-library-b7cda56d2c32&#34;&gt;Exploring the new Android Design Support Library — ribot labs — Medium&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみにGoogleもMediumを使い始めているらしい&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/google-developers&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://medium.com/google-developers&#34;&gt;https://medium.com/google-developers&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;いちばん印象的だったこと:7594fce3acbf9ff470786da04bd10d27&#34;&gt;いちばん印象的だったこと&lt;/h2&gt;
+
+&lt;p&gt;やはり、この質問がいちばん記憶にあるし、大事なことだとおもう。&lt;/p&gt;
+
+&lt;p&gt;Q「マテリアルデザインを使うとGoogleっぽくなるのでは？」&lt;/p&gt;
+
+&lt;p&gt;A.ガイドラインはガイドラインであって必ずそうしなければならないということはない。&lt;/p&gt;
+
+&lt;p&gt;Googleは&lt;a href=&#34;http://android-developers.blogspot.jp/2015/05/announcing-material-design-showcase-and.html&#34; target=&#34;_blank&#34;&gt;Announcing the Material Design Showcase and Awards | Android Developers Blog&lt;/a&gt;を実施したが、必ずガイドラインに沿わなければならないということはないということを示したかったため実施したとのこと。&lt;/p&gt;
+
+&lt;p&gt;特に&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.ideashower.readitlater.pro&#34; target=&#34;_blank&#34;&gt;Pocket Androidアプリ&lt;/a&gt;, &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.tumblr&#34; title=&#34;Tumbler Androidアプリ&#34; target=&#34;_blank&#34;&gt;Tumbler Androidアプリ&lt;/a&gt;のアプリを見ればわかるとのこと。&lt;/p&gt;
+
+&lt;p&gt;Tumbler使用者からすると、FAB(Floating Action Button)が出てくるまでマテリアルデザインだと気づかなかったという。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/design/icons/&#34;&gt;Material icons &amp;#8211; Google Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.fastcodesign.com/3046512/how-google-finally-got-design&#34;&gt;How Google Finally Got Design | Co.Design | business + design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.materialup.com/&#34;&gt;Slack Concept for Android – Mobile app by Nik&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;twitterの-devfest:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Twitterの#devfest&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/hashtag/devfest?src=hash&amp;vertical=default&amp;f=tweets&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/devfest?src=hash&amp;amp;vertical=default&amp;amp;f=tweets&#34;&gt;https://twitter.com/hashtag/devfest?src=hash&amp;amp;vertical=default&amp;amp;f=tweets&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2014年の振り返り</title>
+      <link>/kwmt27.net/index.php/2014/12/31/looking-back-2014/</link>
+      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/12/31/looking-back-2014/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2013/12/31/looking-back-2013/&#34; target=&#34;_blank&#34;&gt;昨年も振り返り&lt;/a&gt;を書いていて、振り返りの記事を振り返るとなかなか面白いので、今年も書いてみようかなと。&lt;/p&gt;
+
+&lt;h2 id=&#34;各月に起こった事をだらだらと:d52cc0ce3815b3f17a08403570dbe0a6&#34;&gt;各月に起こった事をだらだらと&lt;/h2&gt;
+
+&lt;p&gt;2013年に9年ちょっと働いた会社を退職して2013年12月から2014年3月までは、契約社員として過ごし、最後の方はPHPやPhotoShop/Illustratorなど知らない技術について勉強させて頂きました。&lt;/p&gt;
+
+&lt;p&gt;実質2月から&lt;a href=&#34;http://www.tech-vein.com/archives/9/pingpong-game/&#34; target=&#34;_blank&#34;&gt;アニメピンポンのソーシャルゲーム開発&lt;/a&gt;に関わらせて頂き、そのまま4月に入社しました。&lt;/p&gt;
+
+&lt;p&gt;5月ぐらいまでは慣れないPHPで超ハードでしたが、PHP案件が終わってからの5,6月あたりは&lt;a href=&#34;http://blog.guildworks.jp/2014/10/15/%E3%80%90%E4%BA%8B%E4%BE%8B%E7%B4%B9%E4%BB%8B%E3%80%91android%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E5%A4%A7%E5%B9%85%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB%E3%81%97%E3%80%81%E3%83%80/&#34; target=&#34;_blank&#34;&gt;Androidアプリ開発&lt;/a&gt;をしました。一部手伝ってもらったり、レビューしてもらったりありますが、デザイン除く部分は基本的に1人で担当しました。&lt;/p&gt;
+
+&lt;p&gt;(PHP案件がさんざんなできだったので、このAndroidアプリでようやく自身を取り戻しました)&lt;/p&gt;
+
+&lt;p&gt;7月あたりに&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.co.galaxyagency.akippa&#34; target=&#34;_blank&#34;&gt;Android案件がもう一個&lt;/a&gt;あって、10,11月あたりにiOS案件を担当しました。(このときは始めてのObjC)(このiOSアプリは非公開だが、UIはツイッターみたいなやつ)&lt;/p&gt;
+
+&lt;p&gt;個人的にですが、GDG中国の人からgolangcafe#50に招待されたので、10月に東京にいきました。そのとき初対面ｗ&lt;/p&gt;
+
+&lt;p&gt;12月に入ってから、iOS案件を現在とりかかっているところです。(swiftでやってます)&lt;/p&gt;
+
+&lt;p&gt;技術的には結構色々やった気がします。仕事で使った言語だけでも、php,java,objc,swift,javascript,html,goってところでしょうか。&lt;/p&gt;
+
+&lt;h2 id=&#34;去年の目標はどうだった:d52cc0ce3815b3f17a08403570dbe0a6&#34;&gt;去年の目標はどうだった？&lt;/h2&gt;
+
+&lt;p&gt;あ、去年の目標の「人に役立つ何かを作りたい」というのは仕事で達成出来たと思います。ブログを毎月書くというのは、6月達成できてないですね。。。「入門ソーシャルデータ」を読破も全く手つけてない。。。&lt;/p&gt;
+
+&lt;p&gt;ただ、目標には挙げてなかったですけど、ずっとやりたかった神戸のフルマラソンを完走しました！これは個人的にめっちゃ嬉しかったです。少しずつでも練習して、一歩一歩前に進めば、目標は達成できることを学び実感できました。&lt;/p&gt;
+
+&lt;p&gt;自動車業界でECUを作ってきましたが、ユーザーの反応がほぼダイレクトに分かるってのは楽しいですね。&lt;/p&gt;
+
+&lt;p&gt;スマホアプリ開発楽しすぎ！&lt;/p&gt;
+
+&lt;h2 id=&#34;来年の目標は:d52cc0ce3815b3f17a08403570dbe0a6&#34;&gt;来年の目標は&lt;/h2&gt;
+
+&lt;p&gt;毎月ブログを書いてアウトプットすることは毎年の目標としよう。&lt;/p&gt;
+
+&lt;p&gt;お金もちょっと使い過ぎ感あるので、貯めよかな。1万/月ぐらい。それよりもうちょいお金を増やす努力してみようかな。&lt;/p&gt;
+
+&lt;p&gt;マラソンアプリを世の中に出せるぐらいまでにもっていきたいですね。&lt;/p&gt;
+
+&lt;p&gt;あ、フルマラソン1回、ハーフ2回ぐらいは出て、ハーフは2時間切ること、フルは5時間30分切ることを目標としたいです。&lt;/p&gt;
+
+&lt;p&gt;仕事的には、少し仕事が粗い部分があるので適度に丁寧にするのと、今年の仕事の経験を活かして、スピードアップして作業が進められたらいいなと思います。&lt;/p&gt;
+
+&lt;p&gt;あと、日曜の講師の仕事もありましたね。教えることは自分の勉強にもなるので、理解してもらえるように本チャンの仕事に支障がないように調整しながら、準備等進めて行きたいと思います。&lt;/p&gt;
+
+&lt;p&gt;あ、&lt;a href=&#34;https://github.com/gophersjp/go&#34; target=&#34;_blank&#34;&gt;golangの翻訳&lt;/a&gt;もそろそろ始めていきたいな。参加するだけして、何もしてなかったので。。。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:d52cc0ce3815b3f17a08403570dbe0a6&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;ぜんぜんまとまらないけど、とにかく今年もお世話になったみなさまありがとうございました。来年も引き続きよろしくお願いします。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WEB&#43;DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んだ。</title>
+      <link>/kwmt27.net/index.php/2014/09/11/read_webdbpress_about_webapi_design/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/09/11/read_webdbpress_about_webapi_design/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-225x300.jpg&#34; alt=&#34;WEB+DB PRESS Vol.82&#34; width=&#34;225&#34; height=&#34;300&#34; class=&#34;alignleft size-thumbnail wp-image-1288&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-225x300.jpg 225w, http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-768x1024.jpg 768w&#34; sizes=&#34;(max-width: 225px) 100vw, 225px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;WEB+DB PRESS Vol.82&lt;/a&gt;を買いました。Go言語が載ってるからという理由で買いましたが、「Web APIデザインの鉄則」という特集があって、おもしろそうなのでよんでみました。&lt;/p&gt;
+
+&lt;h2 id=&#34;第1章-web-apiの基礎知識:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第1章 Web APIの基礎知識&lt;/h2&gt;
+
+&lt;p&gt;この特集ではメッセージ形式をJSONとするRESTful APIの設計について書かれていますが、REST以外のスタイルにRPCなどもあるのに、なぜRESTful APIにするのかを、基礎から丁寧に書いてくれています。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、RESTfulなWeb APIをここでは、ROA(Resource Oriented Architecture)に沿って設計することと定義しています。&lt;/p&gt;
+
+&lt;h2 id=&#34;第2章-リソース設計:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第2章 リソース設計&lt;/h2&gt;
+
+&lt;p&gt;「Eメール送信を行うためのAPI」を題材としています。その題材を元に、リソースに含まれるフィールドをどのように定義するか、その定義をどうやって明文化するかが書かれています。おすすめは、&lt;a href=&#34;http://json-schema.org/&#34; target=&#34;_blank&#34;&gt;JSON Schema&lt;/a&gt;という手法を用いることだとそうです。JSON Schemaを使いながら、題材に必要なリソースを定義していっています。&lt;/p&gt;
+
+&lt;p&gt;語彙を決めるのには先人の知恵（&lt;a href=&#34;http://schema.org/Person&#34;&gt;schema.org&lt;/a&gt;や &lt;a href =&#34;http://www.opensearch.org/Specifications/OpenSearch/1.1&#34; target=&#34;_blank&#34;&gt;OpenSeacrh&lt;/a&gt;) などを参考にするとよいとのことです。&lt;/p&gt;
+
+&lt;h2 id=&#34;第3章-インターフェース設計:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第3章 インターフェース設計&lt;/h2&gt;
+
+&lt;p&gt;ここでは、エンドポイントURI・HTTPメソッド・クエリパラメータを定めていきます。第2章で作成したJSON Shemaによる定義に追加していきます。&lt;/p&gt;
+
+&lt;p&gt;「新しいリソースを作成するエンドポイント」や「すでに存在するリソースを削除するエンドポイント」のそれぞれに対して、どのような要件で作成するかが解説されています。「HTTPメソッドの選び方」も詳しく書いてあります。&lt;/p&gt;
+
+&lt;h2 id=&#34;第4章-エラー表現とドキュメント:7d0d31d6910888acfe6deb790b41df08&#34;&gt;第4章 エラー表現とドキュメント&lt;/h2&gt;
+
+&lt;p&gt;「エラーがなぜ起こったのか」「どのようにすればそれを解決できるか」を機械がわかるような仕組みにするために、エラー表現をどのように決めていくかについて説明されています。&lt;/p&gt;
+
+&lt;p&gt;また、文書だけでは説明できない部分は図を書いたりしますが、その図を作成する&lt;a href=&#34;http://plantuml.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;Plant UML&lt;/a&gt;というツールを紹介しています。&lt;/p&gt;
+
+&lt;h2 id=&#34;感想:7d0d31d6910888acfe6deb790b41df08&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;Web APIの設計について非常に勉強になりました。知らないツールなどもあったので、積極的につかっていきたいと思う。&lt;/p&gt;
+
+&lt;div class=&#34;amazlet-box&#34; style=&#34;margin-bottom:0px;&#34;&gt;
+  &lt;div class=&#34;amazlet-image&#34; style=&#34;float:left;margin:0px 12px 1px 0px;&#34;&gt;
+    &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/61gSqezYgPL._SL160_.jpg&#34; alt=&#34;WEB+DB PRESS Vol.82&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  
+
+&lt;p&gt;&lt;div class=&#34;amazlet-info&#34; style=&#34;line-height:120%; margin-bottom: 10px&#34;&gt;
+    &lt;div class=&#34;amazlet-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;
+      &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;WEB+DB PRESS Vol.82&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;div class=&amp;quot;amazlet-powered-date&amp;quot; style=&amp;quot;font-size:80%;margin-top:5px;line-height:120%&amp;quot;&amp;gt;
+    posted with &amp;lt;a href=&amp;quot;http://www.amazlet.com/&amp;quot; title=&amp;quot;amazlet&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;amazlet&amp;lt;/a&amp;gt; at 14.09.11
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-detail&amp;quot;&amp;gt;
+  山口 徹 Jxck 佐々木 大輔 横路 隆 加来 純一 山本 伶 大平 武志 米川 健一 坂本 登史文 若原 祥正 和久田 龍 平栗 遵宜 伊藤 直也 佐藤 太一 高橋 俊幸 海野 弘成 五嶋 壮晃 佐藤 歩 吉村 総一郎 橋本 翔 舘野 祐一 中島 聡 渡邊 恵太 はまちや2 竹原 河合 宜文 &amp;lt;br /&amp;gt;技術評論社 &amp;lt;br /&amp;gt;売り上げランキング: 663
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-sub-info&amp;quot; style=&amp;quot;float: left;&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;amazlet-link&amp;quot; style=&amp;quot;margin-top: 5px&amp;quot;&amp;gt;
+    &amp;lt;a href=&amp;quot;http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/&amp;quot; name=&amp;quot;amazletlink&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Amazon.co.jpで詳細を見る&amp;lt;/a&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;amazlet-footer&#34; style=&#34;clear: left&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SDカードスロットからはみ出さない専用形状のSDカード</title>
+      <link>/kwmt27.net/index.php/2014/05/27/sdcard-for-mac-book-air-pro/</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/05/27/sdcard-for-mac-book-air-pro/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;トランセンドジャパンが、｢MacBook Air/Pro｣シリーズのSDカードスロットからはみ出さない専用形状のSDカード「JetDrive Lite」シリーズの販売を開始した (引用元：&lt;a href=&#34;http://taisy0.com/2014/05/23/29800.html&#34;&gt;http://taisy0.com/2014/05/23/29800.html&lt;/a&gt; )&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とのことで、ちょうど、空き容量ないので、買ってみるか。ポチッ。&lt;/p&gt;
+
+&lt;div class=&#34;amazlet-box&#34; style=&#34;margin-bottom:0px;&#34;&gt;
+  &lt;div class=&#34;amazlet-image&#34; style=&#34;float:left;margin:0px 12px 1px 0px;&#34;&gt;
+    &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/B00K73NT0S/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/41ocZnObcgL._SL160_.jpg&#34; alt=&#34;Transcend Macbook Air専用 SDスロット対応拡張メモリーカード JetDrive Lite 130 128GB for Macbook Air 13&#34; (Late 2010 - Mid 2013) TS128GJDL130&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  
+
+&lt;p&gt;&lt;div class=&#34;amazlet-info&#34; style=&#34;line-height:120%; margin-bottom: 10px&#34;&gt;
+    &lt;div class=&#34;amazlet-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;
+      &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/B00K73NT0S/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;Transcend Macbook Air専用 SDスロット対応拡張メモリーカード JetDrive Lite 130 128GB for Macbook Air 13&amp;#8243; (Late 2010 &amp;#8211; Mid 2013) TS128GJDL130&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;div class=&amp;quot;amazlet-powered-date&amp;quot; style=&amp;quot;font-size:80%;margin-top:5px;line-height:120%&amp;quot;&amp;gt;
+    posted with &amp;lt;a href=&amp;quot;http://www.amazlet.com/&amp;quot; title=&amp;quot;amazlet&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;amazlet&amp;lt;/a&amp;gt; at 14.05.27
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-detail&amp;quot;&amp;gt;
+  トランセンド・ジャパン (2014-05-23)&amp;lt;br /&amp;gt;売り上げランキング: 503
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-sub-info&amp;quot; style=&amp;quot;float: left;&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;amazlet-link&amp;quot; style=&amp;quot;margin-top: 5px&amp;quot;&amp;gt;
+    &amp;lt;a href=&amp;quot;http://www.amazon.co.jp/exec/obidos/ASIN/B00K73NT0S/kwmt27-22/ref=nosim/&amp;quot; name=&amp;quot;amazletlink&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Amazon.co.jpで詳細を見る&amp;lt;/a&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;amazlet-footer&#34; style=&#34;clear: left&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;div class=&#34;amazlet-box&#34; style=&#34;margin-bottom:0px;&#34;&gt;
+  &lt;div class=&#34;amazlet-image&#34; style=&#34;float:left;margin:0px 12px 1px 0px;&#34;&gt;
+    &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/B00K73NSU4/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/41E1yf5NRNL._SL160_.jpg&#34; alt=&#34;Transcend Macbook Air専用 SDスロット対応拡張メモリーカード JetDrive Lite 130 64GB for Macbook Air 13&#34; (Late 2010 - Mid 2013) TS64GJDL130&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  
+
+&lt;p&gt;&lt;div class=&#34;amazlet-info&#34; style=&#34;line-height:120%; margin-bottom: 10px&#34;&gt;
+    &lt;div class=&#34;amazlet-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;
+      &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/B00K73NSU4/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;Transcend Macbook Air専用 SDスロット対応拡張メモリーカード JetDrive Lite 130 64GB for Macbook Air 13&amp;#8243; (Late 2010 &amp;#8211; Mid 2013) TS64GJDL130&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;div class=&amp;quot;amazlet-powered-date&amp;quot; style=&amp;quot;font-size:80%;margin-top:5px;line-height:120%&amp;quot;&amp;gt;
+    posted with &amp;lt;a href=&amp;quot;http://www.amazlet.com/&amp;quot; title=&amp;quot;amazlet&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;amazlet&amp;lt;/a&amp;gt; at 14.05.27
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-detail&amp;quot;&amp;gt;
+  トランセンド・ジャパン (2014-05-23)&amp;lt;br /&amp;gt;売り上げランキング: 1,144
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;quot;amazlet-sub-info&amp;quot; style=&amp;quot;float: left;&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;amazlet-link&amp;quot; style=&amp;quot;margin-top: 5px&amp;quot;&amp;gt;
+    &amp;lt;a href=&amp;quot;http://www.amazon.co.jp/exec/obidos/ASIN/B00K73NSU4/kwmt27-22/ref=nosim/&amp;quot; name=&amp;quot;amazletlink&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Amazon.co.jpで詳細を見る&amp;lt;/a&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;amazlet-footer&#34; style=&#34;clear: left&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2013年の振り返り</title>
+      <link>/kwmt27.net/index.php/2013/12/31/looking-back-2013/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/12/31/looking-back-2013/</guid>
+      <description>
+
+&lt;p&gt;そういえば、今まで振り返り記事を書いたことがなかったので、どう書いていいかわからないですが、ちょっと書いてみます。&lt;/p&gt;
+
+&lt;p&gt;今年もいろいろありました。特に退職したのが個人的には大きな出来事となり、非常に考えさせられる年になりました。&lt;/p&gt;
+
+&lt;h2 id=&#34;各月の起こったこと:d6918b496f438c144804b5ad45573073&#34;&gt;各月の起こったこと&lt;/h2&gt;
+
+&lt;p&gt;2月はデンソーのスマートテックアワードというAndroidアプリコンテンストに、Androidの会で知り合った3人で作って応募したり、4月は忘れらないStartupWeekend Osakaでの優勝とGoConの参加と、規模は超小さいですが、初めてのもくもく会主催もやりました。&lt;/p&gt;
+
+&lt;p&gt;5月は初めてNode.jsに触り、6月はGoConを神戸支部で報告させてもらったり、東京まで脱出ツアーにも出掛けました。あ、福岡のStartupWeekendにも参加して悔しい思いもしました。&lt;/p&gt;
+
+&lt;p&gt;リーンローンチパッドというリーンスタートアップの勉強会に参加したり、技術勉強会だけではなくて、経営的な勉強家にも初めて参加した年でした。&lt;/p&gt;
+
+&lt;p&gt;7月には会社を退職し、神戸から大阪に引っ越したのも今年です。7月以降は着物プロジェクトに没頭して、なかなか売り上げがあがらないことにスタートアップの難しさを感じました。&lt;/p&gt;
+
+&lt;h2 id=&#34;技術的には:d6918b496f438c144804b5ad45573073&#34;&gt;技術的には&lt;/h2&gt;
+
+&lt;p&gt;ブログの記事で言うと、今年は42件で、そのうちGo言語に関する記事が32件（76％）もの割合でGo言語記事が占めていました。ちなみに、2012年が25件中16件(64%)がGo言語の記事でした。今年はGoを使って仕事させてもらったので、よかったと思います。&lt;/p&gt;
+
+&lt;p&gt;ある程度Goがわかったつもりになったので、来年はスマートフォンアプリを作っていきたいと思っています。AndroidもiOSも頑張っていきたいですね。&lt;/p&gt;
+
+&lt;p&gt;というか、スマホアプリにこだわらず、人に役に立つ何かを作りたいです。それがハードが必要なハードを作ったりもしてみたいです。本日の報道で、&lt;a href=&#34;http://on-msn.com/1hRWtM6&#34; target=&#34;_blank&#34;&gt;グーグルとアウディが提携&lt;/a&gt;とのことで、今後ますます車とITが密接につながると予想されます。前職の車開発の経験・知識を活かして、そちらに集中するのも悪くないかもしれないと思っています。&lt;/p&gt;
+
+&lt;p&gt;アイデアはそう簡単に出てこないので、1日1個はアイデアを出すように心がけたいと思っています。それと、ブログですがｋ，今年初めて毎月1記事以上の記事を書けたので、継続して来年も最低1記事/月は書くようにしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;（あ、ブログも今年引っ越したんでした）&lt;/p&gt;
+
+&lt;p&gt;最近はデータ分析なんかにも興味があります。分析結果からどのようなことができるのかを考え、提案するってのをやっていきたいですね。まずは「入門ソーシャルデータ」を読破したいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめると:d6918b496f438c144804b5ad45573073&#34;&gt;まとめると&lt;/h2&gt;
+
+&lt;p&gt;がんばって生きたいです！さらに言うと、周りの人を幸せにしたいです！そうするためには、やるべきことがたくさんあります。1つ1つ着実にクリアしていきたいと思います。まずは仕事をするというところからでしょうか（笑）&lt;/p&gt;
+
+&lt;p&gt;今年お世話になった皆様、ご迷惑をおかけすると思いますが、来年もよろしくお願い致します。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ブログ引っ越しました。</title>
+      <link>/kwmt27.net/index.php/2013/03/16/%E3%83%96%E3%83%AD%E3%82%B0%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
+      <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/03/16/%E3%83%96%E3%83%AD%E3%82%B0%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2013/03/port_moody_heritage_house_move.jpg&#34; alt=&#34;Port Moody Heritage House Move&#34; width=&#34;800&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-84&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2013/03/port_moody_heritage_house_move-300x225.jpg 300w, http://kwmt27.net/wp-content/uploads/2013/03/port_moody_heritage_house_move-624x468.jpg 624w, http://kwmt27.net/wp-content/uploads/2013/03/port_moody_heritage_house_move.jpg 800w&#34; sizes=&#34;(max-width: 800px) 100vw, 800px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&#34;Androg&#34; href=&#34;http://androg.seesaa.net/&#34; target=&#34;_blank&#34;&gt;seesaaブログ&lt;/a&gt;から引越しました。画像がなかったり、一部表示されていないことがあるかもしれませんが、徐々に直していきます。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

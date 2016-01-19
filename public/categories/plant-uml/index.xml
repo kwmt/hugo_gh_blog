@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plant Uml on Androg</title>
+    <link>kwmt27.net/categories/plant-uml/</link>
+    <description>Recent content in Plant Uml on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 11 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/categories/plant-uml/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Intellij IDEAでPlant UMLを使えるようにする。</title>
+      <link>/kwmt27.net/index.php/2014/09/12/how_to_setup_plant_uml_in_intellij_idea/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/09/12/how_to_setup_plant_uml_in_intellij_idea/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:2f018e26ec21478fb3352fba8610c690&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2014/09/11/read_webdbpress_about_webapi_design/&#34; title=&#34;WEB+DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んだ。&#34;&gt;WEB+DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んで&lt;/a&gt;、&lt;a href=&#34;http://plantuml.sourceforge.net/index.html&#34; target=&#34;_blank&#34;&gt;Plant UML&lt;/a&gt;というツールを知ったのですが、さっそくIntellij IDEAで使えたらいいなぁと思って、使えるようになったので、その設定方法を書いておこうかと思います。といっても、プラグインをインストール＋αぐらいですが、、、&lt;/p&gt;
+
+&lt;h2 id=&#34;設定方法:2f018e26ec21478fb3352fba8610c690&#34;&gt;設定方法&lt;/h2&gt;
+
+&lt;p&gt;いつものIntellij IDEAにPluginをインストール画面(設定画面(⌘ + ,)-&amp;gt;Pluginを選択-&amp;gt;Browse repositoriesをクリック)から、&amp;#8221;plant&amp;#8221;で検索すると下記のような検索結果がでますが、「PlantUML integration」をインストールする。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-360x300.png&#34; alt=&#34;PlantUML integration Plugin選択画面&#34; width=&#34;360&#34; height=&#34;300&#34; class=&#34;aligncenter size-thumbnail wp-image-1294&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-360x300.png 360w, http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-1024x852.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-624x519.png 624w&#34; sizes=&#34;(max-width: 360px) 100vw, 360px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これだけで、とりあえず、test.pumlファイルを作ってみました（New -&amp;gt;UML State）。するとサンプルコードが書かれたファイルが作成されます。&lt;/p&gt;
+
+&lt;p&gt;コードがあるからには図も見たいなぁと思って、View -&amp;gt; Tool Windows -&amp;gt; PlantUMLを選択し、表示させようとしたところ、&amp;#8221;Dot Executable〜&amp;#8221;などとエラーが出てしまいました。&lt;/p&gt;
+
+&lt;p&gt;このエラーにも書かれていますが、&lt;a href=&#34;http://www.graphviz.org/&#34; target=&#34;_blank&#34;&gt;Graphviz(dot)&lt;/a&gt;というソフトが必要になりますので、それを&lt;a href=&#34;http://www.graphviz.org/Download..php&#34; target=&#34;_blank&#34;&gt;インストール&lt;/a&gt;します。&lt;/p&gt;
+
+&lt;p&gt;Intellij IDEAが起動している場合は再起動すると、図が表示されることが確認できると思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-407x300.png&#34; alt=&#34;PlantUML_Intellij&#34; width=&#34;407&#34; height=&#34;300&#34; class=&#34;aligncenter size-thumbnail wp-image-1296&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-407x300.png 407w, http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-1024x754.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-624x459.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-900x662.png 900w&#34; sizes=&#34;(max-width: 407px) 100vw, 407px&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:2f018e26ec21478fb3352fba8610c690&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://bit.ly/13K3Xwm&#34; title=&#34;Plant UML公式サイト&#34; target=&#34;_blank&#34;&gt;Plant UML公式サイト&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://yohshiy.blog.fc2.com/blog-entry-152.html#install&#34; target=&#34;_blank&#34;&gt;PlantUML の使い方 | プログラマーズ雑記帳&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

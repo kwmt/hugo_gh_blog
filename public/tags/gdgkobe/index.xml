@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gdgkobe on Androg</title>
+    <link>kwmt27.net/tags/gdgkobe/</link>
+    <description>Recent content in Gdgkobe on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 02 Jun 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/gdgkobe/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GoCon報告会で報告させて頂きました。</title>
+      <link>/kwmt27.net/index.php/2013/06/03/gocon/</link>
+      <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/06/03/gocon/</guid>
+      <description>
+
+&lt;h2 id=&#34;イベント:4d1d8ce9b8a427ece9b6f272e9a86cf4&#34;&gt;イベント&lt;/h2&gt;
+
+&lt;p&gt;渡米放浪記(Google IOなど) / GoCon報告会 / BigQuery Ideathon + Hackathon&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plus.google.com/u/0/events/cb7qvi8rjccej62i79l48mgdcfg&#34;&gt;https://plus.google.com/u/0/events/cb7qvi8rjccej62i79l48mgdcfg&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;報告資料:4d1d8ce9b8a427ece9b6f272e9a86cf4&#34;&gt;報告資料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1&#34;&gt;http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ブログにそのまま載せれるように文字多めで書きました。&lt;/p&gt;
+
+&lt;p&gt;私にとって人生で大きな出来事もこっそり書いてたりしてます。&lt;/p&gt;
+
+&lt;p&gt;みなさま今後ともよろしくお願い致します。&lt;/p&gt;
+
+&lt;p&gt;GoConに行った時のブログ書いていなかったので、ちょうどよかったです。&lt;/p&gt;
+
+&lt;h2 id=&#34;使用プレゼンツール:4d1d8ce9b8a427ece9b6f272e9a86cf4&#34;&gt;使用プレゼンツール&lt;/h2&gt;
+
+&lt;ul style=&#34;list-style:none&#34;&gt;
+  &lt;li&gt;
+    ツール：&lt;a href=&#34;https://code.google.com/p/go/source/browse/?repo=talks&#34;&gt;https://code.google.com/p/go/source/browse/?repo=talks&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    GoDoc：&lt;a href=&#34;https://godoc.org/golang.org/x/tools/cmd/present&#34;&gt;https://godoc.org/golang.org/x/tools/cmd/present&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    ↓↓&lt;a href=&#34;https://code.google.com/p/go/source/browse/present/moved.go?repo=talks&#34;&gt;移動したそうです(2014.5.15追記)&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    GoDoc：&lt;a href=&#34;http://godoc.org/code.google.com/p/go.tools/cmd/present&#34;&gt;http://godoc.org/code.google.com/p/go.tools/cmd/present&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

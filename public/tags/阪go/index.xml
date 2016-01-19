@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>阪go on Androg</title>
+    <link>kwmt27.net/tags/%E9%98%AAgo/</link>
+    <description>Recent content in 阪go on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 19 Nov 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/%E9%98%AAgo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>第1回大阪Go勉強会の課題をやってなかったので、いまさらながらやってみた。 #阪Go</title>
+      <link>/kwmt27.net/index.php/2013/11/19/hango-exercises/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/11/19/hango-exercises/</guid>
+      <description>
+
+&lt;p&gt;課題は、&lt;a href=&#34;https://github.com/todoa2c/hango/blob/master/vol01.md&#34;&gt;こちら&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;先生のコードとは少し違かったので、めもっとく。&lt;/p&gt;
+
+&lt;h2 id=&#34;fizzbuzz:b27d3339481c37c935bbbf5663b5e5b5&#34;&gt;FizzBuzz&lt;/h2&gt;
+
+&lt;p&gt;
+&lt;script src=&#34;//gist.github.com/7540879.js&#34;&gt;&lt;/script&gt;
+
+&lt;!--TODO: こんな感じにしたい--&gt;
+&lt;!--
+&lt;script src=&#34;//gist.github.com/kwmt/7540879#file-fizzbuzz.go.js&#34;&gt;&lt;/script&gt;
+--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;switch&lt;/code&gt;のあと何も書かなかったら、&lt;code&gt;true&lt;/code&gt;っての忘れてた。&lt;/p&gt;
+
+&lt;p&gt;最初、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;switch i {
+case i % 15 == 0:
+....
+}
+&lt;/pre&gt;
+
+&lt;p&gt;って書いてエラー出たので、あれ？ってなってた。&lt;/p&gt;
+
+&lt;h2 id=&#34;ワードカウント:b27d3339481c37c935bbbf5663b5e5b5&#34;&gt;ワードカウント&lt;/h2&gt;
+
+&lt;p&gt;課題のワードカウントは、解答例見ちゃって、&lt;code&gt;map&lt;/code&gt;の使い方でふむふむとおもった。&lt;/p&gt;
+
+&lt;h2 id=&#34;その日付は何日目:b27d3339481c37c935bbbf5663b5e5b5&#34;&gt;その日付は何日目？&lt;/h2&gt;
+
+&lt;!--TODO: こんな感じにしたい--&gt;
+
+&lt;!--
+&lt;script src=&#34;//gist.github.com/kwmt/7540879#file-dayofyear.go.js&#34;&gt;&lt;/script&gt;
+--&gt;
+
+&lt;p&gt;&lt;code&gt;time&lt;/code&gt;パッケージはうるう年も考えてあるからラク。testコードは書いてないけど、まぁいいか。&lt;/p&gt;
+
+&lt;h2 id=&#34;オライリーの総額計算:b27d3339481c37c935bbbf5663b5e5b5&#34;&gt;オライリーの総額計算&lt;/h2&gt;
+
+&lt;!--TODO: こんな感じにしたい--&gt;
+
+&lt;!--
+&lt;script src=&#34;//gist.github.com/kwmt/7540879#file-oreillybook.go.js&#34;&gt;&lt;/script&gt;
+--&gt;
+
+&lt;p&gt;goroutineとchannelを使ってやってみたけど、終了処理がなんか微妙な気がするので、もっといい方法あれば教えてください。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>第1回 #阪Go で GDG Kobeの活動内容を紹介してきました。</title>
+      <link>/kwmt27.net/index.php/2013/09/20/hango/</link>
+      <pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/09/20/hango/</guid>
+      <description>&lt;p&gt;というのを、GDG Kobeブログに投稿しました。（初投稿）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kobegdg.blogspot.jp/2013/09/hango.html&#34;&gt;GDG Kobeの活動内容の紹介 in 第1回 #阪Go&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

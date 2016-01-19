@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Androg</title>
+    <link>kwmt27.net/categories/docker/</link>
+    <description>Recent content in Docker on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 12 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dockerを導入した際の作業メモ</title>
+      <link>/kwmt27.net/index.php/2014/12/12/docker/</link>
+      <pubDate>Fri, 12 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/12/12/docker/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:63866d49e69bb608150d119d01b9a6ae&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;AWSで運用していたこのWordpressをさくらVPSに移行するにあたって、ついでに&lt;a href=&#34;https://www.docker.com/&#34; target=&#34;_blank&#34;&gt;Docker&lt;/a&gt;も勉強しようかなぁと思って、さくらVPSに&lt;a href=&#34;https://coreos.com/&#34; target=&#34;_blank&#34;&gt;CoreOS&lt;/a&gt;を載せて、Dockerでnginx + wordpressを動かすためにDockerについていろいろ調べたので、それのメモ。&lt;/p&gt;
+
+&lt;h2 id=&#34;dockerの基礎-学習:63866d49e69bb608150d119d01b9a6ae&#34;&gt;Dockerの基礎(学習)&lt;/h2&gt;
+
+&lt;p&gt;個人的にDockerについてはこちらがわかりやすかった記事&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nkbp.jp/1t790Tn&#34; target=&#34;_blank&#34;&gt;ITpro Report &amp;#8211; ［Docker解説］「コンテナ」単位でシステム構成を“固める”：ITpro &lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;hello-docker:63866d49e69bb608150d119d01b9a6ae&#34;&gt;Hello Docker&lt;/h3&gt;
+
+&lt;p&gt;Docker公式のHello world&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1w4IwmU&#34; target=&#34;_blank&#34;&gt;Dockerizing Applications &amp;#8211; Docker Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;docker run -d 
+&lt;/pre&gt;
+
+&lt;p&gt;の &lt;code&gt;-d&lt;/code&gt;はバックグラウンドで起動させるオプション&lt;/p&gt;
+
+&lt;h3 id=&#34;dockerfileリファレンス-fromとかrunとかの説明はココ:63866d49e69bb608150d119d01b9a6ae&#34;&gt;Dockerfileリファレンス FROMとかRUNとかの説明はココ&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.docker.com/reference/builder/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://docs.docker.com/reference/builder/&#34;&gt;http://docs.docker.com/reference/builder/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ベストプラクティス:63866d49e69bb608150d119d01b9a6ae&#34;&gt;ベストプラクティス&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1z27frW&#34; target=&#34;_blank&#34;&gt;Best practices for writing Dockerfiles &amp;#8211; Docker Documentation&lt;/a&gt;(英語)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1z27i7f&#34; target=&#34;_blank&#34;&gt;Best practices for writing Dockerfiles 日本語訳（仮） &amp;#8211; Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;作業:63866d49e69bb608150d119d01b9a6ae&#34;&gt;作業&lt;/h2&gt;
+
+&lt;h3 id=&#34;さくらvpsにcoreosをインストールするには:63866d49e69bb608150d119d01b9a6ae&#34;&gt;さくらVPSにCoreOSをインストールするには&lt;/h3&gt;
+
+&lt;p&gt;さくらVPSの管理コンソール画面が変わってたり、注意と書いてあるところはマジで注意しないといけなかったり、ネットワーク設定でens3をeth0にしないといけなかったりありましたが、ほぼ下記でインストールできました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://qiita.com/yujiod/items/dc154120c4df2e938111&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://qiita.com/yujiod/items/dc154120c4df2e938111&#34;&gt;http://qiita.com/yujiod/items/dc154120c4df2e938111&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;dockerのコンテナを起動するには-h2:63866d49e69bb608150d119d01b9a6ae&#34;&gt;Dockerのコンテナを起動するには&lt;/h2&gt;&lt;/h3&gt;
+
+&lt;p&gt;CoreOS(さくらVPS)にログインしてる状態で&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;docker run -it -v /home/core:/core -p 80:80 -p 22 --name=&#34;wordpress&#34;  -d -t oskarhane/docker-wordpress-nginx-ssh
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;dockerのコンテナの中に入るには:63866d49e69bb608150d119d01b9a6ae&#34;&gt;Dockerのコンテナの中に入るには&lt;/h3&gt;
+
+&lt;pre class=&#34;go&#34;&gt;docker exec -it wordpress bash
+&lt;/pre&gt;
+
+&lt;p&gt;参考:&lt;a href=&#34;http://bit.ly/1IyYhIa&#34; target=&#34;_blank&#34;&gt;コンテナに入りたい？それ docker exec でできるよ &amp;#8211; Qiita&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以下は、docker ver1.3以前に使用していた。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1sbiVns&#34; target=&#34;_blank&#34;&gt;起動中のDockerコンテナにnsenterで接続する &amp;#8211; PiyoPiyoDucky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1l2uqIT&#34; target=&#34;_blank&#34;&gt;Dockerコンテナに入るなら SSH より nsinit が良さそう &amp;#8211; Gosuke Miyashita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ホストとコンテナ間でファイルを共有するには:63866d49e69bb608150d119d01b9a6ae&#34;&gt;ホストとコンテナ間でファイルを共有するには&lt;/h3&gt;
+
+&lt;pre class=&#34;go&#34;&gt;docker -v &amp;lt;ホスト側&amp;gt;:&amp;lt;コンテナ側&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;参考:&lt;a href=&#34;http://bit.ly/1vDBvon&#34; target=&#34;_blank&#34;&gt;Docker 1.3の新機能を試してみる ｜ Developers.IO&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

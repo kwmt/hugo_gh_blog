@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Struct on Androg</title>
+    <link>kwmt27.net/tags/struct/</link>
+    <description>Recent content in Struct on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 12 Oct 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/struct/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>#golang mapからstructに変換するには？</title>
+      <link>/kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid>
+      <description>
+
+&lt;h2 id=&#34;reflect-pkgを使った方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;reflect pkgを使った方法&lt;/h2&gt;
+
+&lt;p&gt;最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;参考リンク&lt;/a&gt;）&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6938201.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34;&gt;http://play.golang.org/p/5Inl2jO7zL&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;encoding-json-pkgを使った方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;encoding/json pkgを使った方法&lt;/h2&gt;
+
+&lt;p&gt;ただちょっとこれだと扱いにくくて(MapToStructの中身を修正すれば扱いやすくなるかもしれないですが)、パフォーマンスを気にしなければ、mapを一旦JSONにして、そのJSONをstructにするという方法が扱いやすいということを教えてもらいました。&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6950666.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/Kd7TRoRG5w&#34;&gt;http://play.golang.org/p/Kd7TRoRG5w&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ライブラリmapstructureを使う方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;ライブラリmapstructureを使う方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mitchellh/mapstructure&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/mitchellh/mapstructure&#34;&gt;https://github.com/mitchellh/mapstructure&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mapstructure.Decode関数を使えばよさげ。&lt;/p&gt;
+
+&lt;h2 id=&#34;補足-mapから-map-string-interface-に変換する方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;補足：mapから map[string]interface{}に変換する方法&lt;/h2&gt;
+
+&lt;p&gt;最初は、MapToStructの第一引数にmap[string][]stringをそのまま渡してて、valueのところがスライスだったらだめなのかな？と思ってましたが、map[string]interface{}に変換すればいいだけってのを教えてもらって、次のような変換で解決しました。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;m := map[string][]string{
+    &#34;1&#34;:[]string{&#34;a&#34;,&#34;b&#34;},
+    &#34;2&#34;:[]string{&#34;C&#34;,&#34;d&#34;},
+}
+// convert map to a map[string]interface{}
+mi := make(map[string]interface{}, len(m))
+for k, v := range mm {
+    mi[k] = v
+}
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;補足-個人的なきっかけ:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;補足：個人的なきっかけ&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;var r *http.Request
+r.Form (= url.Values = map[string][]string)
+&lt;/pre&gt;
+
+&lt;p&gt;POSTリクエストがきた時のr.Formを構造体に一時的に格納したいのですが、格納先の構造体のフィールドがやたら多い場合、一個ずつ格納するのが面倒だなというのがきっかけでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/2PCtqxyirVE&#34; target=&#34;_blank&#34;&gt;how to convert map to struct &amp;#8211; Google グループ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;Ideone.com &amp;#8211; XWtlo &amp;#8211; Online Go Compiler &amp;#038; Debugging Tool&lt;/a&gt;（これはGo1以前のソースなのでそのままでは動かない）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1axEFRY&#34; target=&#34;_blank&#34;&gt;struct &amp;lt;-&amp;gt; map[string]interface{} conversion &amp;#8211; Google グループ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openid on Androg</title>
+    <link>kwmt27.net/tags/openid/</link>
+    <description>Recent content in Openid on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 01 May 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/openid/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>#golang OpenIDのライブラリ</title>
+      <link>/kwmt27.net/index.php/2013/05/01/openid/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/05/01/openid/</guid>
+      <description>
+
+&lt;h2 id=&#34;openidのライブラリ:0519e88248edbd39fb95b89e2865acd4&#34;&gt;OpenIDのライブラリ&lt;/h2&gt;
+
+&lt;p&gt;golangのOpenIDのライブラリありまっせというだけ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/yohcop/openid.go&#34;&gt;https://github.com/yohcop/openid.go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;別のライブラリもあるけど、上の方が&lt;a href=&#34;https://github.com/yohcop/openid.go/tree/master/src/openid_example&#34;&gt;sample&lt;/a&gt;{.broken_link}もあって楽チン！?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fduraffourg/go-openid&#34;&gt;https://github.com/fduraffourg/go-openid&lt;/a&gt;{.broken_link}&lt;/p&gt;
+
+&lt;p&gt;sampleは&lt;a href=&#34;http://thinkit.co.jp/article/815/1&#34;&gt;OpenIDの仕組み&lt;/a&gt;がわかれば簡単。だけど、OpenID発行サイトで認証されたユーザーのIDが返ってくるんだけど、そこからユーザー情報（メールアドレスとか）に変換する方法が不明。。GAEならすぐできそうなんだけど。。。&lt;/p&gt;
+
+&lt;h2 id=&#34;セキュリティの参考情報:0519e88248edbd39fb95b89e2865acd4&#34;&gt;セキュリティの参考情報&lt;/h2&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;OpenIDに仕掛けられやすい5つの攻撃&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&#34;http://thinkit.co.jp/article/835/1&#34;&gt;http://thinkit.co.jp/article/835/1&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;「FacebookやOpenIDでログイン」に複数の弱点――セキュリティ研究者が指摘&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&#34;http://www.computerworld.jp/topics/592/202071&#34;&gt;http://www.computerworld.jp/topics/592/202071&lt;/a&gt;{.broken_link}&lt;/dd&gt;
+&lt;/dl&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

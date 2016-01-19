@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dart on Androg</title>
+    <link>kwmt27.net/tags/dart/</link>
+    <description>Recent content in Dart on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 29 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/dart/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dart FLIGHT SCHOOL Kyoto に行ってきた</title>
+      <link>/kwmt27.net/index.php/2014/04/29/dart-flight-school-kyoto/</link>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/04/29/dart-flight-school-kyoto/</guid>
+      <description>
+
+&lt;p&gt;GoogleのDart開発チームからビデオで挨拶&lt;/p&gt;
+
+&lt;p&gt;Dartの基本的な文法を話してくれるスピーカーが雪の影響で遅れて、場つなぎの説明があって&lt;/p&gt;
+
+&lt;p&gt;会場の注意事項とかパフォーマンスの話しとか&lt;/p&gt;
+
+&lt;p&gt;型はあるけど、実行時に型情報を捨てている。&lt;/p&gt;
+
+&lt;h2 id=&#34;dartとは:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;Dartとは&lt;/h2&gt;
+
+&lt;p&gt;Googleが開発したプログラミング言語&lt;/p&gt;
+
+&lt;p&gt;JavaScriptに置き換わるブラウザ組み込みのスクリプト言語を目指して開発された&lt;/p&gt;
+
+&lt;h2 id=&#34;開発環境:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;開発環境&lt;/h2&gt;
+
+&lt;p&gt;DartEditor&lt;/p&gt;
+
+&lt;p&gt;EclipseベースのIDE&lt;/p&gt;
+
+&lt;p&gt;DartでHello World&lt;/p&gt;
+
+&lt;h2 id=&#34;dartの動作環境:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;Dartの動作環境&lt;/h2&gt;
+
+&lt;p&gt;・DartVM搭載のブラウザで直接動作&lt;/p&gt;
+
+&lt;p&gt;Dart1.1はJSより25％高速&lt;/p&gt;
+
+&lt;p&gt;・&amp;#8221;dart2js&amp;#8221;でJSに変換して動かす&lt;/p&gt;
+
+&lt;h2 id=&#34;dartの歴史:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;Dartの歴史&lt;/h2&gt;
+
+&lt;p&gt;2011年10月Dart発表(early preview)&lt;/p&gt;
+
+&lt;p&gt;2013年11月SDK1.0正式リリース&lt;/p&gt;
+
+&lt;p&gt;2014年2月 Dart FLIGHT SCHOOL&lt;/p&gt;
+
+&lt;p&gt;Jsはネストが深くなる→Callback Hell→Dartなら深くならない&lt;/p&gt;
+
+&lt;p&gt;参考：What&amp;#8217;s New in Dart :Youtube&lt;/p&gt;
+
+&lt;p&gt;ローカル変数&lt;/p&gt;
+
+&lt;p&gt;querySelector(xxxxx)&lt;/p&gt;
+
+&lt;p&gt;ServerSide Dart&lt;/p&gt;
+
+&lt;p&gt;サーバーもクライアントもDartで書ける&lt;/p&gt;
+
+&lt;p&gt;FlogCはdart2jsになる前のもの。&lt;/p&gt;
+
+&lt;p&gt;&amp;#8212;&amp;#8212;&lt;/p&gt;
+
+&lt;p&gt;前半：文法まわり&lt;/p&gt;
+
+&lt;p&gt;class Hug{ ←クラスが作れる&lt;/p&gt;
+
+&lt;p&gt;final num strength;&lt;/p&gt;
+
+&lt;p&gt;Hug(this.strength); ←コンストラクタ&lt;/p&gt;
+
+&lt;p&gt;Hug.bear(); strength =100;&lt;/p&gt;
+
+&lt;p&gt;Hug operator +(Hug(other){&lt;/p&gt;
+
+&lt;p&gt;return new Hug(strength +&lt;/p&gt;
+
+&lt;p&gt;JavascriptはJqueryとかCoffeeスクリプトとかいろんなものを入れてるから、クリーンじゃない。それを解決するために、Dartができた&lt;/p&gt;
+
+&lt;p&gt;Dartはthisはthis。javaの感覚で使ってよい&lt;/p&gt;
+
+&lt;p&gt;後半：ライブラリなど&lt;/p&gt;
+
+&lt;p&gt;Pub(package manager for Dart) &lt;a href=&#34;https://pub.dartlang.org&#34;&gt;https://pub.dartlang.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bootjack is a porting of Twitter Bootstrap 3.0.x in Dart.&lt;/p&gt;
+
+&lt;p&gt;DartEditorに統合されており、簡単に利用することができる(yamlに1行かくだけ）&lt;/p&gt;
+
+&lt;p&gt;New Fileは意外と賢い。入力したファイルタイプでひながたを作ってくれる。たとえば、a.htmlとかするとhtmlのひな形入りのファイルを作ってくれる&lt;/p&gt;
+
+&lt;h2 id=&#34;dart-html:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;dart:html&lt;/h2&gt;
+
+&lt;p&gt;DOM操作を行うためののライブラリ。&lt;/p&gt;
+
+&lt;p&gt;HTMLの要素を選択するquerySelectorやInputElementなどのHTMLの要素のクラスが含まれています。&lt;/p&gt;
+
+&lt;p&gt;UnkwownElementがなんなのか分からなかった。ドイツ語のページに行っちゃう(´・ω・`)&lt;/p&gt;
+
+&lt;p&gt;単一の要素の選択&lt;/p&gt;
+
+&lt;p&gt;ElementList querySelectorAll&lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;リストはリスト&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;イベントハンドラ&lt;/p&gt;
+
+&lt;p&gt;HTML要素のイベントハンドラはStreamで提供されます。&lt;/p&gt;
+
+&lt;p&gt;Streamとは、連続するデータを扱う枠組みです。dart:asyncのライブラリの紹介時に説明&lt;/p&gt;
+
+&lt;h2 id=&#34;dart-io:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;dart:io&lt;/h2&gt;
+
+&lt;p&gt;ファイル、ソケット、HTTP、プロセスなどをサポートするサーバーアプリケーション向けのライブラリ。&lt;/p&gt;
+
+&lt;p&gt;ブラウザベースでは動かない&lt;/p&gt;
+
+&lt;h2 id=&#34;dart-async:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;dart:async&lt;/h2&gt;
+
+&lt;p&gt;非同期処理を行うためのライブラリでFutureやStreamなどが含まれる。&lt;/p&gt;
+
+&lt;p&gt;Future:&lt;/p&gt;
+
+&lt;p&gt;将来返る値を受け取るためのオブジェクト。&lt;/p&gt;
+
+&lt;p&gt;多くのライブラリにおいてDartではCallbackではんく、Futureを利用する&lt;/p&gt;
+
+&lt;p&gt;FutureはCompleterがセット。&lt;/p&gt;
+
+&lt;p&gt;Stream:&lt;/p&gt;
+
+&lt;p&gt;連続するデータを受け取る箇所で利用される。&lt;/p&gt;
+
+&lt;p&gt;HTML要素のonClickはクリックイベントを連続する要素としてみてStreamとして提供されています。&lt;/p&gt;
+
+&lt;p&gt;Dartはコールバックを使うのではなくて、FutureとかStreamを使って非同期処理を行う。&lt;/p&gt;
+
+&lt;p&gt;Dartはシングルスレッドのモデル。&lt;/p&gt;
+
+&lt;p&gt;EventQueueの内容をEventLoopが順次実行していく。&lt;/p&gt;
+
+&lt;h2 id=&#34;isolate:d3e6849fc4b082b20187a221abdf3d4b&#34;&gt;Isolate&lt;/h2&gt;
+
+&lt;p&gt;デバッガやStackTraceで見かけるIsolateとはいったい何か？&lt;/p&gt;
+
+&lt;p&gt;→IsolateはDartの並行処理モデル&lt;/p&gt;
+
+&lt;p&gt;・スレッドに似た独立したワーカー&lt;/p&gt;
+
+&lt;p&gt;・Isolate間でメモリは一切共有しない&lt;/p&gt;
+
+&lt;p&gt;・ReceivePort,SentPortを利用して文字列のメッセージによる通信でIsolate間は連携を行う。&lt;/p&gt;
+
+&lt;p&gt;　常に値はコピーされて送信される。&lt;/p&gt;
+
+&lt;p&gt;メモリは共有しないため排他制御を行わなくてよい！&lt;/p&gt;
+
+&lt;p&gt;使い方&lt;/p&gt;
+
+&lt;p&gt;Isolate.spawn(entryPoint, receivePort.sendPort)&lt;/p&gt;
+
+&lt;p&gt;DartはDOM構築が終わった後にmain()が実行されることを保証している。&lt;/p&gt;
+
+&lt;p&gt;なので、jsみたいにDOM構築が終わったらという条件判断を入れる必要がない。&lt;/p&gt;
+
+&lt;p&gt;privateはライブラリ単位。&lt;/p&gt;
+
+&lt;p&gt;なので、おなじライブラリの中にあるクラスの中のprivateの値は、そのライブラリのクラスの外からアクセス可能&lt;/p&gt;
+
+&lt;p&gt;&amp;#8212;&amp;#8211;&lt;/p&gt;
+
+&lt;p&gt;Dartのコードラボ&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/h5QfGt&#34;&gt;http://goo.gl/h5QfGt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;AngularDartのコードラボ&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/HKVKuv&#34;&gt;http://goo.gl/HKVKuv&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

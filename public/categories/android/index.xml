@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Androg</title>
+    <link>kwmt27.net/categories/android/</link>
+    <description>Recent content in Android on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 23 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Google I/O報告会 2015 参加メモ #devfest</title>
+      <link>/kwmt27.net/index.php/2015/06/23/google-io-report-2015-memo-devfest/</link>
+      <pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2015/06/23/google-io-report-2015-memo-devfest/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/devfestjapan/&#34; target=&#34;_blank&#34;&gt;Google I/O報告会 2015(会場:サイバーエージェント(渋谷マークシティ13F)&lt;/a&gt;に行ってきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/devfestjapan/2015summer/agenda&#34; target=&#34;_blank&#34;&gt;アジェンダが公開されてた&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;全体の流れメモ:7594fce3acbf9ff470786da04bd10d27&#34;&gt;全体の流れメモ&lt;/h2&gt;
+
+&lt;h3 id=&#34;全体:7594fce3acbf9ff470786da04bd10d27&#34;&gt;全体&lt;/h3&gt;
+
+&lt;p&gt;DevFestの歴史&lt;/p&gt;
+
+&lt;p&gt;2各会場の紹介&lt;/p&gt;
+
+&lt;p&gt;Keynote Androidはぬいて説明&lt;/p&gt;
+
+&lt;p&gt;会場MosconeWest&lt;/p&gt;
+
+&lt;p&gt;派手さな感じで楽しかった&lt;/p&gt;
+
+&lt;p&gt;すっごい寒かった&lt;/p&gt;
+
+&lt;p&gt;8回目SF&lt;/p&gt;
+
+&lt;p&gt;セッション数がヘリ、コミュニケーション重要視&lt;/p&gt;
+
+&lt;p&gt;Androidの話題が多い、デザイン多い&lt;/p&gt;
+
+&lt;p&gt;クラウド少ない→別のイベントになるんじゃないかと予想&lt;/p&gt;
+
+&lt;p&gt;Lobby公園のような感じ&lt;/p&gt;
+
+&lt;p&gt;コミュニケーションできるような。充電ステーションでみんあが集まて会話が生まれる感じ&lt;/p&gt;
+
+&lt;p&gt;exiii $300&lt;/p&gt;
+
+&lt;p&gt;おみやげはメインでなく、コミュニケーションメイン&lt;/p&gt;
+
+&lt;p&gt;キーノートはいま使える現実的な物。&lt;/p&gt;
+
+&lt;p&gt;DESIGN to DE$IGN デザインはビジネス&lt;/p&gt;
+
+&lt;h3 id=&#34;android:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Android&lt;/h3&gt;
+
+&lt;p&gt;M developer previewの略？ｗ&lt;/p&gt;
+
+&lt;p&gt;指紋認証 Fingerprint&lt;/p&gt;
+
+&lt;p&gt;サンプルは github google&lt;/p&gt;
+
+&lt;p&gt;全データはデフォルトでバックアップされる&lt;/p&gt;
+
+&lt;p&gt;細かくも設定できる。&lt;/p&gt;
+
+&lt;p&gt;Doze&lt;/p&gt;
+
+&lt;p&gt;しばらくさわってない端末はdozeモード へ&lt;/p&gt;
+
+&lt;p&gt;App stanby&lt;/p&gt;
+
+&lt;p&gt;しばらくさわっていないアプリはidleモード&lt;/p&gt;
+
+&lt;p&gt;※しばらくはどれくらい？はわからない。&lt;/p&gt;
+
+&lt;p&gt;Icons in Notifications:Icon.createWidthBitmapで生成できる&lt;/p&gt;
+
+&lt;p&gt;Textの範囲指定&lt;/p&gt;
+
+&lt;p&gt;App Links&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Webページとアプリとの関係性を明確にする。&lt;/li&gt;
+&lt;li&gt;自分のアプリが優先的に。&lt;/li&gt;
+&lt;li&gt;Sylus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;フラッシュだけを使うことがカメラを使わずにできるようになった。&lt;/p&gt;
+
+&lt;p&gt;AlphaOptimaization&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;いままでよりもいい感じで透明Viewを使える&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;MIDIのAPI追加&lt;/p&gt;
+
+&lt;p&gt;ストレージ&lt;/p&gt;
+
+&lt;p&gt;ART:runtime stats&lt;/p&gt;
+
+&lt;p&gt;Ambient Mode&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;できるだCPU稼働率をゼロにするモード&lt;/li&gt;
+&lt;li&gt;manifest&lt;/li&gt;
+&lt;li&gt;WakerLockとWearable supportlibraryの２つが前提でsetAmibentEnabeledの一行だけ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;App Invite&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;紹介するときsetDeppLinkでインテント作って&lt;/li&gt;
+&lt;li&gt;紹介されたとき、リファラーがついてれればOK&lt;/li&gt;
+&lt;li&gt;マニフェストにintentfilterを追加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;App Indexing&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google検索で、アプリがあればアプリを紹介してくれる。&lt;/li&gt;
+&lt;li&gt;マニフェストに関係があるドメインを禁輸しておく。&lt;/li&gt;
+&lt;li&gt;すべての検索でひっかかてもうっとおしので、robot.txtに相当する機能がある。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Android Wear&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Maps API Watchで使える機能
+
+&lt;ul&gt;
+&lt;li&gt;モバイルと一緒onMapReadyとかFragmentManagerからmapを取得&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Materialデザイン&lt;/p&gt;
+
+&lt;p&gt;EmptyState&lt;/p&gt;
+
+&lt;p&gt;MaterialShowcase&lt;/p&gt;
+
+&lt;p&gt;各APIのFrameworkがCocoaPodsに対応&lt;/p&gt;
+
+&lt;p&gt;pod try&lt;/p&gt;
+
+&lt;h3 id=&#34;maps:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Maps&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Don&amp;#8217;t ping too much&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t ping on the minute&lt;/li&gt;
+&lt;li&gt;ランダムな秒数をおいてサーバーに問い合わせなさい&lt;/li&gt;
+&lt;li&gt;定期的な問い合わせだと、複数人からのアクセスで同時にサーバーアクセスが行くので重い&lt;/li&gt;
+&lt;li&gt;ランダムで他の人と合わないように問い合わせをするといいよ。&lt;/li&gt;
+&lt;li&gt;apikeyをアプリに入れないように。&lt;/li&gt;
+&lt;li&gt;サーバーを通してapiキーを取得してね。&lt;/li&gt;
+&lt;li&gt;iOSのGoogle Map SDK for iOS version1.10&lt;/li&gt;
+&lt;li&gt;Objc/Swift対応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;materialデザイン:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Materialデザイン&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;全てに適用　VRもTVもAutoも。&lt;/li&gt;
+&lt;li&gt;でざいん 統一感、使いやすい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ブランディング:7594fce3acbf9ff470786da04bd10d27&#34;&gt;ブランディング&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;自社のブランドにするには？Googleっぽくなく。→ペルソナを明らかに。必要なところに。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Too hot→無理にハンバーガメニューを使わなくていい&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ToolCold→ツールバーを大きめにうまく隠して&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;TooRight→モバイル、Webも前部に対応&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;東京会場でのセッション２つ:7594fce3acbf9ff470786da04bd10d27&#34;&gt;東京会場でのセッション２つ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Polymerのライブコーディング&lt;/li&gt;
+&lt;li&gt;Google鈴木さんからのマテリアルデザインに関する補足&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Polymerの話は別記事にする予定なので、以下は、マテリアルデザインについてのメモ。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FABは必ず必要ではない&lt;/li&gt;
+&lt;li&gt;カードViewを必ずしも使う必要がない。セカンダリアクションが期待されてしまうため、アクションが残念。&lt;/li&gt;
+&lt;li&gt;FABは右下に置かなくていい&lt;/li&gt;
+&lt;li&gt;アニメーションについて
+
+&lt;ul&gt;
+&lt;li&gt;早い段階でアニメーション設計を考えていたほうがいい。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;portlaitとlandscape&lt;/li&gt;
+&lt;li&gt;画面内で完結するようにするのもいい&lt;/li&gt;
+&lt;li&gt;Viewの階層は一番低いレイヤーから考えるとよい。FABが一番上。&lt;/li&gt;
+&lt;li&gt;色紙を使うといい　ペーパープロトタイピング&lt;/li&gt;
+&lt;li&gt;material design award&lt;/li&gt;
+&lt;li&gt;ガイドラインは絶対じゃない。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;マテリアルデザインってグーグルっぽくなるけど、どうしたらいいん？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;開発者が楽になったり、ユーザーが期待する動きに期待&lt;/li&gt;
+&lt;li&gt;Generalの選択肢とし、いいところどりでいいと思うby鈴木さん&lt;/li&gt;
+&lt;li&gt;色を変えること　とガイドラインを解釈して自分たちでガイドラインを作るといいんじゃないby安藤幸央さん&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;material-design-libraryの使い方:7594fce3acbf9ff470786da04bd10d27&#34;&gt;material design libraryの使い方&lt;/h2&gt;
+
+&lt;p&gt;Google 公式のAndroid Blogよりも下のほうがわかりやすいらしい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/ribot-labs/exploring-the-new-android-design-support-library-b7cda56d2c32&#34;&gt;Exploring the new Android Design Support Library — ribot labs — Medium&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみにGoogleもMediumを使い始めているらしい&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/google-developers&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://medium.com/google-developers&#34;&gt;https://medium.com/google-developers&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;いちばん印象的だったこと:7594fce3acbf9ff470786da04bd10d27&#34;&gt;いちばん印象的だったこと&lt;/h2&gt;
+
+&lt;p&gt;やはり、この質問がいちばん記憶にあるし、大事なことだとおもう。&lt;/p&gt;
+
+&lt;p&gt;Q「マテリアルデザインを使うとGoogleっぽくなるのでは？」&lt;/p&gt;
+
+&lt;p&gt;A.ガイドラインはガイドラインであって必ずそうしなければならないということはない。&lt;/p&gt;
+
+&lt;p&gt;Googleは&lt;a href=&#34;http://android-developers.blogspot.jp/2015/05/announcing-material-design-showcase-and.html&#34; target=&#34;_blank&#34;&gt;Announcing the Material Design Showcase and Awards | Android Developers Blog&lt;/a&gt;を実施したが、必ずガイドラインに沿わなければならないということはないということを示したかったため実施したとのこと。&lt;/p&gt;
+
+&lt;p&gt;特に&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.ideashower.readitlater.pro&#34; target=&#34;_blank&#34;&gt;Pocket Androidアプリ&lt;/a&gt;, &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.tumblr&#34; title=&#34;Tumbler Androidアプリ&#34; target=&#34;_blank&#34;&gt;Tumbler Androidアプリ&lt;/a&gt;のアプリを見ればわかるとのこと。&lt;/p&gt;
+
+&lt;p&gt;Tumbler使用者からすると、FAB(Floating Action Button)が出てくるまでマテリアルデザインだと気づかなかったという。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/design/icons/&#34;&gt;Material icons &amp;#8211; Google Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.fastcodesign.com/3046512/how-google-finally-got-design&#34;&gt;How Google Finally Got Design | Co.Design | business + design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.materialup.com/&#34;&gt;Slack Concept for Android – Mobile app by Nik&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;twitterの-devfest:7594fce3acbf9ff470786da04bd10d27&#34;&gt;Twitterの#devfest&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/hashtag/devfest?src=hash&amp;vertical=default&amp;f=tweets&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/devfest?src=hash&amp;amp;vertical=default&amp;amp;f=tweets&#34;&gt;https://twitter.com/hashtag/devfest?src=hash&amp;amp;vertical=default&amp;amp;f=tweets&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android Studioを1.0にバージョンアップしたら、Gradle DSL method not found: &amp;#8216;runProguard()&amp;#8217;って怒られた場合</title>
+      <link>/kwmt27.net/index.php/2014/12/09/android-studio-1-0-gradle-dsl-method-not-found-runproguard/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/12/09/android-studio-1-0-gradle-dsl-method-not-found-runproguard/</guid>
+      <description>&lt;p&gt;Android Studioがついに1.0になりましたね。ということで&lt;a href=&#34;http://bit.ly/1ueoqlV&#34; target=&#34;_blank&#34;&gt;ダウンロード&lt;/a&gt;して、起動したらgradleのバージョンを1.0.0にしろとかいろいろ怒られたんですが、そこらへんは自動で修正してくれたのに、下記のエラーは自動で修正してくれませんでしたのでメモ。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Error:(32, 0) Gradle DSL method not found: &#39;runProguard()&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;対応は&lt;code&gt;runProguard&lt;/code&gt;を&lt;code&gt;minifyEnabled&lt;/code&gt;に変更します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;diff --git a/app/build.gradle b/app/build.gradle
+index 351288d..08b53f8 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -29,7 +29,7 @@ android {
+-            runProguard false
++            minifyEnabled false
+             proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+         }
+     }
+&lt;/pre&gt;
+
+&lt;p&gt;詳しくは、&lt;a href=&#34;http://bit.ly/1ueoeD6&#34; target=&#34;_blank&#34;&gt;Migrating Gradle Projects to version 1.0.0 &amp;#8211; Android Tools Project Site&lt;/a&gt; に記載してあります。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>android wear appのインストール時の注意点</title>
+      <link>/kwmt27.net/index.php/2014/11/19/notice_when_install_android_wearable_apps/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/11/19/notice_when_install_android_wearable_apps/</guid>
+      <description>
+
+&lt;p&gt;開発時（といいますか、デバッグキーを使ってビルドしている時）は、携帯端末とWearable端末に別々にインストールしないと、携帯端末だけにインストールしても自動的にWearable端末にインストールされません。&lt;/p&gt;
+
+&lt;p&gt;リリースキーを使って署名している場合は、自動的にインストールされます。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:3e31c56e68adfbff999614b6e2ca60cf&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.android.com/training/wearables/apps/creating.html#Install&#34; target=&#34;_blank&#34;&gt;Install the Wearable App&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TwitterのFabric SDKをAndroid Studioで使ってみる</title>
+      <link>/kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</link>
+      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:b0282adda1b6c326f04989549de27210&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;ひさびさTwitterをつかってアプリつくろうと思って&lt;a href=&#34;https://dev.twitter.com/&#34; target=&#34;_blank&#34;&gt;ディベロッパーサイト&lt;/a&gt;に行ったら、fabric?????とか出てきてなんじゃこれ？と思って調べてたら、10/22(現地時間)に発表されたTwitterのモバイル向け新SDKとやららしい。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1CYl4HO&#34; target=&#34;_blank&#34;&gt;Twitter、モバイルアプリ向け新SDK「Fabric」発表　パスワード不要の次世代認証「Digits」リリース &amp;#8211; ITmedia ニュース&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;まぁ英語でもいいんだけど、日本語の情報ないかなぁと探してみたけど、全然ない(´・ω・`)&lt;/p&gt;
+
+&lt;p&gt;ということで、Android StudioでFabric SDKのセットアップしてから、ツイートできるようになるまでを書いてみようと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;android版fabricの公式サイト:b0282adda1b6c326f04989549de27210&#34;&gt;Android版Fabricの公式サイト&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34;&gt;https://dev.twitter.com/twitter-kit/android&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;確認したバージョン:b0282adda1b6c326f04989549de27210&#34;&gt;確認したバージョン&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Android Studio：0.9.2
+Fabric SDK：1.0.1
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;アプリの登録:b0282adda1b6c326f04989549de27210&#34;&gt;アプリの登録&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://apps.twitter.com/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://apps.twitter.com/&#34;&gt;https://apps.twitter.com/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これは普通に登録するだけ（今までどおり）&lt;/p&gt;
+
+&lt;h2 id=&#34;fabric-sdkのセットアップ:b0282adda1b6c326f04989549de27210&#34;&gt;Fabric SDKのセットアップ&lt;/h2&gt;
+
+&lt;p&gt;IDEプラグインをダウンロードすることもできるみたいだが、Gradleを使っているなら、build.gradleに書くだけで済ませたい。&lt;/p&gt;
+
+&lt;p&gt;基本的には下記を参考にすればよいと思うのですが、早速build.gradleの設定ではまった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34;&gt;https://dev.twitter.com/twitter-kit/android/integrate&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記書いてあるとおりに記述してもsyncに失敗するので、Fabric SDKを使うには下記のように設定すればsyncは通っていけたっぽい。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;--- a/build.gradle
++++ b/build.gradle
+@@ -3,17 +3,21 @@
+ buildscript {
+     repositories {
+         jcenter()
++        maven { url &#39;https://maven.fabric.io/repo&#39; }
+     }
+     dependencies {
+         classpath &#39;com.android.tools.build:gradle:0.12.+&#39;
++        classpath &#39;io.fabric.tools:gradle:1.+&#39;
+     }
+ }
+ 
+ allprojects {
++    apply plugin: &#39;io.fabric&#39;
+     repositories {
+         jcenter()
++        maven { url &#39;https://maven.fabric.io/repo&#39; }
+     }
+ }
+&lt;/pre&gt;
+
+&lt;pre class=&#34;go&#34;&gt;--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -23,5 +37,7 @@ dependencies {
+     compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+     compile &#39;com.google.android.gms:play-services:6.1.71&#39;
+     compile &#39;com.android.support:support-v4:21.+&#39;
++    compile(&#39;com.twitter.sdk.android:twitter:1.0.0@aar&#39;) {
++        transitive = true;
++    }
+ }
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;api-keyとapi-secretを追加する:b0282adda1b6c326f04989549de27210&#34;&gt;API KEYとAPI Secretを追加する&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34;&gt;https://dev.twitter.com/twitter-kit/android/integrate&lt;/a&gt;&lt;/a&gt; に「Add API Key and Build Secret」があるが、&lt;project&gt;/app/crashlytics.properties にAPI KEYとAPI Secretを書きます。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;twitterConsumerSecret=&amp;lt;YOUR SECRET&amp;gt;
+twitterConsumerKey=&amp;lt;YOUR KEY&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;crashlytics.propertiesに書いたKEYとSECRETの使い方に関しては、下記のリポジトリのbuild.gradleが参考になった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/twitterdev/cannonball-android/blob/master/app/build.gradle&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/twitterdev/cannonball-android/blob/master/app/build.gradle&#34;&gt;https://github.com/twitterdev/cannonball-android/blob/master/app/build.gradle&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;僕が書いたのは下記です。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -1,5 +1,13 @@ apply plugin: &#39;com.android.application&#39;
+ 
++Properties props = new Properties()
++try {
++    props.load(file(&#39;./crashlytics.properties&#39;).newDataInputStream())
++} catch (Exception ex) {
++    throw new GradleException(&#34;Missing crashlytics.properties, check the crashlytics.properties file.&#34;);
++}
++
++
+ android {
+     compileSdkVersion 21
+     buildToolsVersion &#34;20.0.0&#34;
+@@ -12,7 +20,13 @@ android {
+         versionName &#34;1.0&#34;
+     }
+     buildTypes {
++        debug {
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_KEY&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerKey&#34;)}\&#34;&#34;
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_SECRET&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerSecret&#34;)}\&#34;&#34;
++        }
+         release {
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_KEY&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerKey&#34;)}\&#34;&#34;
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_SECRET&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerSecret&#34;)}\&#34;&#34;
+             runProguard false
+             proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+         }
+
+&lt;/pre&gt;
+
+&lt;p&gt;これは、buildConfigFieldを使っていて、アプリ内でBuildConfigを使ってKEYとSECRETを使えるようにしています。&lt;/p&gt;
+
+&lt;p&gt;次のように、ApplicationクラスのサブクラスでAPI KEYとSECRETを使ってFabric SDKの初期化します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;public class App extends Application{
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(BuildConfig.CONSUMER_KEY, BuildConfig.CONSUMER_SECRET);
+        Fabric.with(this, new TwitterCore(authConfig));
+    }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;※AndroidManifest.xmlに&lt;code&gt;android:name=&amp;quot;.App&amp;quot;&lt;/code&gt;を追加することを忘れないこと。&lt;/p&gt;
+
+&lt;h2 id=&#34;twitterでログインする:b0282adda1b6c326f04989549de27210&#34;&gt;Twitterでログインする&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/twitter-login&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/twitter-login&#34;&gt;https://dev.twitter.com/twitter-kit/android/twitter-login&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ログイン画面を作成します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;&amp;lt;com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id=&#34;@+id/login_button&#34;
+        android:layout_width=&#34;wrap_content&#34;
+        android:layout_height=&#34;wrap_content&#34; /&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;プレビューは「SIGN IN WITH TWITTER」と英語表記ですが、日本語設定の端末で確認すると「Twitterでログイン」と日本語になっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/11/sign_in_with_twitter-168x300.png&#34; alt=&#34;sign_in_with_twitter&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;aligncenter size-thumbnail wp-image-1356&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Activityの方は公式サイトどおりでいけます。&lt;/p&gt;
+
+&lt;p&gt;ログイン成功後の&lt;code&gt;TwitterSession&lt;/code&gt;を受け取る事ができるのですが、&lt;code&gt;result.data&lt;/code&gt;で取得できます。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;mTwitterLoginButton = (TwitterLoginButton) findViewById(R.id.login_button);
+mTwitterLoginButton.setCallback(new Callback&amp;lt;TwitterSession&gt;() {
+    @Override
+        public void success(Result&amp;lt;TwitterSession&gt; result) {
+        mTwitterSession = result.data;
+    }
+}   
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;twitterのrest-apiを使う:b0282adda1b6c326f04989549de27210&#34;&gt;TwitterのREST APIを使う&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/api&#34;&gt;https://dev.twitter.com/twitter-kit/android/api&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;公式サイトの例は、１つのツイートを取得しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid&#34;&gt;https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;僕はツイートしたかったので、こんな感じになりました。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;/**
+ * ツイートする。
+ * @param message ツイートする内容
+ * @see https://dev.twitter.com/rest/reference/post/statuses/update
+ */
+private void tweet(String message) {
+    TwitterApiClient twitterApiClient = TwitterCore.getInstance().getApiClient();
+    StatusesService statusesService = twitterApiClient.getStatusesService();
+
+    statusesService.update(message, null, false, null, null, null, false, null, new Callback&amp;lt;Tweet&gt;() {
+        @Override
+        public void success(Result&amp;lt;Tweet&gt; result) {
+            mHandler.post(new Runnable() {
+                public void run() {
+                    Toast.makeText(self, &#34;ツイートしました。&#34;, Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+        public void failure(TwitterException exception) {
+            mHandler.post(new Runnable() {
+                public void run() {
+                    Toast.makeText(self, &#34;ツイートに失敗しました。&#34;, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
+    });
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;StatusesService#update&lt;/code&gt;の引数の順番は、REST APIドキュメントの順番どおりです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/post/statuses/update&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/post/statuses/update&#34;&gt;https://dev.twitter.com/rest/reference/post/statuses/update&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この&lt;code&gt;tweet&lt;/code&gt;メソッドを呼びたいタイミングで呼べばツイートできます。&lt;/p&gt;
+
+&lt;h2 id=&#34;おわりに:b0282adda1b6c326f04989549de27210&#34;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;以上で、Fabric SDKのセットアップからツイートまでを書きましたが、&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/tweetui&#34; target=&#34;_blank&#34;&gt;TweetUi Kit&lt;/a&gt;や &lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/compose&#34; target=&#34;_blank&#34;&gt;TweetComposer Kit&lt;/a&gt;なるものがあったり、電話番号を使ってサインインする&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/digits&#34; target=&#34;_blank&#34;&gt;Digits&lt;/a&gt;なるものがあるみたいですね。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android StudiodでgreenDaoを使う</title>
+      <link>/kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:c037d87e89bf2c7318095970bf4dad30&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;AndroidのORMライブラリについて調べてみてまして、ORMLite、Active Android、greenDaoが有名のようです。&lt;/p&gt;
+
+&lt;p&gt;ORMLite、Active Androidは、アノテーションを使っていて、greenDaoは使っていません。&lt;/p&gt;
+
+&lt;p&gt;アノテーションはリフレクションに依存しているため、特にAndroidデバイスにおいては、パフォーマンスに影響出ますので、greenDaoを使おうかと思います。(&lt;a href=&#34;#sanko&#34;&gt;参考1&lt;/a&gt;などをみますと、パフォーマンスにクリティカルに影響があるアプリでなければどれつかっても良さそうですが・・・）&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方としては:c037d87e89bf2c7318095970bf4dad30&#34;&gt;使い方としては、&lt;/h2&gt;
+
+&lt;p&gt;２ステップ必要で、１ステップ目は、モデル定義しgreendao-generatorでコードを自動生成します。(普通のjava)&lt;/p&gt;
+
+&lt;p&gt;２ステップ目として、自動生成したコードをAndroidに組み込みます。&lt;/p&gt;
+
+&lt;p&gt;それで、自動生成するために新規にjavaプロジェクトを作る必要があると書いてある参考サイトが多くて、確かにそれでもいいのですが、別プロジェクトを作るのが面倒くさいし、プロジェクトが別なので管理がバラバラになりそうなので、なんとかしてのプロジェクトで出来ないか調べていた所、ちょ～分かりやすく書いて下さっていたサイトがありましたので、リンク張らせて頂きます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1yf9A5G&#34; target=&#34;_blank&#34;&gt;Android Studioでgradle taskを使ってgreenDaoのDao生成を行う &amp;#8211; きょこみのーと&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほとんど上記で、Android Studioのバージョンが0.8時に、リポジトリがmavenCentral()からjcenter()に変更になったことと、自動生成の出力先(上記のサイトではdaoOutputDirPath)に注意することぐらいでしょうか。&lt;/p&gt;
+
+&lt;p&gt;あとは、ココらへんを見たりしてgreenDaoの使い方を確認すると良いと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/YRdS3A&#34; target=&#34;_blank&#34;&gt;Documentation | greenDAO – Android ORM for SQLite&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:c037d87e89bf2c7318095970bf4dad30&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;li id=&#34;sanko&#34;&gt;
+  &lt;a href=&#34;http://bit.ly/1wBwKBn&#34; target=&#34;_blank&#34;&gt;Androidで使えるOR Mapper: ORMLite « LINE Engineers&amp;#8217; Blog&lt;/a&gt;
+&lt;/li&gt;
+  1. &lt;a href=&#34;http://bit.ly/Xzc3r0&#34; target=&#34;_blank&#34;&gt;Non-technical FAQ | greenDAO – Android ORM for SQLite&lt;/a&gt;
+  2. &lt;a href=&#34;http://bit.ly/XzcGki&#34; target=&#34;_blank&#34;&gt;ormlite &amp;#8211; Green DAO vs ORM lite vs Active Android &amp;#8211; Stack Overflow&lt;/a&gt;
+  3. &lt;a href=&#34;http://bit.ly/YRe8zz&#34; target=&#34;_blank&#34;&gt;[Android Tips] ActiveAndroid を使って ActiveRecord ライクに SQLite を操作する ｜ Developers.IO&lt;/a&gt;
+      * &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4798040029/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;Androidオープンソースライブラリ徹底活用(書籍)&lt;/a&gt;&lt;/ol&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2つのアクティビティ間のアニメーションに3Dトランジションを適用する</title>
+      <link>/kwmt27.net/index.php/2014/07/16/2%E3%81%A4%E3%81%AE%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%93%E3%83%86%E3%82%A3%E9%96%93%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB3d%E3%83%88%E3%83%A9/</link>
+      <pubDate>Wed, 16 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/07/16/2%E3%81%A4%E3%81%AE%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%93%E3%83%86%E3%82%A3%E9%96%93%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB3d%E3%83%88%E3%83%A9/</guid>
+      <description>&lt;p&gt;下記が大いに参考になるが、めちゃめちゃ重い。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1mgh78z&#34;&gt;animation &amp;#8211; How to apply 3d transition between two activities in android? &amp;#8211; Stack Overflow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>【Android】【WebView】Cookieの有効期限が切れた場合にどうなるか確認する</title>
+      <link>/kwmt27.net/index.php/2014/07/16/check-cookie-if-expire/</link>
+      <pubDate>Wed, 16 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/07/16/check-cookie-if-expire/</guid>
+      <description>&lt;pre class=&#34;go&#34;&gt;CookieSyncManager.createInstance(context);
+
+// &#39;Set-Cookie&#39; HTTP response headerのフォーマットに合わせる
+SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&#34;EEE, d-MMM-yyyy HH:mm:ss z&#34;, Locale.UK);
+
+TimeZone gmt = TimeZone.getTimeZone(&#34;GMT&#34;);
+simpleDateFormat.setTimeZone(gmt);
+Calendar calendar = Calendar.getInstance();
+calendar.setTimeZone(gmt);
+
+// すぐ確認できる時間を設定(ここでは5秒)
+int afterFiveSeconds = calendar.get(Calendar.SECOND) + 5;
+calendar.set(Calendar.SECOND, afterFiveSeconds);
+
+// 有効期限の書式を作成して、
+String expire = &#34;expires=&#34; + simpleDateFormat.format(calendar.getTime()) + &#34;;&#34;;
+
+// 上で作った有効期限を含めたクッキーを保存して、
+CookieManager.getInstance().setCookie(&amp;lt;URL&amp;gt;, &amp;lt;&#39;Set-Cookie&#39; HTTP response headerのフォーマット&amp;gt;);
+
+//6秒ぐらい待って、
+Thread.sleep(6000); 
+
+// クッキーが削除されているか確認
+Log.d(TAG,CookieManager.getInstace().getCookie(&amp;lt;クッキーを保存したURL&amp;gt;));
+
+&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Androidプロジェクトを新規作成してVolleyが使えるようになるまで</title>
+      <link>/kwmt27.net/index.php/2014/07/10/how-to-use-volley-library/</link>
+      <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/07/10/how-to-use-volley-library/</guid>
+      <description>
+
+&lt;p&gt;サンプルプロジェクトは、&lt;a href=&#34;https://github.com/kwmt/volleysample&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;におきました。&lt;/p&gt;
+
+&lt;h2 id=&#34;androidプロジェクトを新規作成する:76e3898ab09f841248548e63f72fd0b4&#34;&gt;Androidプロジェクトを新規作成する&lt;/h2&gt;
+
+&lt;p&gt;Android StudioでNew Projectを作成する (例プロジェクト名：VolleySample)&lt;/p&gt;
+
+&lt;h2 id=&#34;volleyプロジェクトを追加する:76e3898ab09f841248548e63f72fd0b4&#34;&gt;volleyプロジェクトを追加する&lt;/h2&gt;
+
+&lt;p&gt;volleyプロジェクトを作成したAndroidプロジェクトにsubmoduleとして追加・設定する&lt;/p&gt;
+
+&lt;p&gt;1.作成したプロジェクトに移動してgit init
+&lt;pre class=&#34;go&#34;&gt;$ cd VolleySample
+$ git init
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;2.必要なら.gitignoreに追加してコミット
+  3.volleyプロジェクトを追加する&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ git submodule add https://android.googlesource.com/platform/frameworks/volley modules/volley
+&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;VolleySample/modules/volley にcloneされる&lt;/li&gt;
+&lt;li&gt;.gitmudulesに自動的に追加される&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ git diff --cached
+--- /dev/null
++++ b/.gitmodules
+@@ -0,0 +1,3 @@
++[submodule &#34;modules/volley&#34;]
++       path = modules/volley
++       url = https://android.googlesource.com/platform/frameworks/volley
+
+--- /dev/null
++++ b/volley
+@@ -0,0 +1 @@
++Subproject commit 0e406xxxxxxxx
+&lt;/pre&gt;
+
+&lt;p&gt;4.setting.gradleに、volleyプロジェクト追加した時のパスを追加する
+&lt;pre class=&#34;go&#34;&gt;$ git diff
+&amp;mdash; a/settings.gradle
++++ b/settings.gradle
+@@ -1 +1 @@
+-include &amp;lsquo;:app&amp;rsquo;
++include &amp;lsquo;:app&amp;rsquo;,&amp;rsquo;:modules:volley&amp;rsquo;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;5.volleyを使いたいプロジェクトにvolleyの依存設定を追加
+&lt;pre class=&#34;go&#34;&gt;$ git diff
+&amp;mdash; a/app/build.gradle
++++ b/app/build.gradle
+@@ -21,4 +21,5 @@ android {
+ dependencies {
+     compile fileTree(dir: &amp;lsquo;libs&amp;rsquo;, include: [&amp;rsquo;*.jar&amp;rsquo;])
++    compile project(&amp;rsquo;:modules:volley&amp;rsquo;)
+ }
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;6.以下はvolleyがアップデートされるまでに必要な対応&lt;/p&gt;
+
+&lt;p&gt;volleyの SDK build tools revisionを19.1.0に修正する&lt;/p&gt;
+
+&lt;p&gt;本来は上記の依存設定まででいいはずだが、それだけだと下記のエラーが出るので仕方がなさそう&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Error:The SDK Build Tools revision (19.0.0) is too low for project &#39;:modules:volley&#39;. Minimum required is 19.1.0
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;volleyを使ってみる:76e3898ab09f841248548e63f72fd0b4&#34;&gt;Volleyを使ってみる&lt;/h2&gt;
+
+&lt;p&gt;この記事 &lt;a href=&#34;http://bit.ly/1n8SAca&#34; target=&#34;_blank&#34;&gt;Android working with Volley Library&lt;/a&gt; を参考にvolleyを使ってみます。&lt;/p&gt;
+
+&lt;p&gt;この記事は簡単に言うと、Applicationを継承したシングルトンクラスを使うといい感じに使えるよって感じです。&lt;/p&gt;
+
+&lt;h3 id=&#34;まずapplicationを継承したappcontrollerを作成します:76e3898ab09f841248548e63f72fd0b4&#34;&gt;まずApplicationを継承したAppControllerを作成します&lt;/h3&gt;
+
+
+&lt;script src=&#34;//gist.github.com/5bb307d224a5d7324890.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;ここでは画像は扱っていません。&lt;/p&gt;
+
+&lt;h3 id=&#34;androidmanifest-xmlに追記:76e3898ab09f841248548e63f72fd0b4&#34;&gt;AndroidManifest.xmlに追記&lt;/h3&gt;
+
+&lt;p&gt;アプリが起動すると自動的に起動させるように、AndroidManifest.xmlにシングルトンクラスを追記します。あと、ネットワークを使用しますので、INTERNET権限を追加します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ git diff
+--- a/app/src/main/AndroidManifest.xml
++++ b/app/src/main/AndroidManifest.xml
+@@ -2,7 +2,9 @@
+ &amp;lt;manifest xmlns:android=&#34;http://schemas.android.com/apk/res/android&#34;
+     package=&#34;net.kwmt27.volleysample&#34; &amp;gt;
+ 
++    &amp;lt;uses-permission android:name=&#34;android.permission.INTERNET&#34; /&amp;gt;
+     &amp;lt;application
++        android:name=&#34;net.kwmt27.volleysample.app.AppController&#34;
+         android:allowBackup=&#34;true&#34;
+         android:icon=&#34;@drawable/ic_launcher&#34;
+         android:label=&#34;@string/app_name&#34;
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;実際に使ってみます:76e3898ab09f841248548e63f72fd0b4&#34;&gt;実際に使ってみます&lt;/h3&gt;
+
+&lt;p&gt;適当に&lt;code&gt;MainActivity&lt;/code&gt;の&lt;code&gt;onCreate()&lt;/code&gt;に適当なリクエストをなげて、レスポンスを確認します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;@Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
++
++        request();
++    }
++
++    private void request() {
++        // Tag used to cancel the request
++        String tag_json_obj = &#34;json_obj_req&#34;;
++
++        String url = &#34;http://api.androidhive.info/volley/person_object.json&#34;;
++
++        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
++                url, null,
++                new Response.Listener&amp;lt;JSONObject&gt;() {
++
++                    @Override
++                    public void onResponse(JSONObject response) {
++                        Log.d(TAG, response.toString());
++
++                    }
++                }, new Response.ErrorListener() {
++
++            @Override
++            public void onErrorResponse(VolleyError error) {
++                VolleyLog.d(TAG, &#34;Error: &#34; + error.getMessage());
++            }
++        });
++
++        // Adding request to request queue
++        AppController.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
+     }
+
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;あとはビルド-起動して確認:76e3898ab09f841248548e63f72fd0b4&#34;&gt;あとはビルド・起動して確認&lt;/h3&gt;
+
+&lt;pre class=&#34;go&#34;&gt;D/MainActivity﹕ {&#34;email&#34;:&#34;ravi8x@gmail.com&#34;,&#34;phone&#34;:{&#34;home&#34;:&#34;08947 000000&#34;,&#34;mobile&#34;:&#34;9999999999&#34;},&#34;name&#34;:&#34;Ravi Tamada&#34;}
+&lt;/pre&gt;
+
+&lt;p&gt;こんな感じでlogcatに出ていれば使えています。&lt;/p&gt;
+
+&lt;h2 id=&#34;エラーハンドリング:76e3898ab09f841248548e63f72fd0b4&#34;&gt;エラーハンドリング&lt;/h2&gt;
+
+&lt;p&gt;先ほどの&lt;code&gt;request&lt;/code&gt;メソッドに書いてますが、正常にレスポンスが返ってくれば&lt;code&gt;onResponse&lt;/code&gt;が呼ばれます。では、エラーの場合はどうなるのか？それは&lt;code&gt;onErrorResponse&lt;/code&gt;が呼ばれます。上記のコードでは、ログ出力しているだけですが、エラーハンドリングする必要が出てくると思います。その時は、下記のようにして、それぞれに対応する処理を書いてあげれば良いです。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;if( error instanceof NetworkError) {
+    } else if( error instanceof ClientError) {
+    } else if( error instanceof ServerError) {
+    } else if( error instanceof AuthFailureError) {
+    } else if( error instanceof ParseError) {
+    } else if( error instanceof NoConnectionError) {
+    } else if( error instanceof TimeoutError) {
+    }
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考:76e3898ab09f841248548e63f72fd0b4&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://bit.ly/1iXgweq&#34; target=&#34;_blank&#34;&gt;Android Studio で Volley を使う &amp;#8211; ひだまりソケットは壊れない&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://bit.ly/1oVwQNI&#34; target=&#34;_blank&#34;&gt;Volleyを使うのがかなり簡単になってた &amp;#8211; Islands in the byte stream &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://bit.ly/1fDRoJt&#34; target=&#34;_blank&#34;&gt;Git submodule の基礎 &amp;#8211; Qiita&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://bit.ly/1oVzEdN&#34; target=&#34;_blank&#34;&gt;Git diff says subproject is dirty &amp;#8211; Stack Overflow &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://bit.ly/1n8SAca&#34; target=&#34;_blank&#34;&gt;Android working with Volley Library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://bit.ly/1oFnBR1&#34; target=&#34;_blank&#34;&gt;Android: How handle message error from the server using Volley? &amp;#8211; Stack Overflow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android Stuio(0.5.7)でNavigation Drawerでエラーになる。</title>
+      <link>/kwmt27.net/index.php/2014/05/05/android-studio-navigationdrawer/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/05/05/android-studio-navigationdrawer/</guid>
+      <description>&lt;p&gt;Android Studio(0.5.7)でNavigation DrawerをNew Projectしたら、getFragmentManager()のところで、Fragmentを継承したNavigationDrawerFragmentにキャストできないってエラーが出たので、その原因と対策です。&lt;/p&gt;
+
+&lt;p&gt;[Android Studio(0.5.7)でNavigation DrawerをNew Projectしたら、getFragmentManager()のところで、Fragmentを継承したNavigationDrawerFragmentにキャストできないってエラーが出たので、その原因と対策です。&lt;/p&gt;
+
+&lt;p&gt;]&lt;a href=&#34;http://bit.ly/1g1IelN&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1g1IdOI&#34;&gt;Looking for wrong fragment class with Android compatibility library &amp;#8211; Stack Overflow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android Studio(0.5.7)のNew ProjectでTabbed Activityを選んだらエラーになる</title>
+      <link>/kwmt27.net/index.php/2014/05/03/android-studio-tabbed-activity-error/</link>
+      <pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/05/03/android-studio-tabbed-activity-error/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/05/tabbed-activity.png&#34; alt=&#34;tabbed-activity&#34; width=&#34;387&#34; height=&#34;239&#34; class=&#34;aligncenter size-full wp-image-1419&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Android StudioのNew ProjectでTabbed Activityを選んだらいきなり下のエラーが出て困った。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Error:Execution failed for task &#39;:app:processDebugResources&#39;.
+&gt; com.android.ide.common.internal.LoggedErrorException: Failed to run command:
+&amp;lt;android SDK&amp;gt;/build-tools/19.0.0/aapt package -f --no-crunch -I &amp;lt;android SDK&amp;gt;/platforms/android-19/android.jar -M &amp;lt;my project&amp;gt;/app/build/manifests/debug/AndroidManifest.xml -S &amp;lt;my project&amp;gt;/app/build/res/all/debug -A &amp;lt;my project&amp;gt;/app/build/assets/debug -m -J &amp;lt;my project&amp;gt;/app/build/source/r/debug -F &amp;lt;my project&amp;gt;/app/build/libs/app-debug.ap_ --debug-mode --custom-package &amp;lt;my package&gt;
+  Error Code:
+    138
+&lt;/pre&gt;
+
+&lt;p&gt;このエラーから検索していったらハマった。stack overflowとかではaaptのバグだよとか書かれてるし、しょうがないのかなぁとか思ってて、よくよく考えると、&lt;code&gt;MainActivity&lt;/code&gt;は&lt;code&gt;ActionBarActivity&lt;/code&gt;を継承しているのですが、ただ単に&lt;code&gt;ActionBarActivity&lt;/code&gt;がみつからないって言われてただけでした。&lt;/p&gt;
+
+&lt;p&gt;つまり、&lt;code&gt;import android.support.v7.app.ActionBarActivity;&lt;/code&gt;を追加する。ただし、最初のプロジェクトの自動生成では、support.v7ライブラリは追加されていないので、FileメニューからProject Structure(⌘;)から、Dependenciesタブを選択し、下部の+から&lt;code&gt;com.android.support:appcompat-v7&lt;/code&gt;を追加する&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/05/project-structure-600x164.png&#34; alt=&#34;project-structure&#34; width=&#34;600&#34; height=&#34;164&#34; class=&#34;aligncenter size-thumbnail wp-image-1418&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これで&lt;code&gt;ActionBarActivity&lt;/code&gt;のエラーは消えるのですが、Runすると、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;You need to use a Theme.AppCompat theme (or descendant) with this activity.
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2295)
+&lt;/pre&gt;
+
+&lt;p&gt;のようなエラーが出るので、&lt;code&gt;AndroidManifest.xml&lt;/code&gt;のthemeの部分を&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android:theme=&#34;@style/Theme.AppCompat&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;に変更する。これで無事起動した。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>【Android】久しぶりにAndroidアプリった。</title>
+      <link>/kwmt27.net/index.php/2013/03/11/android%E4%B9%85%E3%81%97%E3%81%B6%E3%82%8A%E3%81%ABandroid%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A3%E3%81%9F/</link>
+      <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/03/11/android%E4%B9%85%E3%81%97%E3%81%B6%E3%82%8A%E3%81%ABandroid%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A3%E3%81%9F/</guid>
+      <description>
+
+&lt;p&gt;&lt;span style=&#34;font-size: x-small;&#34;&gt;201302-03でやったキーワード&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;久しぶりにAndroidアプリった。こんなに真剣にやったのはたぶん1年ぶりぐらい。&lt;/p&gt;
+
+&lt;p&gt;ググったら日本語の情報がわんさか出てきたことに感動。&lt;/p&gt;
+
+&lt;p&gt;ということで、基本的にはググればわかるので、ここでは今回やったキーワードだけ残しておくメモです。&lt;/p&gt;
+
+&lt;h2 id=&#34;トグルボタンを使うには:373425092af78321030c70a9f1ffccfe&#34;&gt;トグルボタンを使うには？&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android.widget.ToggleButton&lt;/pre&gt;
+
+&lt;p&gt;OnCheckedChangeListener　をimplementsして、以下のonCheckedChangedをoverride&lt;/p&gt;
+
+&lt;pre class=&#34;brush: java; title: ; notranslate&#34; title=&#34;&#34;&gt;// OnCheckedChangeListenerをimplementした時に実装が必要なメソッド
+// トグルボタン用
+@Override
+public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+if (isChecked){
+//ON
+} else{
+//OFF
+}
+}
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;プリファレンスは:373425092af78321030c70a9f1ffccfe&#34;&gt;プリファレンスは？&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android.content.SharedPreferences
+android.preference.PreferenceActivity&lt;/pre&gt;
+
+&lt;h2 id=&#34;音声認識させるには:373425092af78321030c70a9f1ffccfe&#34;&gt;音声認識させるには？&lt;/h2&gt;
+
+&lt;h3 id=&#34;標準ダイアログが出る:373425092af78321030c70a9f1ffccfe&#34;&gt;標準ダイアログが出る&lt;/h3&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android.speech.RecognizerIntent&lt;/pre&gt;
+
+&lt;h3 id=&#34;標準ダイアログを出さない:373425092af78321030c70a9f1ffccfe&#34;&gt;標準ダイアログを出さない&lt;/h3&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android.speech.SpeechRecognizer&lt;/pre&gt;
+
+&lt;p&gt;※以下のパーミッションが必要&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;&amp;lt;uses-permission android:name=&#34;android.permission.RECORD_AUDIO&#34;/&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;※ダイアログは出ないが、ピコっていう音はなる。&lt;/p&gt;
+
+&lt;h2 id=&#34;一定間隔で処理するには:373425092af78321030c70a9f1ffccfe&#34;&gt;一定間隔で処理するには？&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;java.util.Timer
+java.util.TimerTask&lt;/pre&gt;
+
+&lt;h2 id=&#34;ウィジェットを実装するには:373425092af78321030c70a9f1ffccfe&#34;&gt;ウィジェットを実装するには？&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android.appwidget.AppWidgetManager　を継承したクラス(ここでWidgetProvider)を作成
+onUpdateでServiceを継承したクラス(ここではWidgetService)をstartService&lt;/pre&gt;
+
+&lt;p&gt;このとき、マニフェストファイルにこんな感じ書いとく&lt;/p&gt;
+
+&lt;pre class=&#34;brush: xml; title: ; notranslate&#34; title=&#34;&#34;&gt;&amp;lt;receiver&amp;gt;
+android:name=&amp;quot;.WidgetProvider&amp;quot;
+android:label=&amp;quot;@string/app_name&amp;quot; &amp;gt;
+&amp;lt;intent-filter&amp;gt;
+&amp;lt;action android:name=&amp;quot;android.appwidget.action.APPWIDGET_UPDATE&amp;quot; /&amp;gt;
+&amp;lt;/intent-filter&amp;gt;
+&amp;lt;meta-data
+android:name=&amp;quot;android.appwidget.provider&amp;quot;
+android:resource=&amp;quot;@xml/widget_provider&amp;quot; /&amp;gt;
+&amp;lt;/receiver&amp;gt;
+&amp;lt;service android:name=&amp;quot;.WidgetService&amp;quot; &amp;gt;
+&amp;lt;intent-filter&amp;gt;
+&amp;lt;action android:name=&amp;quot;com.example.myproject.HOGEHOGE&amp;quot;/&amp;gt;
+&amp;lt;/intent-filter&amp;gt;
+&amp;lt;/service&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;サービスタグの は、ウィジェットに対してクリックイベントを取りたいときに必要。&lt;/p&gt;
+
+&lt;p&gt;作成中の自分のプロジェクト（myproject）の中で自分でHOGEHOGEを定義しておき、「HOGEHOGEになったら、ある処理をする」という具合に実装する。&lt;/p&gt;
+
+&lt;h2 id=&#34;画像を繰り返すには:373425092af78321030c70a9f1ffccfe&#34;&gt;画像を繰り返すには？&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android:tileMode=&#34;repeat&#34;&lt;/pre&gt;
+
+&lt;h2 id=&#34;最後に:373425092af78321030c70a9f1ffccfe&#34;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;上記をキーワードにググれば分かるはず。と自分に言い残してみる。&lt;/p&gt;
+
+&lt;p&gt;参考にしたURLをメモってれば良かったけど、まぁいっか。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>docomo WiFiの設定内容確認方法</title>
+      <link>/kwmt27.net/index.php/2013/01/06/docomo-wifi%E3%81%AE%E8%A8%AD%E5%AE%9A%E5%86%85%E5%AE%B9%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 06 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/01/06/docomo-wifi%E3%81%AE%E8%A8%AD%E5%AE%9A%E5%86%85%E5%AE%B9%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;p&gt;docomo Wi-Fiを使おうと思ってdocomo Wi-FiユーザIDとdocomo Wi-Fiパスワードを確認しよう思って探してたら、分かりにくすぎてイライラしたので、メモった。&lt;/p&gt;
+
+&lt;p&gt;spモードメールアプリを起動&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;メール設定&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;その他&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;Wi-Fiオプション利用設定→Wi-Fiメール設定&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;認証画面で、spモードパスワード(数字4桁)を入力&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;Wi-Fi設定画面に行くが、ここで一番下にある&lt;span style=&#34;color:#FF0000;&#34;&gt;「&amp;lt;各種設定」&lt;/span&gt;をタップする&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;「spモード各種設定」画面に行くので、「docomo Wi-Fi設定」をタップする&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;「&amp;gt;確認」をタップ&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;認証画面で、spモードパスワード(数字4桁)を入力&lt;/p&gt;
+
+&lt;p&gt;⇣&lt;/p&gt;
+
+&lt;p&gt;確認画面で下記の項目を確認することができる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;docomo Wi-FiユーザID&lt;/li&gt;
+&lt;li&gt;docomo Wi-Fiパスワード&lt;/li&gt;
+&lt;li&gt;SSID&lt;/li&gt;
+&lt;li&gt;WEPキー&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;dメニューと書いてあったので、dメニューからいこうしたけど、深すぎて余計分からなかったorz&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Galaxy Note（SC-05D）を購入したよ。</title>
+      <link>/kwmt27.net/index.php/2012/05/01/galaxy-notesc-05d%E3%82%92%E8%B3%BC%E5%85%A5%E3%81%97%E3%81%9F%E3%82%88/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2012/05/01/galaxy-notesc-05d%E3%82%92%E8%B3%BC%E5%85%A5%E3%81%97%E3%81%9F%E3%82%88/</guid>
+      <description>
+
+&lt;h2 id=&#34;galaxy-noteの写真集:f5dfab625fe3c0e451ad6642fc1b4b7e&#34;&gt;Galaxy Noteの写真集&lt;/h2&gt;
+
+&lt;p&gt;遅ればせながら、Galaxy Note（SC-05D）を購入したので写真撮影ｖ&lt;/p&gt;
+
+&lt;dl class=&#34;thumbnail_tate clearfix&#34;&gt;
+  &lt;div&gt;
+    &lt;dt&gt;
+      &lt;img
+src=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Box_Front-thumbnail2.jpg&#34;
+width=&#34;240&#34; height=&#34;320&#34;
+border=&#34;0&#34; align=&#34;&#34; alt=&#34;GalaxyNote箱の表&#34;
+pbsrc=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Box_Front.jpg&#34;
+class=&#34;PopBoxImageSmall&#34;
+onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd&gt;
+      Galaxy Note 箱の表
+    &lt;/dd&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;dt&gt;
+      &lt;img
+src=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Box_Back-thumbnail2.jpg&#34;
+width=&#34;240&#34; height=&#34;320&#34;
+border=&#34;0&#34; align=&#34;&#34; alt=&#34;GalaxyNote箱の裏&#34;
+pbsrc=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Box_Back.jpg&#34;
+class=&#34;PopBoxImageSmall&#34;
+onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd&gt;
+      Galaxy Note 箱の裏
+    &lt;/dd&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
+
+&lt;!--横--&gt;
+
+&lt;dl class=&#34;thumbnail_yoko clearfix&#34;&gt;
+  &lt;div&gt;
+    &lt;dt&gt;
+      &lt;img
+src=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Box_Side_2-thumbnail2.jpg&#34;
+width=&#34;320&#34; height=&#34;240&#34;
+border=&#34;0&#34; align=&#34;&#34; alt=&#34;GalaxyNote箱の側面&#34;
+pbsrc=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Box_Side_2.jpg&#34;
+class=&#34;PopBoxImageSmall&#34;
+onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd&gt;
+      Galaxy Note 箱の側面
+    &lt;/dd&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
+
+&lt;dl class=&#34;thumbnail_tate clearfix&#34;&gt;
+  &lt;div&gt;
+    &lt;dt&gt;
+      &lt;img
+src=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Front_1-thumbnail2.jpg&#34;
+width=&#34;240&#34; height=&#34;320&#34;
+border=&#34;0&#34; align=&#34;&#34; alt=&#34;GalaxyNote表1&#34;
+pbsrc=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Front_1.jpg&#34;
+class=&#34;PopBoxImageSmall&#34;
+onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd&gt;
+      Galaxy Note 表1
+    &lt;/dd&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;dt&gt;
+      &lt;img
+src=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Front_2-thumbnail2.jpg&#34;
+width=&#34;240&#34; height=&#34;320&#34;
+border=&#34;0&#34; align=&#34;&#34; alt=&#34;GalaxyNote表2&#34;
+pbsrc=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Front_2.jpg&#34;
+class=&#34;PopBoxImageSmall&#34;
+onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd&gt;
+      Galaxy Note 表2
+    &lt;/dd&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;dt&gt;
+      &lt;img
+src=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Back-thumbnail2.jpg&#34;
+width=&#34;240&#34; height=&#34;320&#34;
+border=&#34;0&#34; align=&#34;&#34; alt=&#34;GalaxyNote裏&#34;
+pbsrc=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Back.jpg&#34;
+class=&#34;PopBoxImageSmall&#34;
+onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd&gt;
+      Galaxy Note 裏
+    &lt;/dd&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
+
+&lt;!--横--&gt;
+
+&lt;dl class=&#34;thumbnail_yoko clearfix&#34;&gt;
+  &lt;div&gt;
+    &lt;dt&gt;
+      &lt;img
+src=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Accessory-thumbnail2.jpg&#34;
+width=&#34;320&#34; height=&#34;240&#34;
+border=&#34;0&#34; align=&#34;&#34; alt=&#34;GalaxyNote付属品&#34;
+pbsrc=&#34;http://androg.up.seesaa.net/image/GalaxyNote_Accessory.jpg&#34;
+class=&#34;PopBoxImageSmall&#34;
+onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd&gt;
+      Galaxy Note 付属品
+    &lt;/dd&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;動画も少し撮影。Galaxy Sの起動より”S”になるまでがなめらかな印象。&lt;/p&gt;
+
+&lt;p&gt;次の動画は、カバーをかけたときどんな感じかの動画&lt;/p&gt;
+
+&lt;p&gt;次は、ペンを使ったらどんな感じかの動画&lt;/p&gt;
+
+&lt;h2 id=&#34;気になる値段:f5dfab625fe3c0e451ad6642fc1b4b7e&#34;&gt;気になる値段&lt;/h2&gt;
+
+&lt;p&gt;以下は、2012/4/30にLABI三宮店で、ソフトバンクの携帯からドコモに乗り換えたときの値段になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;ins&gt;解約金&lt;/ins&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;ソフトバンク携帯（DesireⅡ）の解約金：&lt;span style=&#34;color:#329800;&#34;&gt;25455円&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;内訳：現時点で1年6ヶ月で今解約すると、機種代金の残りが2580円×6ヶ月、それに解約金9975円をプラスして25455円。&lt;/p&gt;
+
+&lt;p&gt;（基本料金（980円）が入ってないのは、もちろん解約するから、基本料金はかからない。）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;ins&gt;機種代金&lt;/ins&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Galaxy Noteの機種代金：&lt;span style=&#34;color:#329800;&#34;&gt;66360円&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;MNP乗り換え割引：&lt;span style=&#34;color:#329800;&#34;&gt;ー35000円&lt;/span&gt;※1&lt;/p&gt;
+
+&lt;p&gt;Docomoポイント：&lt;span style=&#34;color:#329800;&#34;&gt;ー6825円 &lt;/span&gt;(6500ポイント*1.05（諸費税？※2））&lt;/p&gt;
+
+&lt;p&gt;合計：&lt;span style=&#34;color:#329800;&#34;&gt;24535円&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;ins&gt;毎月の支払&lt;/ins&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;基本料金：&lt;span style=&#34;color:#329800;&#34;&gt;780円&lt;/span&gt;（&lt;a href=&#34;http://www.nttdocomo.co.jp/charge/bill_plan/xi/type_xi_ninen/index.html&#34;&gt;タイプXi にねん&lt;/a&gt;）※3&lt;/p&gt;
+
+&lt;p&gt;パケット：&lt;span style=&#34;color:#329800;&#34;&gt;2100円&lt;/span&gt;（&lt;a href=&#34;http://www.nttdocomo.co.jp/charge/packet/xi_pake_hodai_w/about/index.html&#34;&gt;Xiパケホーダイダブル&lt;/a&gt;）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.nttdocomo.co.jp/charge/discount/monthly_support/index.html?icid=CRP_CHA_2ndPR_Flash_monthly_support&#34;&gt;月々サポート&lt;/a&gt;：&lt;span style=&#34;color:#329800;&#34;&gt;ー4095円&lt;/span&gt;（2年間で98280円割引）&lt;/p&gt;
+
+&lt;p&gt;合計：&lt;span style=&#34;color:#329800;&#34;&gt;ー1215円&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;つまり、初期投資：25455円（解約金）＋24535円（機種代）＝49990円で毎月の支払0円（ちょっとだけ通話もできる！）。なんかめっちゃ得した気分。&lt;/p&gt;
+
+&lt;h2 id=&#34;おわりに:f5dfab625fe3c0e451ad6642fc1b4b7e&#34;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;最後に、解約しなかったら、現状2580円(分割の機種代)と980円(基本料金) で合計 3560 円を毎月支払うことになる。&lt;/p&gt;
+
+&lt;p&gt;解約金を払わず使わない携帯をもったまま基本料金を払い続けるか、解約金を払ってこれから使うであろう携帯にMNPするかは、”今”を考えるともったいない気もしたけど、今後のことを考えると、使う携帯にお金を払ったほうが価値があると考えた。（普通？）&lt;/p&gt;
+
+&lt;p&gt;※1：LABI三宮店では、4/30に行ったときは「25000円」と書いていた。実は先週（4/22)行ったときは「30000円」だったので、1週間で5000円も下がって購入を迷っていたけど、店員さんに「先週30000円割引だったんですよね〜」って言ったら、タイムセールで30000円になっていたとのこと。最高35000円割引までなっていたらしいのです。それを聞いてさらにどうしようか迷ったけど、まぁ買っちゃえということで、手続きに入ってしばらくしたら、店員さんが「割引35000円まで行けるそうです」と教えてくれた。僕はこれで35000円まで割り引いてくれたけど、他にMNPした人はどうなんだろう。25000円割引のままだったのか少々気になるところ。もし、LABI三宮でMNPする場合は、言ってみるといいかもしれない。&lt;/p&gt;
+
+&lt;p&gt;※2：この1.05って消費税？割引が増える方向だからラッキーと思って聞くの忘れた。。。&lt;/p&gt;
+
+&lt;p&gt;※3：この&lt;a href=&#34;http://www.nttdocomo.co.jp/charge/bill_plan/xi/type_xi_ninen/index.html&#34;&gt;タイプXi にねん&lt;/a&gt;にして、2年以内に解約する場合は、解約金9975円がかかる。解約金がかからない&lt;a href=&#34;http://www.nttdocomo.co.jp/charge/bill_plan/xi/type_xi/&#34;&gt;タイプXi&lt;/a&gt;という1560円/月のプランもあるが、これにすると毎月の基本料金が&lt;a href=&#34;http://www.nttdocomo.co.jp/charge/bill_plan/xi/type_xi_ninen/index.html&#34;&gt;タイプXi にねん&lt;/a&gt;の780円/月のプランの2倍になり、さらにMNP割引（35000円）を付けることができなくなるとのこと。解約時に解約金を払わないといけないというなんというか気持ち的に微妙だが、月々が安くなってMNP割引もあるなら、780円/月を選ばない手はない。気持ち的には25025円割引（35000円-9975円）で解約金なしと考えればまぁいいか。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WebAPIの使い方を勉強しました。</title>
+      <link>/kwmt27.net/index.php/2012/03/03/webapi%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%82%92%E5%8B%89%E5%BC%B7%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
+      <pubDate>Sat, 03 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2012/03/03/webapi%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%82%92%E5%8B%89%E5%BC%B7%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/yokmama/androidweb&#34; target=&#34;_blank&#34;&gt;夜子ままさんのスライド&lt;/a&gt;を参考にWebAPIを使ってJSONを取得し、解析してLogに表示するというのをやってみました。（ほとんどスライドの写経です）&lt;/p&gt;
+
+&lt;p&gt;違いは、スライドの例はGoogleMaps APIを使用していますが、Google+APIを使うようにしただけです。&lt;/p&gt;
+
+&lt;p&gt;ソースは&lt;a href=&#34;https://github.com/kwmt/SampleWebAPI&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;にあげました。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ABC2012 Spring 開催</title>
+      <link>/kwmt27.net/index.php/2012/02/29/abc2012-spring-%E9%96%8B%E5%82%AC/</link>
+      <pubDate>Tue, 28 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2012/02/29/abc2012-spring-%E9%96%8B%E5%82%AC/</guid>
+      <description>&lt;p&gt;Android Bazaar Conference 2012 Springが3/24(土)に東京大学で開催されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.android-group.jp/conference/abc2012s&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://androg.up.seesaa.net/image/abc2012s.png&#34;   width=&#34;80%&#34; border=&#34;0&#34; align=&#34;&#34; alt=&#34;abc2012s&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GDDのスタッフが面白かったので、ABCもスタッフとして参加しますので、よろしくお願いします。&lt;/p&gt;
+
+&lt;p&gt;2月のエントリー、これだけになりそう。。。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

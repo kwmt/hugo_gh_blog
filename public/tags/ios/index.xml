@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ios on Androg</title>
+    <link>kwmt27.net/tags/ios/</link>
+    <description>Recent content in Ios on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 01 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>xcode で controlを押しながら接続出来ない場合の対処方法</title>
+      <link>/kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</guid>
+      <description>
+
+&lt;h2 id=&#34;現象:f74462392c78f8d5ab6a953cf4cfa439&#34;&gt;現象&lt;/h2&gt;
+
+&lt;p&gt;TableViewなどのViewをcontrol押しながら、ヘッダーファイルにドラッグしても、うんともすんともないことがある。&lt;/p&gt;
+
+&lt;h2 id=&#34;原因:f74462392c78f8d5ab6a953cf4cfa439&#34;&gt;原因&lt;/h2&gt;
+
+&lt;p&gt;ViewControllerとクラスが対応付けがされてないため。&lt;/p&gt;
+
+&lt;h2 id=&#34;対処:f74462392c78f8d5ab6a953cf4cfa439&#34;&gt;対処&lt;/h2&gt;
+
+&lt;p&gt;ViewControllerを選択し、&amp;#8221;Show the identity inspection&amp;#8221;をクリックし、Custom Classで対応付けたいクラスを選択する。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

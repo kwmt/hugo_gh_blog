@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Androg</title>
+    <link>kwmt27.net/tags/windows/</link>
+    <description>Recent content in Windows on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Windows7で開いているすべてのフォルダを一発で閉じるソフトを作りました。</title>
+      <link>/kwmt27.net/index.php/2013/05/30/closeallfolders/</link>
+      <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/05/30/closeallfolders/</guid>
+      <description>
+
+&lt;h2 id=&#34;問題:dfa9ad2c68515a564cbd36f290b09f41&#34;&gt;問題&lt;/h2&gt;
+
+&lt;p&gt;知り合いから次のような質問がありました。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Windows7でタスクバーのボタンを結合しない状態で、
+開いているすべてのフォルダを閉じたいんだけど、どうしたらいい？？
+&lt;/pre&gt;
+
+&lt;p&gt;Windows XPまではCtrlを押しながら、マウスで開いてるフォルダを選択していったら、選択状態になって右クリックの閉じるってやったらすべてのフォルダを閉じることができたんですけど、Windows7では、Ctrlを押しながらマウスで選択しても選択状態になりません。&lt;/p&gt;
+
+&lt;p&gt;タスクバーのボタンを常に結合の設定にしておけば、「すべてのウィンドウを閉じる」という項目があるのですが、結合しない設定だとそれがありません。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2013/05/30/closeallfolders/win7closefolder/&#34; rel=&#34;attachment wp-att-656&#34;&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder.png&#34; alt=&#34;win7closefolder&#34; width=&#34;305&#34; height=&#34;236&#34; class=&#34;alignnone size-full wp-image-656&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder-300x232.png 300w, http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder.png 305w&#34; sizes=&#34;(max-width: 305px) 100vw, 305px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;解決:dfa9ad2c68515a564cbd36f290b09f41&#34;&gt;解決&lt;/h2&gt;
+
+&lt;p&gt;一発で削除する方法を探してみましたが、&lt;a href=&#34;http://bit.ly/176PAUA&#34;&gt;個別に選択できる機能がないマイクロソフトの人が回答しています&lt;/a&gt;（この書き方はホントにわかってるの？と思うような書き方だけど）&lt;/p&gt;
+
+&lt;p&gt;となると、ツールも無さそうだし作るしか無い。&lt;/p&gt;
+
+&lt;p&gt;ということで、&lt;strong&gt;作りました。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらからダウンロードしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/wp-content/uploads/2013/05/CloseAllFolders.exe&#34;&gt;CloseAllFoldersのダウンロード&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これをタスクバーに登録しといてWindows ロゴ キー + 数字キーのショートカットキーですべてのフォルダを一発で閉じれるようになりますね。&lt;/p&gt;
+
+&lt;p&gt;※完了メッセージを出すのはわずらわしいと思ったので表示させてません。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

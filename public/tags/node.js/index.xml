@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.Js on Androg</title>
+    <link>kwmt27.net/tags/node/index.js/</link>
+    <description>Recent content in Node.Js on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 13 May 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>大阪Node学園入学式2013に行ってきた。 #ong5</title>
+      <link>/kwmt27.net/index.php/2013/05/13/osaka-node-gakuen/</link>
+      <pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/05/13/osaka-node-gakuen/</guid>
+      <description>
+
+&lt;h1 id=&#34;はじめに:72ddcf606ee6d406617ce04ce8a28f87&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://atnd.org/events/38400&#34;&gt;大阪Node学園入学式2013&lt;/a&gt;に行ってきました。&lt;/p&gt;
+
+&lt;p&gt;ひとまずnode.jsはどうやったら動かせるのかというところから、expressというウェブアプリケーションフレームワークを使って、いろいろイジって使い方を学びました。&lt;/p&gt;
+
+&lt;h2 id=&#34;nodejsのインストール:72ddcf606ee6d406617ce04ce8a28f87&#34;&gt;nodejsのインストール&lt;/h2&gt;
+
+&lt;p&gt;node.jsをインストールし、使えることを確認した後、ウェブアプリケーションフレームワークであるexpressをインストールして動かしてみるところまで。&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/5568311.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;nodemonをインストールしておくと便利:72ddcf606ee6d406617ce04ce8a28f87&#34;&gt;nodemonをインストールしておくと便利&lt;/h2&gt;
+
+
+&lt;script src=&#34;//gist.github.com/5568366.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;expressのハンズオンの記録はこっちに置いた:72ddcf606ee6d406617ce04ce8a28f87&#34;&gt;expressのハンズオンの記録はこっちに置いた。&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kwmt/nodejs-handson&#34;&gt;https://github.com/kwmt/nodejs-handson&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ハンズオンやりながらコミットしていったんだけど、コミットログがイケてない(´・ω・`)&lt;/p&gt;
+
+&lt;h2 id=&#34;感想:72ddcf606ee6d406617ce04ce8a28f87&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;CUIベースで話が進んでいたので、unixコマンドを知らない人は結構そこだけで苦痛だったかも。&lt;/p&gt;
+
+&lt;p&gt;実際行くなら、基本コマンドは覚えていくといいと思う。&lt;/p&gt;
+
+&lt;p&gt;しかし知ってる人が教えていたので、なんとかなるとは思うけれど。&lt;/p&gt;
+
+&lt;p&gt;個人的には、ちょうどいいペースだったと思います。シェルなどの環境が違うと少しハマったりもしましたが。。。&lt;/p&gt;
+
+&lt;p&gt;websoketの話もあるみたいので、次あればそこまでは聞きたい。&lt;/p&gt;
+
+&lt;p&gt;ありがとうございました！&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

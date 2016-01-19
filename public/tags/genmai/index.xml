@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genmai on Androg</title>
+    <link>kwmt27.net/tags/genmai/</link>
+    <description>Recent content in Genmai on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 22 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/genmai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Genmaiを使ってみた。 #golang</title>
+      <link>/kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</link>
+      <pubDate>Mon, 22 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</guid>
+      <description>&lt;p&gt;ORM for golangの&lt;a href=&#34;http://bit.ly/1ucuNGX&#34; target=&#34;_blank&#34;&gt;Genmai&lt;/a&gt;を使って、MySQLにアクセスしてみた。&lt;/p&gt;
+
+&lt;p&gt;使い方は以下の様な感じです。&lt;/p&gt;
+
+&lt;p&gt;テーブルを定義します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;// ユーザーテーブル
+type User struct {
+    Id    int `db:&#34;pk&#34;`
+    Name  string
+    genmai.TimeStamp
+}
+&lt;/pre&gt;
+
+&lt;p&gt;データベースを作る時に、&lt;code&gt;&amp;amp;genmai.MySQLDialect{}&lt;/code&gt;と、&lt;a href=&#34;https://github.com/go-sql-driver/mysql/#dsn-data-source-name&#34; target=&#34;_blank&#34;&gt;DSN&lt;/a&gt;を指定する。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;database, err := genmai.New(&amp;genmai.MySQLDialect{}, dataSourceName)
+// userテーブルがなければ、作成する
+if err := database.CreateTableIfNotExists(&amp;User{}); err != nil {
+    panic(err)
+}
+&lt;/pre&gt;
+
+&lt;pre class=&#34;go&#34;&gt;// 挿入したいデータ
+data := []User{
+        {Name:&#34;Aさん&#34;},
+        {Name:&#34;Bさん&#34;},
+        {Name:&#34;Cさん&#34;},
+    }
+// dataを挿入
+if _, err := database.Insert(data); err!= nil{
+    panic(err)
+}
+&lt;/pre&gt;
+
+&lt;pre class=&#34;go&#34;&gt;// 取得したい空のデータを用意
+var users []User
+// データを取得
+if err:= db.Select(&amp;users); err != nil{
+    panic(err)
+}
+&lt;/pre&gt;
+
+&lt;p&gt;これを実行すると、&lt;/p&gt;
+
+&lt;p&gt;テーブル作成できた！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/09/table_struct-600x73.png&#34; alt=&#34;table_struct&#34; width=&#34;600&#34; height=&#34;73&#34; class=&#34;aligncenter size-thumbnail wp-image-1321&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2014/09/table_struct-600x73.png 600w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-300x36.png 300w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-1024x125.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-624x76.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-900x110.png 900w&#34; sizes=&#34;(max-width: 600px) 100vw, 600px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;データの挿入もOK！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/09/table_content-600x152.png&#34; alt=&#34;table_content&#34; width=&#34;600&#34; height=&#34;152&#34; class=&#34;aligncenter size-thumbnail wp-image-1320&#34; srcset=&#34;http://kwmt27.net/wp-content/uploads/2014/09/table_content-600x152.png 600w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-300x76.png 300w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-1024x259.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-624x158.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-900x228.png 900w, http://kwmt27.net/wp-content/uploads/2014/09/table_content.png 1128w&#34; sizes=&#34;(max-width: 600px) 100vw, 600px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;あれ？データの取得が下記のエラーでコケるなぁ。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;unsupported driver -&gt; Scan pair: []uint8 -&gt; *time.Time
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;time.Time&lt;/code&gt;を使ってる箇所は、&lt;code&gt;User&lt;/code&gt;構造体の&lt;code&gt;genmai.TimeStamp&lt;/code&gt;のところだけです。ちなみに&lt;code&gt;genmai.TimeStamp&lt;/code&gt;がどうなっているかというと、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;// TimeStamp is fields for timestamps that commonly used.
+type TimeStamp struct {
+    // Time of creation. This field will be set automatically by BeforeInsert.
+    CreatedAt time.Time `json:&#34;created_at&#34;`
+
+    // Time of update. This field will be set by BeforeInsert or BeforeUpdate.
+    UpdatedAt time.Time `json:&#34;updated_at&#34;`
+}
+&lt;/pre&gt;
+
+&lt;p&gt;となっています。&lt;/p&gt;
+
+&lt;p&gt;また、MySQLのドライバに、&lt;a href=&#34;https://github.com/go-sql-driver/mysql&#34; target=&#34;_blank&#34;&gt;github.com/go-sql-driver/mysql&lt;/a&gt;を使っています。&lt;/p&gt;
+
+&lt;p&gt;うん、ココらへんが怪しいですね。とおもって調べていたら、&lt;a href=&#34;https://github.com/go-sql-driver/mysql&#34; target=&#34;_blank&#34;&gt;github.com/go-sql-driver/mysql&lt;/a&gt;は&lt;code&gt;time.Time&lt;/code&gt;はサポートしているのですが、[]byteからtime.Timeへの変換がデフォルトではできません。これを可能にするには、DSNのパラメータに、&lt;code&gt;parseTime=true&lt;/code&gt;をつける必要があります。というのが、下記に書いてあります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/go-sql-driver/mysql#timetime-support&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/go-sql-driver/mysql#timetime-support&#34;&gt;https://github.com/go-sql-driver/mysql#timetime-support&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以上です。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

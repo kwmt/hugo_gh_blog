@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.2 Rc1 on Androg</title>
+    <link>kwmt27.net/tags/1/index.2-rc1/</link>
+    <description>Recent content in 1.2 Rc1 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 12 Oct 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/1.2-rc1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>#golang mapからstructに変換するには？</title>
+      <link>/kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid>
+      <description>
+
+&lt;h2 id=&#34;reflect-pkgを使った方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;reflect pkgを使った方法&lt;/h2&gt;
+
+&lt;p&gt;最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;参考リンク&lt;/a&gt;）&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6938201.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34;&gt;http://play.golang.org/p/5Inl2jO7zL&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;encoding-json-pkgを使った方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;encoding/json pkgを使った方法&lt;/h2&gt;
+
+&lt;p&gt;ただちょっとこれだと扱いにくくて(MapToStructの中身を修正すれば扱いやすくなるかもしれないですが)、パフォーマンスを気にしなければ、mapを一旦JSONにして、そのJSONをstructにするという方法が扱いやすいということを教えてもらいました。&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6950666.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/Kd7TRoRG5w&#34;&gt;http://play.golang.org/p/Kd7TRoRG5w&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ライブラリmapstructureを使う方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;ライブラリmapstructureを使う方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mitchellh/mapstructure&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/mitchellh/mapstructure&#34;&gt;https://github.com/mitchellh/mapstructure&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mapstructure.Decode関数を使えばよさげ。&lt;/p&gt;
+
+&lt;h2 id=&#34;補足-mapから-map-string-interface-に変換する方法:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;補足：mapから map[string]interface{}に変換する方法&lt;/h2&gt;
+
+&lt;p&gt;最初は、MapToStructの第一引数にmap[string][]stringをそのまま渡してて、valueのところがスライスだったらだめなのかな？と思ってましたが、map[string]interface{}に変換すればいいだけってのを教えてもらって、次のような変換で解決しました。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;m := map[string][]string{
+    &#34;1&#34;:[]string{&#34;a&#34;,&#34;b&#34;},
+    &#34;2&#34;:[]string{&#34;C&#34;,&#34;d&#34;},
+}
+// convert map to a map[string]interface{}
+mi := make(map[string]interface{}, len(m))
+for k, v := range mm {
+    mi[k] = v
+}
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;補足-個人的なきっかけ:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;補足：個人的なきっかけ&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;var r *http.Request
+r.Form (= url.Values = map[string][]string)
+&lt;/pre&gt;
+
+&lt;p&gt;POSTリクエストがきた時のr.Formを構造体に一時的に格納したいのですが、格納先の構造体のフィールドがやたら多い場合、一個ずつ格納するのが面倒だなというのがきっかけでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:6a6ec8ccc2e96e6ec0438624473d174f&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/2PCtqxyirVE&#34; target=&#34;_blank&#34;&gt;how to convert map to struct &amp;#8211; Google グループ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;Ideone.com &amp;#8211; XWtlo &amp;#8211; Online Go Compiler &amp;#038; Debugging Tool&lt;/a&gt;（これはGo1以前のソースなのでそのままでは動かない）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1axEFRY&#34; target=&#34;_blank&#34;&gt;struct &amp;lt;-&amp;gt; map[string]interface{} conversion &amp;#8211; Google グループ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、キャストするには？</title>
+      <link>/kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</guid>
+      <description>
+
+
+&lt;script src=&#34;//gist.github.com/6895772.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/gvadP4k1Bo&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/gvadP4k1Bo&#34;&gt;http://play.golang.org/p/gvadP4k1Bo&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/pkg/strconv/#FormatInt&#34; target=&#34;_blank&#34;&gt;strconv.FormatInt&lt;/a&gt;の第一引数は&amp;#8221;int64&amp;#8243;型で、&lt;a href=&#34;http://golang.org/pkg/strconv/#FormatUint&#34; target=&#34;_blank&#34;&gt;strconv.FormatUint&lt;/a&gt;の第一引数は&amp;#8221;uint64&amp;#8243;型です。&lt;/p&gt;
+
+&lt;p&gt;たとえば、ただ100と書くとint型になりますので、fv.Callの引数のところで、キャストしてあげる必要があります。キャストするには、reflectパッケージの&lt;a href=&#34;http://golang.org/pkg/reflect/#Value.Convert&#34; target=&#34;_blank&#34;&gt;Convertメソッド&lt;/a&gt;を使います。&lt;/p&gt;
+
+&lt;p&gt;ほとんど同じ処理で、ある一部分だけ異なる関数を使っているという場合に役に立つと思います。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、このConvertメソッドは、go1.1のリリース時に追加されました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/doc/go1.1#reflect&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://golang.org/doc/go1.1#reflect&#34;&gt;http://golang.org/doc/go1.1#reflect&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:dd3051da1cf2545fdceed9633c9e293f&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1fWdHYS&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;goken/goken08-reflect.md at master · goken/goken&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/reflect/#Value.Convert&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://golang.org/pkg/reflect/#Value.Convert&#34;&gt;http://golang.org/pkg/reflect/#Value.Convert&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1ctDnMp&#34; target=&#34;_blank&#34;&gt;#golang リフレクションを使って、関数の引数の型を取得するには？ | Androg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1ctDtDT&#34; target=&#34;_blank&#34;&gt;#golang リフレクションを使って、関数をコールするには？ | Androg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、関数の引数の型を取得するには？</title>
+      <link>/kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</guid>
+      <description>
+
+
+&lt;script src=&#34;//gist.github.com/6895177.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:b6a95452afe1d4c92c27b37ba552d1b6&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1fWdHYS&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;goken/goken08-reflect.md at master · goken/goken&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/src/pkg/reflect/type.go?#L157&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://golang.org/src/pkg/reflect/type.go?#L157&#34;&gt;http://golang.org/src/pkg/reflect/type.go?#L157&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、関数をコールするには？</title>
+      <link>/kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</guid>
+      <description>
+
+
+&lt;script src=&#34;//gist.github.com/6895428.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:a7253945f587662917148ac6e1019182&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1fWdHYS&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;goken/goken08-reflect.md at master · goken/goken&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/reflect/#Value.Call&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://golang.org/pkg/reflect/#Value.Call&#34;&gt;http://golang.org/pkg/reflect/#Value.Call&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang 文字数をカウントするには？</title>
+      <link>/kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</guid>
+      <description>
+
+&lt;h2 id=&#34;文字数をカウントしたい:6f938ada1f11f42a584fe7ddf82d3475&#34;&gt;文字数をカウントしたい！&lt;/h2&gt;
+
+&lt;p&gt;そう思ってすぐ思いついたのは、stringsパッケージの&lt;a href=&#34;http://golang.org/pkg/strings/#Count&#34; target=&#34;_blank&#34;&gt;Count&lt;/a&gt;関数。&lt;/p&gt;
+
+&lt;p&gt;Exampleのあったので、確認のためRunしてみる。&lt;/p&gt;
+
+&lt;p&gt;なぜか期待する文字数の +1 になる。&lt;a href=&#34;http://golang.org/src/pkg/strings/strings.go?#L70&#34; target=&#34;_blank&#34;&gt;srcを見てみたところ、+1されてる・・・&lt;/a&gt;。なんで？&lt;/p&gt;
+
+&lt;p&gt;とツイートしたら、ロブ・パイク先生からお返事頂きました！&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34; width=&#34;550&#34;&gt;
+  &lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+    &lt;a href=&#34;https://twitter.com/kwmt27&#34;&gt;@kwmt27&lt;/a&gt; All strings contain the empty string.
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    &amp;mdash; Rob Pike (@rob_pike) &lt;a href=&#34;https://twitter.com/rob_pike/status/387996687173550080&#34;&gt;October 9, 2013&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;でも、あれ？ &lt;a href=&#34;http://golang.org/pkg/strings/#Count&#34; target=&#34;_blank&#34;&gt;strings#Count&lt;/a&gt;の例にあるけど、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;fmt.Println(strings.Count(&#34;cheese&#34;, &#34;e&#34;))
+&lt;/pre&gt;
+
+&lt;p&gt;これは、3と出力しますよね。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;fmt.Println(strings.Count(&#34;five&#34;, &#34;&#34;))
+&lt;/pre&gt;
+
+&lt;p&gt;これは、なんで5を出力するの？すべての文字列にempty stringが&amp;#8221;含まれてる&amp;#8221;んなら、1じゃないのかな！？この答えは、たぶんプログラミング言語の基本な気がする&amp;#8230;ちょっと調べてみよう。&lt;/p&gt;
+
+&lt;p&gt;とにかく、期待する文字数をカウントするには、Count関数でも使われているunicode/utf8パッケージの&lt;a href=&#34;http://golang.org/pkg/unicode/utf8/#RuneCountInString&#34; target=&#34;_blank&#34;&gt;RuneCountInString&lt;/a&gt;関数を使えばよさそうだ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って関数名を取得するには？</title>
+      <link>/kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/pkg/reflect/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;reflect&amp;#8221;&lt;/a&gt;パッケージだけでは取得できないようで、&lt;a href=&#34;http://golang.org/pkg/runtime/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;runtime&amp;#8221;&lt;/a&gt;パッケージの&lt;code&gt;&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;&lt;/code&gt;という関数を使うようです。&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6840466.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:69498b034e47686ef53c806c66b6fa56&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1a0Zfsp&#34; target=&#34;_blank&#34;&gt;reflection &amp;#8211; How to get the name of a function in Go? &amp;#8211; Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1fWdHYS&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;goken/goken08-reflect.md at master · goken/goken&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang 関数の引数をオプション的に扱うには？</title>
+      <link>/kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</guid>
+      <description>&lt;p&gt;分かりやすい言葉が思いつかなかったのすが、関数の引数をオプション的に扱うというのは、関数の引数をとってもとならなくても良いように関数を定義することです。それには&lt;code&gt;&amp;lt;a href=&amp;quot;http://golang.org/ref/spec#Passing_arguments_to_..._parameters&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;&lt;/code&gt;パラメータを使うと良さそうです。&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6840821.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/kRLQLIWkxN&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/kRLQLIWkxN&#34;&gt;http://play.golang.org/p/kRLQLIWkxN&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ただし、&lt;code&gt;&amp;lt;a href=&amp;quot;http://golang.org/ref/spec#Passing_arguments_to_..._parameters&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;&lt;/code&gt;パラメータは、引数の最後でしか使えませんので、注意が必要です。つまり、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;func f(s ...string, i int)
+&lt;/pre&gt;
+
+&lt;p&gt;のようなことはできないということです。ちなみに、こうすると次のエラーがでます。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;can only use ... as final argument in list
+&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#Nginx &#43; #golang (FastCGI)&#43; #MySQL を使ったWebアプリケーションを書くための準備</title>
+      <link>/kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:30541588868439902a1efc8adcbbf1c0&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;下記の記事をみたら分かりやすいかもしれませんが、英語なので、実際にやった方法も交えてメモしておこうと思います。（似てるところもありますが、翻訳ではありません。）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mwholt.blogspot.jp/2013/05/writing-go-golang-web-app-with-nginx.html&#34; target=&#34;_blank&#34;&gt;Writing a Go (&amp;#8220;golang&amp;#8221;) Web App with nginx, FastCGI, MySQL, JSON&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前提として、Go言語でWebサーバーをつくって動かすと言うと２種類の方法があります。&lt;/p&gt;
+
+&lt;p&gt;１つは、Go言語の&lt;a href=&#34;http://golang.org/pkg/net/http/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;net/http&amp;#8221;&lt;/a&gt;パッケージというのがありますので、これを使ってGo自体でWebサーバーを作ってしまうことができます。&lt;/p&gt;
+
+&lt;p&gt;もう1つは、ApacheやNginxなどのWebサーバー上で、CGI(正確にはFastCGI)としてGo言語を動かす方法です。これはNginx+PHP-FPMのようなもに近いイメージだと思います。&lt;/p&gt;
+
+&lt;p&gt;Nginxを使うか使わないかは、こちらの&lt;a href=&#34;http://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not&#34; title=&#34;Webserver for Go (golang) webservices: using NGINX or not?&#34; target=&#34;_blank&#34;&gt;Stackoverflow&lt;/a&gt;をみると、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Go HTTPサーバーはいいんだけど、Webサーバーを一から作るのは大変だよ、Nginxを使った方が簡単だよ&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;みたいな感じで、Nginxつかった方がいいよという結論になってます。&lt;/p&gt;
+
+&lt;p&gt;この記事では、2つ目の方法のNginx+golang(FastCGI)でWebアプリケーションを作る準備をメモしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;データベースとしては、MySQLを使いたいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;使用環境:30541588868439902a1efc8adcbbf1c0&#34;&gt;使用環境&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;サーバOS:CentOS release 6.4
+Webサーバ:nginx-1.4.1
+データベース:mysql  Ver 14.14 Distrib 5.5.27
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;1-nginxをインストールする-seciton:30541588868439902a1efc8adcbbf1c0&#34;&gt;1.Nginxをインストールする {.seciton}&lt;/h2&gt;
+
+&lt;p&gt;まずは、CentOSにNginxをソースからインストールしたいと思います。(&lt;a href=&#34;http://wiki.nginx.org/Install&#34; target=&#34;_blank&#34;&gt;Nginx installリンク&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;なぜソースからインストールするのかは、Web+DBにおすすめと書かれていたから(^o^;&lt;/p&gt;
+
+&lt;p&gt;ちゃんというとモジュール追加するには、make時にくっつけとかないといけないからで、必要なければ、rpmとかからインストールしてもいいと思います。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;# wget http://nginx.org/download/nginx-1.4.1.tar.gz
+# tar zxvf nginx-1.4.1.tar.gz
+# ls
+nginx-1.4.1
+# cd nginx-1.4.1
+# ./configure
+&lt;/pre&gt;
+
+&lt;p&gt;雑誌Web+DB pressのVol12.2013には下記のように指定してましたが、個人的にはデフォルトの方が分かりやすいため、特にオプション指定はしていません。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;# ./configure --prefix=/usr/local --conf-path=/etc/nginx/nginx.conf 
+&lt;/pre&gt;
+
+&lt;p&gt;デフォルトでは、Nginxは/usr/local/nginxにインストールされます。&lt;/p&gt;
+
+&lt;p&gt;nginxのサービスを起動したりするコマンドは、/usr/local/nginx/sbinの中にあるnginxコマンドなので、PATHを設定しておくと楽になるかと思います。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;bashの場合 .bashrcに下記を記入
+export PATH=/usr/local/nginx/sbin:$PATH
+&lt;/pre&gt;
+
+&lt;p&gt;さて、&lt;code&gt;./configure&lt;/code&gt;の時点に少し戻ります。私の環境では、&lt;code&gt;./configure&lt;/code&gt;時に下記の2つのエラーが出ましたので、それらについてのエラー内容と対策も書いておきたいと思います。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;【./configure時のエラー１】
+./configure: error: the HTTP rewrite module requires the PCRE library.
+【対策】
+# yum -y install pcre pcre-devel
+
+【./configure時のエラー２】
+./configure: error: the HTTP gzip module requires the zlib library.
+【対策】
+# yum -y install zlib-devel
+
+※参考
+&lt;a href=&#34;http://bit.ly/19V1ahY&#34; target=&#34;_blank&#34;&gt;64bit版CentOS 5.3にnginxをインストールしてみた - Umeyashikiの日記&lt;/a&gt; 
+&lt;/pre&gt;
+
+&lt;p&gt;これで&lt;code&gt;./configure&lt;/code&gt;が正常に終了したと思いますので、下記のようにしてインストールしましょう。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;# make
+# make install
+&lt;/pre&gt;
+
+&lt;p&gt;以上で、Nginxのインストールは終了です。&lt;/p&gt;
+
+&lt;p&gt;次に、Nginxの設定に行きたいところですが、インストールを終わらせてしまいましょう。&lt;/p&gt;
+
+&lt;h2 id=&#34;2-go-toolsをインストール:30541588868439902a1efc8adcbbf1c0&#34;&gt;2.Go Toolsをインストール&lt;/h2&gt;
+
+&lt;p&gt;基本的には本家サイトの&lt;a href=&#34;http://golang.org/doc/install&#34; target=&#34;_blank&#34;&gt;Getting Started&lt;/a&gt;をみてください。&lt;/p&gt;
+
+&lt;p&gt;簡単に言うと、こちらから環境にあったものをインストールするか、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://golang.org/dl/&#34;&gt;https://golang.org/dl/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ソースからインストールする場合には、拙作ですが、gitが入っていれば数回のコマンド入力でgoがインストールできます。「Mercurialが入ってなければ、Mercurialをインストールする」というような工程はもう必要ありません。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kwmt/goinstall&#34; title=&#34;goinstall&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/kwmt/goinstall&#34;&gt;https://github.com/kwmt/goinstall&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらもお勧めです。(Linux,Macのみ対応しています。)&lt;/p&gt;
+
+&lt;h2 id=&#34;3-mysqlをインストールする:30541588868439902a1efc8adcbbf1c0&#34;&gt;3.MySQLをインストールする&lt;/h2&gt;
+
+&lt;p&gt;ググりましょう。&lt;/p&gt;
+
+&lt;h2 id=&#34;4-nginxの設定をする:30541588868439902a1efc8adcbbf1c0&#34;&gt;4.Nginxの設定をする&lt;/h2&gt;
+
+&lt;p&gt;FastCGIを使うには、locationディレクティブに次のような感じで設定するようです。&lt;/p&gt;
+
+&lt;p&gt;この例だと、ポート8080にアクセスがきたら、ポート9000にアクセスするようになります。（作るアプリによっては実用的ではないかもしれません）&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;server {
+    listen       8080;
+    server_name  localhost;
+
+    location / {
+        fastcgi_pass 127.0.0.1:9000;
+        include fastcgi.conf;
+    }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Basic認証を掛ける方法は、&lt;a href=&#34;http://bit.ly/17eWMgm&#34; target=&#34;_blank&#34;&gt;【Nginx】Basic認証をかける&lt;/a&gt;を参考にさせて頂きました。&lt;/p&gt;
+
+&lt;p&gt;実際の設定としては次のようになります。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;location /admin {
+            auth_basic &#34;members onry&#34;;
+            auth_basic_user_file &#34;/etc/nginx/.htpasswd&#34;;
+            fastcgi_pass 127.0.0.1:9000;
+            include fastcgi.conf;
+        }
+&lt;/pre&gt;
+
+&lt;p&gt;設定が終わったので、Nginxを起動させましょう。起動するには、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;# nginx
+&lt;/pre&gt;
+
+&lt;p&gt;です。&lt;/p&gt;
+
+&lt;p&gt;再起動と停止は次のようにします。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;# nginx -s reload //再起動
+# nignx -s stop   //停止
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-go言語プログラムをfastcgiとして動かすためには:30541588868439902a1efc8adcbbf1c0&#34;&gt;5.Go言語プログラムをFastCGIとして動かすためには&lt;/h2&gt;
+
+&lt;p&gt;何も出力しませんが、localhost:9000で接続要求を待ってくれます。この&amp;#8221;9000&amp;#8243;はNginx側の設定の9000と合わせる必要があります。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;package main
+import (
+    &#34;net/http&#34;
+    &#34;net/http/fcgi&#34;
+)
+func main(){
+    l,_:= net.Listen(&#34;tcp&#34;,&#34;:9000&#34;)
+    mux := http.NewServeMux()
+    fcgi.Serve(l,mux)
+}
+&lt;/pre&gt;
+
+&lt;p&gt;ちなみに、下記は&lt;a href=&#34;http://golang.org/pkg/net/http/fcgi/#Serve&#34; target=&#34;_blank&#34;&gt;&amp;#8220;net/http/fcgi&amp;#8221;&lt;/a&gt;パッケージのServe関数の翻訳です。Serve関数で何をやってるのかが分かるかと思います。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Serve関数はリスナー&lt;code&gt;l&lt;/code&gt;(エル)上で、FastCGI接続を待ち受け、それぞれに対して新しいゴルーチンを作ります。&lt;/p&gt;
+
+&lt;p&gt;そのゴルーチンはリクエストを解釈し、リクエストに応答する&lt;code&gt;handler&lt;/code&gt;をコールします。&lt;code&gt;l&lt;/code&gt;(エル)が&lt;code&gt;nil&lt;/code&gt;の場合、&lt;code&gt;Serve&lt;/code&gt;関数は、&lt;code&gt;os.Stdin&lt;/code&gt;からの接続を受け入れます。&lt;code&gt;handler&lt;/code&gt;が&lt;code&gt;nil&lt;/code&gt;の場合、&lt;code&gt;http.DefaultServeMux&lt;/code&gt;が使われます。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;6-go言語からmysqlを使うには:30541588868439902a1efc8adcbbf1c0&#34;&gt;6.Go言語からMySQLを使うには&lt;/h2&gt;
+
+&lt;p&gt;ドライバを下記からインストールする必要があります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/s/sqldrivers&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://golang.org/s/sqldrivers&#34;&gt;http://golang.org/s/sqldrivers&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上のリストをみると、MySQLのドライバは2つあるのですが、たとえば、go-sql-driver/mysqlをインストールするには次のようにします。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ go get github.com/go-sql-driver/mysql
+&lt;/pre&gt;
+
+&lt;p&gt;使い方については、下記が参考になると思います。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/go-sql-driver/mysql/wiki/Examples&#34; target=&#34;_blank&#34;&gt;wikiにあるExamples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/tenntenn/items/dddb13c15643454a7c3b&#34; target=&#34;_blank&#34;&gt;[Go言語] database/sqlパッケージを使ってみた&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;もう1つのドライバmymysqlについては、過去記事をご参照ください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2012/09/06/golang%e3%81%8b%e3%82%89mysql%e3%82%92%e4%bd%bf%e3%81%86%e3%81%ab%e3%81%af/&#34; title=&#34;golangからMySQLを使うには&#34; target=&#34;_blank&#34;&gt;golangからMySQLを使うには&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;補足-mysqlから取得した日本語が文字化けする件:30541588868439902a1efc8adcbbf1c0&#34;&gt;補足：mysqlから取得した日本語が文字化けする件&lt;/h2&gt;
+
+&lt;p&gt;※Mac OSのみかもしれない.&lt;/p&gt;
+
+&lt;p&gt;【原因】&lt;/p&gt;
+
+&lt;p&gt;Server側とClient側の文字コードが異なっていたため。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Server characterset:    latin1
+Db     characterset:    latin1
+Client characterset:    utf8
+Conn.  characterset:    utf8
+&lt;/pre&gt;
+
+&lt;p&gt;【対策】&lt;/p&gt;
+
+&lt;p&gt;macでは&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;/etc/my.conf
+&lt;/pre&gt;
+
+&lt;pre class=&#34;go&#34;&gt;[client]
+default-character-set=utf8
+...
+[mysqld]
+character-set-server=utf8 #ここだけ 違うので注意
+...
+[mysqldump]
+...
+default-character-set=utf8  
+[mysql]
+...
+default-character-set=utf8
+&lt;/pre&gt;
+
+&lt;p&gt;あとはmysqlを再起動する&lt;/p&gt;
+
+&lt;p&gt;（macの場合はシステム環境設定-&amp;gt;MySQL-&amp;gt;Stop MySQL Server -&amp;gt;Start MySQL Server）&lt;/p&gt;
+
+&lt;p&gt;※参考&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://d.hatena.ne.jp/nightmare_tim/20110530/1306704112&#34;&gt;fedora15 mysql5.5 default-character-setが原因で起動できない&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;補足-go言語でクロスコンパイルするには:30541588868439902a1efc8adcbbf1c0&#34;&gt;補足：Go言語でクロスコンパイルするには&lt;/h2&gt;
+
+&lt;p&gt;まだ試したことないですが、とりあえずメモがてら。ためして何か分かったら更新するかもです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1g3egQA&#34; target=&#34;_blank&#34;&gt;Go言語でクロスコンパイルする &amp;#8211; memoメモ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;おわりに:30541588868439902a1efc8adcbbf1c0&#34;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;これでひとまずNginx+golang(fcgi)+MySQLの環境が整ったとおもいますので、あとは&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/doc/articles/wiki/&#34; target=&#34;_blank&#34;&gt;Writing Web Applications&lt;/a&gt;(&lt;a href=&#34;https://github.com/kwmt/golangwiki/blob/master/doc/articles/wiki.md&#34; target=&#34;_blank&#34;&gt;日本語訳&lt;/a&gt;)(スライド：&lt;a href=&#34;http://www.slideshare.net/yasi_life/goweb-16448500&#34; target=&#34;_blank&#34;&gt;Go言語によるwebアプリの作り方&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;のような記事を読むと良いと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考リンク:30541588868439902a1efc8adcbbf1c0&#34;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mwholt.blogspot.jp/2013/05/writing-go-golang-web-app-with-nginx.html&#34; target=&#34;_blank&#34;&gt;Writing a Go (&amp;#8220;golang&amp;#8221;) Web App with nginx, FastCGI, MySQL, JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not&#34; title=&#34;Webserver for Go (golang) webservices: using NGINX or not?&#34; target=&#34;_blank&#34;&gt;Stackoverflow:Webserver for Go (golang) webservices: using NGINX or not?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/net/http/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;net/http&amp;#8221;&lt;/a&gt;パッケージ&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/net/http/fcgi/#Serve&#34; target=&#34;_blank&#34;&gt;&amp;#8220;net/http/fcgi&amp;#8221;&lt;/a&gt;パッケージ&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.nginx.org/Install&#34; target=&#34;_blank&#34;&gt;Nginx installリンク&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/19V1ahY&#34; target=&#34;_blank&#34;&gt;64bit版CentOS 5.3にnginxをインストールしてみた &amp;#8211; Umeyashikiの日記&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/17eWMgm&#34; target=&#34;_blank&#34;&gt;【Nginx】Basic認証をかける&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/doc/install&#34; target=&#34;_blank&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://golang.org/dl/&#34;&gt;https://golang.org/dl/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kwmt/goinstall&#34; title=&#34;goinstall&#34; target=&#34;_blank&#34;&gt;goinstall&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/s/sqldrivers&#34; target=&#34;_blank&#34;&gt;SQLDrivers &amp;#8211; go-wiki &amp;#8211; SQL database drivers &amp;#8211; Go Language Community Wiki &amp;#8211; Google Project Hosting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/go-sql-driver/mysql/wiki/Examples&#34; target=&#34;_blank&#34;&gt;wikiにあるExamples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/tenntenn/items/dddb13c15643454a7c3b&#34; target=&#34;_blank&#34;&gt;[Go言語] database/sqlパッケージを使ってみた&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2012/09/06/golang%e3%81%8b%e3%82%89mysql%e3%82%92%e4%bd%bf%e3%81%86%e3%81%ab%e3%81%af/&#34; title=&#34;golangからMySQLを使うには&#34; target=&#34;_blank&#34;&gt;golangからMySQLを使うには&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/nightmare_tim/20110530/1306704112&#34;&gt;fedora15 mysql5.5 default-character-setが原因で起動できない&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1g3egQA&#34; target=&#34;_blank&#34;&gt;Go言語でクロスコンパイルする &amp;#8211; memoメモ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、構造体フィールドの値を取得するには？</title>
+      <link>/kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</guid>
+      <description>
+
+&lt;p&gt;リフレクションを使って、構造体フィールドの値を取得するには？&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6792088.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/Tp5S6AVDB8&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/Tp5S6AVDB8&#34;&gt;http://play.golang.org/p/Tp5S6AVDB8&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:7fa19f7cd3dd22f862eee8866f2bc941&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/goken/goken/blob/master/goken08-reflect/goken08-reflect.md&#34; target=&#34;_blank&#34;&gt;Go研 Vol.8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、構造体フィールドの値を変更するには？</title>
+      <link>/kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</guid>
+      <description>
+
+&lt;p&gt;リフレクションを使って、構造体フィールドの値を変更するには？&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6792127.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:72fe90f91e75b9c8fc516f44ecb54c95&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/goken/goken/blob/master/goken08-reflect/goken08-reflect.md&#34; target=&#34;_blank&#34;&gt;Go研 Vol.8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang 画像ファイルをbase64 encode/decode するには</title>
+      <link>/kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</link>
+      <pubDate>Sun, 29 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</guid>
+      <description>
+
+&lt;p&gt;ある適当な画像（ここでは&amp;#8221;image.jpg&amp;#8221;）をbase64エンコードした文字列に変換したあと、変換された文字列をデコードして画像ファイル（ここでは&amp;#8221;encode_and_decord.jpg&amp;#8221;）を作成する。&lt;/p&gt;
+
+&lt;p&gt;（同じ画像ファイルが作成されるだけですが&amp;#8230;）&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6750943.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:08cc87d9c0023c6b1eaf6507750f20e0&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/encoding/base64/&#34; target=&#34;_blank&#34;&gt;encoding/base64パッケージ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#golang メールを送信するには</title>
+      <link>/kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</link>
+      <pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</guid>
+      <description>
+
+&lt;h2 id=&#34;最初に:328d6be256a2098f1d0c300310b7b470&#34;&gt;最初に&lt;/h2&gt;
+
+&lt;p&gt;Go言語でのメール送信方法について、&lt;a href=&#34;#smtp&#34;&gt;SMTP(ポート25番)を使った方法&lt;/a&gt;と&lt;a href=&#34;#smtpovertls&#34;&gt;Gmailを使ってメールを送信する方法(SMTP over TLS)&lt;/a&gt;をメモしておこうと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージを使用します。&lt;/p&gt;
+
+&lt;p&gt;基本的には、go-wikiページにある &lt;a href=&#34;http://bit.ly/1dFcSBs&#34; target=&#34;_blank&#34;&gt;SendingMail&lt;/a&gt;を参考にしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.puni.net/~mimori/smtp/ref.html&#34; target=&#34;_blank&#34;&gt;SMTPコマンドリファレンス&lt;/a&gt;のような仕様を読みながら、&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージのソースを読んだら理解が深まりました。感想としては、そのままwrapしてるだけって感じでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;smtp.section:328d6be256a2098f1d0c300310b7b470&#34;&gt;SMTP(ポート25番)を使った方法&lt;/h2&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6699756.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;smtpovertls.section:328d6be256a2098f1d0c300310b7b470&#34;&gt;Gmailを使ってメールを送信する方法(SMTP over TLS)&lt;/h2&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6680028.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:328d6be256a2098f1d0c300310b7b470&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1dFcSBs&#34; target=&#34;_blank&#34;&gt;SendingMail &amp;#8211; go-wiki &amp;#8211; Using the smtp package to send an email.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.puni.net/~mimori/smtp/ref.html&#34; target=&#34;_blank&#34;&gt;SMTPコマンドリファレンス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/mail/troubleshooter/1668960?rd=1#ts=1665018,1665141,2769074&#34; target=&#34;_blank&#34;&gt;Gmal ヘルプ &amp;#8211; IMAP と POP3 の開始方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

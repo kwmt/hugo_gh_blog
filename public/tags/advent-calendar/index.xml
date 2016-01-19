@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Advent Calendar on Androg</title>
+    <link>kwmt27.net/tags/advent-calendar/</link>
+    <description>Recent content in Advent Calendar on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 18 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/advent-calendar/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>#golang でマッチングサイトを作った時の感想。</title>
+      <link>/kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</link>
+      <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</guid>
+      <description>
+
+&lt;p&gt;この記事は &lt;a href=&#34;http://qiita.com/advent-calendar/2013/go&#34; target=&#34;_blank&#34;&gt;Go Advent Calendar 2013&lt;/a&gt; の 18 日目の投稿です。&lt;/p&gt;
+
+&lt;h2 id=&#34;はじめに:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;今年もいろいろと行われていますAdvent Calendarですが、初めて参加させて頂きます。プログラミング界隈のプロフェッショナルな方々の中で書くというのは、ただ1人で家で書いてるだけなのに、ちょっと緊張しちゃってます(^^ゞ　&lt;/p&gt;
+
+&lt;p&gt;簡単にGo歴を。&lt;a href=&#34;http://bit.ly/1dJqET7&#34; target=&#34;_blank&#34;&gt;2012年1月に勉強会&lt;/a&gt;に参加してから、シンプルで守備範囲が広そうで強力で、なにより楽しいと感じ、それから自分で勉強したりして発表させて頂いたりしました(&lt;a href=&#34;http://www.slideshare.net/yasi_life/presentations&#34; target=&#34;_blank&#34;&gt;slideshare&lt;/a&gt;)。&lt;a href=&#34;http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1&#34; target=&#34;_blank&#34;&gt;神戸からGoCon Springに参加&lt;/a&gt;したり、&lt;a href=&#34;http://bit.ly/1dJqv20&#34; target=&#34;_blank&#34;&gt;神戸から名古屋の勉強会に参加&lt;/a&gt;したりしました。&lt;/p&gt;
+
+&lt;p&gt;そんな中、今年の10月に、マッチングサイトを作ってほしいという話があり、言語は何でもいいとのことだったので、担当者に&amp;#8221;Goはキマスよ&amp;#8221;と訴え続け、Goで作らせて頂きました。&lt;/p&gt;
+
+&lt;p&gt;そこで、よく「Goで何ができるの？」って聞かれますので、「マッチングサイトが作れますよ」という事例を紹介したいところなのですが、そのマッチングサイトは、まだオープンしておらず、残念ながらリンクやスクリーンショットを貼ることができません。ので、そのマッチングサイトを作った時の&amp;#8221;機能&amp;#8221;と&amp;#8221;構成&amp;#8221;を簡単に説明した後、&amp;#8221;感想&amp;#8221;を書いていきたいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;機能:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;機能&lt;/h2&gt;
+
+&lt;p&gt;このマッチングサイトのおおまかな機能としては、以下になります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;都道府県や店舗の特徴から、ある店舗を検索できる&lt;/li&gt;
+&lt;li&gt;検索結果から、各店舗の詳細を見ることができる&lt;/li&gt;
+&lt;li&gt;お問い合わせフォームから各店舗に問い合わせできる(メール送信)&lt;/li&gt;
+&lt;li&gt;各店舗を、新規に登録・更新・削除することができる&lt;/li&gt;
+&lt;li&gt;登録時、画像をアップロードできる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;マッチングサイトの必要最低限の機能のイメージです。&lt;/p&gt;
+
+&lt;h2 id=&#34;構成:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;構成&lt;/h2&gt;
+
+&lt;h4 id=&#34;サーバーの構成:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;サーバーの構成&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/&#34; target=&#34;_blank&#34;&gt;Nginx + Golang(FastCGI) + MySQL&lt;/a&gt;で作成しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;パッケージ構成:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;パッケージ構成&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;main&lt;/code&gt;パッケージの他に&lt;code&gt;db&lt;/code&gt;パッケージ、&lt;code&gt;data&lt;/code&gt;パッケージ、後はテンプレートファイル(*.tmpl)です。&lt;/p&gt;
+
+&lt;p&gt;MVCモデルのイメージで言うと、&lt;code&gt;data&lt;/code&gt;,&lt;code&gt;db&lt;/code&gt;パッケージがModelで、テンプレートはView、&lt;code&gt;main&lt;/code&gt;パッケージがControllerというイメージで作成しました。あとは、&lt;code&gt;util&lt;/code&gt;パッケージです。もちろん、db,data,utilという名前である必要はありません。&lt;/p&gt;
+
+&lt;h4 id=&#34;各パッケージのファイル数と総ステップ数:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;各パッケージのファイル数と総ステップ数&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mainパッケージ・・・17ファイル&lt;/li&gt;
+&lt;li&gt;dataパッケージ・・・23ファイル&lt;/li&gt;
+&lt;li&gt;dbパッケージ・・・2ファイル&lt;/li&gt;
+&lt;li&gt;utilパッケージ・・・12ファイル&lt;/li&gt;
+&lt;li&gt;テンプレートファイル・・・37ファイル&lt;/li&gt;
+&lt;li&gt;総ステップ数・・・8678ステップ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;使用した外部ライブラリ:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;使用した外部ライブラリ&lt;/h4&gt;
+
+&lt;p&gt;データベース関連&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MySQLのドライバ：&lt;a href=&#34;https://github.com/go-sql-driver/mysql&#34; target=&#34;_blank&#34;&gt;&amp;#8220;github.com/go-sql-driver/mysql&amp;#8221;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ORマッパー：&lt;a href=&#34;https://github.com/coopernurse/gorp&#34; target=&#34;_blank&#34;&gt;&amp;#8220;github.com/coopernurse/gorp&amp;#8221;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;画像関連&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;画像をリサイズする：&lt;a href=&#34;https://github.com/nfnt/resize&#34; target=&#34;_blank&#34;&gt;&amp;#8220;github.com/nfnt/resize&amp;#8221;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;実績工数:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;実績工数&lt;/h4&gt;
+
+&lt;p&gt;実装2人で約30人日(デザイン除く)&lt;/p&gt;
+
+&lt;h2 id=&#34;感想:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;(これだけではイメージ沸かないですよね・・・すみません。。。感想に入らせて頂きます。)&lt;/p&gt;
+
+&lt;p&gt;●現在、&lt;a href=&#34;http://robfig.github.io/revel/&#34; target=&#34;_blank&#34;&gt;Revel&lt;/a&gt;と先日の海外のAdvent Calenderで発表がありました&lt;a href=&#34;http://blog.gopheracademy.com/day-05-beego&#34; target=&#34;_blank&#34;&gt;beego&lt;/a&gt;というフレームワークがありますが、このくらいの規模ならフレームワークは不要かなと思いました。&lt;/p&gt;
+
+&lt;p&gt;●ORMの&lt;a href=&#34;https://github.com/coopernurse/gorp&#34; target=&#34;_blank&#34;&gt;gorp&lt;/a&gt;を使わず、ゴリゴリSQLをかいても出来ますが、gorpにより非常に楽させてもらいました。個人的には使いやすかったと思います。&lt;/p&gt;
+
+&lt;p&gt;●標準パッケージでテンプレート(&lt;a href=&#34;http://golang.org/pkg/html/template/&#34; target=&#34;_blank&#34;&gt;html/template&lt;/a&gt;)が使え、改めてフレームワークなどを入れる必要がないので、余計な使い方を覚える必要がないのが個人的には良いと思いました。&lt;/p&gt;
+
+&lt;p&gt;●デザイン部分はデザイナーさんが担当したのですが、&lt;code&gt;if&lt;/code&gt;文などのプログラミングがわかならなくても、&amp;#8221;{{}}部分はプログラムしていますが、他のところはいじってもらって大丈夫です&amp;#8221;ぐらいの説明で、テンプレートファイルを容易に理解して頂いたので、楽でした。&lt;/p&gt;
+
+&lt;p&gt;●&lt;code&gt;{{define &amp;quot;header&amp;quot;}}ヘッダー{{end}}&lt;/code&gt;のようにモジュール化でき、&lt;code&gt;{{template &amp;quot;header&amp;quot;}}&lt;/code&gt;のようにして、モジュールを呼び出すことが出来ますが、あたりまえかもしれませんが、これもやみくもにモジュール化するのではなくて、分かりやすい構成にした方がよいと感じました。&lt;/p&gt;
+
+&lt;p&gt;●テンプレートファイルの読み込みの仕方によっては、Goのバイナリを再コンパイルしなくても更新されるのは、非常に重宝しました。デザイナーさんがデザインを変更しても、ブラウザの更新だけでデザインの変更が確認できるからです。&lt;/p&gt;
+
+&lt;p&gt;このようにする読み込みの仕方は、テンプレートファイルをParseするときに、関数の外で読み込まないことです。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;func RootHandler(w http.ResponseWriter, r *http.Request) {
+    tmpl := template.New(&#34;main.tmpl&#34;)
+    tmpl = template.Must(tmpl.ParseGlob(&#34;templates/*.tmpl&#34;))
+    data = ・・・
+    tmpl.Execute(w,data)
+    ・・・
+}
+&lt;/pre&gt;
+
+&lt;p&gt;つまり、次のようにしてしまうと、ブラウザの更新だけでは更新されません。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;var  tmpl = template.Must((template.New(&#34;main.tmpl&#34;)).ParseGlob(&#34;templates/*.tmpl&#34;))
+
+func RootHandler(w http.ResponseWriter, r *http.Request) {
+    data = ・・・
+    tmpl.Execute(w,data)
+    ・・・
+}
+&lt;/pre&gt;
+
+&lt;p&gt;●Go1.2からテンプレートに比較演算子が使えるようになりましたが(&lt;a href=&#34;http://golang.org/doc/go1.2#text_template&#34; target=&#34;_blank&#34;&gt;本家変更点&lt;/a&gt;, &lt;a href=&#34;https://github.com/kwmt/golangwiki/blob/master/doc/go1.2.md#the-texttemplate-and-htmltemplate-packages&#34; target=&#34;_blank&#34;&gt;翻訳&lt;/a&gt;)、個人的にはテンプレートをあまりプログラムちっくにすべきではないかもしれないと思いました。デザイナーさんにやさしいテンプレートを作成することが関係を良くするポイントかもしれません。&lt;/p&gt;
+
+&lt;p&gt;●(感想というか覚え書きですが)テンプレートでは、ある構造体にレシーバとして定義したメソッドが使えます(&lt;a href=&#34;http://golang.org/pkg/text/template/#hdr-Arguments&#34; target=&#34;_blank&#34;&gt;text/templateパッケージ&lt;/a&gt;)。&lt;/p&gt;
+
+&lt;p&gt;例えば、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;type Person struct{
+    Address int
+}
+
+func (p *Person) Method() bool {
+    ・・・・
+} 
+&lt;/pre&gt;
+
+&lt;p&gt;としたとき、テンプレートファイルを、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;{{if .Method}}
+・・・
+{{end}}
+&lt;/pre&gt;
+
+&lt;p&gt;とすれば、&lt;code&gt;Method&lt;/code&gt;が使えます。&lt;a href=&#34;http://golang.org/pkg/text/template/#FuncMap&#34; target=&#34;_blank&#34;&gt;template.FuncMap&lt;/a&gt;(&lt;a href=&#34;http://bit.ly/1acasGJ&#34; target=&#34;_blank&#34;&gt;使い方&lt;/a&gt;)は、データに紐付けなくてもよい関数を作り、データに関連するものは上記の&lt;code&gt;Method&lt;/code&gt;のように作るようにすれば分かりやすいかなと思います。&lt;/p&gt;
+
+&lt;p&gt;●(これも感想というか覚え書きですが)&lt;a href=&#34;http://golang.org/pkg/net/http/fcgi/&#34; target=&#34;_blank&#34;&gt;fcgi.Serve&lt;/a&gt;関数内で、要求があるたびに新しくゴルーチンを作っています(&lt;a href=&#34;http://golang.org/src/pkg/net/http/fcgi/child.go?s=6606:6660#L262&#34; target=&#34;_blank&#34;&gt;ソース&lt;/a&gt;)。&lt;/p&gt;
+
+&lt;h2 id=&#34;終わりに:c0dbec7fa3cfe404e69f284d2c58d1c4&#34;&gt;終わりに&lt;/h2&gt;
+
+&lt;p&gt;このマッチングサイトのリンクやスクリーンショットを示せず、とても分かりにくかったと思いますが、&amp;#8221;Goってツール系のイメージがある&amp;#8221;とか、&amp;#8221;速さが必要なところでしか使わない&amp;#8221;とか思ってる方に、普通にWebサイトが作れるんだ、ということを少しは知って頂けたかなと思い、終わりにしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;なにかGoに関してご相談ありましたら、&lt;a href=&#34;https://twitter.com/kwmt27&#34;&gt;@kwmt27&lt;/a&gt; までご連絡下さい。最後までお読み頂きありがとうございました。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

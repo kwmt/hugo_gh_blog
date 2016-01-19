@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Runtime on Androg</title>
+    <link>kwmt27.net/tags/runtime/</link>
+    <description>Recent content in Runtime on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 05 Oct 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/runtime/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>#golang リフレクションを使って関数名を取得するには？</title>
+      <link>/kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/pkg/reflect/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;reflect&amp;#8221;&lt;/a&gt;パッケージだけでは取得できないようで、&lt;a href=&#34;http://golang.org/pkg/runtime/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;runtime&amp;#8221;&lt;/a&gt;パッケージの&lt;code&gt;&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;&lt;/code&gt;という関数を使うようです。&lt;/p&gt;
+
+
+&lt;script src=&#34;//gist.github.com/6840466.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;参考:69498b034e47686ef53c806c66b6fa56&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1a0Zfsp&#34; target=&#34;_blank&#34;&gt;reflection &amp;#8211; How to get the name of a function in Go? &amp;#8211; Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1fWdHYS&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;goken/goken08-reflect.md at master · goken/goken&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

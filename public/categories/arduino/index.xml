@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arduino on Androg</title>
+    <link>kwmt27.net/categories/arduino/</link>
+    <description>Recent content in Arduino on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 12 Dec 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/categories/arduino/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2011/12/10-11はArduino三昧だった。</title>
+      <link>/kwmt27.net/index.php/2011/12/13/20111210-11%E3%81%AFarduino%E4%B8%89%E6%98%A7%E3%81%A0%E3%81%A3%E3%81%9F/</link>
+      <pubDate>Mon, 12 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2011/12/13/20111210-11%E3%81%AFarduino%E4%B8%89%E6%98%A7%E3%81%A0%E3%81%A3%E3%81%9F/</guid>
+      <description>
+
+&lt;p&gt;2011/12/10(土曜日)は&lt;a href=&#34;http://atnd.org/events/22366&#34; target=&#34;_blank&#34;&gt;Android日本橋でんでんタウンもくもく会第2回&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;に行って来ました。場違いなのを覚悟で。&lt;/p&gt;
+
+&lt;h2 id=&#34;arduinoを動かすための準備:3fc5bae77b64d523df084baa0e0eb708&#34;&gt;Arduinoを動かすための準備&lt;/h2&gt;
+
+&lt;p&gt;基本的に、以下のY.A.M の 雑記帳を参考にさせて頂きました。&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://y-anz-m.blogspot.com/2011/05/android-open-accessory-development-kit.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://y-anz-m.blogspot.com/2011/05/android-open-accessory-development-kit.html&#34;&gt;http://y-anz-m.blogspot.com/2011/05/android-open-accessory-development-kit.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.arduino.cc/en/Main/software&#34; target=&#34;_blank&#34;&gt;Download the Arduino Software&lt;/a&gt;で各OS（ぼくはMac OS）のリンクをクリックして「arduino-1.0-macosx.zip」をダウンロードして解凍。解凍すると、「Arduino」（アプリケーション）が解凍される。それを起動すると以下のような画面が起動する。&lt;/p&gt;
+
+&lt;p&gt;前のバージョン（1.0以前）までは同時に、FTDIUSBSerialDriver_10_4_10_5_10_6.mpkgが同梱されていたようなのですが1.0からなくて、&lt;a href=&#34;http://www.ftdichip.com/Drivers/VCP.htm&#34; target=&#34;_blank&#34;&gt;FTDI chip&lt;/a&gt;のサイトから2.2.16(Mac 64bit)をダウンロードすると、FTDIUSBSerialDriver_10_4_10_5_10_6.mpkgがインストールできます。&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;いま気づいたのですが、&lt;a href=&#34;http://arduino.cc/en/Guide/MacOSX#toc3&#34; target=&#34;_blank&#34;&gt;3 | Install the Software&lt;/a&gt;によると、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If you&amp;#8217;re using an Arduino Uno or Mga 2560, you don&amp;#8217;t have any drivers to install. Skip ahead to the next step.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#8217;re using an older board (Duemilanove, Diecimila, or any board with an FTDI driver chip that looks like this:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とあるので、FTDIドライバが不要なボードもあるのかな。&lt;/p&gt;
+
+&lt;p&gt;ちょっと脱線しましたが、Arduinoアプリケーションを起動するとこんな感じになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://androg.up.seesaa.net/image/Arduino_app.png&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://androg.up.seesaa.net/image/Arduino_app-thumbnail2.png&#34; width=&#34;227&#34; height=&#34;239&#34; border=&#34;0&#34; align=&#34;&#34; alt=&#34;Arduino_app.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Capacitive Sensing Libraryというのもの必要だそうです。&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.arduino.cc/playground/Main/CapSense&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.arduino.cc/playground/Main/CapSense&#34;&gt;http://www.arduino.cc/playground/Main/CapSense&lt;/a&gt;&lt;/a&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;からダウンロードして、解凍しときます。「CapSense」フォルダができます。あとで中のファイルを移動します。&lt;/p&gt;
+
+&lt;p&gt;ADKをするのに必要な&lt;a href=&#34;https://dl-ssl.google.com/android/adk/adk_release_0512.zip&#34; target=&#34;_blank&#34;&gt;ADK Package&lt;/a&gt;もダウンロード・解凍しておきます。　「ADK_release_0512」フォルダができます。&lt;/p&gt;
+
+&lt;p&gt;次に、ダウンロードしたファイルを移動します。まず移動する場所は、Finderでアプリケーションフォルダを開き、Arduinoを右クリックして、「パッケージの内容を表示」をクリックします。Contents/Resources/Java/libraries　が移動先です。&lt;/p&gt;
+
+&lt;p&gt;移動ファイルは先程ダウンロードした&lt;/p&gt;
+
+&lt;p&gt;・CapSense/CapSense.h、CapSense.cppの２ファイル&lt;/p&gt;
+
+&lt;p&gt;・ADK_release_0512/firmware/arduino_libs/AndroidAccessory フォルダと、USB_Host_Shieldフォルダです。&lt;/p&gt;
+
+&lt;h2 id=&#34;次にボードとpcを接続してから:3fc5bae77b64d523df084baa0e0eb708&#34;&gt;次にボードとPCを接続してから&lt;/h2&gt;
+
+&lt;p&gt;次に、ボードとPCをつなげ、Arduinoアプリケーションを起動し、LEDを点滅させるサンプル &lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;File &amp;gt; Examples &amp;gt; 1.Basics &amp;gt; Blink.&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;を開きます。&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;Tools &amp;gt; Board &amp;gt; Arduino Duemilanove w/ ATmega328&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;を選択してます。（これは使うボードによって異なります。）&lt;/p&gt;
+
+&lt;p&gt;Verify/Compile（⌘R）をすると、（最初はSerial Portを聞かれるので、/dev/tty.usbserial-xxxxxxxを選択すると、）13pinにつながっているLEDが1秒ごとに点滅します。&lt;/p&gt;
+
+&lt;h2 id=&#34;次はブレッドボードにledを付けて点灯させる:3fc5bae77b64d523df084baa0e0eb708&#34;&gt;次はブレッドボードにLEDを付けて点灯させる&lt;/h2&gt;
+
+&lt;p&gt;D12　→　抵抗　→　LED　→　GND&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;というつなげ方で、SketchのBlinkの13を12に変えてやると、LEDが点滅します。&lt;/p&gt;
+
+&lt;p&gt;で、3色LEDというのがあるそうで、それを点滅させてみることが出来たので、Youtubeにあげてみました。12/10はここまで。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=Pf4Ajam0MEg&amp;amp;feature=youtube_gdata&amp;amp;external_video_config=width%3D320%26height%3D240&#34;&gt;Arduinoで3色LEDを点滅させてみた。&lt;/a&gt;{.external-video-link}&lt;/p&gt;
+
+&lt;h2 id=&#34;2011-12-11-日曜日-もarduino:3fc5bae77b64d523df084baa0e0eb708&#34;&gt;2011/12/11(日曜日)もArduino&lt;/h2&gt;
+
+&lt;p&gt;12/10のでんもく会の時に「Arduinoファンクラブで、初心者向けに勉強会やるからおいで」と誘われたので、2日連続で日本橋に行って来ました。そのときの様子がアップされてました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blogs.yahoo.co.jp/patalliro1701/27737418.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://blogs.yahoo.co.jp/patalliro1701/27737418.html&#34;&gt;http://blogs.yahoo.co.jp/patalliro1701/27737418.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;11時から開始で、始めに1500円でなんかわからんままキットを買いましたが（強制ではない）、それで勉強させてもらいました。&lt;/p&gt;
+
+&lt;p&gt;キットの中にサーボモーターとかいうやつが入ってました。180度回転する代物で、その回転を制御するといろんなことができるそうです。とりあえずはそのサーボモーターが気になったので、動かすことを目標にしてみた。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kousaku-kousaku.blogspot.com/2008/06/arduino.html&#34; target=&#34;_blank&#34;&gt;こちら&lt;/a&gt;を参考にさせてもらったり、まわりの方にたくさん教えて頂きながら、とりあえず動きました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=ShvKt1EPdq4&amp;amp;feature=youtube_gdata&amp;amp;external_video_config=width%3D320%26height%3D240&#34;&gt;Arduinoでサーボモーターを動かしてみた。&lt;/a&gt;{.external-video-link}&lt;/p&gt;
+
+&lt;p&gt;キットの中には、暗くなったらLEDを点灯させたり、明るくなったら消灯させたりできるCDSというものが入っていました。それも試そうかと思ったけど、保留に。&lt;/p&gt;
+
+&lt;p&gt;結局アイデア勝負だね〜と思うも、ぜんぜんアイデアが思い浮かばない。。。そいういえば昨日ナイトライダーみたいなのもできるよと言われてたことを思い出して、時間も無いしそれをやってみよう。と思うも、深く考え過ぎたらしく、時間内には出来ませんでした。が、12/12にできたので、とりあえず、Youtubeにアップっと。（Youtubeハマりそうｗ）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=Qf9XuEkqGzE&amp;amp;feature=youtube_gdata&amp;amp;external_video_config=width%3D320%26height%3D240&#34;&gt;ArduinoでLED9個を連続で点滅させてみた。&lt;/a&gt;{.external-video-link}&lt;/p&gt;
+
+&lt;p&gt;なんか長くなったけど、とりえあず以上かな。あ、Arduino本体と本を買ったのでリンク貼っとこう。&lt;/p&gt;
+
+&lt;p&gt;Arduino本体です。2500円は安いそうです。日本橋では3000円近くするみたいでした。&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;この本は超おすすめだそうです。&lt;/br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

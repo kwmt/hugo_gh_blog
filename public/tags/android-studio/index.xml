@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android Studio on Androg</title>
+    <link>kwmt27.net/tags/android-studio/</link>
+    <description>Recent content in Android Studio on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 09 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/android-studio/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Android Studioを1.0にバージョンアップしたら、Gradle DSL method not found: &amp;#8216;runProguard()&amp;#8217;って怒られた場合</title>
+      <link>/kwmt27.net/index.php/2014/12/09/android-studio-1-0-gradle-dsl-method-not-found-runproguard/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/12/09/android-studio-1-0-gradle-dsl-method-not-found-runproguard/</guid>
+      <description>&lt;p&gt;Android Studioがついに1.0になりましたね。ということで&lt;a href=&#34;http://bit.ly/1ueoqlV&#34; target=&#34;_blank&#34;&gt;ダウンロード&lt;/a&gt;して、起動したらgradleのバージョンを1.0.0にしろとかいろいろ怒られたんですが、そこらへんは自動で修正してくれたのに、下記のエラーは自動で修正してくれませんでしたのでメモ。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Error:(32, 0) Gradle DSL method not found: &#39;runProguard()&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;対応は&lt;code&gt;runProguard&lt;/code&gt;を&lt;code&gt;minifyEnabled&lt;/code&gt;に変更します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;diff --git a/app/build.gradle b/app/build.gradle
+index 351288d..08b53f8 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -29,7 +29,7 @@ android {
+-            runProguard false
++            minifyEnabled false
+             proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+         }
+     }
+&lt;/pre&gt;
+
+&lt;p&gt;詳しくは、&lt;a href=&#34;http://bit.ly/1ueoeD6&#34; target=&#34;_blank&#34;&gt;Migrating Gradle Projects to version 1.0.0 &amp;#8211; Android Tools Project Site&lt;/a&gt; に記載してあります。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TwitterのFabric SDKをAndroid Studioで使ってみる</title>
+      <link>/kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</link>
+      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:b0282adda1b6c326f04989549de27210&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;ひさびさTwitterをつかってアプリつくろうと思って&lt;a href=&#34;https://dev.twitter.com/&#34; target=&#34;_blank&#34;&gt;ディベロッパーサイト&lt;/a&gt;に行ったら、fabric?????とか出てきてなんじゃこれ？と思って調べてたら、10/22(現地時間)に発表されたTwitterのモバイル向け新SDKとやららしい。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1CYl4HO&#34; target=&#34;_blank&#34;&gt;Twitter、モバイルアプリ向け新SDK「Fabric」発表　パスワード不要の次世代認証「Digits」リリース &amp;#8211; ITmedia ニュース&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;まぁ英語でもいいんだけど、日本語の情報ないかなぁと探してみたけど、全然ない(´・ω・`)&lt;/p&gt;
+
+&lt;p&gt;ということで、Android StudioでFabric SDKのセットアップしてから、ツイートできるようになるまでを書いてみようと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;android版fabricの公式サイト:b0282adda1b6c326f04989549de27210&#34;&gt;Android版Fabricの公式サイト&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34;&gt;https://dev.twitter.com/twitter-kit/android&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;確認したバージョン:b0282adda1b6c326f04989549de27210&#34;&gt;確認したバージョン&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Android Studio：0.9.2
+Fabric SDK：1.0.1
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;アプリの登録:b0282adda1b6c326f04989549de27210&#34;&gt;アプリの登録&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://apps.twitter.com/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://apps.twitter.com/&#34;&gt;https://apps.twitter.com/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これは普通に登録するだけ（今までどおり）&lt;/p&gt;
+
+&lt;h2 id=&#34;fabric-sdkのセットアップ:b0282adda1b6c326f04989549de27210&#34;&gt;Fabric SDKのセットアップ&lt;/h2&gt;
+
+&lt;p&gt;IDEプラグインをダウンロードすることもできるみたいだが、Gradleを使っているなら、build.gradleに書くだけで済ませたい。&lt;/p&gt;
+
+&lt;p&gt;基本的には下記を参考にすればよいと思うのですが、早速build.gradleの設定ではまった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34;&gt;https://dev.twitter.com/twitter-kit/android/integrate&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記書いてあるとおりに記述してもsyncに失敗するので、Fabric SDKを使うには下記のように設定すればsyncは通っていけたっぽい。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;--- a/build.gradle
++++ b/build.gradle
+@@ -3,17 +3,21 @@
+ buildscript {
+     repositories {
+         jcenter()
++        maven { url &#39;https://maven.fabric.io/repo&#39; }
+     }
+     dependencies {
+         classpath &#39;com.android.tools.build:gradle:0.12.+&#39;
++        classpath &#39;io.fabric.tools:gradle:1.+&#39;
+     }
+ }
+ 
+ allprojects {
++    apply plugin: &#39;io.fabric&#39;
+     repositories {
+         jcenter()
++        maven { url &#39;https://maven.fabric.io/repo&#39; }
+     }
+ }
+&lt;/pre&gt;
+
+&lt;pre class=&#34;go&#34;&gt;--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -23,5 +37,7 @@ dependencies {
+     compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+     compile &#39;com.google.android.gms:play-services:6.1.71&#39;
+     compile &#39;com.android.support:support-v4:21.+&#39;
++    compile(&#39;com.twitter.sdk.android:twitter:1.0.0@aar&#39;) {
++        transitive = true;
++    }
+ }
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;api-keyとapi-secretを追加する:b0282adda1b6c326f04989549de27210&#34;&gt;API KEYとAPI Secretを追加する&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/integrate&#34;&gt;https://dev.twitter.com/twitter-kit/android/integrate&lt;/a&gt;&lt;/a&gt; に「Add API Key and Build Secret」があるが、&lt;project&gt;/app/crashlytics.properties にAPI KEYとAPI Secretを書きます。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;twitterConsumerSecret=&amp;lt;YOUR SECRET&amp;gt;
+twitterConsumerKey=&amp;lt;YOUR KEY&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;crashlytics.propertiesに書いたKEYとSECRETの使い方に関しては、下記のリポジトリのbuild.gradleが参考になった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/twitterdev/cannonball-android/blob/master/app/build.gradle&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/twitterdev/cannonball-android/blob/master/app/build.gradle&#34;&gt;https://github.com/twitterdev/cannonball-android/blob/master/app/build.gradle&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;僕が書いたのは下記です。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -1,5 +1,13 @@ apply plugin: &#39;com.android.application&#39;
+ 
++Properties props = new Properties()
++try {
++    props.load(file(&#39;./crashlytics.properties&#39;).newDataInputStream())
++} catch (Exception ex) {
++    throw new GradleException(&#34;Missing crashlytics.properties, check the crashlytics.properties file.&#34;);
++}
++
++
+ android {
+     compileSdkVersion 21
+     buildToolsVersion &#34;20.0.0&#34;
+@@ -12,7 +20,13 @@ android {
+         versionName &#34;1.0&#34;
+     }
+     buildTypes {
++        debug {
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_KEY&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerKey&#34;)}\&#34;&#34;
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_SECRET&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerSecret&#34;)}\&#34;&#34;
++        }
+         release {
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_KEY&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerKey&#34;)}\&#34;&#34;
++            buildConfigField &#34;String&#34;, &#34;CONSUMER_SECRET&#34;, &#34;\&#34;${props.getProperty(&#34;twitterConsumerSecret&#34;)}\&#34;&#34;
+             runProguard false
+             proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+         }
+
+&lt;/pre&gt;
+
+&lt;p&gt;これは、buildConfigFieldを使っていて、アプリ内でBuildConfigを使ってKEYとSECRETを使えるようにしています。&lt;/p&gt;
+
+&lt;p&gt;次のように、ApplicationクラスのサブクラスでAPI KEYとSECRETを使ってFabric SDKの初期化します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;public class App extends Application{
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(BuildConfig.CONSUMER_KEY, BuildConfig.CONSUMER_SECRET);
+        Fabric.with(this, new TwitterCore(authConfig));
+    }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;※AndroidManifest.xmlに&lt;code&gt;android:name=&amp;quot;.App&amp;quot;&lt;/code&gt;を追加することを忘れないこと。&lt;/p&gt;
+
+&lt;h2 id=&#34;twitterでログインする:b0282adda1b6c326f04989549de27210&#34;&gt;Twitterでログインする&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/twitter-login&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/twitter-login&#34;&gt;https://dev.twitter.com/twitter-kit/android/twitter-login&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ログイン画面を作成します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;&amp;lt;com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id=&#34;@+id/login_button&#34;
+        android:layout_width=&#34;wrap_content&#34;
+        android:layout_height=&#34;wrap_content&#34; /&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;プレビューは「SIGN IN WITH TWITTER」と英語表記ですが、日本語設定の端末で確認すると「Twitterでログイン」と日本語になっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/11/sign_in_with_twitter-168x300.png&#34; alt=&#34;sign_in_with_twitter&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;aligncenter size-thumbnail wp-image-1356&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Activityの方は公式サイトどおりでいけます。&lt;/p&gt;
+
+&lt;p&gt;ログイン成功後の&lt;code&gt;TwitterSession&lt;/code&gt;を受け取る事ができるのですが、&lt;code&gt;result.data&lt;/code&gt;で取得できます。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;mTwitterLoginButton = (TwitterLoginButton) findViewById(R.id.login_button);
+mTwitterLoginButton.setCallback(new Callback&amp;lt;TwitterSession&gt;() {
+    @Override
+        public void success(Result&amp;lt;TwitterSession&gt; result) {
+        mTwitterSession = result.data;
+    }
+}   
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;twitterのrest-apiを使う:b0282adda1b6c326f04989549de27210&#34;&gt;TwitterのREST APIを使う&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/api&#34;&gt;https://dev.twitter.com/twitter-kit/android/api&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;公式サイトの例は、１つのツイートを取得しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid&#34;&gt;https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;僕はツイートしたかったので、こんな感じになりました。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;/**
+ * ツイートする。
+ * @param message ツイートする内容
+ * @see https://dev.twitter.com/rest/reference/post/statuses/update
+ */
+private void tweet(String message) {
+    TwitterApiClient twitterApiClient = TwitterCore.getInstance().getApiClient();
+    StatusesService statusesService = twitterApiClient.getStatusesService();
+
+    statusesService.update(message, null, false, null, null, null, false, null, new Callback&amp;lt;Tweet&gt;() {
+        @Override
+        public void success(Result&amp;lt;Tweet&gt; result) {
+            mHandler.post(new Runnable() {
+                public void run() {
+                    Toast.makeText(self, &#34;ツイートしました。&#34;, Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+        public void failure(TwitterException exception) {
+            mHandler.post(new Runnable() {
+                public void run() {
+                    Toast.makeText(self, &#34;ツイートに失敗しました。&#34;, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
+    });
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;StatusesService#update&lt;/code&gt;の引数の順番は、REST APIドキュメントの順番どおりです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/post/statuses/update&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/rest/reference/post/statuses/update&#34;&gt;https://dev.twitter.com/rest/reference/post/statuses/update&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この&lt;code&gt;tweet&lt;/code&gt;メソッドを呼びたいタイミングで呼べばツイートできます。&lt;/p&gt;
+
+&lt;h2 id=&#34;おわりに:b0282adda1b6c326f04989549de27210&#34;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;以上で、Fabric SDKのセットアップからツイートまでを書きましたが、&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/tweetui&#34; target=&#34;_blank&#34;&gt;TweetUi Kit&lt;/a&gt;や &lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/compose&#34; target=&#34;_blank&#34;&gt;TweetComposer Kit&lt;/a&gt;なるものがあったり、電話番号を使ってサインインする&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android/digits&#34; target=&#34;_blank&#34;&gt;Digits&lt;/a&gt;なるものがあるみたいですね。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android StudiodでgreenDaoを使う</title>
+      <link>/kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに:c037d87e89bf2c7318095970bf4dad30&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;AndroidのORMライブラリについて調べてみてまして、ORMLite、Active Android、greenDaoが有名のようです。&lt;/p&gt;
+
+&lt;p&gt;ORMLite、Active Androidは、アノテーションを使っていて、greenDaoは使っていません。&lt;/p&gt;
+
+&lt;p&gt;アノテーションはリフレクションに依存しているため、特にAndroidデバイスにおいては、パフォーマンスに影響出ますので、greenDaoを使おうかと思います。(&lt;a href=&#34;#sanko&#34;&gt;参考1&lt;/a&gt;などをみますと、パフォーマンスにクリティカルに影響があるアプリでなければどれつかっても良さそうですが・・・）&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方としては:c037d87e89bf2c7318095970bf4dad30&#34;&gt;使い方としては、&lt;/h2&gt;
+
+&lt;p&gt;２ステップ必要で、１ステップ目は、モデル定義しgreendao-generatorでコードを自動生成します。(普通のjava)&lt;/p&gt;
+
+&lt;p&gt;２ステップ目として、自動生成したコードをAndroidに組み込みます。&lt;/p&gt;
+
+&lt;p&gt;それで、自動生成するために新規にjavaプロジェクトを作る必要があると書いてある参考サイトが多くて、確かにそれでもいいのですが、別プロジェクトを作るのが面倒くさいし、プロジェクトが別なので管理がバラバラになりそうなので、なんとかしてのプロジェクトで出来ないか調べていた所、ちょ～分かりやすく書いて下さっていたサイトがありましたので、リンク張らせて頂きます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1yf9A5G&#34; target=&#34;_blank&#34;&gt;Android Studioでgradle taskを使ってgreenDaoのDao生成を行う &amp;#8211; きょこみのーと&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほとんど上記で、Android Studioのバージョンが0.8時に、リポジトリがmavenCentral()からjcenter()に変更になったことと、自動生成の出力先(上記のサイトではdaoOutputDirPath)に注意することぐらいでしょうか。&lt;/p&gt;
+
+&lt;p&gt;あとは、ココらへんを見たりしてgreenDaoの使い方を確認すると良いと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/YRdS3A&#34; target=&#34;_blank&#34;&gt;Documentation | greenDAO – Android ORM for SQLite&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考:c037d87e89bf2c7318095970bf4dad30&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;li id=&#34;sanko&#34;&gt;
+  &lt;a href=&#34;http://bit.ly/1wBwKBn&#34; target=&#34;_blank&#34;&gt;Androidで使えるOR Mapper: ORMLite « LINE Engineers&amp;#8217; Blog&lt;/a&gt;
+&lt;/li&gt;
+  1. &lt;a href=&#34;http://bit.ly/Xzc3r0&#34; target=&#34;_blank&#34;&gt;Non-technical FAQ | greenDAO – Android ORM for SQLite&lt;/a&gt;
+  2. &lt;a href=&#34;http://bit.ly/XzcGki&#34; target=&#34;_blank&#34;&gt;ormlite &amp;#8211; Green DAO vs ORM lite vs Active Android &amp;#8211; Stack Overflow&lt;/a&gt;
+  3. &lt;a href=&#34;http://bit.ly/YRe8zz&#34; target=&#34;_blank&#34;&gt;[Android Tips] ActiveAndroid を使って ActiveRecord ライクに SQLite を操作する ｜ Developers.IO&lt;/a&gt;
+      * &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4798040029/kwmt27-22/ref=nosim/&#34; name=&#34;amazletlink&#34; target=&#34;_blank&#34;&gt;Androidオープンソースライブラリ徹底活用(書籍)&lt;/a&gt;&lt;/ol&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android Stuio(0.5.7)でNavigation Drawerでエラーになる。</title>
+      <link>/kwmt27.net/index.php/2014/05/05/android-studio-navigationdrawer/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/05/05/android-studio-navigationdrawer/</guid>
+      <description>&lt;p&gt;Android Studio(0.5.7)でNavigation DrawerをNew Projectしたら、getFragmentManager()のところで、Fragmentを継承したNavigationDrawerFragmentにキャストできないってエラーが出たので、その原因と対策です。&lt;/p&gt;
+
+&lt;p&gt;[Android Studio(0.5.7)でNavigation DrawerをNew Projectしたら、getFragmentManager()のところで、Fragmentを継承したNavigationDrawerFragmentにキャストできないってエラーが出たので、その原因と対策です。&lt;/p&gt;
+
+&lt;p&gt;]&lt;a href=&#34;http://bit.ly/1g1IelN&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1g1IdOI&#34;&gt;Looking for wrong fragment class with Android compatibility library &amp;#8211; Stack Overflow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android Studio(0.5.7)のNew ProjectでTabbed Activityを選んだらエラーになる</title>
+      <link>/kwmt27.net/index.php/2014/05/03/android-studio-tabbed-activity-error/</link>
+      <pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/05/03/android-studio-tabbed-activity-error/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/05/tabbed-activity.png&#34; alt=&#34;tabbed-activity&#34; width=&#34;387&#34; height=&#34;239&#34; class=&#34;aligncenter size-full wp-image-1419&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Android StudioのNew ProjectでTabbed Activityを選んだらいきなり下のエラーが出て困った。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Error:Execution failed for task &#39;:app:processDebugResources&#39;.
+&gt; com.android.ide.common.internal.LoggedErrorException: Failed to run command:
+&amp;lt;android SDK&amp;gt;/build-tools/19.0.0/aapt package -f --no-crunch -I &amp;lt;android SDK&amp;gt;/platforms/android-19/android.jar -M &amp;lt;my project&amp;gt;/app/build/manifests/debug/AndroidManifest.xml -S &amp;lt;my project&amp;gt;/app/build/res/all/debug -A &amp;lt;my project&amp;gt;/app/build/assets/debug -m -J &amp;lt;my project&amp;gt;/app/build/source/r/debug -F &amp;lt;my project&amp;gt;/app/build/libs/app-debug.ap_ --debug-mode --custom-package &amp;lt;my package&gt;
+  Error Code:
+    138
+&lt;/pre&gt;
+
+&lt;p&gt;このエラーから検索していったらハマった。stack overflowとかではaaptのバグだよとか書かれてるし、しょうがないのかなぁとか思ってて、よくよく考えると、&lt;code&gt;MainActivity&lt;/code&gt;は&lt;code&gt;ActionBarActivity&lt;/code&gt;を継承しているのですが、ただ単に&lt;code&gt;ActionBarActivity&lt;/code&gt;がみつからないって言われてただけでした。&lt;/p&gt;
+
+&lt;p&gt;つまり、&lt;code&gt;import android.support.v7.app.ActionBarActivity;&lt;/code&gt;を追加する。ただし、最初のプロジェクトの自動生成では、support.v7ライブラリは追加されていないので、FileメニューからProject Structure(⌘;)から、Dependenciesタブを選択し、下部の+から&lt;code&gt;com.android.support:appcompat-v7&lt;/code&gt;を追加する&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kwmt27.net/wp-content/uploads/2014/05/project-structure-600x164.png&#34; alt=&#34;project-structure&#34; width=&#34;600&#34; height=&#34;164&#34; class=&#34;aligncenter size-thumbnail wp-image-1418&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これで&lt;code&gt;ActionBarActivity&lt;/code&gt;のエラーは消えるのですが、Runすると、&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;You need to use a Theme.AppCompat theme (or descendant) with this activity.
+at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2295)
+&lt;/pre&gt;
+
+&lt;p&gt;のようなエラーが出るので、&lt;code&gt;AndroidManifest.xml&lt;/code&gt;のthemeの部分を&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;android:theme=&#34;@style/Theme.AppCompat&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;に変更する。これで無事起動した。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

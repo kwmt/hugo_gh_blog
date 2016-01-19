@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Androg</title>
+    <link>kwmt27.net/tags/git/</link>
+    <description>Recent content in Git on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 21 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="kwmt27.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>gitignoreを自動生成</title>
+      <link>/kwmt27.net/index.php/2014/05/21/auto-create-gitignore/</link>
+      <pubDate>Wed, 21 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/kwmt27.net/index.php/2014/05/21/auto-create-gitignore/</guid>
+      <description>&lt;p&gt;キーワード入れたら、そのキーワードにあったgitignoreを自動生成してくれるサイト&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.gitignore.io/&#34;&gt;http://www.gitignore.io/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
