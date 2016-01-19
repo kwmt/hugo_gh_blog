@@ -20,6 +20,10 @@ deploy:
         domain: kwmt27.net
         basedir: public
   after-steps:
-    - wantedly/pretty-slack-notify:
+    - raizyr/ultimate-slack-notify@1.0.6:
         webhook_url: $SLACK_WEBHOOK_URL
         channel: githubpages
+  # after-steps:
+  #   - wantedly/pretty-slack-notify:
+  #       webhook_url: $SLACK_WEBHOOK_URL
+  #       channel: githubpages
