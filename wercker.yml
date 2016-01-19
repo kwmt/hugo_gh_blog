@@ -14,11 +14,10 @@ deploy:
         domain: kwmt27.net
         basedir: public
   after-steps:
-    - script:
-        name: install curl
-        code: |
-            sudo apt-get -y install curl
-    - sherzberg/slack-notify:
-        subdomain: kwmt27
-        token: $SLACK_TOKEN
-        channel: "#githubpages"
+    # - script:
+    #     name: install curl
+    #     code: |
+    #         sudo apt-get -y install curl
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_URL
+        channel: githubpages
