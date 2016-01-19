@@ -1,6 +1,13 @@
 box: debian
 build:
   steps:
+  - script:
+    name: install ruby
+    code: |
+        sudo apt-get install ruby
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_URL
+        channel: githubpages
     - arjen/hugo-build:
         version: "0.15"
         theme: hugo-theme-crisp
