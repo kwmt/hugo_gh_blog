@@ -1,6 +1,8 @@
 box: ruby
 build:
   steps:
+    - install-packages:
+        packages: git ssh-client
     - arjen/hugo-build:
         version: "0.15"
         theme: hugo-theme-crisp
