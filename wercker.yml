@@ -7,7 +7,7 @@ build:
         flags: --buildDrafts=true
   after-steps:
     - wantedly/pretty-slack-notify:
-        webhook_url: $SLACK_URL
+        webhook_url: $SLACK_WEBHOOK_URL
         channel: githubpages
 deploy:
   steps:
@@ -18,10 +18,6 @@ deploy:
         domain: kwmt27.net
         basedir: public
   after-steps:
-    # - script:
-    #     name: install curl
-    #     code: |
-    #         sudo apt-get -y install curl
     - wantedly/pretty-slack-notify:
-        webhook_url: $SLACK_URL
+        webhook_url: $SLACK_WEBHOOK_URL
         channel: githubpages
