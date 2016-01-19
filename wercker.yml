@@ -19,6 +19,7 @@ deploy:
         token: $GIT_TOKEN
         domain: kwmt27.net
         basedir: public
+        repo: kwmt/kwmt.github.io
   after-steps:
     - raizyr/ultimate-slack-notify@1.0.6:
         webhook_url: $SLACK_WEBHOOK_URL
