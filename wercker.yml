@@ -8,7 +8,7 @@ build:
         theme: hugo-theme-crisp
         flags: --buildDrafts=true
   after-steps:
-    - lotustm/slack-notify:
+    - raizyr/ultimate-slack-notify@1.0.6:
         webhook_url: $SLACK_WEBHOOK_URL
         channel: githubpages
 deploy:
