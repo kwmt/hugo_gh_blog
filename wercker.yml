@@ -6,7 +6,6 @@ build:
     - arjen/hugo-build:
         version: "0.15"
         theme: hugo-theme-crisp
-        flags: --buildDrafts=true
   after-steps:
     - raizyr/ultimate-slack-notify@1.0.6:
         webhook_url: $SLACK_WEBHOOK_URL
