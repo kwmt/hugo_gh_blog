@@ -14,11 +14,17 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - lukevivier/gh-pages@0.2.1:
+    - hijonathan/gh-pages@0.2.3:
         token: $GIT_TOKEN
 #        domain: kwmt27.net
         basedir: public
         repo: kwmt/kwmt.github.io
+        branch: gh-pages
+#    - lukevivier/gh-pages@0.2.1:
+#        token: $GIT_TOKEN
+##        domain: kwmt27.net
+#        basedir: public
+#        repo: kwmt/kwmt.github.io
   after-steps:
     - raizyr/ultimate-slack-notify@1.0.6:
         webhook_url: $SLACK_WEBHOOK_URL
