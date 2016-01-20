@@ -1,0 +1,5 @@
+{{ if .IsNamedParams }}
+<script src="//gist.github.com/kwmt/{{ .Get "id" }}{{ if .Get "file" }}#file-{{ .Get "file" }}{{ end }}.js"></script>
+{{ else }}
+<script src="//gist.github.com/{{ .Get 0 }}.js"></script>
+{{ end }}

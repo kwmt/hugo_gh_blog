@@ -1,0 +1,12 @@
+<div id="related">
+  <section>
+    <h5>Related Posts:</h5>
+    <ul>
+      {{ range first 5 .Site.Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }} - {{ .ReadingTime }} Minutes</a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+</div>
