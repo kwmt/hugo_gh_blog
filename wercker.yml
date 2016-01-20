@@ -6,6 +6,10 @@ build:
     - arjen/hugo-build:
         version: "0.15"
         theme: hugo-theme-crisp
+    - script:
+        name: ls stuff
+        code: |
+          ls -haltr /pipeline/source/public
   after-steps:
     - raizyr/ultimate-slack-notify@1.0.6:
         webhook_url: $SLACK_WEBHOOK_URL
@@ -19,6 +23,11 @@ deploy:
         domain: kwmt27.net
         basedir: public
         repo: kwmt/kwmt.github.io
+    - script:
+        name: ls stuff
+        code: |
+          ls -haltr /pipeline/source
+
   after-steps:
     - raizyr/ultimate-slack-notify@1.0.6:
         webhook_url: $SLACK_WEBHOOK_URL
