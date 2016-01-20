@@ -12,7 +12,7 @@ theme = "hugo-theme-crisp"
 #  cover = "/images/cover.jpg"
 
   # Google analytics
-#  ga = "UA-8114245-4"
+  ga = "UA-39334884-1"
   twitter = "kwmt27"
   github = "kwmt"
   disqus = "kwmt27"
