@@ -14,15 +14,9 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-#    - hijonathan/gh-pages@0.2.3:
-#        token: $GIT_TOKEN
-##        domain: kwmt27.net
-#        basedir: public
-#        repo: kwmt/kwmt.github.io
-#        branch: gh-pages
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
-#        domain: kwmt27.net
+        domain: kwmt27.net
         basedir: public
         repo: kwmt/kwmt.github.io
   after-steps:
