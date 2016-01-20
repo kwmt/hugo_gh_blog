@@ -1,4 +1,4 @@
-box: ruby
+box: debian
 build:
   steps:
     - install-packages:
