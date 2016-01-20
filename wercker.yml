@@ -21,7 +21,7 @@ deploy:
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         # CNAMEを作成する
-#        domain: kwmt27.net
+        domain: kwmt27.net
         basedir: public
         repo: kwmt/kwmt.github.io
     - script:
