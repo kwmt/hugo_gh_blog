@@ -3,7 +3,7 @@ categories = ["blog"]
 date = "2016-02-07T13:19:40+09:00"
 tags = ["Hugo", "Wordpress"]
 title = "WordpressからHugoに移行した時のメモ"
-draft = true
+draft = false
 +++
 
 
