@@ -27,7 +27,7 @@ $ git clone https://github.com/SchumacherFM/wordpress-to-hugo-exporter.git wp-co
 2.変換を実行します。
 
 ```bash
-$ cd /home/wordpress/www/vhosts/kwmt27.net/wp-content/plugins/wordpress-to-hugo-exporte
+$ cd wp-content/plugins/wordpress-to-hugo-exporte
 $ php hugo-export-cli.php
 
 This is your file!
