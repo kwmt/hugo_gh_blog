@@ -65,7 +65,7 @@ cloneしてきた`hugo_gh_blog`で `hugo new site .`してHugoサイトを作成
 
 
 ```bash
-% git clone https://github.com/kwmt/hugo-theme-crisp thmemes/hugo-theme-crisp
+% git clone https://github.com/kwmt/hugo-theme-crisp themes/hugo-theme-crisp
 ```
 
 として、`themes`の下にテーマをcloneします。
