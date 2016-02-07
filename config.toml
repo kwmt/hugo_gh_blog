@@ -6,6 +6,10 @@ theme = "hugo-theme-crisp"
 
 
 [params]
+  DateForm = "Jan 02 , 2006"
+  languageCode = "ja"
+  countryCode = "ja"
+
   # Warning Keys are case sensitives
 #  Subtitle = "Il existe moins bien mais c'est plus cher !"
 #  description = "Dévéloppeur, bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le web."
@@ -17,3 +21,9 @@ theme = "hugo-theme-crisp"
   github = "kwmt"
   disqus = "kwmt27"
 
+[indexes]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  post = "/:year/:month/:day/:filename/"
