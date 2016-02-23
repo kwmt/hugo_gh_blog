@@ -6,6 +6,8 @@ date: 2010-08-07
 url: /index.php/2010/08/07/new-android-project/
 categories:
   - Eclipse
+tags:
+  - Eclipse
 
 ---
 Eclipseで新しいプロジェクトを作るとき、ここの設定をいつも忘れるので。
