@@ -3,7 +3,7 @@ title: HTC Desire(X06HTⅡ)の画面キャプチャ方法
 author: kwmt
 layout: post
 date: 2010-10-11
-url: /index.php/2010/10/11/htc-desirex06htⅡの画面キャプチャ方法/
+url: /index.php/2010/10/11/htc-desirex06htの画面キャプチャ方法/
 categories:
   - Android
 tags:
@@ -22,13 +22,13 @@ Android好きな人たちにとっては、だいぶいまさら感はあるか�
   
 【やりたいこと】
 
-* * *HTC Desire(X06HTⅡ)端末の画面をキャプチャしたい
+* HTC Desire(X06HTⅡ)端末の画面をキャプチャしたい
 
 
   
 【現状】</p> 
 
-* * *HTC Desire(X06HTⅡ)端末をUSB接続して、Android SDKのtoolsフォルダにあるddms.batをクリックして、「Dalvik Debug Monitor」を起動しても端末を認識してくれない。
+* HTC Desire(X06HTⅡ)端末をUSB接続して、Android SDKのtoolsフォルダにあるddms.batをクリックして、「Dalvik Debug Monitor」を起動しても端末を認識してくれない。
 
 
   
