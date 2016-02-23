@@ -3,7 +3,7 @@ title: ACE勉強会で、Serviceの概要を発表した。
 author: kwmt
 layout: post
 date: 2011-08-15
-url: /index.php/2011/08/15/ace勉強会で、serviceの概要を発表した。/
+url: /index.php/2011/08/15/ace勉強会でserviceの概要を発表した/
 categories:
   - Android
 tags:

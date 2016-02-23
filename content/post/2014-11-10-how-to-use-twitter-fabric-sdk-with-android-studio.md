@@ -165,7 +165,7 @@ crashlytics.propertiesに書いたKEYとSECRETの使い方に関しては、下�
 
 プレビューは「SIGN IN WITH TWITTER」と英語表記ですが、日本語設定の端末で確認すると「Twitterでログイン」と日本語になっています。
   
-<img src="http://kwmt27.net/wp-content/uploads/2014/11/sign_in_with_twitter-168x300.png" alt="sign_in_with_twitter" width="168" height="300" class="aligncenter size-thumbnail wp-image-1356" />
+<img src="http://kwmt27.net/images/2014/11/sign_in_with_twitter-168x300.png" alt="sign_in_with_twitter" width="168" height="300" class="aligncenter size-thumbnail wp-image-1356" />
 
 Activityの方は公式サイトどおりでいけます。
   

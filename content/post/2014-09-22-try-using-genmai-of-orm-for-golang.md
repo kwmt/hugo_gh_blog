@@ -64,11 +64,11 @@ if err:= db.Select(&users); err != nil{
   
 テーブル作成できた！
   
-<img src="http://kwmt27.net/wp-content/uploads/2014/09/table_struct-600x73.png" alt="table_struct" width="600" height="73" class="aligncenter size-thumbnail wp-image-1321" srcset="http://kwmt27.net/wp-content/uploads/2014/09/table_struct-600x73.png 600w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-300x36.png 300w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-1024x125.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-624x76.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/table_struct-900x110.png 900w" sizes="(max-width: 600px) 100vw, 600px" />
+<img src="http://kwmt27.net/images/2014/09/table_struct-600x73.png" alt="table_struct" width="600" height="73" class="aligncenter size-thumbnail wp-image-1321" srcset="http://kwmt27.net/images/2014/09/table_struct-600x73.png 600w, http://kwmt27.net/images/2014/09/table_struct-300x36.png 300w, http://kwmt27.net/images/2014/09/table_struct-1024x125.png 1024w, http://kwmt27.net/images/2014/09/table_struct-624x76.png 624w, http://kwmt27.net/images/2014/09/table_struct-900x110.png 900w" sizes="(max-width: 600px) 100vw, 600px" />
 
 データの挿入もOK！
   
-<img src="http://kwmt27.net/wp-content/uploads/2014/09/table_content-600x152.png" alt="table_content" width="600" height="152" class="aligncenter size-thumbnail wp-image-1320" srcset="http://kwmt27.net/wp-content/uploads/2014/09/table_content-600x152.png 600w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-300x76.png 300w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-1024x259.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-624x158.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/table_content-900x228.png 900w, http://kwmt27.net/wp-content/uploads/2014/09/table_content.png 1128w" sizes="(max-width: 600px) 100vw, 600px" />
+<img src="http://kwmt27.net/images/2014/09/table_content-600x152.png" alt="table_content" width="600" height="152" class="aligncenter size-thumbnail wp-image-1320" srcset="http://kwmt27.net/images/2014/09/table_content-600x152.png 600w, http://kwmt27.net/images/2014/09/table_content-300x76.png 300w, http://kwmt27.net/images/2014/09/table_content-1024x259.png 1024w, http://kwmt27.net/images/2014/09/table_content-624x158.png 624w, http://kwmt27.net/images/2014/09/table_content-900x228.png 900w, http://kwmt27.net/images/2014/09/table_content.png 1128w" sizes="(max-width: 600px) 100vw, 600px" />
 
 あれ？データの取得が下記のエラーでコケるなぁ。
 

@@ -168,7 +168,7 @@ gotweet_changeプロジェクトであれば、`gotweet_change/template/tweet.ht
 
 これを実行すると、下図のように、ユーザータイムラインを取得することができました。 
 
-<a href="http://kwmt27.net/index.php/2012/05/24/golang%e3%81%a7twitter%e3%81%ae%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%a9%e3%82%a4%e3%83%b3%e3%82%92%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6%e3%81%ab%e8%a1%a8%e7%a4%ba%e3%81%95%e3%81%9b%e3%81%a6%e3%81%bf/gotweet/" rel="attachment wp-att-818"><img src="http://kwmt27.net/wp-content/uploads/2012/05/gotweet-447x300.png" alt="gotweet" width="447" height="300" class="alignnone size-thumbnail wp-image-818" srcset="http://kwmt27.net/wp-content/uploads/2012/05/gotweet-447x300.png 447w, http://kwmt27.net/wp-content/uploads/2012/05/gotweet-300x201.png 300w, http://kwmt27.net/wp-content/uploads/2012/05/gotweet.png 516w" sizes="(max-width: 447px) 100vw, 447px" /></a>
+<img src="http://kwmt27.net/images/2012/05/gotweet-447x300.png" alt="gotweet" width="447" height="300"/>
 
 ## 参考
 

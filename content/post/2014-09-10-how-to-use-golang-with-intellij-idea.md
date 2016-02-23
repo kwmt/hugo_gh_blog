@@ -28,7 +28,7 @@ tags:
   
 ②&#8221;golang&#8221;で検索 -> Go language(golang.org) support pluginをインストール
 
-<img class="aligncenter size-thumbnail wp-image-1266" alt="intellij_golang_plugin_01" src="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-396x300.png" width="396" height="300" srcset="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-396x300.png 396w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-300x227.png 300w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-1024x775.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-624x472.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_01-900x681.png 900w" sizes="(max-width: 396px) 100vw, 396px" />
+<img class="aligncenter size-thumbnail wp-image-1266" alt="intellij_golang_plugin_01" src="http://kwmt27.net/images/2014/09/intellij_golang_plugin_01-396x300.png" width="396" height="300" srcset="http://kwmt27.net/images/2014/09/intellij_golang_plugin_01-396x300.png 396w, http://kwmt27.net/images/2014/09/intellij_golang_plugin_01-300x227.png 300w, http://kwmt27.net/images/2014/09/intellij_golang_plugin_01-1024x775.png 1024w, http://kwmt27.net/images/2014/09/intellij_golang_plugin_01-624x472.png 624w, http://kwmt27.net/images/2014/09/intellij_golang_plugin_01-900x681.png 900w" sizes="(max-width: 396px) 100vw, 396px" />
 
 ## 2.SDKを設定
 
@@ -36,7 +36,7 @@ tags:
   
 ②左側のSDKを選択して、真ん中側の上部のプラスをクリックして、新しいSDKを追加します。このとき、`/usr/local/go`を指定（僕はソースからインストールしてます。homebrewだと違うみたいです。）
 
-<img class="aligncenter size-thumbnail wp-image-1267" alt="intellij_golang_plugin_02" src="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_02-394x300.png" width="394" height="300" srcset="http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_02-394x300.png 394w, http://kwmt27.net/wp-content/uploads/2014/09/intellij_golang_plugin_02.png 732w" sizes="(max-width: 394px) 100vw, 394px" />
+<img class="aligncenter size-thumbnail wp-image-1267" alt="intellij_golang_plugin_02" src="http://kwmt27.net/images/2014/09/intellij_golang_plugin_02-394x300.png" width="394" height="300" srcset="http://kwmt27.net/images/2014/09/intellij_golang_plugin_02-394x300.png 394w, http://kwmt27.net/images/2014/09/intellij_golang_plugin_02.png 732w" sizes="(max-width: 394px) 100vw, 394px" />
 
 ## 3.Goプロジェクトを新規作成する
 

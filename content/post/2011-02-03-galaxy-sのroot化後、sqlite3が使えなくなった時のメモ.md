@@ -3,7 +3,7 @@ title: Galaxy Sのroot化後、sqlite3が使えなくなった時のメモ
 author: kwmt
 layout: post
 date: 2011-02-02
-url: /index.php/2011/02/03/galaxy-sのroot化後、sqlite3が使えなくなった時のメモ/
+url: /index.php/2011/02/03/galaxy-sのroot化後sqlite3が使えなくなった時のメモ/
 categories:
   - Android
 tags:

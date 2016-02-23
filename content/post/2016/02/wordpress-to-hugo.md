@@ -39,7 +39,7 @@ This is your file!
 4.画像パスなどがWPとHugoではことなるので、変換します。
 
 * hugo-export/post を content/postに移動
-* hugo-export/wp-content/uploads を content/uploadsに移動してuploadsをimagesにリネーム
+* hugo-export/images を content/uploadsに移動してuploadsをimagesにリネーム
 
 のように一括置換すればよいでしょう。これでもパスが異なることがあるかも。
 

@@ -3,7 +3,7 @@ title: 大阪EffectiveJava読書会 第2回に参加しました。
 author: kwmt
 layout: post
 date: 2011-06-19
-url: /index.php/2011/06/19/大阪effectivejava読書会-第2回に参加しました。/
+url: /index.php/2011/06/19/大阪effectivejava読書会-第2回に参加しました/
 categories:
   - イベント
 

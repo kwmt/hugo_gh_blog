@@ -3,7 +3,7 @@ title: 【Android】久しぶりにAndroidアプリった。
 author: kwmt
 layout: post
 date: 2013-03-11
-url: /index.php/2013/03/11/【android】久しぶりにandroidアプリった。/
+url: /index.php/2013/03/11/android久しぶりにandroidアプリった/
 pdrp_attributionLocation:
   - end
 categories:
@@ -26,17 +26,18 @@ tags:
 
 OnCheckedChangeListener　をimplementsして、以下のonCheckedChangedをoverride
 
-<pre class="brush: java; title: ; notranslate" title="">// OnCheckedChangeListenerをimplementした時に実装が必要なメソッド
+```
+// OnCheckedChangeListenerをimplementした時に実装が必要なメソッド
 // トグルボタン用
 @Override
 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-if (isChecked){
-//ON
-} else{
-//OFF
+	if (isChecked){
+		//ON
+	} else{
+		//OFF
+	}
 }
-}
-</pre>
+```
 
 ## プリファレンスは？
 
@@ -72,23 +73,23 @@ onUpdateでServiceを継承したクラス(ここではWidgetService)をstartSer
 
 このとき、マニフェストファイルにこんな感じ書いとく
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;receiver&gt;
-android:name=&quot;.WidgetProvider&quot;
-android:label=&quot;@string/app_name&quot; &gt;
-&lt;intent-filter&gt;
-&lt;action android:name=&quot;android.appwidget.action.APPWIDGET_UPDATE&quot; /&gt;
-&lt;/intent-filter&gt;
-&lt;meta-data
-android:name=&quot;android.appwidget.provider&quot;
-android:resource=&quot;@xml/widget_provider&quot; /&gt;
-&lt;/receiver&gt;
-&lt;service android:name=&quot;.WidgetService&quot; &gt;
-&lt;intent-filter&gt;
-&lt;action android:name=&quot;com.example.myproject.HOGEHOGE&quot;/&gt;
-&lt;/intent-filter&gt;
-&lt;/service&gt;
-</pre>
-
+```
+<receiver>
+	android:name=".WidgetProvider"
+	android:label="@string/app_name" >
+	<intent-filter>
+		<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+	</intent-filter>
+	<meta-data
+		android:name="android.appwidget.provider"
+		android:resource="@xml/widget_provider" />
+</receiver>
+<service android:name=".WidgetService" >
+	<intent-filter>
+		<action android:name="com.example.myproject.HOGEHOGE"/>
+	</intent-filter>
+</service>
+```
 サービスタグの は、ウィジェットに対してクリックイベントを取りたいときに必要。
   
 作成中の自分のプロジェクト（myproject）の中で自分でHOGEHOGEを定義しておき、「HOGEHOGEになったら、ある処理をする」という具合に実装する。

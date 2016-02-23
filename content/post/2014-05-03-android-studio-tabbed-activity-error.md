@@ -12,7 +12,7 @@ tags:
   - Android Studio
 
 ---
-<img src="http://kwmt27.net/wp-content/uploads/2014/05/tabbed-activity.png" alt="tabbed-activity" width="387" height="239" class="aligncenter size-full wp-image-1419" />
+<img src="http://kwmt27.net/images/2014/05/tabbed-activity.png" alt="tabbed-activity" width="387" height="239" class="aligncenter size-full wp-image-1419" />
   
 Android StudioのNew ProjectでTabbed Activityを選んだらいきなり下のエラーが出て困った。 
 
@@ -27,7 +27,7 @@ Android StudioのNew ProjectでTabbed Activityを選んだらいきなり下の�
 
 つまり、`import android.support.v7.app.ActionBarActivity;`を追加する。ただし、最初のプロジェクトの自動生成では、support.v7ライブラリは追加されていないので、FileメニューからProject Structure(⌘;)から、Dependenciesタブを選択し、下部の+から`com.android.support:appcompat-v7`を追加する
 
-<img src="http://kwmt27.net/wp-content/uploads/2014/05/project-structure-600x164.png" alt="project-structure" width="600" height="164" class="aligncenter size-thumbnail wp-image-1418" />
+<img src="http://kwmt27.net/images/2014/05/project-structure-600x164.png" alt="project-structure" width="600" height="164" class="aligncenter size-thumbnail wp-image-1418" />
 
 これで`ActionBarActivity`のエラーは消えるのですが、Runすると、
 

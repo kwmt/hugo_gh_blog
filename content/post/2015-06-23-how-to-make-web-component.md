@@ -160,7 +160,7 @@ Files in this directory are available at localhost:8080/components/devfest/...
 
 7.確認
   
-<img src="http://kwmt27.net/wp-content/uploads/2015/06/polymer_finish-600x251.png" alt="polymer_finish" width="600" height="251" class="aligncenter size-thumbnail wp-image-1502" srcset="http://kwmt27.net/wp-content/uploads/2015/06/polymer_finish-600x251.png 600w, http://kwmt27.net/wp-content/uploads/2015/06/polymer_finish-300x125.png 300w, http://kwmt27.net/wp-content/uploads/2015/06/polymer_finish-624x261.png 624w, http://kwmt27.net/wp-content/uploads/2015/06/polymer_finish.png 834w" sizes="(max-width: 600px) 100vw, 600px" />
+<img src="http://kwmt27.net/images/2015/06/polymer_finish-600x251.png" alt="polymer_finish" width="600" height="251" class="aligncenter size-thumbnail wp-image-1502" srcset="http://kwmt27.net/images/2015/06/polymer_finish-600x251.png 600w, http://kwmt27.net/images/2015/06/polymer_finish-300x125.png 300w, http://kwmt27.net/images/2015/06/polymer_finish-624x261.png 624w, http://kwmt27.net/images/2015/06/polymer_finish.png 834w" sizes="(max-width: 600px) 100vw, 600px" />
 
 以上
 

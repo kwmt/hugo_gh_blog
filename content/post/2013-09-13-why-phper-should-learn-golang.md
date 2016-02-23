@@ -29,7 +29,7 @@ tags:
 </h1>
 
 <p>
-  <a href="http://kwmt27.net/index.php/2013/09/13/why-phper-should-learn-golang/gopher-talks/" rel="attachment wp-att-825"><img src="http://kwmt27.net/wp-content/uploads/2013/09/gopher-talks.png" alt="gopher-talks" width="132" height="100" class="alignleft size-full wp-image-825" /></a>
+  <a href="http://kwmt27.net/index.php/2013/09/13/why-phper-should-learn-golang/gopher-talks/" rel="attachment wp-att-825"><img src="http://kwmt27.net/images/2013/09/gopher-talks.png" alt="gopher-talks" width="132" height="100" class="alignleft size-full wp-image-825" /></a>
 </p>
 
 <p>

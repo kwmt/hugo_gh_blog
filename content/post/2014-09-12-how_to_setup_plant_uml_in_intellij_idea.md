@@ -23,7 +23,7 @@ tags:
 
 いつものIntellij IDEAにPluginをインストール画面(設定画面(⌘ + ,)->Pluginを選択->Browse repositoriesをクリック)から、&#8221;plant&#8221;で検索すると下記のような検索結果がでますが、「PlantUML integration」をインストールする。 
 
-<img src="http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-360x300.png" alt="PlantUML integration Plugin選択画面" width="360" height="300" class="aligncenter size-thumbnail wp-image-1294" srcset="http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-360x300.png 360w, http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-1024x852.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/スクリーンショット-2014-09-11-18.49.41-624x519.png 624w" sizes="(max-width: 360px) 100vw, 360px" />
+<img src="http://kwmt27.net/images/2014/09/スクリーンショット-2014-09-11-18.49.41-360x300.png" alt="PlantUML integration Plugin選択画面" width="360" height="300" class="aligncenter size-thumbnail wp-image-1294" srcset="http://kwmt27.net/images/2014/09/スクリーンショット-2014-09-11-18.49.41-360x300.png 360w, http://kwmt27.net/images/2014/09/スクリーンショット-2014-09-11-18.49.41-1024x852.png 1024w, http://kwmt27.net/images/2014/09/スクリーンショット-2014-09-11-18.49.41-624x519.png 624w" sizes="(max-width: 360px) 100vw, 360px" />
 
 これだけで、とりあえず、test.pumlファイルを作ってみました（New ->UML State）。するとサンプルコードが書かれたファイルが作成されます。 
 
@@ -33,7 +33,7 @@ tags:
 
 Intellij IDEAが起動している場合は再起動すると、図が表示されることが確認できると思います。 
 
-<img src="http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-407x300.png" alt="PlantUML_Intellij" width="407" height="300" class="aligncenter size-thumbnail wp-image-1296" srcset="http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-407x300.png 407w, http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-1024x754.png 1024w, http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-624x459.png 624w, http://kwmt27.net/wp-content/uploads/2014/09/PlantUML_Intellij-900x662.png 900w" sizes="(max-width: 407px) 100vw, 407px" />
+<img src="http://kwmt27.net/images/2014/09/PlantUML_Intellij-407x300.png" alt="PlantUML_Intellij" width="407" height="300" class="aligncenter size-thumbnail wp-image-1296" srcset="http://kwmt27.net/images/2014/09/PlantUML_Intellij-407x300.png 407w, http://kwmt27.net/images/2014/09/PlantUML_Intellij-1024x754.png 1024w, http://kwmt27.net/images/2014/09/PlantUML_Intellij-624x459.png 624w, http://kwmt27.net/images/2014/09/PlantUML_Intellij-900x662.png 900w" sizes="(max-width: 407px) 100vw, 407px" />
 
 ## 参考
 

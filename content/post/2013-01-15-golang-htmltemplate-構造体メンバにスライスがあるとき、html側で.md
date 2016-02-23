@@ -3,7 +3,7 @@ title: '#golang html/template: 構造体メンバにスライスがあるとき�
 author: kwmt
 layout: post
 date: 2013-01-15
-url: /index.php/2013/01/15/golang-htmltemplate-構造体メンバにスライスがあるとき、html側で/
+url: /index.php/2013/01/15/golang-htmltemplate-構造体メンバにスライスがあるときhtml側で/
 categories:
   - golang
 tags:
@@ -15,18 +15,20 @@ tags:
 
 例えば、goファイル内で次のように構造体のメンバにスライスHotelsを定義した場合、 
 
-<pre class="brush: golang; title: ; notranslate" title="">・goファイル
+
+
+```go
 type Body struct {
-PagingInfo PagingInfo `xml:"SimpleHotelSearch&gt;paginginfo"`
-Hotels     []Hotel    `xml:"SimpleHotelSearch&gt;hotel"`
+	PagingInfo PagingInfo `xml:"SimpleHotelSearch&gt;paginginfo"`
+	Hotels     []Hotel    `xml:"SimpleHotelSearch&gt;hotel"`
 }
-</pre>
+```
 
 htmlファイルでは、次のように記述します。 
 
-<pre class="brush: golang; title: ; notranslate" title="">・htmlファイル
-[]Hotelsの0番目の要素は{{index .Hotels 0}}です。 // Hotels[0]と同じ意味です。
-</pre>
+```
+[]Hotelsの0番目の要素は{{index .Hotels 0}}です。 <!-- Hotels[0]と同じ意味です。 -->
+```
 
 ## 参考
 

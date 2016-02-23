@@ -16,7 +16,7 @@ tags:
   - template
 
 ---
-<img class="alignnone size-full wp-image-411" alt="golden globs" src="http://kwmt27.net/wp-content/uploads/2013/03/golden_globs.jpg" width="1024" height="681" srcset="http://kwmt27.net/wp-content/uploads/2013/03/golden_globs-451x300.jpg 451w, http://kwmt27.net/wp-content/uploads/2013/03/golden_globs-300x199.jpg 300w, http://kwmt27.net/wp-content/uploads/2013/03/golden_globs-624x414.jpg 624w, http://kwmt27.net/wp-content/uploads/2013/03/golden_globs.jpg 1024w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img src="http://kwmt27.net/images/2013/03/golden_globs.jpg" width="1024" height="681" srcset="http://kwmt27.net/images/2013/03/golden_globs-451x300.jpg 451w, http://kwmt27.net/images/2013/03/golden_globs-300x199.jpg 300w, http://kwmt27.net/images/2013/03/golden_globs-624x414.jpg 624w, http://kwmt27.net/images/2013/03/golden_globs.jpg 1024w" sizes="(max-width: 1024px) 100vw, 1024px" />
 
 [「golangでhtmlファイルの一部を別ファイルに分けるには」][1]で、テンプレートファイルを分割するエントリを書きました。分割したファイルをパースする関数は、template.ParseFiles(filenames &#8230;string)です。分割したファイルが２，３個ならこのParserFiles関数でよいと思いますが、もっと多くなったらファイルパスをゴリゴリ書かないといけません。 
 

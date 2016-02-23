@@ -3,7 +3,7 @@ title: 'Android Bazaar and Conference 2011 Summer #abc2011s に参加してき�
 author: kwmt
 layout: post
 date: 2011-07-29
-url: /index.php/2011/07/29/android-bazaar-and-conference-2011-summer-abc2011s-に参加してきました。/
+url: /index.php/2011/07/29/android-bazaar-and-conference-2011-summer-abc2011s-に参加してきました/
 categories:
   - Android
 tags:

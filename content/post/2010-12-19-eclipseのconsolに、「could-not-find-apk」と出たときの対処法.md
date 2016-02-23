@@ -3,7 +3,7 @@ title: 'eclipseのConsolに、「Could not find <プロジェクト名>.apk!」�
 author: kwmt
 layout: post
 date: 2010-12-19
-url: /index.php/2010/12/19/eclipseのconsolに、「could-not-find-apk」と出たときの対処法/
+url: /index.php/2010/12/19/eclipseのconsolにcould-not-find-apkと出たときの対処法/
 categories:
   - Android
 tags:
@@ -12,10 +12,11 @@ tags:
 ---
 eclipseのConsolに次のように出て起動しない。
 
-<pre class="go">[2010-12-19 20:57:49 - &lt;プロジェクト名>] Android Launch!
-[2010-12-19 20:57:49 - &lt;プロジェクト名>] adb is running normally.
-[2010-12-19 20:57:49 - &lt;プロジェクト名>] Could not find &lt;プロジェクト名>.apk!
-</pre>
+```
+[2010-12-19 20:57:49 - <プロジェクト名>] Android Launch!
+[2010-12-19 20:57:49 - <プロジェクト名>] adb is running normally.
+[2010-12-19 20:57:49 - <プロジェクト名>] Could not find <プロジェクト名>.apk!
+```
 
 Project→Clean
   

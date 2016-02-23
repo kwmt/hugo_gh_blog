@@ -3,7 +3,7 @@ title: Google App EngineのGo言語(GAE/Go)のチュートリアルをやった�
 author: kwmt
 layout: post
 date: 2012-04-27
-url: /index.php/2012/04/27/google-app-engineのgo言語gaegoのチュートリアルをやったメモ。/
+url: /index.php/2012/04/27/google-app-engineのgo言語gaegoのチュートリアルをやったメモ/
 pdrp_attributionLocation:
   - end
 categories:
@@ -158,8 +158,6 @@ Running application&#8230;とでたらサーバーが起動。`http://localhost:
 
 ## データベースのデータを削除するには
 
-[
-  
 データベースを使ったチュートリアル][3]があるのですが、データベースに登録の仕方
   
 ・使用の仕方が書いており、最後「Clearing the Development Server Datastore」でデータベースに登録したデータを消去するには、

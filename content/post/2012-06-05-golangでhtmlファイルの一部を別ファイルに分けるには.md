@@ -27,32 +27,33 @@ tags:
 
 前回と同じHTMLですが、このファイルを`main.html`としましょう。 
 
-<pre class="brush: golang; title: ; notranslate" title="">&lt;!DOCTYPE html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;style type="text/css"&gt;
+```
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
     div.tl  {width:600px;}
     table,td {border: solid; border-collapse: collapse;}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class="tl"&gt;
-&lt;table border cellspacing=0&gt;
+</style>
+</head>
+<body>
+<div class="tl">
+<table border cellspacing=0>
 {{range .}}
-    &lt;tr&gt;
-    &lt;td&gt;
-    日時：{{.Created_at}}&lt;br/&gt;
-    ツイート：{{.Text}} &lt;br/&gt;
+    <tr>
+    <td>
+    日時：{{.Created_at}}<br/>
+    ツイート：{{.Text}} <br/>
     スクリーン名：{{.User.Screen_name}}
-    &lt;/td&gt;
-    &lt;/tr&gt;
+    </td>
+    </tr>
 {{end}}
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</table>
+</div>
+</body>
+</html>
+```
 
 これを、たとえば、ツイッターの内容の部分を別ファイルにするということを考えます。 
 
@@ -64,22 +65,23 @@ tags:
   
 移動先のファイル名は`content.html`とでもしときます。 
 
-<pre class="brush: golang; title: ; notranslate" title="">{{define "content"}}
-&lt;div class="tl"&gt;
-&lt;table border cellspacing=0&gt;
+```
+{{define "content"}}
+<div class="tl">
+<table border cellspacing=0>
 {{range .}}
-    &lt;tr&gt;
-    &lt;td&gt;
-    日時：{{.Created_at}}&lt;br/&gt;
-    ツイート：{{.Text}} &lt;br/&gt;
+    <tr>
+    <td>
+    日時：{{.Created_at}}<br/>
+    ツイート：{{.Text}} <br/>
     スクリーン名：{{.User.Screen_name}}
-    &lt;/td&gt;
-    &lt;/tr&gt;
+    </td>
+    </tr>
 {{end}}
-&lt;/table&gt;
-&lt;/div&gt;
+</table>
+</div>
 {{end}}
-</pre>
+```
 
 `<div class="tl">`から`</div>`の部分を`{{define "content"}}`と`{{end}}`
   
@@ -87,20 +89,21 @@ tags:
 
 次に、元の`main.html`はどうなるかというと、次のようになります。 
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;!DOCTYPE html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;style type="text/css"&gt;
-div.tl  {width:600px;}
-table,td {border: solid; border-collapse: collapse;}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-{{template "content" .}}
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        div.tl  {width:600px;}
+        table,td {border: solid; border-collapse: collapse;}
+    </style>
+</head>
+<body>
+    {{template "content" .}}
+</body>
+</html>
+```
 
 内容があった部分が`{{template "content" .}}`に変わっていることがわかると思います。
   
@@ -128,28 +131,31 @@ t.Execute(w, tweets)
 
 たとえば、copyrightのような文言を別ファイルにして、メインファイルに読み込ませたいとします。 
 
-<pre class="brush: xml; title: ; notranslate" title="">{{define "copyright"}}
-Copyright &lt;img src="http://blog.seesaa.jp/images_e/e/F074.gif" alt="コピーライトマーク" width="15" height="15" border="0" /&gt; 2012 xxxxxx All Rights Reserved.
+```
+{{define "copyright"}}
+Copyright <img src="http://blog.seesaa.jp/images_e/e/F074.gif" alt="コピーライトマーク" width="15" height="15" border="0" /> 2012 xxxxxx All Rights Reserved.
 {{end}}
-</pre>
+```
+
 
 これを`main.html`に読み込ませたいとすると、 
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;!DOCTYPE html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;style type="text/css"&gt;
-div.tl  {width:600px;}
-table,td {border: solid; border-collapse: collapse;}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-{{template "content" .}}
-{{template "copyright"}}
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            div.tl  {width:600px;}
+            table,td {border: solid; border-collapse: collapse;}
+        </style>
+    </head>
+    <body>
+        {{template "content" .}}
+        {{template "copyright"}}
+    </body>
+</html>
+```
 
 と、このようになり、`"copyright"`のあとには`.(dot)`がありません。
   
@@ -165,16 +171,11 @@ table,td {border: solid; border-collapse: collapse;}
 
 ## 参考
 
-text/templateパッケージ
-:   <http://golang.org/pkg/text/template/>
+* [text/templateパッケージ](http://golang.org/pkg/text/template/)
 
-templateのdefineについて
-:   [http://golang.org/pkg/text/template/#Nested\_template\_definitions][1]
+* templateのdefineについて:   [http://golang.org/pkg/text/template/#Nested\_template\_definitions]
 
-{{tempalte &#8220;name&#8221;}}と{{template &#8220;name&#8221; pipeline}}
-:   <http://golang.org/pkg/text/template/##Actions>
+* {{tempalte &#8220;name&#8221;}}と{{template &#8220;name&#8221; pipeline}}:   <http://golang.org/pkg/text/template/##Actions>
 
-Field substitution in nested templates(このMLで.(dot)が必要だとわかった&#8230;)
-:   <https://groups.google.com/group/golang-nuts/browse_thread/thread/4838863461eaaae0?pli=1>
+* Field substitution in nested templates(このMLで.(dot)が必要だとわかった&#8230;):   <https://groups.google.com/group/golang-nuts/browse_thread/thread/4838863461eaaae0?pli=1>
 
- [1]: http://golang.org/pkg/text/template/#Nested_template_definitions

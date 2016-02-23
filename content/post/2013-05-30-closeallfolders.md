@@ -28,7 +28,7 @@ Windows XPまではCtrlを押しながら、マウスで開いてるフォルダ
 
 タスクバーのボタンを常に結合の設定にしておけば、「すべてのウィンドウを閉じる」という項目があるのですが、結合しない設定だとそれがありません。 
 
-<a href="http://kwmt27.net/index.php/2013/05/30/closeallfolders/win7closefolder/" rel="attachment wp-att-656"><img src="http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder.png" alt="win7closefolder" width="305" height="236" class="alignnone size-full wp-image-656" srcset="http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder-300x232.png 300w, http://kwmt27.net/wp-content/uploads/2013/05/win7closefolder.png 305w" sizes="(max-width: 305px) 100vw, 305px" /></a>
+<a href="http://kwmt27.net/index.php/2013/05/30/closeallfolders/win7closefolder/" rel="attachment wp-att-656"><img src="http://kwmt27.net/images/2013/05/win7closefolder.png" alt="win7closefolder" width="305" height="236" class="alignnone size-full wp-image-656" srcset="http://kwmt27.net/images/2013/05/win7closefolder-300x232.png 300w, http://kwmt27.net/images/2013/05/win7closefolder.png 305w" sizes="(max-width: 305px) 100vw, 305px" /></a>
 
 ## 解決
 
@@ -47,4 +47,4 @@ Windows XPまではCtrlを押しながら、マウスで開いてるフォルダ
 ※完了メッセージを出すのはわずらわしいと思ったので表示させてません。
 
  [1]: http://bit.ly/176PAUA
- [2]: http://kwmt27.net/wp-content/uploads/2013/05/CloseAllFolders.exe
+ [2]: http://kwmt27.net/images/2013/05/CloseAllFolders.exe

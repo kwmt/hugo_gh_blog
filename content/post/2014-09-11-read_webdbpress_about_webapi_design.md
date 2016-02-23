@@ -14,7 +14,7 @@ tags:
   - Web API
 
 ---
-<img src="http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-225x300.jpg" alt="WEB+DB PRESS Vol.82" width="225" height="300" class="alignleft size-thumbnail wp-image-1288" srcset="http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-225x300.jpg 225w, http://kwmt27.net/wp-content/uploads/2014/09/20140908_103353-e1410424730181-768x1024.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" />
+<img src="http://kwmt27.net/images/2014/09/20140908_103353-e1410424730181-225x300.jpg" alt="WEB+DB PRESS Vol.82" width="225" height="300" class="alignleft size-thumbnail wp-image-1288" srcset="http://kwmt27.net/images/2014/09/20140908_103353-e1410424730181-225x300.jpg 225w, http://kwmt27.net/images/2014/09/20140908_103353-e1410424730181-768x1024.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" />
 
 <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774166278/kwmt27-22/ref=nosim/" name="amazletlink" target="_blank">WEB+DB PRESS Vol.82</a>を買いました。Go言語が載ってるからという理由で買いましたが、「Web APIデザインの鉄則」という特集があって、おもしろそうなのでよんでみました。 
 

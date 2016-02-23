@@ -3,7 +3,7 @@ title: Open Handset AllianceのFAQを訳してみた。
 author: kwmt
 layout: post
 date: 2011-10-11
-url: /index.php/2011/10/11/open-handset-allianceのfaqを訳してみた。/
+url: /index.php/2011/10/11/open-handset-allianceのfaqを訳してみた/
 categories:
   - Android
 tags:

@@ -3,7 +3,7 @@ title: Writing Web Applicationss を翻訳しました。
 author: kwmt
 layout: post
 date: 2012-06-30
-url: /index.php/2012/06/30/writing-web-applicationss-を翻訳しました。/
+url: /index.php/2012/06/30/writing-web-applicationss-を翻訳しました/
 pdrp_attributionLocation:
   - end
 categories:

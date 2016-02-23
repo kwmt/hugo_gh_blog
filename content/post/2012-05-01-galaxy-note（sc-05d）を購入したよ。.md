@@ -3,7 +3,7 @@ title: Galaxy Note（SC-05D）を購入したよ。
 author: kwmt
 layout: post
 date: 2012-05-01
-url: /index.php/2012/05/01/galaxy-note（sc-05d）を購入したよ。/
+url: /index.php/2012/05/01/galaxy-notesc-05dを購入したよ//
 categories:
   - Android
 
