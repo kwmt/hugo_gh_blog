@@ -6,6 +6,8 @@ date: 2010-11-07
 url: /index.php/2010/11/07/galaxy-sのメールについてdocomoショップ店員に聞いてきた/
 categories:
   - Android
+tags:
+  - Android
 
 ---
 経緯

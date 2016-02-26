@@ -6,6 +6,8 @@ date: 2011-06-19
 url: /index.php/2011/06/19/大阪effectivejava読書会-第2回に参加しました/
 categories:
   - イベント
+tags:
+  - イベント
 
 ---
 <a href="http://atnd.org/events/14958" target="_blank">大阪EffectiveJava読書会 第2回</a>に参加させて頂きました。

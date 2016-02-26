@@ -10,6 +10,7 @@ categories:
   - Android
 tags:
   - Android Studio
+  - Android
 
 ---
 <img src="http://kwmt27.net/images/2014/05/tabbed-activity.png" alt="tabbed-activity" width="387" height="239" class="aligncenter size-full wp-image-1419" />

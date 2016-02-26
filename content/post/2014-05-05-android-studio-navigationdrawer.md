@@ -10,6 +10,7 @@ categories:
   - Android
 tags:
   - Android Studio
+  - Android
 
 ---
 Android Studio(0.5.7)でNavigation DrawerをNew Projectしたら、getFragmentManager()のところで、Fragmentを継承したNavigationDrawerFragmentにキャストできないってエラーが出たので、その原因と対策です。

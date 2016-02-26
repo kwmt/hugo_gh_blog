@@ -6,6 +6,8 @@ date: 2011-09-30
 url: /index.php/2011/09/30/jenkinsにgit-pluginをインストールする/
 categories:
   - Jenkins
+tags:
+  - Jenkins
 
 ---
 ## Git Pluginをイントールする

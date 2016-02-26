@@ -6,6 +6,8 @@ date: 2011-02-01
 url: /index.php/2011/02/01/galaxy-sをroot化してプチフリ対策をした/
 categories:
   - Android
+tags:
+  - Android
 
 ---
 <a href="http://komugi.net/archives/2010/10/28225019" target="_blank">Galaxy S SC-02B root取得からリカバリまでhttp://komugi.net/archives/2010/10/28225019</a>

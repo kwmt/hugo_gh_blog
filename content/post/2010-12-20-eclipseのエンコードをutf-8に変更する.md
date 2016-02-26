@@ -6,6 +6,8 @@ date: 2010-12-19
 url: /index.php/2010/12/20/eclipseのエンコードをutf-8に変更する/
 categories:
   - Android
+tags:
+  - Android
 
 ---
 [Window]→[Preference]をクリックし、

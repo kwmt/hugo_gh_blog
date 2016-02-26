@@ -6,6 +6,9 @@ date: 2013-01-06
 url: /index.php/2013/01/06/docomo-wifiの設定内容確認方法/
 categories:
   - Android
+tags:
+  - Android
+
 
 ---
 docomo Wi-Fiを使おうと思ってdocomo Wi-FiユーザIDとdocomo Wi-Fiパスワードを確認しよう思って探してたら、分かりにくすぎてイライラしたので、メモった。 

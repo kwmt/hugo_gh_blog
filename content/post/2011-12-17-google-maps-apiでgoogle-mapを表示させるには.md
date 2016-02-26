@@ -6,6 +6,8 @@ date: 2011-12-16
 url: /index.php/2011/12/17/google-maps-apiでgoogle-mapを表示させるには/
 categories:
   - Google Maps API
+tags:
+  - Google Maps API
 
 ---
 とりあえず、以下をheadで読み込んでおいて、

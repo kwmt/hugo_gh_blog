@@ -8,6 +8,8 @@ pdrp_attributionLocation:
   - end
 categories:
   - 日記
+tags:
+  - 日記
 
 ---
 > トランセンドジャパンが、｢MacBook Air/Pro｣シリーズのSDカードスロットからはみ出さない専用形状のSDカード「JetDrive Lite」シリーズの販売を開始した (引用元：<http://taisy0.com/2014/05/23/29800.html> ) 

@@ -10,6 +10,7 @@ categories:
   - Node.js
   - イベント
 tags:
+  - イベント
   - Node.js
 
 ---

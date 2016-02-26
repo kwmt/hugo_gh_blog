@@ -6,6 +6,8 @@ date: 2012-05-01
 url: /index.php/2012/05/01/galaxy-notesc-05dを購入したよ//
 categories:
   - Android
+tags:
+  - Android
 
 ---
 ## Galaxy Noteの写真集

@@ -6,6 +6,10 @@ date: 2010-10-24
 url: /index.php/2010/10/25/androidkobeへ行ってきた/
 categories:
   - イベント
+tags:
+  - イベント
+  - Android
+  
 
 ---
 日本Androidの会神戸支部へ参加させて頂きました。#androidkobe

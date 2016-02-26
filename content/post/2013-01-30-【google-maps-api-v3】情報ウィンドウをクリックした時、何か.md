@@ -8,6 +8,8 @@ pdrp_attributionLocation:
   - end
 categories:
   - Google Maps API
+tags:
+  - Google Mapa API
 
 ---
 ## はじめに

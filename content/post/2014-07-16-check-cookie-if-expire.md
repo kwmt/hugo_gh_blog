@@ -10,6 +10,7 @@ categories:
   - Android
 tags:
   - WebView
+  - Android
 
 ---
 <pre class="go">CookieSyncManager.createInstance(context);

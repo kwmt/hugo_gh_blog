@@ -10,6 +10,8 @@ fb_author_post_id:
   - 746468085416501
 categories:
   - Vagrant
+tags:
+  - Vagrant
 
 ---
 下記のパスを環境変数(PATH)に追加する。

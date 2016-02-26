@@ -8,6 +8,8 @@ pdrp_attributionLocation:
   - end
 categories:
   - イベント
+tags:
+  - イベント
 
 ---
 ## はじめに

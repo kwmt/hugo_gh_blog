@@ -8,6 +8,10 @@ pdrp_attributionLocation:
   - end
 categories:
   - golang
+tags:
+  - golang
+  - Go言語
+  - GAE/Go
 
 ---
 ## はじめに

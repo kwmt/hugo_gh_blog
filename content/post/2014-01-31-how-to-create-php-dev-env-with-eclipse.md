@@ -11,6 +11,7 @@ categories:
   - Vagrant
 tags:
   - PHP
+  - Vagrant
 
 ---
 ## vagrantのインストール

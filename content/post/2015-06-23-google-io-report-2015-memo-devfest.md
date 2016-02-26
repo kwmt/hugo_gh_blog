@@ -7,6 +7,9 @@ url: /index.php/2015/06/23/google-io-report-2015-memo-devfest/
 categories:
   - Android
   - 日記
+tags:
+  - Android
+  - 日記
 
 ---
 <a href="https://sites.google.com/site/devfestjapan/" target="_blank">Google I/O報告会 2015(会場:サイバーエージェント(渋谷マークシティ13F)</a>に行ってきました。

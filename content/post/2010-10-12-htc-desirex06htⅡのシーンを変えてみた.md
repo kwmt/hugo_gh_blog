@@ -6,6 +6,9 @@ date: 2010-10-11
 url: /index.php/2010/10/12/htc-desirex06htのシーンを変えてみた/
 categories:
   - Android
+tags:
+  - Android
+
 
 ---
 せっかく[キャプチャできるようになった][1]ので、、、
