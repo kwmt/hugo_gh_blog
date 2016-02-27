@@ -18,6 +18,7 @@ tags = ["Android", "GCM"]
 
 
 ## サンプルプロジェクトリポジトリ
+
 全体のプロジェクトは<a href="https://github.com/kwmt/PushNotificationSample" target=_blank>kwmt/PushNotificationSample</a>に置いています。
 
 
