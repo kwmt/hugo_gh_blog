@@ -6,7 +6,9 @@ tags = ["機会学習"]
 
 +++
 
-2/27に近畿大学で行われた機械学習に行ってきました。
+2/27に近畿大学で行われた<a href="https://gdgkyoto.doorkeeper.jp/events/38705?utm_campaign=event_38705_32741&utm_medium=email&utm_source=registered_message" target=_blank>機械学習勉強会</a>に行ってきました。
+
+
 
 波部先生
 @habhit
