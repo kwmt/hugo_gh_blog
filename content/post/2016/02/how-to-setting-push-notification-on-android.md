@@ -347,7 +347,7 @@ MVCを想定しているので(<a href="http://konifar.hatenablog.com/entry/2015
 
 この記事のサンプルプロジェクトでは <a href="http://square.github.io/dagger/" target=_blank>Dagger</a>も導入していますが、直接プッシュ通知には関係ないため説明は省略します。
 
-## 参考
+# 参考
 * <a href="https://developers.google.com/cloud-messaging/android/client" target=_blank>Set up a GCM Client App on Android</a>
 * <a href="https://github.com/googlesamples/google-services/tree/master/android/gcm" target=_blank>googlesamples/google-services</a>
 
