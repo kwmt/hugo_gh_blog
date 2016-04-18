@@ -3,6 +3,7 @@ categories = ["kug2", "golang"]
 date = "2016-04-17T13:32:22+09:00"
 tags = ["kug2", "golang"]
 title = "第3回 関西golang勉強会メモ"
+
 +++
 
 <a href="http://kug2.connpass.com/event/29065/" target=_blank>第3回 関西golang勉強会</a>　に行ってきたメモです。
