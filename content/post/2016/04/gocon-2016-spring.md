@@ -2,11 +2,11 @@
 categories = ["golang", "GoCon"]
 date = "2016-04-27T10:09:38+09:00"
 tags = ["golang", "GoCon"]
-title = "gocon 2016 spring"
+title = "GoCon 2016 springに行ってきた"
 
 +++
 
-<a href="http://gocon.connpass.com/event/27521/" target="_blank">GoCon2016 Spring</a>に行ってきました。
+4/23(土)は、<a href="http://gocon.connpass.com/event/27521/" target="_blank">GoCon2016 Spring</a>に行ってきました。
 
 
 イワタプロが資料一覧をまとめてくださってましたので、乗っかります

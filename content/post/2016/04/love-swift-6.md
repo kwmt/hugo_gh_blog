@@ -1,8 +1,8 @@
 +++
-categories = ["x", "y"]
+categories = ["swift"]
 date = "2016-04-27T11:02:08+09:00"
-tags = ["x", "y"]
-title = "love swift #6"
+tags = ["swift", "y"]
+title = "集まれSwift好き！Swift愛好会 #6に行ってきた"
 
 +++
 
@@ -34,8 +34,8 @@ CollectionTypeなどのプロトコルの中身(コード)を見ていったの�
 
 ひろせさんの自作ライブラリ（下記）の紹介でした。SegueAddtionはクロージャでprepareForSegureを書けて、コードが離れないのがいいなと思いました。
 ResourceKitは文字列として扱うのではなくて、定数として使えて補完も効くようになるのがいいなと思いましたが、導入がちょっとめんどくさい？という印象でした。
-<a href="https://github.com/bannzai/SegueAddition" target="_blank">https://github.com/bannzai/SegueAddition</a>
-<a href="https://github.com/bannzai/ResourceKit" target="_blank">https://github.com/bannzai/ResourceKit</a>
+* <a href="https://github.com/bannzai/SegueAddition" target="_blank">https://github.com/bannzai/SegueAddition</a>
+* <a href="https://github.com/bannzai/ResourceKit" target="_blank">https://github.com/bannzai/ResourceKit</a>
 
 
 Reproの七島さんから <a href="http://qiita.com/jollyjoester/items/c4013c60acd453ea7248">RxSwift触ってみた</a>という発表がありました。
