@@ -104,7 +104,7 @@ Ambient Mode
 
 App Invite
 
-  * 紹介するときsetDeppLinkでインテント作って
+  * 紹介するときsetDeepLinkでインテント作って
   * 紹介されたとき、リファラーがついてれればOK
   * マニフェストにintentfilterを追加
 
