@@ -2,7 +2,7 @@
 categories = ["Go言語"]
 date = "2016-12-11T20:49:46+09:00"
 tags = ["gin", "golang"]
-title = "ginを軽く呼んでみる"
+title = "ginを軽く読んでみる"
 
 +++
 
