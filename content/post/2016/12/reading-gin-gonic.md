@@ -6,7 +6,13 @@ title = "ginを軽く読んでみる"
 
 +++
 
+# はじめに
+[大阪]Goモク会を開催しました。
+https://connpass.com/event/13696/
+gomobileを使ってアニメーションさせたりレコメンドシステムを作ったりしてる人がいる中、僕はginのコードリーディングをしました。
 
+
+# 読んでみる
 
 Readmeに書いてるサンプル
 
@@ -248,3 +254,6 @@ func (engine *Engine) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 }
 ```
 
+sync.poolについては下記が参考になりました。
+http://jxck.hatenablog.com/entry/sync.Pool
+http://mattn.kaoriya.net/software/lang/go/20140625223125.htm
