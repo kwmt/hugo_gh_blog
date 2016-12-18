@@ -167,8 +167,7 @@ func (engine *Engine) Use(middleware ...HandlerFunc) IRoutes {
 `engine.RouterGroup.Use(middleware...)`としているところを見ます。
 
 `RouterGroup` は `Engine` 構造体に埋め込まれた構造体です。
-埋め込まれてるので`engine.Use(middleware...)`こうできるはずですがしてないのは可読性からと思われます。
-ただ、ほかのところでは、`engine.Use(middleware...)`としていたので、ここでは違うのはなんでだろ。
+埋め込まれてるので`engine.Use(middleware...)`こうできますが、こうすると自分自身の`Use`が呼ばれてしまいループしてしまうので、明示敵的に`engine.RouterGroup.Use`としています。
 
 
 ```
