@@ -1,8 +1,8 @@
 +++
 categories = ["CI"]
-date = "2016-12-35T11:43:00+09:00"
+date = "2016-12-25T11:43:00+09:00"
 tags = ["wercker", "wercker-step"]
-title = "wercker-step.ymlの使い方"
+title = "werckerの独自stepの作り方"
 
 +++
 
@@ -19,10 +19,9 @@ steps:
 なんとなく、`wercker-step.yml`と`run.sh`が必要そうってことはわかったけど、どうやって使うんだろうと思ったのがきっかけです。
 そしてすぐにはわからなかったのでメモしておこうと思います。
 
-ちなみに、`wercker-step.yml`はマニフェストファイルと呼ばれています。
 
 # stepの作成からそのstepの使用まで
-## 自作stepの作成
+## 独自stepの作成
 ということで、まず`wercker-step.yml`と`run.sh`という名前のファイルを用意します。
 
 
