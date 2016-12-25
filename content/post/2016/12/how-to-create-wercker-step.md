@@ -1,6 +1,6 @@
 +++
 categories = ["CI"]
-date = "2016-12-25T11:43:00+09:00"
+date = "2016-12-25T14:08:59+09:00"
 tags = ["wercker", "wercker-step"]
 title = "werckerの独自stepの作り方"
 
@@ -45,7 +45,7 @@ GitHubにレポジトリを作ってプッシュします。
 先ほど作成したものをwerckerに登録して公開する必要があります。
 
 こちらから<a href="https://app.wercker.com/" target="_blank">https://app.wercker.com/</a>stepを作成します。
-<img src="./images/2016/12/create-wercker-step.png" >
+<img src="/images/2016/12/create-wercker-step.png" >
 
 このとき先ほど`wercker-step.yml`とかをプッシュしたレポジトリを指定します。
 
@@ -57,7 +57,7 @@ Wercker directoryにDeployするには、`deploy target`を指定する必要が
 
 先ほどのビルドが成功したら、ビルドの詳細画面で`Build passed`と出ている右側に`Deploy to`というドロップダウンがあるので、そこをクリックして、`publish-step`というDeploy targetを指定し、`Start deploy`をクリックするとデプロイされます。
 
-<img src="./images/2016/12/specify-deploy-target.png" >
+<img src="/images/2016/12/specify-deploy-target.png" >
 
 デプロイされると下記URLのような感じになります。
 <a href="https://app.wercker.com/applications/585f2630d8cb9e0100c142c4/tab/details/" target="_blank">https://app.wercker.com/applications/585f2630d8cb9e0100c142c4/tab/details/</a>
@@ -73,7 +73,7 @@ steps:
 
 これでwerckerを走らせると、
 
-<img src="./images/2016/12/run-my-wercker-step.png" >
+<img src="/images/2016/12/run-my-wercker-step.png" >
 
 `hello world!`が出力されてることがわかると思います。
 
