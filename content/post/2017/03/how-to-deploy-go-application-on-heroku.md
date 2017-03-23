@@ -1,11 +1,10 @@
 +++
 date = "2017-03-23T12:17:50+09:00"
 title = "HerokuでGoアプリケーションを動かしたい"
-draft = true
+categories = ["Go言語"]
+tags = ["Heroku", "golang", "Go"]
 
 +++
-
-
 
 
 # はじめに
