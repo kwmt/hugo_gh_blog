@@ -1,7 +1,7 @@
 +++
 date = "2017-07-20T22:00:00+09:00"
 title = "モバもく会を開催して、Github Trendingを軽く読んでみた"
-draft = true
+draft = false
 categories = ["Android"]
 
 +++
