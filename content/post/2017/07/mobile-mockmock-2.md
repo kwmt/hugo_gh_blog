@@ -57,6 +57,7 @@ snowアプリみたいなことができるライブラリのようです。
 
 
 起動してスタンプを選択して、顔にカメラを向けると、
+
 <img src="/images/2017/07/mobamock2/PLDroidShortVideo_sample.png" width="300">
 
 このようになり、保存できます。
