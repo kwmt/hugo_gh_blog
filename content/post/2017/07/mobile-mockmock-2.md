@@ -32,7 +32,7 @@ categories = ["Android"]
 
 * SmartRefreshLayoutは前回よんだので除外
 * android-interview-questions
-* sprint-boot
+* spring-boot
 
 
 
