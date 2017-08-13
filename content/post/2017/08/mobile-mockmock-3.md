@@ -25,7 +25,7 @@ categories = ["Android"]
 
 ちなみに、BottomNavigationというのはこのようなものです。
 
-<img src="/images/2017/08/mobamock3/bottom_navigation.mp4" width="300">
+<img src="/images/2017/08/mobamock3/bottom_navigation.gif" width="300">
 
 
 ## [ガイドライン]最上位の移動先を 3～5 個表示する
@@ -36,7 +36,7 @@ categories = ["Android"]
 
 IllegalArgumentExceptionが出ます。
 
-<img src="/images/2017/08/mobamock3/bottom_only6.png" width="300">
+<img src="/images/2017/08/mobamock3/bottom_over6.png" width="300">
 
 
 - 2個にした場合
