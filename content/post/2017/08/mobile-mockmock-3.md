@@ -186,7 +186,7 @@ return new ColorStateList(new int[][]{
 
 <img src="/images/2017/08/mobamock3/BottomNavigationMenuView.png" width="300">
 
-高さは、[`design_bottom_navigation_height`が56dp](https://github.com/android/platform_frameworks_support/blob/7dbbadd44f1d8b14990cf413bace64e1535a2564/design/res/values/dimens.xml#L61)と定義されており、
+高さは、[`design_bottom_navigation_height`が56dp](https://github.com/android/platform_frameworks_support/blob/7dbbadd44f1d8b14990cf413bace64e1535a2564/design/res/values/dimens.xml#L61)と定義されており、
 
 ```xml
 <dimen name="design_bottom_navigation_height">56dp</dimen>
