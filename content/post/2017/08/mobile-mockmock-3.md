@@ -336,10 +336,81 @@ TransitionManager.beginDelayedTransition(view, mSet);
 こちらのTransitionの詳細は[荒木さんのyoutube](https://www.youtube.com/watch?v=YMmuuuB-uxM)を見るのが分かりやすいかと思います。Transition Support Libraryについては、7:23あたりから聞くことが出来ます。
 
 
+## [ガイドライン]アクションが 4つまたは 5つの場合は、アクティブではないビューにはアイコンしか表示しません。
 
+<img src="/images/2017/08/mobamock3/menu5.png" width="300">
 
+`BottomNavigationMenuView`がメニューを作成する際に`buildMenuView`メソッドが呼ばれますが、そこで`mShiftingMode = mMenu.size() > 3;`
+とメニュー数が4か5個だったら`mShiftingMode`をtrueにセットしています。この`mShiftingMode`を使っていろいろ判断しているようです。
 
+先程の`BottomNavigationItemView#setChecked`メソッドで、`mLargeLabel`のみ使って、`mSmallLabel`をINVISIBLEにすることで実現していました。
 
+```java
+@Override
+public void setChecked(boolean checked) {
+    if (mShiftingMode) {
+        if (checked) {
+            LayoutParams iconParams = (LayoutParams) mIcon.getLayoutParams();
+            iconParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.TOP;
+            iconParams.topMargin = mDefaultMargin;
+            mIcon.setLayoutParams(iconParams);
+            mLargeLabel.setVisibility(VISIBLE);
+            mLargeLabel.setScaleX(1f);
+            mLargeLabel.setScaleY(1f);
+        } else {
+            LayoutParams iconParams = (LayoutParams) mIcon.getLayoutParams();
+            iconParams.gravity = Gravity.CENTER;
+            iconParams.topMargin = mDefaultMargin;
+            mIcon.setLayoutParams(iconParams);
+            mLargeLabel.setVisibility(INVISIBLE);
+            mLargeLabel.setScaleX(0.5f);
+            mLargeLabel.setScaleY(0.5f);
+        }
+        mSmallLabel.setVisibility(INVISIBLE);
+    } else {
+        //省略
+    }
+}
+```
+
+## [ガイドライン]Shifting bottom navigation barのWidthのサイズ
+
+```
+Active view
+    Maximum: 168dp
+    Minimum: 96dp
+Inactive view
+    Maximum: 96dp
+    Minimum: 56dp
+```
+
+[`BotomNavigationMenuView#onMeasure`](https://github.com/android/platform_frameworks_support/blob/master/design/src/android/support/design/internal/BottomNavigationMenuView.java#L110-L116) で計算してました。
+
+```java
+final int inactiveCount = count - 1;
+final int activeMaxAvailable = width - inactiveCount * mInactiveItemMinWidth;
+final int activeWidth = Math.min(activeMaxAvailable, mActiveItemMaxWidth);
+final int inactiveMaxAvailable = (width - activeWidth) / inactiveCount;
+final int inactiveWidth = Math.min(inactiveMaxAvailable, mInactiveItemMaxWidth);
+```
+
+```
+mInactiveItemMinWidth = 56dp
+mInactiveItemMaxWidth = 96dp
+mActiveItemMaxWidth = 168dp
+```
+なので、`activeWidth`は最大168dpになり、`inactiveWidth`は最大96dpになります。
+
+## [ガイドライン] スナックバーの高度（6 dp）は低いため、下部のナビゲーションバー（8 dp の高度）の背面にスナックバーが表示されます。
+
+関係するのは`BottomNavigationView`のコンストラクタで下記の処理があったぐらいでした。
+BottomNavationの上側からSnackbarが表示されることはないようです。
+```java
+if (a.hasValue(R.styleable.BottomNavigationView_elevation)) {
+    ViewCompat.setElevation(this, a.getDimensionPixelSize(
+            R.styleable.BottomNavigationView_elevation, 0));
+}
+```
 
 # その他わかったこと
 
@@ -379,7 +450,7 @@ http://vividcode.hatenablog.com/entry/android-app/drawable-tinting
 
 こちら知らなかった。。。
 
-## 
+## PointerIconについて
 
 [`BottomNavigationItemView#setEnabled`](https://github.com/android/platform_frameworks_support/blob/master/design/src/android/support/design/internal/BottomNavigationItemView.java#L190)メソッドを眺めていたら、
 
@@ -388,7 +459,7 @@ ViewCompat.setPointerIcon(this,
         PointerIconCompat.getSystemIcon(getContext(), PointerIconCompat.TYPE_HAND));
 ```
 
-という処理があって気になって[PointerIconCompat#setPointerIcon](https://developer.android.com/reference/android/support/v4/view/ViewCompat.html#setPointerIcon)を調べてみたら、マウスオーバーした時にマウスポインタを変更するような処理なんですね。スマホでは使わないと思うんですが、TVとかで使うことあるんですかね。
+という処理があって気になったので、[PointerIconCompat#setPointerIcon](https://developer.android.com/reference/android/support/v4/view/ViewCompat.html#setPointerIcon)を調べてみたら、マウスオーバーした時にマウスポインタを変更するような処理なんですね。スマホでは使わないと思うんですが、TVとかで使うことあるんですかね。
 
 ## まとめ
 
