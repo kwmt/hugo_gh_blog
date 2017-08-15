@@ -194,8 +194,9 @@ return new ColorStateList(new int[][]{
 
 それを[こちらで取得して](https://github.com/android/platform_frameworks_support/blob/0b16435cc00a7e86687d53168b773105906ad1c0/design/src/android/support/design/internal/BottomNavigationMenuView.java#L77)、onMesureでセットしています。
 
-## [ガイドライン]アイコン: 24 x 24 dp
+## [ガイドライン]アイコン: 24 x 24 dp、テキストの下に 10 dp、テキストサイズRoboto Regular 14sp (active view)、Roboto Regular 12sp (inactive view)
 
+### アイコン: 24 x 24 dp
 <img src="/images/2017/08/mobamock3/bottomNavigationItemView.png" width="300">
 
 メニュー1個を表すClassは`BottomNavigationItemView` になりますが、レイアウトは[design_bottom_navigation_item.xml](https://github.com/android/platform_frameworks_support/blob/master/design/res/layout/design_bottom_navigation_item.xml)で決めれています。
@@ -211,8 +212,134 @@ return new ColorStateList(new int[][]{
     android:layout_marginTop="@dimen/design_bottom_navigation_margin"
     android:layout_marginBottom="@dimen/design_bottom_navigation_margin"
     android:duplicateParentState="true" />
-
+<android.support.design.internal.BaselineLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center_horizontal"
+    android:clipToPadding="false"
+    android:paddingBottom="10dp"
+    android:duplicateParentState="true">
+    <TextView
+        android:id="@+id/smallLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/design_bottom_navigation_text_size"
+        android:singleLine="true"
+        android:duplicateParentState="true" />
+    <TextView
+        android:id="@+id/largeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textSize="@dimen/design_bottom_navigation_active_text_size"
+        android:singleLine="true"
+        android:duplicateParentState="true" />
+</android.support.design.internal.BaselineLayout>
 ```
+### テキストの下に 10 dp
+
+こちらは上記XMLをみたらすぐわかります。
+
+```xml
+android:paddingBottom="10dp"
+```
+
+となっていました。
+
+### テキストサイズRoboto Regular 14sp (active view)、Roboto Regular 12sp 
+
+こちらもXMLを見たらすぐわかります。smallLabelに`design_bottom_navigation_text_size`(12sp)が設定され、largeLabelに`design_bottom_navigation_active_text_size`(14sp)が設定されています。
+
+
+
+## [ガイドライン]アクティブ時アイコン上部のパディングは6dp, 非アクティブ時アイコン上部のパディングは8dp
+### アイコンのアニメーションはどのように実装されているのか？
+
+について見ていく中でガイドラインを確認して行きたいと思います。
+
+この記事の最初と同じものですが、
+
+<img src="/images/2017/08/mobamock3/bottom_navigation.gif" width="300">
+
+アイコンの動きをよく見ると、選択時にアイコンが少し上にアニメーションして動き、非選択時に下にアニメーションしているのがわかるかと思います。これをどのように実装しているかを見ていきます。
+
+
+
+`BottomNavigationMenuView`が`OnClickListener`でクリックを検知して`MenuPresenter`をimplementsした`BottomNavigationPresenter#updateMenuView`が呼ばれ、[`BottomNavigationMenuView#updateMenuView`](https://github.com/android/platform_frameworks_support/blob/7dbbadd44f1d8b14990cf413bace64e1535a2564/design/src/android/support/design/internal/BottomNavigationMenuView.java#L285)が呼ばれます。
+
+`BottomNavigationMenuView#updateMenuView`を抜き出すと下記になります。
+
+```java
+public void updateMenuView() {
+    final int menuSize = mMenu.size();
+    if (menuSize != mButtons.length) {
+        // The size has changed. Rebuild menu view from scratch.
+        buildMenuView();
+        return;
+    }
+    int previousSelectedId = mSelectedItemId;
+    for (int i = 0; i < menuSize; i++) {
+        mPresenter.setUpdateSuspended(true);
+        MenuItem item = mMenu.getItem(i);
+        if (item.isChecked()) {
+            mSelectedItemId = item.getItemId();
+            mSelectedItemPosition = i;
+        }
+        mButtons[i].initialize((MenuItemImpl) item, 0);
+        mPresenter.setUpdateSuspended(false);
+    }
+    if (previousSelectedId != mSelectedItemId) {
+        mAnimationHelper.beginDelayedTransition(this);
+    }
+}
+```
+
+まず、`mButtons`は
+```
+private BottomNavigationItemView[] mButtons;
+```
+このように定義されていますが、`BottomNavigationItemView#initialize`メソッドの中で、`setChecked`メソッドを呼んでその中でチェック状態によって、アイコンの`topmargin`を変更することによって移動させています。
+
+```java
+@Override
+public void setChecked(boolean checked) {
+    // 省略
+    if (checked) {
+        LayoutParams iconParams = (LayoutParams) mIcon.getLayoutParams();
+        iconParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.TOP;
+        iconParams.topMargin = mDefaultMargin + mShiftAmount;
+        mIcon.setLayoutParams(iconParams);
+        //　省略
+    } else {
+        LayoutParams iconParams = (LayoutParams) mIcon.getLayoutParams();
+        iconParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.TOP;
+        iconParams.topMargin = mDefaultMargin;
+        mIcon.setLayoutParams(iconParams);
+        // 省略
+    }
+}
+```
+
+`mDefaultMargin`が8dpで`mShiftAmount`が-2dpになるので、アクティブ時（選択時）は6dpになります。
+
+これだけだったら切り替わり時にパッと切り替わるだけなので、なんでアニメーションしているのかと思ったら、ポイントは`updateMenuView`メソッドの最後の下記の部分でアニメーションを実行させていました。
+
+```java
+mAnimationHelper.beginDelayedTransition(this);
+```
+
+こちらの実態はICS以降の場合は下記を呼びます。ICSより以前はサポートされてませんので、メソッドの中身は空の状態です。
+```java
+TransitionManager.beginDelayedTransition(view, mSet);
+```
+
+こちらのTransitionの詳細は[荒木さんのyoutube](https://www.youtube.com/watch?v=YMmuuuB-uxM)を見るのが分かりやすいかと思います。Transition Support Libraryについては、7:23あたりから聞くことが出来ます。
+
+
+
+
+
+
 
 # その他わかったこと
 
@@ -251,6 +378,17 @@ android:background="?android:attr/windowBackground"
 http://vividcode.hatenablog.com/entry/android-app/drawable-tinting
 
 こちら知らなかった。。。
+
+## 
+
+[`BottomNavigationItemView#setEnabled`](https://github.com/android/platform_frameworks_support/blob/master/design/src/android/support/design/internal/BottomNavigationItemView.java#L190)メソッドを眺めていたら、
+
+```java
+ViewCompat.setPointerIcon(this,
+        PointerIconCompat.getSystemIcon(getContext(), PointerIconCompat.TYPE_HAND));
+```
+
+という処理があって気になって[PointerIconCompat#setPointerIcon](https://developer.android.com/reference/android/support/v4/view/ViewCompat.html#setPointerIcon)を調べてみたら、マウスオーバーした時にマウスポインタを変更するような処理なんですね。スマホでは使わないと思うんですが、TVとかで使うことあるんですかね。
 
 ## まとめ
 
