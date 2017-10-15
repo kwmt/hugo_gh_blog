@@ -44,6 +44,25 @@ e:           dagger.android.AndroidInjector.inject(arg0)
 e: java.lang.IllegalStateException: failed to analyze: org.jetbrains.kotlin.kapt3.diagnostic.KaptError: Error while annotation processing
 ```
 
+ちなみに、このエラーの原因は
+
+AppComponentクラスで指定している Moduleがsupportではない `AndroidInjectionModule` クラスの方を指定しているため。
+
+```
+@Component(modules = arrayOf(
+        AndroidInjectionModule::class,
+    )
+)
+interface AppComponent : AndroidInjector<App> {
+```
+
+対策は、上記の詳細からsupport.Fragment DispatchingAndroidInjectorとあることから、
+
+`AndroidInjectionModule` を `AndroidSupportInjectionModule`にすればよい。
+
+
+参考リンク: https://github.com/google/dagger/issues/783
+
 ## まとめ
 
 Android Studioでエラーログ見れるようにならないかな。。コントリビュートすればいいんでしょうけど。
