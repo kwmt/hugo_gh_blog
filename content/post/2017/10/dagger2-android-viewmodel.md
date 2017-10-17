@@ -1,6 +1,6 @@
 +++
 date = "2017-10-17T10:00:00+09:00"
-title = "Dagger2 + Android + ViewModel(with databindin)"
+title = "Dagger2 + Android + ViewModel(with databinding)"
 draft = false
 categories = ["Android"]
 tags = ["Android", "Dagger2"]
@@ -227,21 +227,16 @@ class MainFragment : DaggerFragment() {
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
         >
-
         <data>
-
             <variable
                 name="viewModel"
                 type="net.kwmt27.codesearch.presentation.viewmodel.MainFragmentViewModel"
                 />
         </data>
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             >
-
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
