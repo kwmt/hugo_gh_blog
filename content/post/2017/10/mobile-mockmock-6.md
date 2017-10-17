@@ -27,5 +27,8 @@ categories = ["モバもく会"]
 
 結論：[公式ドキュメント](https://google.github.io/dagger/android.html)をちゃんと読め！ということでした。
 
+Daggerについては、[別記事](http://kwmt27.net/2017/10/17/dagger2-android-viewmodel/)に書きました。
+
+
 以上です。
 
