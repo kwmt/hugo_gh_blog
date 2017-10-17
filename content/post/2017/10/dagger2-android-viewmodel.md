@@ -16,7 +16,7 @@ daggerバージョンが2.10になったときに、[`dagger.androd`クラスが
 
 [https://google.github.io/dagger/android.html](https://google.github.io/dagger/android.html)
 
-またサンプルコードは、Dagger 2.12 時点によるものです。
+またサンプルコードは、[Dagger 2.12](https://github.com/google/dagger/releases/tag/dagger-2.12) 時点によるものです。
 
 
 ## dagger.android
