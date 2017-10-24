@@ -9,7 +9,7 @@ tags = ["Android", "Dagger2"]
 
 ## はじめに
 
-daggerバージョンが2.10になったときに、[`dagger.androd`クラスがリリースされた](https://github.com/google/dagger/releases/tag/dagger-2.10)ようで、いままでと少し書き方が変わっていたので、メモを書きました。
+daggerバージョンが2.10になったときに、[`dagger.android`](https://github.com/google/dagger/releases/tag/dagger-2.10)がリリースされたようで、いままでと少し書き方が変わっていたので、メモを書きました。
 
 
 基本的に下記ページを参考にしています。
