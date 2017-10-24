@@ -1,6 +1,6 @@
 +++
 date = "2017-10-24T23:20:00+09:00"
-title = "Kotlinプロジェクトで`Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon`というエラーが出たときの対処法"
+title = "Kotlinプロジェクトで「Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon」というエラーが出たときの対処法"
 draft = false
 categories = ["Android"]
 tags = ["Android", "Kotlin", "Databinding"]
