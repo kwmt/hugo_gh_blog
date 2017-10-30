@@ -11,12 +11,12 @@ tags = ["Kotlin", "Mockito2"]
 
 Android Studio: 2.3.3
 Kotlin: 1.1.51
-Mokito: 2.7.0
+Mokito: 2.11.0
 
 build.gradleには`mockito-core`を指定
 
 ```build.gradle
-testCompile "org.mockito:mockito-core:2.7.0"
+testCompile "org.mockito:mockito-core:2.11.0"
 ```
 
 ## 問題
