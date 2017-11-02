@@ -81,7 +81,7 @@ ViewDataBinding.inflate(LayoutInflater?)
 ```
 ViewDataBinding.inflate(LayoutInflater)
 ```
-になったっぽい
+厳密になったっぽい
 
 ### 対策
 
