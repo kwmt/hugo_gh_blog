@@ -90,7 +90,7 @@ ViewDataBinding.inflate(LayoutInflater)
 
 としました。
 
-## 
+## More than one file was found with OS independent path 'META-INF/app_stagingDebug.kotlin_module'
 
 ### エラー詳細
 Error:Execution failed for task ':app:transformResourcesWithMergeJavaResForStagingDebug'.
@@ -104,4 +104,33 @@ Error:Execution failed for task ':app:transformResourcesWithMergeJavaResForStagi
 
 でエラーがでなくなったので、verup前のビルドで生成されたものが残ってたのかなぁ。
 
+## Could not find com.android.tools.build:gradle:3.0.0. Searched in the following locations
 
+### エラー詳細
+
+```
+* What went wrong:
+> Could not resolve all files for configuration ':classpath'.
+   > Could not find com.android.tools.build:gradle:3.0.0.
+     Searched in the following locations:
+         https://jcenter.bintray.com/com/android/tools/build/gradle/3.0.0/gradle-3.0.0.pom
+         https://jcenter.bintray.com/com/android/tools/build/gradle/3.0.0/gradle-3.0.0.jar
+     Required by:
+         project :
+```
+
+## 対策
+
+```
+--- a/build.gradle
++++ b/build.gradle
+@@ -5,6 +5,7 @@ buildscript {
+     ext.dokka_version = '0.9.15'
+     repositories {
+         jcenter()
++        google()
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:3.0.0'
+ ```
+ 
