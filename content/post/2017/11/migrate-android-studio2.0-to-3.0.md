@@ -6,6 +6,8 @@ categories = ["Android Studio3.0"]
 
 +++
 
+## はじめに
+
 ```
      dependencies {
 -        classpath 'com.android.tools.build:gradle:2.3.3'
