@@ -37,7 +37,7 @@ Error:All flavors must now belong to a named flavor dimension. Learn more at htt
 
 ```
 // Specifies two flavor dimensions.
-flavorDimensions "default", "minApi"
+flavorDimensions "tier", "minApi"
 
 productFlavors {
      free {
