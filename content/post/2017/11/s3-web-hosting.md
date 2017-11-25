@@ -7,6 +7,12 @@ categories = ["web"]
 +++
 
 
-
 * [Amazon S3による静的Webサイトホスティング](https://www.slideshare.net/horiyasu/amazon-s3web-27138902)
     * 独自ドメインの設定が超絶参考になった。
+
+
+## 以下が必要なのに気づくのに時間かかってしまった。
+
+1. バケット選択
+1. プロパティ
+1. Static website hostingで有効化
