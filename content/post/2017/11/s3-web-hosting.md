@@ -6,9 +6,11 @@ categories = ["web"]
 
 +++
 
+## 参考
 
 * [Amazon S3による静的Webサイトホスティング](https://www.slideshare.net/horiyasu/amazon-s3web-27138902)
     * 独自ドメインの設定が超絶参考になった。
+* [ウェブサイトのホスティングの有効化](http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/EnableWebsiteHosting.html)
 
 
 ## 以下が必要なのに気づくのに時間かかってしまった。
