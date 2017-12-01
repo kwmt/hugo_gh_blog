@@ -18,3 +18,8 @@ categories = ["web"]
 1. バケット選択
 1. プロパティ
 1. Static website hostingで有効化
+
+
+## SSL化
+
+https://qiita.com/jasbulilit/items/73d70a01a5d3b520450f
