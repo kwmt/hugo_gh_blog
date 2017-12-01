@@ -4,6 +4,7 @@ title = "モバもく会 #2 を開催して、Github Trending(java)を軽く読�
 draft = false
 categories = ["モバもく会"]
 tags = ["モバもく会", "勉強会", "Android"]
+
 +++
 
 

@@ -4,6 +4,7 @@ title = "モバもく会#6 を開催"
 draft = false
 categories = ["モバもく会"]
 tags = ["モバもく会", "勉強会"]
+
 +++
 
 2017/10/15(日)に<a target="_blank" href="https://mobamoku.connpass.com/event/68548">モバもく会#6</a>という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。

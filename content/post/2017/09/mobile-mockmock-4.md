@@ -4,6 +4,7 @@ title = "モバもく会 #4 を開催"
 draft = false
 categories = ["モバもく会"]
 tags = ["モバもく会", "勉強会"]
+
 +++
 
 
