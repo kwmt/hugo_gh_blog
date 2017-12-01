@@ -2,7 +2,8 @@
 date = "2017-10-15T21:18:00+09:00"
 title = "Kotlin kapt error"
 draft = false
-categories = ["kotlin"]
+categories = ["Kotlin"]
+tags = ["Kotlin"]
 
 +++
 
