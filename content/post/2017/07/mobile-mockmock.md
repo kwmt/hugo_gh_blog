@@ -3,7 +3,7 @@ date = "2017-07-20T22:00:00+09:00"
 title = "モバもく会を開催して、Github Trendingを軽く読んでみた"
 draft = false
 categories = ["モバもく会"]
-tags = ["モバもく会", "勉強会", "Android"]
+tags = ["モバもく会", "勉強会", "Android"]
 
 +++
 
