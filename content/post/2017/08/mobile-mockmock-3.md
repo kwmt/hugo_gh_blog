@@ -3,7 +3,7 @@ date = "2017-08-13T20:00:00+09:00"
 title = "モバもく会 #3 を開催して、Support Design LibraryのBottomNavigationViewを読んだ"
 draft = false
 categories = ["Android"]
-
+tags = ["モバもく会", "勉強会"]
 +++
 
 

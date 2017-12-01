@@ -3,6 +3,8 @@ date = "2017-12-01T14:30:00+09:00"
 title = "Kotlin Conf Android Codeを読んだときのメモ"
 draft = false
 categories = ["Android"]
+tags = ["Android", "Kotlin"]
+
 
 +++
 

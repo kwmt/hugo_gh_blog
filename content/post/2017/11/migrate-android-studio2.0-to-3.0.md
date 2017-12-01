@@ -3,6 +3,7 @@ date = "2017-11-02T00:07:00+09:00"
 title = "Android Studio 2.3.3 から3.0にしたときのメモ"
 draft = false
 categories = ["Android Studio3.0"]
+tags = ["Android", "Android Studio"]
 
 +++
 

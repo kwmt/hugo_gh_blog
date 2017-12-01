@@ -3,6 +3,7 @@ date = "2017-11-26T00:02:00+09:00"
 title = "Amazon S3でWebサイトホスティングのメモ"
 draft = false
 categories = ["web"]
+tags = ["AWS", "S3"]
 
 +++
 
