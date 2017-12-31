@@ -18,6 +18,7 @@ project root で下記を実行します
 
 特定のビルド バリアントに対してのみ lint タスクを実行するには
 
+（例）
 ```
 ./gradlew lintDevelopDebug
 ```
@@ -374,7 +375,7 @@ Valid issue id's:
 "WrongThreadInterprocedural": Wrong Thread (Interprocedural)
 
 ### IDの詳細を知るには
-% $ANDROID_HOME/tools/bin/lint --show  HardcodedText                                                                                             (git)-[feature/verup-lib]
+% $ANDROID_HOME/tools/bin/lint --show  HardcodedText
 HardcodedText
 -------------
 Summary: Hardcoded text
