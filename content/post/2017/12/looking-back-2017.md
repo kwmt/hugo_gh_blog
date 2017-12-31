@@ -96,7 +96,7 @@ Aアプリは2年前から担当させて頂いてるのですが、改修する
         * DDDに関する勉強会でした。ScalaのEither型が参考になりました。
     * [「正しいものを正しくつくる」とは何か(大阪開催)](https://guildworks.doorkeeper.jp/events/64730)
 * 11月 
-    * [モバもく会#8][http://kwmt27.net/2017/12/01/mobile-mockmock-8/]
+    * [モバもく会#8](http://kwmt27.net/2017/12/01/mobile-mockmock-8/)
 * 12月 
     * [モバもく会#9](https://mobamoku.connpass.com/event/73662/)
     * [Mobile Act OSAKA #2](https://mobileact.connpass.com/event/68892/)
