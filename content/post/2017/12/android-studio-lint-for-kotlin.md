@@ -28,6 +28,7 @@ project root で下記を実行します
 
 ### IDリストを表示するには？
 
+```
 %  $ANDROID_HOME/tools/bin/lint --list
 Valid issue categories:
     Correctness
@@ -373,8 +374,11 @@ Valid issue id's:
 "SuspiciousImport": 'import android.R' statement
 "WrongFolder": Resource file in the wrong res folder
 "WrongThreadInterprocedural": Wrong Thread (Interprocedural)
+```
 
 ### IDの詳細を知るには
+
+```
 % $ANDROID_HOME/tools/bin/lint --show  HardcodedText
 HardcodedText
 -------------
@@ -396,6 +400,7 @@ translations for existing string resources.
 
 There are quickfixes to automatically extract this hardcoded string into a
 resource lookup.
+```
 
 # 参考
 * [Lint によるコードの改善](https://developer.android.com/studio/write/lint.html)
