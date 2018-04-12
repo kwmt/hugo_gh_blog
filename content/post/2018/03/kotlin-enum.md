@@ -142,21 +142,6 @@ enum class SampleType {
 // null
 ```
 
-## リストが別のリストに含まれているか調べるには？
-```
-fun main(args: Array<String>) {
-    val caches = arrayListOf(16, 8)
-    val target = arrayListOf(16, 3)
-    val result = target.filterNot { it in caches }
-    println(result)
-// output:
-// [3]
-```
-https://try.kotlinlang.org/#/UserProjects/7et0bso059r7fs4t0jv2nmh1fo/m3suq2u3uo48jclbhe65o6n0av
-
-
-`filterNot`は、falseを返した要素だけ抽出するのがポイント
-
 
 ## Any?の型情報を知るには？
 
