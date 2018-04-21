@@ -5,6 +5,10 @@ draft = false
 
 +++
 
+<div align="center">
+<img src="/images/2018/04/yahoo_mercari.jpg" />
+</div>
+
 # はじめに
 
 > In the second half of 2018, Play will require that new apps and app updates target a recent Android API level.
@@ -54,7 +58,9 @@ MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersion�
 
 チャンネルというのは、例えばGoogle Play Musicアプリを参考しますと、下図の赤枠で囲んだ部分になります。
 
+<div align="center">
 <img src="/images/2018/04/channel_sample.png" />
+</div>
 
 チャンネルごとに通知をON/OFFすることができたり、カラーやサウンドもチャンネルごとに設定できます。
 同じアプリ内で、通知が来て欲しいチャンネルは通知をONにし、通知が不快だなと思うチャンネルだけを通知が来ないようにOFFできるという機能です。
@@ -65,13 +71,17 @@ MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersion�
 ## 通知アイコンが真っ白になった！
 次にAndroid Oreoで通知アイコンが真っ白になるという現象に遭遇しました。下図の矢印のところです。
 
+<div align="center">
 <img src="/images/2018/04/notification_icon_white.png" />
+</div>
 
 これをみたとき最初は、Lolipopから、アイコン画像の透過でない部分は白くレンダリングされるため、アイコン画像自体が対応していないのなかな？と思ったんですが、手元にあったMarshmallow端末で確認した所、ちゃんと表示されていたので、それは違いました。
 
 いろいろ調べた所、Firebase SDK version11.8.0の不具合とのことで、12.0.0に上げると解決しました。リリースノートにもアイコンの不具合を修正したと記載があります。
 
+<div align="center">
 <img src="/images/2018/04/firebase_sdk_release_note.png" />
+</div>
 
 <a target="_blank" href="https://firebase.google.com/support/release-notes/android">https://firebase.google.com/support/release-notes/android</a>
 
@@ -81,7 +91,9 @@ MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersion�
 
 チャンネル設定を見てみると、作成した覚えのない「その他」というチャンネルが出来ていて、そのチャンネルに割り当てられてしまったようです。
 
+<div align="center">
 <img src="/images/2018/04/unkown_channel.png" />
+</div>
 
 
 アプリがバックグラウンドにいるときにプッシュ通知が来た場合のチャンネルをAndroidManifestで設定できるのですが、原因はその設定が間違っていただけでした。
@@ -110,7 +122,3 @@ MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersion�
 しかし、めちゃめちゃいい知見だったと言ってくださる方がいて、発表した甲斐がありました。ただ、懇親会中のザワザワした中でのLTだったので、あまり聞かれてなかったっぽいのですがw
 
 最後になりましたが、Yahooさん、メルカリさん、とてもいい場を作って頂きありがとうございました！最高の金曜になりました！
-
-
-
-
