@@ -117,7 +117,7 @@ MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersion�
 この記事は、
 <a target="_blank" href="https://yahoo-osaka.connpass.com/event/79888/">mixleap #11</a>でLTさせて頂いた内容です。
 その時のスライドは下記です。
-<a target="_blank" href="https://www.slideshare.net/yasi_life/androidoreo-94549006">https://www.slideshare.net/yasi_life/androidoreo-94549006</a>
+<a target="_blank" href="https://www.slideshare.net/yasi_life/androidoreo-94560866">https://www.slideshare.net/yasi_life/androidoreo-94560866</a>
 
 反省点は、発表原稿を作ったのですが、それを読むのに必死で前をみれなかったことです。発表練習が圧倒的に足りなかったです。。あとPCを置く台が低かったというのもあるかもですが、資料の字が小さくて読みにくかったので、次はフォントサイズを少し大きめにしようと思いました。覚えるくらい練習しろよというツッコミが来そうですが。。5分のところ6分を超えてしまってスミマセンでした。。
 
