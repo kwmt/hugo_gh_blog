@@ -71,7 +71,7 @@ MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersion�
 
 いろいろ調べた所、Firebase SDK version11.8.0の不具合とのことで、12.0.0に上げると解決しました。リリースノートにもアイコンの不具合を修正したと記載があります。
 
-<img src="/images/2018/04/notification_icon_white.png" />
+<img src="/images/2018/04/firebase_sdk_release_note.png" />
 
 <a target="_blank" href="https://firebase.google.com/support/release-notes/android">https://firebase.google.com/support/release-notes/android</a>
 
