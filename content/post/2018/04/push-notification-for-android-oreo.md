@@ -14,6 +14,8 @@ draft = false
 > In the second half of 2018, Play will require that new apps and app updates target a recent Android API level.
 > 
 > 引用元: <a target="_blank" href="https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html">https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html</a>
+>
+> 日本語訳: <a target="_blank" href="https://developers-jp.googleblog.com/2017/12/improving-app-security-and-performance.html">https://developers-jp.googleblog.com/2017/12/improving-app-security-and-performance.html</a>
 
 突然ですが、PlayStoreでアプリを公開するにあたり、ターゲットSDKバージョンを最新に指定することが義務化されることはご存知でしょうか。
 新規アプリの公開で、2018年8月から、既存アプリのアップデートで2018年11月からAPIレベル26以降つまりAndroid 8.0オレオ以降の対応が必須になります。
