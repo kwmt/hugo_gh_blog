@@ -6,7 +6,7 @@ draft = false
 +++
 
 <div align="center">
-<img src="/images/2018/04/yahoo_mercari.jpg" />
+<img src="/images/2018/04/yahoo_mercari.png" />
 </div>
 
 # はじめに
