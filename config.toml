@@ -1,5 +1,5 @@
 # 参考: https://github.com/Zenithar/zenithar.hugo/blob/master/config.toml
-baseurl = "http://kwmt27.net/"
+baseurl = "https://kwmt27.net/"
 languageCode = "ja"
 title = "Androg"
 theme = "hugo-theme-crisp"
