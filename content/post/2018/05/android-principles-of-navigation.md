@@ -2,6 +2,7 @@
 date = "2018-05-23T10:00:00+09:00"
 title = "Principles of Navigation(Navigationの原則)の翻訳"
 draft = false
+tags = ["Android", "Jetpack", "Navigation"]
 
 +++
 # はじめに
