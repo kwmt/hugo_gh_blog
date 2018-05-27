@@ -75,17 +75,17 @@ http://ck.ceair.com/muovc/main/ja_JP/Static_pages/TripPreparation.html
 Transferの向きに従って行きます。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1952.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1952.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1953.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1953.jpg" />
 </div>
 
 ここで、ちょっと写真がぶれてますが、右側が自分でトランジット手続きをする場所、左側が人が手続きをしてくれる場所になり、僕は右側の自動のレーンに案内されましたが、いざ自動をやってみると、エラーになり、左側の人が手続きする方に並び直されました。やることはパスポートスキャンして、チケットスキャンして、顔写真とるぐらいだったのですが。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1954.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1954.jpg" />
 </div>
 
 そのあと、セキュリティゲートで荷物検査です。
@@ -93,25 +93,25 @@ Transferの向きに従って行きます。
 ペットボトルがあったら、ゲート前に捨てる必要がありそうでした。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1955.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1955.jpg" />
 </div>
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1956.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1956.jpg" />
 </div>
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1957.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1957.jpg" />
 </div>
 
 ゲート通過したら、搭乗口を確認して時間まで待ちます。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1958.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1958.jpg" />
 </div>
 
 そろそろ時間かなと思ったころに、列が二列になっていて、なんの列か聞いたらSFO行きの列だったので慌てて並びましたが、無事乗ることができました。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1961.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1961.jpg" />
 </div>
 
 
@@ -120,56 +120,56 @@ Transferの向きに従って行きます。
 ３，４，３列の大きな飛行機で、僕は４列の左通路側でした。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1962.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1962.jpg" />
 </div>
 
 USBの接続口がありました。携帯の充電ができました。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1963.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1963.jpg" />
 </div>
 
 モニタ周り全体はこんな感じ。
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1964.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1964.jpg" />
 </div>
 
 さて、寝る準備です。完全に不審者ですねｗ
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1968.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1968.jpg" />
 </div>
 
 食事は３食出ました。時間はたぶん４時間後ずつぐらいだと思いますが、はっきりと分かりません。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1969.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1969.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1974.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1974.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1976.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1976.jpg" />
 </div>
 
 飛行機の中のwifiについてですが、中国東方航空はフリーwifiはあるにはありました。
 座席番号と、パスポートの下4桁(ID と書かれていて、一瞬なんの番号かわからなかった。)を入力すれば、ネットに繋がるのは繋がりますが、めちゃくちゃ遅いし、それに中国なのでグレートファイアウォールの影響で、google やLINEが使えなかった。。ので、ネットは期待しない方がいい。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1970.png" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1970.png" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1971.png" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1971.png" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1972.png" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1972.png" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1973.png" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1973.png" />
 </div>
 
 おとなしく映画を2本と少しみました。ナミヤ雑貨店の奇跡、打ち上げ花火下から見るか上からみるかを全部みて、スターウォーズラストジェダイは途中まで。
@@ -178,10 +178,10 @@ SFO空港に着きました。たぶん全部で2時間ぐらいしか寝れな�
 5/4 9時pst 12℃でちょっと寒かったです。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1979.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1979.jpg" />
 </div>
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1980.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1980.jpg" />
 </div>
 
 ## SFOの税関にて
@@ -193,11 +193,11 @@ SFO空港に着きました。たぶん全部で2時間ぐらいしか寝れな�
 のところにチェックをいれ、裏面に何を、どのくらいの金額分もってきたか詳細を書くみたいでした。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1982.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1982.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1981.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1981.jpg" />
 </div>
 
 調べてると、カップラーメンはアメリカに持ち込んではダメそう？という記事を見つけましたが、結果的に大丈夫でした。
@@ -223,11 +223,11 @@ Vacation ？Business ？って聞かれたので、vacation って言って、�
 
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1983.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1983.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1986.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1986.jpg" />
 </div>
 
 ## SFOからSIMゲットするまで
@@ -240,39 +240,39 @@ BARTという電車で移動するのですが、そこでCLIPPERカードとい
 
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1989.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1989.jpg" />
 </div>
 
 BARTはこんな電車でした。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1991.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1991.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1992.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1992.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1991.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1991.jpg" />
 </div>
 
 San Bruno駅の写真です。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1995.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1995.jpg" />
 </div>
 
 ショッピングモールがあって、
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1996.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1996.jpg" />
 </div>
 
 2階にT-Mobileを発見しました。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1997.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1997.jpg" />
 </div>
 
 
@@ -282,14 +282,14 @@ Can I get prepaid SIM card?っめ言ったら、何日滞在するか聞かれ�
 バケイションって言ったから、どこ行くの？って聞かれて、サンフランシスコ市内とかマウンテンビューとか言っといた
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1998.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1998.jpg" />
 </div>
 
 
 始めてUSのスタバでかったときのコーヒーです。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2002.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2002.jpg" />
 </div>
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ローカルなスタバに来たけど、早すぎて聞き取れん。。ブラックコーヒーが良かったのに砂糖入ってる。 (@ Starbucks in San Bruno, CA) <a href="https://t.co/5ob9iLsSQB">https://t.co/5ob9iLsSQB</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/992482307213848577?ref_src=twsrc%5Etfw">2018年5月4日</a></blockquote>
@@ -303,7 +303,7 @@ Can I get prepaid SIM card?っめ言ったら、何日滞在するか聞かれ�
 San Brunoの駅構内です。BARTの駅はだいたいこんな感じでした。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2003.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2003.jpg" />
 </div>
 
 San Bruno から mountain viewに向かおうと思ってbartに乗って次の駅のミルブレーについて、乗り換えが必要なのを忘れてて、san brunoに引き返してしまった。
@@ -314,7 +314,7 @@ San Bruno から mountain viewに向かおうと思ってbartに乗って次の�
 カルトレインの時刻表と運賃表
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2004.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2004.jpg" />
 </div>
 
 現地ではよくわかってなかったけど、MillbraeからMountain ViewはClipper　Cardで$7.70だったんですね。
@@ -322,23 +322,23 @@ San Bruno から mountain viewに向かおうと思ってbartに乗って次の�
 カルトレインのMillbrae駅はこんな感じ
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2005.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2005.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2006.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2006.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2010.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2010.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2011.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2011.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2014.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2014.jpg" />
 </div>
 ミルブレーからカルトレイン乗った。乗り方はクリッパー持ってる場合は、ピッとして、降りる時にピッとするみたい。
 二階席も座れた。
@@ -346,30 +346,30 @@ San Bruno から mountain viewに向かおうと思ってbartに乗って次の�
 MountainViewに到着
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2020.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2020.jpg" />
 </div>
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2018.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2018.jpg" />
 </div>
 
 チェックインが16時ぐらいで、Mountain Viewについたのが15時だったのとトイレ行きたかったので、駅前のSUBWAYに入ったが、トイレはStaff Onlyで借りれなかった。
 日本でもSUBWAY行ったことなかったのでシステムがわからなかったが、セット的なものを頼んだのだが、たぶんドリンクを取りわすれたんだと思う。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2022.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2022.jpg" />
 </div>
 
 16時近くなったので、Airbnbの宿まで歩いて行こうとして、道が行き止まりだったりして、迷子になってしまった・・・ので、始めてUberを呼んだ。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2023.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2023.jpg" />
 </div>
 
 昼間だったけど、人が歩いてないし、めっちゃ怖かったです。実際は慣れてないだけだったっぽいのですが。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2024.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2024.jpg" />
 </div>
 
 
@@ -384,7 +384,7 @@ Uberで指定した地図が少し違くて、ホストに連絡したら違う�
 たぶん２，３０分まよったあげく、ホストの旦那さんがわかりやすい道まで出てきてくれて、ようやくたどり着きました。
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_2025.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2025.jpg" />
 </div>
 
 たしかこの日は時間も遅かったし、SUBWAYでたべたのが夜ご飯になったと思います。
