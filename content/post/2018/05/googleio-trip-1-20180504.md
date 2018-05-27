@@ -2,6 +2,8 @@
 date = "2018-05-27T18:00:00+09:00"
 title = "Google I/O 2018 に初めて行ってきた。(2018/05/04pst日本からSan Franciscoへ)"
 draft = false
+categories = ["日記"]
+tags = ["旅行記", "日記", "Google I/O 2018"]
 
 +++
 
