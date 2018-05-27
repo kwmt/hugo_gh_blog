@@ -52,7 +52,7 @@ http://ck.ceair.com/muovc/main/ja_JP/Static_pages/TripPreparation.html
 関空から上海10:30ぐらいに関空から上海の機内食でした。普通に焼きそばの味でおいしかったです。あんまり唐揚げが乗ることはないと思うけど（笑）
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1949.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1949.jpg"/>
 </div>
 
 機内で日本語を話すことが出来るのはCAさんは、2名とのこと。ちょっと安心。
