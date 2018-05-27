@@ -64,7 +64,7 @@ http://ck.ceair.com/muovc/main/ja_JP/Static_pages/TripPreparation.html
 
 
 <div align="center">
-<img src="/images/2018/05/googleio-20180504/IMG_1950.jpg" />
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1950.jpg" />
 </div>
 
 ## 上海からSanFransicoへ
