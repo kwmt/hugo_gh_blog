@@ -238,6 +238,9 @@ SFOのとなりの駅のSan Bruno stationからのt-mobileが近そうだった�
 
 BARTという電車で移動するのですが、そこでCLIPPERカードというICOCCAやSUICAみたいなカードをゲットしました。自動販売機でゲットできます。買い方はややこしいかもですが、ちゃんと自動販売機の案内に従って進めばちゃんと買えました。
 
+<div align="center">
+<img width="80%" src="/images/2018/05/googleio-20180504/IMG_2007.jpg" />
+</div>
 
 <div align="center">
 <img width="80%" src="/images/2018/05/googleio-20180504/IMG_1989.jpg" />
