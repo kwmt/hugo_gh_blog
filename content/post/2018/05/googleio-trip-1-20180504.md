@@ -256,10 +256,6 @@ BARTはこんな電車でした。
 <img width="80%" src="/images/2018/05/googleio-20180504/IMG_1992.jpg" />
 </div>
 
-<div align="center">
-<img width="80%" src="/images/2018/05/googleio-20180504/IMG_1991.jpg" />
-</div>
-
 San Bruno駅の写真です。
 
 <div align="center">
