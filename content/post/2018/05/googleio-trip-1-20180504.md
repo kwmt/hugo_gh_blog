@@ -395,3 +395,39 @@ T-mobileの残り容量とか確認したくなっていろいろ調べてたっ
 サインアップしたらいいのかな？と思ったら、このプランではできなかったけど、phone アプリで#932# と打ってコールすればよかったです。
 https://support.t-mobile.com/docs/DOC-1286
 
+
+
+# KPT
+
+## Keep
+- 飛行機は早めにとる
+  - 3/2にとった飛行機のSkyTicketの関空発の92820円は安い(高松からトランジットありで10万超えるという話を聞いた)
+- 宿泊先は早めにとる
+  - airbnbは3月2日にとって、一泊6500円は安かった（他の人の話を聞くと、ホテル一泊2万以上するらしい）
+- 日本の朝に出発するのは良さそう
+  - 日本の朝9:30出発して現地の朝9時頃について、チェックインが夕方だったのでそのまま夜まで寝なかったのは、時差ボケにあんまりならなかったのでよかった
+- マスク必須
+  - 飛行機内はとても乾燥したので、マスクで保湿ができたのは喉によかった。
+- Clipper cardは便利
+- T-mobileは3G、$30は8日間で十分だった。
+- おすすめのネックピローはよかった
+  - 息を吹き込むタイプではなくて、手動で空気を入れられる
+  - パンパンに空気をいれるのではなく、少し空気を抜いておくと、固くなく気持ちよかった。
+  - <div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01N11IO8F/kwmt27-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/51PSRSyYltL._SL160_.jpg" alt="Jerrybox ネックピロー 旅行用 首枕 飛行機まくら トラベルピロー 旅行便利グッズ 手動プレス式膨らませる(グレー)" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01N11IO8F/kwmt27-22/ref=nosim/" name="amazletlink" target="_blank">Jerrybox ネックピロー 旅行用 首枕 飛行機まくら トラベルピロー 旅行便利グッズ 手動プレス式膨らませる(グレー)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 18.05.29</div></div><div class="amazlet-detail">Jerrybox <br />売り上げランキング: 16,169<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01N11IO8F/kwmt27-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+- スリッパ必須
+  - ユニクロのスリッパ、超気持ちよかった。
+
+## Problem
+- 中国東方航空はグレートファイアーウォールでLINEやGoogle、Facebookできない
+- 帰りの飛行機は疲れて飛行機の中で寝てしまい、1週間ぐらい時差ボケがなおならなかった。(朝3時起きてしまう)
+- 地図上では結構遠いので、荷物が多いときはUberやLyftを使ったほうが吉
+- ロープハンガーを持っていったが、airbndの宿泊先にはハンガーとかけるところがあったのでいらなかった。
+
+## Try
+- マスクは持っていく
+- UberやLyftを使う
+  - 特にUberよりLyftのほうが安いので、Lyftを使うといい。
+  - 知り合いと乗るときは、運賃をsplitできる
+- 一つの宿泊先にUS期間中ずっといるのもいいけど、別の宿泊先に変更してもいいかもしれない
+  - SFとMountain Viewは1時間半ぐらいかかるため、IOがない期間ははSF市内に、IO中はMountainViewという感じに。
+  - そうすると、SFの夜が楽しめるかもしれません。
