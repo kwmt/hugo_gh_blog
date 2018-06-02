@@ -46,9 +46,9 @@ tags = ["Android", "Jetpack", "Navigation"]
 
 - Destination
     - 遷移先
-        - ※DestinationはNavigationにおいて、画面の意味があるので、`遷移先の画面`としてしまおうかとおもったり、`Destination`のままでにしようかと悩みましたが、`遷移先`に統一しました。
+        - ※DestinationはNavigationにおいて、画面の意味があるので、`遷移先の画面`としてしまおうかと思ったり、`Destination`のままにしようかと悩みましたが、`遷移先`に統一しました。
 - start destination
     - 最初の遷移先
-        - ※Navigationにおいて、アプリ起動時の画面を意味しています。また`開始先`のような訳も考えましたが、上記Destinationを`遷移先`としたので、そのまま遷移先はそのまま残して、`最初の遷移先`としました。
+        - ※Navigationにおいて、アプリ起動時の画面を意味しています。また`開始先`のような訳も考えましたが、上記Destinationを`遷移先`としたので、`最初の遷移先`としました。
 - navigation stack
     - ナビゲーションスタック
