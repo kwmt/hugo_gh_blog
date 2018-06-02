@@ -1,13 +1,13 @@
 +++
 date = "2018-05-23T10:00:00+09:00"
-title = "Principles of Navigation(Navigationの原則)の翻訳"
+title = "Principles of Navigationの翻訳"
 draft = false
 tags = ["Android", "Jetpack", "Navigation"]
 
 +++
 # はじめに
 
-[Principles of Navigation](https://developer.android.com/topic/libraries/architecture/navigation/navigation-principles)を一度読んでみたほうが良さそうと思って読んでみた時のメモというか翻訳です。
+[Principles of Navigation](https://developer.android.com/topic/libraries/architecture/navigation/navigation-principles)(Navigationの原則)を一度読んでみたほうが良さそうと思って読んでみた時のメモというか翻訳です。
 
 # Principles of Navigation(Navigationの原則)
 
