@@ -7,17 +7,12 @@ draft = false
 
 
 # はじめに
-これは、[Navigation Codelab](https://codelabs.developers.google.com/codelabs/android-navigation/index.html?index=..%2F..%2Findex#2)をやってみた内容です。
-
-自分が後でみて分かるように、いちぶ翻訳しています。
+これは、[Navigation Codelab](https://codelabs.developers.google.com/codelabs/android-navigation/index.html?index=..%2F..%2Findex#2)をやりながら、[Implement navigation with the Navigation Architecture Component](https://developer.android.com/topic/libraries/architecture/navigation/navigation-implementing)も読みつつ、わからないことだったり、気づいたことをメモしていってる内容です。
 
 
 ## Navigationとは？
 
-
-https://developer.android.com/topic/libraries/architecture/navigation/navigation-implementing
-
-Navigation Architecture Component はアプリの遷移のナビゲーションの実施をシンプルにします。
+Navigation Architecture Component はアプリのナビゲーションの実装をシンプルにします。
 行き先はアプリ内の特定の画面です。デフォルトでは、Navigation Architecture Componentは遷移先としてSupport FragmentとActivityを含みますが、
 
 ## setup
@@ -571,9 +566,12 @@ Deeplinkを追加するには、Navigation Graphで Deeplinkから遷移した�
 </activity>
 ```
 
-確認するには、ブラウザで `www.example.com/<any string>/`にアクセスすると、アプリが立ち上がり、Deep Linkを設定したDestinationに遷移することを確認します。
 
+確認するには、ターミナルでadb shellのamコマンドで確認できます。アプリが立ち上がり、Deep Linkを設定したDestinationに遷移することが確認できます。
 
+```shell
+% adb shell am start -W -a android.intent.action.VIEW -d "https://www.example.com/abcd/" com.example.android.codelabs.navigation
+```
 
 
 # 参考
