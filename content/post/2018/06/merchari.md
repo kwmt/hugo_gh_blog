@@ -24,7 +24,7 @@ San FranciscoでのLimeBikeがめちゃくちゃ良い体験ができた(歩く�
 メルチャリの中の人も、認識しているものもあるかもしれませんが、思ったことを書いてみます。
 
 <div align="center">
-<img src="/images/2018/06/merchari/IMG_3476.jpg" />
+<img src="/images/2018/06/merchari/IMG_3476.PNG" />
 </div>
 
 # 解決したらいいなと僕が思った課題たち
@@ -142,7 +142,7 @@ Lime BikeやUberはまずクレジットカードを登録しないと使えな�
 いろいろな地域で大阪も比較的坂道少ないと思いますので、ぜひ大阪にも作ってください！
 
 <div align="center">
-<img src="/images/2018/06/merchari/IMG_3472.jpg" />
+<img src="/images/2018/06/merchari/IMG_3472.PNG" />
 </div>
 
 <div align="center">
