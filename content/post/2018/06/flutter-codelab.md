@@ -54,7 +54,6 @@ https://github.com/kwmt/flutter-codelab
 - テーマ変更が超簡単
 
     ```dart
-    @@ -8,6 +8,9 @@ class MyApp extends StatelessWidget {
     Widget build(BuildContext context) {
         return new MaterialApp(
         title: 'Welcome to Flutter',
@@ -65,7 +64,7 @@ https://github.com/kwmt/flutter-codelab
         );
     }
     ```
-    
+
     |  デフォルトテーマ  |  変更後 |
     | ---- | ---- |
     |  <img src="/images/2018/06/flutter-codelab/flutter-theme-before.png" width="300" />  |  <img src="/images/2018/06/flutter-codelab/flutter-theme-after.png" width="300" />  |
