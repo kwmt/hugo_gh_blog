@@ -65,6 +65,6 @@ https://github.com/kwmt/flutter-codelab
     }
     ```
 
-    |  デフォルトテーマ  |  変更後 |
-    | ---- | ---- |
-    |  <img src="/images/2018/06/flutter-codelab/flutter-theme-before.png" width="300" />  |  <img src="/images/2018/06/flutter-codelab/flutter-theme-after.png" width="300" />  |
+|  デフォルトテーマ  |  変更後 |
+| ---- | ---- |
+|  <img src="/images/2018/06/flutter-codelab/flutter-theme-before.png" width="300" />  |  <img src="/images/2018/06/flutter-codelab/flutter-theme-after.png" width="300" />  |
