@@ -51,8 +51,8 @@ https://github.com/kwmt/flutter-codelab
 - 画面遷移はNavigator.pushで遷移
     - iOSはUINavigtaionControllerの動き
     - AndroidはstartActivityの動きになる（が、少しぎこちない？ので対策はあるのだろうか・・・）
-- テーマ変更が超簡単
 
+- テーマ変更が超簡単
     ```dart
     Widget build(BuildContext context) {
         return new MaterialApp(
@@ -64,6 +64,7 @@ https://github.com/kwmt/flutter-codelab
         );
     }
     ```
+
 
 |  デフォルトテーマ  |  変更後 |
 | ---- | ---- |
