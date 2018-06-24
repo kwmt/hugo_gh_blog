@@ -258,4 +258,4 @@ class _MyHomePageState extends State<MyHomePage> {
 
 # さいごに
 
-上からざっと読みました。[Building a layout](https://flutter.io/tutorials/layout/#building)がレイアウトの基本的なことが書かれていて、[Lay out multiple widgets vertically and horizontally](Lay out multiple widgets vertically and horizontally)は応用という感じでしたので、さらっと目を通したぐらいですが、これを読んだおかけげ、レイアウトの基本がわかった気がします。
+上からざっと読みました。[Building a layout](https://flutter.io/tutorials/layout/#building)がレイアウトの基本的なことが書かれていて、[Lay out multiple widgets vertically and horizontally](Lay out multiple widgets vertically and horizontally)は応用という感じでしたので、さらっと目を通したぐらいですが、これを読んだおかけで、レイアウトの基本がわかった気がします。
