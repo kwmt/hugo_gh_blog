@@ -1,5 +1,5 @@
 +++
-date = "2018-06-22T15:30:00+09:00"
+date = "2018-06-23T15:30:00+09:00"
 title = "Dart2のコンストラクタがわからなかったのでメモ"
 draft = false
 categories = ["flutter"]
