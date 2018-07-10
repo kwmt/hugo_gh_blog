@@ -34,6 +34,12 @@ tags = ["Android", "adb"]
     ```
     このように`connected`と出たら、完了です。USB外してもadb devicesで端末が表示されるはずです。
 
+    ```
+    % adb devices
+    List of devices attached
+    <端末のIPアドレス>:5556	device
+    ```
+
 
 ## もし adb connectできなかったら
 
