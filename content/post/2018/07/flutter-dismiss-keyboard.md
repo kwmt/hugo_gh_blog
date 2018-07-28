@@ -16,7 +16,7 @@ FlutterでLINEのようなチャットアプリを作っていて、TextFormで�
 
 ```dart
 GestureDetector(
-    onTap: () => FocusScope.of(context).requestFocus(new FocusNode()),
+    onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
     child: listView,
 )
 ```
