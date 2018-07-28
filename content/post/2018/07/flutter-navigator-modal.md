@@ -46,4 +46,4 @@ tags = ["Flutter"]
 
 ## 最後に
 
-"flutter modal"とググっていて、全然引っかからなくて、しばらく諦めてたんですが、絶対あるはずということで根気よく調べたら、"flutter popup screen"(https://www.google.co.jp/search?q=flutter+popup+screen&oq=flutter+popup+screen&aqs=chrome..69i57.9311j1j7&sourceid=chrome&ie=UTF-8)で検索したら、こちらの[ブログ](https://marcinszalek.pl/flutter/flutter-fullscreendialog-tutorial-weighttracker-ii/)を見つけて、「あー、モーダルってダイアログでしたね。。」となっているところです。。。
+"flutter modal"とググっていて、全然引っかからなくて、しばらく諦めてたんですが、絶対あるはずということで根気よく調べたら、["flutter popup screen"](https://www.google.co.jp/search?q=flutter+popup+screen&oq=flutter+popup+screen&aqs=chrome..69i57.9311j1j7&sourceid=chrome&ie=UTF-8)で検索したら、こちらの[ブログ](https://marcinszalek.pl/flutter/flutter-fullscreendialog-tutorial-weighttracker-ii/)を見つけて、「あー、モーダルってダイアログでしたね。。」となっているところです。。。
