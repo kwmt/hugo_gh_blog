@@ -4,7 +4,7 @@ build:
     - install-packages:
         packages: git ssh-client
     - arjen/hugo-build:
-        version: "0.40.3"
+        version: "0.42.1"
         theme: hugo-theme-crisp
     - script:
         name: ls stuff
