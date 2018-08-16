@@ -129,7 +129,7 @@ Androidは全画面表示で枠があるデザインになっていました。
 
 それで、Dart PackagesサイトのREADMEをまずは見ると思いますが、Dart Packagesサイト側のREADMEを読んでもうまく動かず、GithubのREADMEを読んだらうまくいったということがありました。
 
-<img src="/images/2018/08/flutter-workshop-gdgkobe/barcode_scan_android.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/pub_readme.png" />
 
 具体的には、いまは修正されてるのですが、image_pickerというプラグインで、iOSではNSMicrophoneUsageDescriptionの設定が必要なのに、Dart PackagesサイトのREADMEには書いてなく、GithubのREADMEには書かれていたという事がありました。
 
