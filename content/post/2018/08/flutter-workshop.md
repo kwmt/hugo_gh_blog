@@ -135,9 +135,6 @@ Androidは全画面表示で枠があるデザインになっていました。
 
 これはTwitterで教えて頂いたのですが、Dart PackagesサイトはpublishしたときにしかREADME更新できないようで、publishするにはバージョンを上げる必要があるみたいで、README更新するだけのためにバージョンを上げるのも、、、感があるのかもということでした。
 
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://t.co/iH4hFdFJEo">https://t.co/iH4hFdFJEo</a> のREADME と <a href="https://t.co/jM6IR0Cu2a">https://t.co/jM6IR0Cu2a</a> のREADME って同期されてないのね。。。NSMicrophoneUsageDescriptionが必要なことが<a href="https://t.co/J92iQoHjpu">https://t.co/J92iQoHjpu</a>の方に書かれてなくて、Contributeのチャンスじゃんと思ったら、githubの方に書かれてた。(少しハマった…)</p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1012548046020702208?ref_src=twsrc%5Etfw">2018年6月29日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">pub.dartlangの方はpublishしたときにしかREADME更新できないんですよね...<br>README更新するためだけにバージョン上げるのも感があるのかもです<br>(同期はして欲しい)</p>&mdash; 月見ふそやんUnderground (@azihsoyn) <a href="https://twitter.com/azihsoyn/status/1012549577440833536?ref_src=twsrc%5Etfw">2018年6月29日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
