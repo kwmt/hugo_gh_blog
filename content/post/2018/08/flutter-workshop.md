@@ -1,5 +1,5 @@
 +++
-date = "2018-08-05T21:28:00+09:00"
+date = "2018-08-16T19:35:00+09:00"
 title = "Flutterあるある"
 draft = false
 categories = ["Flutter"]
