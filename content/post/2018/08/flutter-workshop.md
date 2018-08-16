@@ -34,27 +34,27 @@ tags = ["Flutter","LT"]
 cached_network_imageプラグインというのが公式ドキュメントに載っているのが見つかります。
 
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/working_with_cached_images.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/working_with_cached_images.png" />
 
 
 これを使おうとして、flutter packages getすると、「cached_network_imageはuuidプラグインに依存していてバージョン0.5.3が必要です」というエラーが出てしまいました。これはuuidプラグインのバージョン1.0.0以上を使っている場合にエラーになります。
 
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/pacakges_get_fail.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/pacakges_get_fail.png" />
 
 issueを見てみると、29日前にissueが上がってたり、
 
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/cached_network_image_issue.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/cached_network_image_issue.png" />
 
 プルリクエストまで出ているのに、とくにメンテされる気配がなさそうでした。。。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/cached_network_image_pr.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/cached_network_image_pr.png" />
 
 
 そんなときは、pubspec.yamlは直接githubリポジトリを参照することができるので、動かないgithubリポジトリをforkして修正すれば、本家のプラグインが動かなくても大丈夫です！
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/pubspec-yaml.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/pubspec-yaml.png" />
 
 ここでは、pubspec.yamlはgitリポジトリを参照できますよ、ということを言いたかっただけです。
 
@@ -63,15 +63,15 @@ issueを見てみると、29日前にissueが上がってたり、
 2つ目はGoogle製プラグインが動かないことがありました。
 firebase_messagingプラグインを使って Androidにプッシュ通知を送ったところ、送った時点でクラッシュするという致命的な現象に遭遇しました。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/firebase_messaging_issue.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/firebase_messaging_issue.png" />
 
 これはissueがあって、プルリクエストがない状況でして、たまたま原因がわかったのでプルリクエストを送りました。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/firebase_messaging_pr.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/firebase_messaging_pr.png" />
 
 プルリクエストを送ったところ、2週間弱ぐらい反応なくて、他の人が突っついたら動き始めてくれました。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/firebase_messaging_pr2.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/firebase_messaging_pr2.png" />
 
 このプルリクエスト自体は他のプラグインの絡みでマージされなかったのですが、修正してもらって、現在のバージョンではプッシュ通知が届いたときにクラッシュしなくなっています。
 
@@ -84,28 +84,28 @@ firebase_messagingプラグインを使って Androidにプッシュ通知を送
 
 QRコードを読み取るプラグインはいくつかあって、たとえば、qr_readerというプラグインがあります。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/qr_reader_plugin.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/qr_reader_plugin.png" />
 
 Androidで動かすとカメラ画面が全画面になっていますが、
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/qr_reader_android.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/qr_reader_android.png" />
 
 iOSでは全画面ではなく、中央部分のみカメラ画面があるという感じになっていました。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/qr_reader_ios.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/qr_reader_ios.png" />
 
 
 ほかにはbarcode_scanというプラグインがあります。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/barcode_scan_plugin.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/barcode_scan_plugin.png" />
 
 これもちょっと異なっていて、iOSは全画面表示でとくに枠とかないのですが、
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/barcode_scan_ios.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/barcode_scan_ios.png" />
 
 Androidは全画面表示で枠があるデザインになっていました。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/barcode_scan_android.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/barcode_scan_android.png" />
 
 今回のチャットアプリに関してはこれで妥協しているのですが、必要ならプルリクエストするか、自分でプラグインを作る必要がありそうかなぁと思います。
 
@@ -129,7 +129,7 @@ Androidは全画面表示で枠があるデザインになっていました。
 
 それで、Dart PackagesサイトのREADMEをまずは見ると思いますが、Dart Packagesサイト側のREADMEを読んでもうまく動かず、GithubのREADMEを読んだらうまくいったということがありました。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/barcode_scan_android.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/barcode_scan_android.png" />
 
 具体的には、いまは修正されてるのですが、image_pickerというプラグインで、iOSではNSMicrophoneUsageDescriptionの設定が必要なのに、Dart PackagesサイトのREADMEには書いてなく、GithubのREADMEには書かれていたという事がありました。
 
@@ -172,7 +172,7 @@ pub finished with exit code 1
 
 調べていたら、issueにはdev チャンネルで修正されているので切り替えてとのことなので、devチャンネルに切り替えました。
 
-<img src="images/2018/08/flutter-workshop-gdgkobe/flutter_launcher_icons_issue.png" />
+<img src="/images/2018/08/flutter-workshop-gdgkobe/flutter_launcher_icons_issue.png" />
 
 チャンネルを切り替えるには、`flutter channel <チャンネル名>`とします。
 
