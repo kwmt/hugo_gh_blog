@@ -9,7 +9,7 @@ tags = ["Flutter","LT"]
 
 ## はじめに
 
-2018/08/12(日)にGDG神戸主催のFlutter勉強会が開催されました。勉強会全体に関しては <a href="https://kobegdg.blogspot.com/2018/08/flutter.html" target="_blank">こちらのブログ</a>を見ていただいて、ここでは僕が「Flutterあるある」というタイトルでLTしたので、それについて書きたいと思います。
+2018/08/12(日)にGDG神戸主催のFlutter勉強会が開催されました。勉強会全体に関しては <a href="https://kobegdg.blogspot.com/2018/08/flutter.html" target="_blank">こちらのブログ</a>を見ていただいて、ここでは僕が「Flutterあるある」というタイトルでLT(LT資料は<a href="https://speakerdeck.com/yasutaka/flutteraruaru" target="_blank">こちら</a>)したので、それについて書きたいと思います。
 
 基本的に原稿をもとに加筆・修正しています。
 
