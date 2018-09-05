@@ -15,7 +15,7 @@ tags = ["Android Studio", "Android"]
 ~/Library/Preferences/AndroidStudio3.1/options/recentProjects.xml
 ```
 
-このファイルを下記のような感じにして保存してAndroid Studioを開き直したら動いてくれました。なお、xml
+このファイルを下記のような感じにして保存してAndroid Studioを開き直したら動いてくれました。
 
 ```xml
 <application>
