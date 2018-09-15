@@ -354,6 +354,6 @@ Flutterの公式ドキュメントは豊富かなと思います。Install方法
 - Flutter
     - https://flutter.io/
 - Dart仕様
-    - https://www.dartlang.org/guides/language/language-tour
+    - https://www.dartlang.org/guides/language/language-tour
 - Announcing Flutter Release Preview 1
     - https://medium.com/flutter-io/flutter-release-preview-1-943a9b6ee65a?linkId=53249457
