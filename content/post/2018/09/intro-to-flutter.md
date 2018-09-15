@@ -283,7 +283,7 @@ Xcodeを起動して実行しなくてもAndroid Studioから実行すること�
 ## ホットリロード
 下記の動画を、コードを書き換えて保存したらすぐにデバイスに反映される動画です。
 
-<img src="/images/2018/09/intro-to-flutter/hot-reload" />
+<img src="/images/2018/09/intro-to-flutter/hot-reload.gif" />
 
 どうですかね？この速さ感動しませんか？
 ビルド中にツイッター見る暇なんかなくんるんです（笑）
