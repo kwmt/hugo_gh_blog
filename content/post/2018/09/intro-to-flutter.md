@@ -72,6 +72,7 @@ SNSログインして、チャットルームを作成します。このとき�
 
 
 このようなとき、
+
 - もし、ネィティブ並みにサクサク動くアプリが１つのソースコードコードで書けるとしたら？
 - もし、プログラミング言語がkotlinやswiftとは違うけど、そこそこいい感じの言語だったとしたら？
 - もし、開発スピードを上げれるとしたら？
@@ -99,11 +100,16 @@ Flutterはハイパフォーマンスのレンダリングエンジンを持っ�
 そのため、こちらのFlutterで作成されたアプリの動画を見ていただきたいのですが、
 
 
+|   |   |
+|---|---|
+| <img src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" width="300"/>  |  <img src="/images/2018/09/intro-to-flutter/flutter-ui-2.gif" width="300" /> |
 
-<img src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" />
-<img src="/images/2018/09/intro-to-flutter/flutter-ui-2.gif" />
-<img src="/images/2018/09/intro-to-flutter/flutter-ui-3.png" />
-<img src="/images/2018/09/intro-to-flutter/flutter-ui-4.gif" />
+|   |   |
+|---|---|
+| <img src="/images/2018/09/intro-to-flutter/flutter-ui-3.png" width="300" />  |  <img src="/images/2018/09/intro-to-flutter/flutter-ui-4.gif" width="300" /> |
+
+
+
 
 どうですか？なかなかきれいでサクサク動いてそうなイメージ湧きませんか？
 
@@ -316,6 +322,7 @@ Flutterの公式ドキュメントは豊富かなと思います。Install方法
 また、冒頭に新iPhoneの話題をしたのがきっかけで、懇親会に新型iPhoneの話も聞けてよかったです！
 
 反省点としては、
+
 - タイマーを設定しわすれていたこと。
 - デモするときのプロジェクタ確認をしていないかったこと。シミュレータが画面に収まらないとか問題があった。
 - Nativeにコンパイルされるというところをちゃんと説明できなかった。
