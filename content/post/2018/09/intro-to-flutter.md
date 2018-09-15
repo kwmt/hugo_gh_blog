@@ -101,11 +101,8 @@ Flutterはハイパフォーマンスのレンダリングエンジンを持っ�
 
 
 <img src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" />
-
 <img src="/images/2018/09/intro-to-flutter/flutter-ui-2.gif" />
-
 <img src="/images/2018/09/intro-to-flutter/flutter-ui-3.png" />
-
 <img src="/images/2018/09/intro-to-flutter/flutter-ui-4.gif" />
 
 どうですか？なかなかきれいでサクサク動いてそうなイメージ湧きませんか？
