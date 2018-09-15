@@ -11,7 +11,7 @@ tags = ["Flutter","登壇"]
 
 2018/09/15(日)にクラスメソッドさん主催の<a href="https://classmethod.connpass.com/event/97832/" target="_blank">モバイルメソッド大阪第二回</a>が開催されました。そこで「Intro to Flutter」というタイトルで発表させて頂きました。
 
-<a href="" target="_blank">スライドはこちら</a>
+<a href="https://speakerdeck.com/yasi/intro-to-flutter" target="_blank">スライドはこちら</a>
 
 その時の発表内容を書いておきたいと思います。基本的に原稿をもとにブログ用に加筆・修正しています。
 
