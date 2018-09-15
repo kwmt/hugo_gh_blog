@@ -100,13 +100,25 @@ Flutterはハイパフォーマンスのレンダリングエンジンを持っ�
 そのため、こちらのFlutterで作成されたアプリの動画を見ていただきたいのですが、
 
 
-|   |   |
-|---|---|
-| <img src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" width="300"/>  |  <img src="/images/2018/09/intro-to-flutter/flutter-ui-2.gif" width="300" /> |
+<table width="160" border="1">
+<tr>
+<td valign="top">
+<img src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" width="300"/>
+</td>
+<td valign="top">
+<img src="/images/2018/09/intro-to-flutter/flutter-ui-2.gif" width="300" /> 
+</td>
+</tr>
+<tr>
+<td valign="top">
+<img src="/images/2018/09/intro-to-flutter/flutter-ui-3.png" width="300" />
 
-|   |   |
-|---|---|
-| <img src="/images/2018/09/intro-to-flutter/flutter-ui-3.png" width="300" />  |  <img src="/images/2018/09/intro-to-flutter/flutter-ui-4.gif" width="300" /> |
+</td>
+<td valign="top">
+<img src="/images/2018/09/intro-to-flutter/flutter-ui-4.gif" width="300" />
+</td>
+</tr>
+</table>
 
 
 
