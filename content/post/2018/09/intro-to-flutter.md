@@ -100,7 +100,7 @@ Flutterはハイパフォーマンスのレンダリングエンジンを持っ�
 そのため、こちらのFlutterで作成されたアプリの動画を見ていただきたいのですが、
 
 
-<table width="160" border="1">
+<table >
 <tr>
 <td valign="top">
 <img src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" width="300"/>
