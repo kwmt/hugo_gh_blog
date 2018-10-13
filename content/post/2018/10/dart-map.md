@@ -25,9 +25,7 @@ print(transMember);
 // output:
 // ({userID1: true}, {userID2: true})
 ```
-
-## 動かして確認するにはこちら
-
-<a href="https://dartpad.dartlang.org/6d48e7bc264ae588d1b083cf6ca3c61a" target="_blank">https://dartpad.dartlang.org/6d48e7bc264ae588d1b083cf6ca3c61a</a>
+## Dartpad
+動かして確認するには<a href="https://dartpad.dartlang.org/6d48e7bc264ae588d1b083cf6ca3c61a" target="_blank">こちら</a>
 
 
