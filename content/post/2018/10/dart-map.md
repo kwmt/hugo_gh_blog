@@ -7,7 +7,6 @@ tags = ["Flutter","Dart", "Map"]
 
 +++
 
-FlutterでFirestoreに保存する際に、Map(たとえば`Map<String, bool>`)を`<String, dynamic>`に変換する必要があったので、その時のメモ。
 
 ```dart
 // サンプルデータ
