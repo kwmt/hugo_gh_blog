@@ -56,6 +56,16 @@ Tアプリはまだ作業中なのですが、Camera2ApiやOpenCVなど今ま
 
 来年は春ぐらいまではTアプリが続きそうです。
 
+## Flutterに関して
+
+[Qiita](https://qiita.com/kwmt@github/items/2e81b46d62beb091d18b)にも書いたのですが、今年の後半からFlutter三昧でした。
+
+今年は1つアプリをリリースしました。
+
+<a href='https://play.google.com/store/apps/details?id=com.instantonnection.app&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="300" alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/images/generic/ja_badge_web_generic.png'/></a>
+
+iOSは審査中です。
+
 ## 勉強会
 
 * 1月 
