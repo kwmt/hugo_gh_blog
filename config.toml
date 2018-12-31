@@ -3,7 +3,7 @@ baseurl = "https://kwmt27.net/"
 languageCode = "ja"
 title = "Androg"
 theme = "hugo-theme-crisp"
-
+enableEmoji = true
 
 [params]
   DateForm = "Jan 02 , 2006"
