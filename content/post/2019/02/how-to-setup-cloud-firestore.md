@@ -16,7 +16,7 @@ Cloud Firestoreを始めFirebaseのサービスを使えるようにするため
 
 # Firebaseにプロジェクトを追加
 
-こちらのURL(https://console.firebase.google.com/)を開き、プロジェクトを追加します。今回の場合は`sd-2019-04-flutter`というプロジェクトを追加しました。
+こちらのURL([https://console.firebase.google.com/](https://console.firebase.google.com/))を開き、プロジェクトを追加します。今回の場合は`sd-2019-04-flutter`というプロジェクトを追加しました。
 
 <img src="/images/2019/02/how-to-setup-cloud-firestore/create-new-project.png" />
 
@@ -52,7 +52,7 @@ AndroidでFirebaseを使えるようにするためには、google-services.json
 <img src="/images/2019/02/how-to-setup-cloud-firestore/add-app-android2.png" />
 
 
-## Flutterプロジェクトでセットアップする
+## Flutterプロジェクト(Android)でセットアップする
 
 ### Flutterプロジェクトにgoogle-services.jsonを格納する
 
@@ -63,11 +63,11 @@ AndroidでFirebaseを使えるようにするためには、google-services.json
 `Flutterプロジェクトルート/android/` にある `build.gradle`ファイルを開いて、google-serviceプラグインを追加します。
 
 ```gradle
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.google.gms:google-services:4.1.0' // ←この行を追加
-    }
+dependencies {
+    classpath 'com.android.tools.build:gradle:3.2.1'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    classpath 'com.google.gms:google-services:4.1.0' // ←この行を追加
+}
 ```
 
 次に`Flutterプロジェクトルート/android/app`にある `build.gradle`ファイルを開いて、最下行に下記を追記してください。
@@ -117,7 +117,7 @@ Xcodeが開いたら、左側のProject Navigatorの`Runner`を選択すると�
 <img src="/images/2019/02/how-to-setup-cloud-firestore/add-app-ios2.png" />
 
 
-## Flutterプロジェクトでセットアップする
+## Flutterプロジェクト(iOS)でセットアップする
 
 ### FlutterプロジェクトにGoogleService-Info.plistを格納する
 
