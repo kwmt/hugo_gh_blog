@@ -14,7 +14,7 @@ Cloud Firestoreを始めFirebaseのサービスを使えるようにするため
 ここではFirebaseにプロジェクトを追加しFlutterプロジェクトでAndroidとiOSでFirebaseを使えるようになるまでの設定方法を見ていきたいと思います。
 
 
-# Firebaseにプロジェクトを追加
+# Firebaseにプロジェクトを追加
 
 こちらのURL([https://console.firebase.google.com/](https://console.firebase.google.com/))を開き、プロジェクトを追加します。今回の場合は`sd-2019-04-flutter`というプロジェクトを追加しました。
 
