@@ -8,7 +8,7 @@ author = "kwmt27"
 categories = ["リリース情報"]
 tags = ["Flutter","iOS","インコネ"]
 keywords = [""]
-twitterImage = "/images/2019/03/inconne-ios-app-release/inconne.png"
+twitterImage = "images/2019/03/inconne-ios-app-release/inconne.png"
 description = "説明だよ"
 +++
 
