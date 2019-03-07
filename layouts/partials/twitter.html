@@ -5,7 +5,7 @@
     <meta property="og:image" content="{{ print $.Site.BaseURL . }}"/>
   <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image:src" content="{{ print $.Site.BaseURL . }}"/>
+    <meta name="twitter:image:src" content="{{ print $.Permalink . }}"/>
   {{ else }}
     <meta name="twitter:card" content="summary"/>
   {{ end }}
