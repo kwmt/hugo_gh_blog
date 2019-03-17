@@ -6,7 +6,7 @@ toc = true
 slug = ""
 author = "kwmt27"
 categories = ["flutter"]
-tags = ["Flutter","test",'flutter_inapp_purchase"]
+tags = ["Flutter","test","flutter_inapp_purchase"]
 keywords = ["matcher","test","flutter"]
 description = ""
 +++
