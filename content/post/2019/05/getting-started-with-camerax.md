@@ -1,7 +1,7 @@
 +++
 title= "Getting Started with CameraXというCodelabをやってみた"
 date= 2019-05-02T23:50:00+09:00
-draft = true
+draft = false
 toc = true
 slug = ""
 author = "kwmt27"
