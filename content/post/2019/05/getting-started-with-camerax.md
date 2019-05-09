@@ -300,3 +300,5 @@ CameraX.bindToLifecycle(this, preview, imageCapture, analyzerUseCase)
 D/CameraXApp: Average luminosity: ...
 ```
 
+
+<img src="/images/2019/05/getting-started-with-camerax/camerax.png" width="300" />
