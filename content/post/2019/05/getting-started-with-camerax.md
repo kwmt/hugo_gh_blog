@@ -19,7 +19,6 @@ keywords = [""]
 2019/05/01にCameraXなるCodelabが公開されてたのでやってみました。
 https://codelabs.developers.google.com/codelabs/camerax-getting-started/index.html?index=..%2F..index#0
 
-※2019/05/02時点でまだmavenで公開されていないため、動きません。
 
 ## 1,2
 
@@ -137,7 +136,7 @@ Previewクラスを使うためには、まずconfigを定義する必要があ�
 ```kotlin
 private fun startCamera() {
     val previewConfig = PreviewConfig.Builder().apply {
-        setTargetAspectRatio(Rationl(1, 1))
+        setTargetAspectRatio(Rational(1, 1))
         setTargetResolution(Size(640, 640))
     }.build()
 
@@ -213,7 +212,7 @@ val imageCapture = ImageCapture(imageCaptureConfig)
 findViewById<ImageButton>(R.id.capture_button).setOnClickListener {
     val file = File(externalCacheDirs.first(), "${System.currentTimeMill
     imageCapture.takePicture(file,
-        object : ImageCapture.OnImageSavaedListener {
+        object : ImageCapture.OnImageSavedListener {
             override fun onError(
                 error: ImageCapture.UseCaseError,
                 message: String, exc: Throwable?
@@ -286,7 +285,7 @@ val analyzerConfig = ImageAnalysisConfig.Builder().apply {
         "LuminosityAnalysis").apply { start() }
     setCallbackHandler(Handler(anaalyzerThread.looper))
     setImageReaaderMode(
-        ImageAnalysis.ImageReaderMode.ACQIRE_LATEST_IMAGE
+        ImageAnalysis.ImageReaderMode.ACQUIRE_LATEST_IMAGE
     )
 }.build()
 val analyzerUseCase = ImageAnalysis(analyzerConfig).apply {
