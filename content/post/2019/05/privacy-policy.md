@@ -1,7 +1,7 @@
 +++
 title= "プライバシーポリシー"
 date= 2019-05-12T00:00:00+09:00
-draft = true
+draft = false
 toc = true
 slug = ""
 author = "kwmt27"
