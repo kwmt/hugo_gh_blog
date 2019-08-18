@@ -438,7 +438,8 @@ lateinitと何が違うのかと思って試してみたら、
 ようだ。
 
 
-### provideDelegate
+### <a href="https://kotlinlang.org/docs/reference/delegated-properties.html#providing-a-delegate-since-11" target="_blank">provideDelegate</a>
+
 
 バージョン1.1以降、関数本体内のDelegatedプロパティと、デリゲートを提供する前にプロパティをチェックできるprovideDelegate演算子を使用できます。
 
