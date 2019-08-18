@@ -196,7 +196,7 @@ NEW has been assigned to 'p' in delegation.Example@5c3bd550.
 
 ## デリゲートの標準ライブラリ
 
-### lazy
+### <a href="https://kotlinlang.org/docs/reference/delegated-properties.html#lazy" target="_blank">lazy</a>
 
 lazy()はラムダを取り、`Lazy<T>`インスタンスを返す関数です。最初のget()の呼び出しはlazy()に渡されたラムダを実行し、結果を記憶します。その後のget()の呼び出しは記録したした結果を返すだけです。
 
@@ -218,7 +218,7 @@ fun main() {
 
 デフォルトでは、lazyプロパティの評価は同期されます。値は1つのスレッドでのみ計算され、すべてのスレッドは同じ値を参照します。
 
-### observable
+### <a href="https://kotlinlang.org/docs/reference/delegated-properties.html#observable" target="_blank">observable</a>
 
 Delegates.observable（）は、初期値と変更用のハンドラーの2つの引数を取ります。 ハンドラーは、プロパティに割り当てるたびに（割り当てが実行された後）呼び出されます。 割り当てられるプロパティ、古い値、新しい値の3つのパラメーターがあります。(Google翻訳そのまま・・・)
 
@@ -244,7 +244,7 @@ fun main() {
 // second
 ```
 
-### vetoable
+### <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-delegates/vetoable.html" target="_blank">vetoable</a>
 
 もし、newValueに制限を掛けたい場合、`observable`の代わりに`vetoable`を使用すると良さそうとのことなので見てみます。
 
@@ -292,7 +292,7 @@ fun main() {
 
 ちなみに、`veto`とは「禁止する」「拒否する」の意味とのこと。初めて知った。
 
-###　Storing Properties in a Map
+### <a href="https://kotlinlang.org/docs/reference/delegated-properties.html#storing-properties-in-a-map" target="_blank">Storing Properties in a Map</a>
 
 一般的な使用例の1つは、マップにプロパティの値を保存することです。 これは、JSONの解析やその他の「動的な」処理などのアプリケーションで頻繁に発生します。 この場合、マップインスタンス自体を委任プロパティのデリゲートとして使用できます。
 
@@ -404,7 +404,8 @@ public final String getName() {
 すごいなと思ったのはMap<String, Any?>とvalueをAny?型にしているのに、型を確認したらAny?型ではなく、それぞれセットした型で取得できているので、ビックリした(リフレクション使っているので当たり前かもしれないが・・・)。
 
 
-### notNull
+### <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-delegates/not-null.html" target="_blank">notNull</a>
+
 
 オブジェクトの構築時ではなく、後で初期化されるnull以外の値を持つ読み取り/書き込みプロパティのプロパティデリゲートを返します。 初期値が割り当てられる前にプロパティを読み取ろうとすると、例外が発生します。
 
