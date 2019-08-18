@@ -19,13 +19,13 @@ KotlinのDelegated propertyであることは知っていたが、あんまり�
 override var onboardingCompleted by BooleanPreference(prefs, PREF_ONBOARDING, false)
 ```
 
-試したコードはこちらです。
+ちなみに、試したコードはこちらです。
 
 https://github.com/kwmt/Kotlin-Playground/tree/master/src/main/kotlin/delegation
 
 ## まずはDelegationの基本について
 
-Javaでは処理をクラスに委譲するには次のようにやっていた。(下記サンプルはJavaではないが、Javaで書くならこんな感じになる)
+Javaでは処理をクラスに委譲するには次のようにやっていたと思います。(下記サンプルはJavaではないが、Javaで書くならこんな感じになる)
 
 ```kotlin
 package delegation
@@ -43,7 +43,7 @@ class Person(name: Nameble) : Nameble {
 }
 
 fun main() {
-    val person = Person(JackName(),)
+    val person = Person(JackName())
     println(person.name)
 }
 ```
@@ -246,7 +246,7 @@ fun main() {
 
 ### vetoable
 
-もし、newValueに制限を掛けたい場合、`observable`の代わりに`vetoable`を使用すると良さそう。
+もし、newValueに制限を掛けたい場合、`observable`の代わりに`vetoable`を使用すると良さそうとのことなので見てみます。
 
 ```kotlin
 import kotlin.properties.Delegates
@@ -323,7 +323,7 @@ fun main() {
 // int
 ```
 
-コード見て、どうなってるのか初見ではわからなかったので、デコンパイルしてみた。
+コード見て、どうなってるのか初見ではわからなかったので、デコンパイルしてみました。
 
 ```java
 public final class StoreInMapKt {
@@ -382,7 +382,8 @@ public final class StoreInMapKt {
 }
 ```
 
-metadataは削除したがこの様になる。Userクラスは、フィールドにStringやIntではなく、それぞれMap型のフィールドを持たせていました。
+metadataは削除しましたが、このようになります。
+Userクラスは、フィールドにStringやIntではなく、それぞれMap型のフィールドを持たせていました。
 
 ```java
 private final Map name$delegate;
