@@ -13,7 +13,7 @@ keywords = [""]
 
 # はじめに
 
-Android Lifecyleのコードラボをやりつつ、ViewModelやLiveDataの仕組みを調べたのでメモしておこと思います。
+Android Lifecycleのコードラボをやりつつ、ViewModelやLiveDataの仕組みを調べたのでメモしておこと思います。
 
 https://codelabs.developers.google.com/codelabs/android-lifecycles
 
@@ -37,7 +37,7 @@ class ChronoViewModel: ViewModel() {
 }
 ```
 
-`ViewModel`は、ViewModelインスタンスが破棄されたときに呼ばれる`onCleared`というメソッドを持っています。
+`ViewModel`は、ViewModelインスタンスが破棄されるときに呼ばれる`onCleared`というメソッドを持っています。
 
 ### ViewModelインスタンスの取得方法
 
@@ -92,7 +92,7 @@ ViewModelの生存期間はActivityやFragmentよりも長いです。
     onDestroy
 ```
 
-画面回転時に、Activityは`onDestroy`されていますが、ViewModelは`onCleared`が呼ばれません。
+画面回転時に、Activityは`onDestroy`されていますが、ViewModelは`onCleared`が呼ばれていません。
 
 
 ## ViewModelの仕組み
@@ -133,7 +133,7 @@ https://android.googlesource.com/platform/frameworks/base.git/+/refs/heads/andro
 `onCreate`時に`ActivityThread`の`mActivies`の保持しておいた`ActivityClientRecord`インスタンスを取得して、そこに`lastNonConfigurationInstances`という最後の構成状態を取得し、`Activity`の`mLastNonConfigurationInstances`にセットします。
 https://android.googlesource.com/platform/frameworks/base.git/+/refs/heads/android10-release/core/java/android/app/Activity.java#7738
 
-`ComponentActivity#getViewModelStore()`が呼ばれと内部で`getLastNonConfigurationInstance()`が呼ばれていて、
+`ComponentActivity#getViewModelStore()`が呼ばれ、内部で`getLastNonConfigurationInstance()`が呼ばれていて、
 https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/activity/activity/src/main/java/androidx/activity/ComponentActivity.java#187
 
 これは`mLastNonConfigurationInstances`がnullでなければ`mLastNonConfigurationInstances.activity`(これがViewModelの実態)を返すようになっています。
@@ -147,7 +147,7 @@ https://android.googlesource.com/platform/frameworks/base.git/+/refs/heads/andro
 画面回転時に、Activityのメンバ変数`mChangingConfigurations`に`true`がセットされます。
 https://android.googlesource.com/platform/frameworks/base.git/+/refs/heads/android10-release/core/java/android/app/ActivityThread.java#5165
 
-LifeCycleのState変更が監視されていて、`onDestroy`にStateが変わると、onStateChengedが呼ばれて、`mChangingConfigurations`を返すメソッド `isChangingConfigurations()`で画面回転中か確認し、true(回転中)なら何もぜず、false(回転中でははないonDestory=Activity終了)なら、`onCleared`メソッドを呼ぶという仕組みになっています。
+LifecycleのState変更が監視されていて、`onDestroy`にStateが変わると、onStateChengedが呼ばれて、`mChangingConfigurations`を返すメソッド `isChangingConfigurations()`で画面回転中か確認し、true(回転中)なら何もぜず、false(回転中でははないonDestory=Activity終了)なら、`onCleared`メソッドを呼ぶという仕組みになっています。
 https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/activity/activity/src/main/java/androidx/activity/ComponentActivity.java#118
 
 
@@ -161,7 +161,7 @@ class ChronoViewModel : ViewModel() {
 }
 ```
 
-Activity側ではonCreate時に、startTimeがnullなら時間を新規にセットして、nullじゃない（開店時）なら、ViewModelのstartTimeをセットすればよいです。
+Activity側ではonCreate時に、startTimeがnullなら時間を新規にセットして、nullじゃない（回転時）なら、ViewModelのstartTimeをセットすればよいです。
 
 Activity側のコードは[Step2](https://github.com/googlecodelabs/android-lifecycles/blob/master/app/src/main/java/com/example/android/lifecycles/step2/ChronoActivity2.java#L41-L50)のコードをKotlinで書いただけなので割愛。そういう意味ではViewModelもそうなのですが、ポイントはViewModelの方なので。
 
@@ -219,10 +219,6 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ホントはViewModelにViewを渡して、次のような感じでViewModelでViewを更新できたら良かったんでしょうけど、上記の通りメモリリークするので、Activity側でUIを更新しないといけないので、それをどうするかっていうのがstep3の[`LiveData`](https://developer.android.com/reference/android/arch/lifecycle/LiveData)を使いましょうというお話。
 
-## 本題に戻ります！
-
-UIを1秒間価格で更新したいということでしたね。
-
 ```kotlin
 class ChronoViewModel : ViewModel() {
     var timerTextView: TextView? = null
@@ -233,6 +229,11 @@ class ChronoViewModel : ViewModel() {
     }
 }
 ```
+
+
+## 本題に戻ります！
+
+UIを1秒間間隔で更新したいということでしたね。
 
 まず、LiveDataに値を設定できる`MutableLiveData`とそれをLiveDataとして返す関数を作成します。
 
@@ -415,7 +416,7 @@ protected void onPause() {
 AndroidのライブラリやAPIはこのような処理をすることが多く、ActivityやFragmentで処理を書くと煩雑になってしまい、読みにくくなってしまいます。このようなことを防ぐために[`Lifecycle`](https://developer.android.com/topic/libraries/architecture/lifecycle)を使うと便利ですよ、という話になります。
 
 簡単に言うと、ActivityやFragment以外のクラスでライフサイクルの変更を検知することができます。
-このコードラボでは、`BoundLocationListener`クラスがライフサイクルの変更を検知できるようになる予定なのですが、どのような仕組みかというと、まず`BoundLocationListener`にActivityの`lifecycleOwner`インスタンスを渡して、LifecCycleを次のように監視します。(`lifecycleOwner`は`ComponentActivity`が実装しているインターフェースでしたね)
+このコードラボでは、`BoundLocationListener`クラスがライフサイクルの変更を検知できるようになる予定なのですが、どのような仕組みかというと、まず`BoundLocationListener`にActivityの`lifecycleOwner`インスタンスを渡して、Lifecycleを次のように監視します。(`lifecycleOwner`は`ComponentActivity`が実装しているインターフェースでしたね)
 
 ```kotlin
 lifecycleOwner.lifecycle.addObserver(this)
@@ -453,9 +454,9 @@ https://github.com/googlecodelabs/android-lifecycles/issues/5
 
 次はViewModelがFramgment間や、FragmentとActivity間でシェアできるよというお話。
 
-１つのActivityに２つのシークバーを持つFragmentが上下に並んでいて、ViewModelを使うと、片方のシークバーを移動すると、もう片方のシークバーが同期的に動くようにできるらしい。
+１つのActivityに２つのシークバーを持つFragmentが上下に並んでいて、ViewModelを使うと、片方のシークバーを移動したときにもう片方のシークバーも同期的に動くようにできるらしい。
 
-ViewModelインスタンスを取得する際、FragmentのLifecycleOwnerを渡すのではなく、Fragmentが属しているActivityのLifecycleOwnerを渡してあげれば良い。
+ViewModelインスタンスを取得する際、FragmentのLifecycleOwnerを渡すのではなく、Fragmentが属しているActivityのLifecycleOwnerを渡してあげれば良いようです。
 
 
 いままでは次のようにViewModelインスタンスを取得していた。
@@ -493,7 +494,7 @@ override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolea
 }
 ```
 
-その更新するLiveDataを監視して、更新されたシークバーの値を更新してあげると、
+その更新するLiveDataを監視して、シークバーの値を更新してあげると、
 
 ```kotlin
 mSeekBarViewModel.seekbarValue.observe(viewLifecycleOwner, Observer {
@@ -512,7 +513,7 @@ mSeekBarViewModel.seekbarValue.observe(viewLifecycleOwner, Observer {
 
 - ViewModelはActivityやFragmentより、生存期間が長いので、画面回転などのActivity再生成でも回転前と後で値を保持できる。
 - LiveDataを使って、ViewModelでの更新をActivityやFragmentに通知できる。
-- LifecycleはActivityやFragment以外のクラスでライフサイクル管理ができるので、ActivityやFragment生成時にubscribeし、破棄時にunsubscribeするようなコンポーネントで使うとスッキリできる。
+- LifecycleはActivityやFragment以外のクラスでライフサイクル管理ができるので、ActivityやFragment生成時にsubscribeし、破棄時にunsubscribeするようなコンポーネントで使うとスッキリできる。
 - ViewModelはFragment間やFragmentとActivity間で共有できる。
 
 
