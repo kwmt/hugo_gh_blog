@@ -14,18 +14,19 @@ keywords = [""]
 # はじめに
 
 Android Lifecyleのコードラボをやりつつ、ViewModelやLiveDataの仕組みを調べたのでメモしておこと思います。
+
 https://codelabs.developers.google.com/codelabs/android-lifecycles
 
 
 # Step1,2 ViewModel
-step1はアプリが起動したらタイマーがカウントアップし、画面回転するとタイマーのカウントがクリアされてしまう、という問題にViewModelというものを使ってどう対処するかをみていくと同時に、ViewModelの仕組みについてもみて行きたいと思います。
+step1はアプリが起動したらタイマーがカウントアップし、画面回転するとタイマーのカウントがクリアされてしまう、という問題にViewModelというものを使ってどう対処するのかという話です。
 
 ## ViewModelとは
-ViewModelを使えば、ActivityやFragmentのライフサイクル全体でデータを保持できます。
+[ViewModel](https://developer.android.com/reference/android/arch/lifecycle/ViewModel.html)を使えば、ActivityやFragmentのライフサイクル全体でデータを保持できます。
 ActivityやFragmentは、ユーザーの操作でCreatedとDestroyedを繰り返す生存期間の短いオブジェクトです。
 
 
-ViewModelクラスを作成するには、ViewModel()を継承します。（中身は空っぽですが）
+ViewModelクラスを作成するには、`ViewModel()`を継承します。（中身は空っぽですが）
 
 ```kotlin
 class ChronoViewModel: ViewModel() {
@@ -69,22 +70,22 @@ ViewModelの生存期間はActivityやFragmentよりも長いです。
 
 ```
 起動
-　　onCreate
-    　　viewModel created(正確にはLazyなのでアクセスしたタイミング)
-　　onStart
-　　onResume
+    onCreate
+        viewModel created(正確にはLazyなのでアクセスしたタイミング)
+    onStart
+    onResume
 回転
-　　onPause
-　　onStop
-   onDestroy
-   onCreate
-   onStart
-   onResume
+    onPause
+    onStop
+    onDestroy
+    onCreate
+    onStart
+    onResume
 バックボタンでアプリ終了
-　　onPause
-   onStop
+    onPause
+    onStop
         viewModel onCleared
-   onDestroy
+    onDestroy
 ```
 
 画面回転時に、Activityは`onDestroy`されていますが、ViewModelは`onCleared`が呼ばれません。
@@ -93,6 +94,7 @@ ViewModelの生存期間はActivityやFragmentよりも長いです。
 ## ViewModelの仕組み
 
 ここで、
+
 1. ViewModelがどのような仕組みで保持されているか
 1. 画面回転時にも`onDestroy`が呼ばれているにも関わらず`onCleared`は呼ばれず、アプリ終了時にのみ`onCleared`が呼ばれている仕組み
 
@@ -108,7 +110,7 @@ ChronoActivity -> AppCompatActivty -> FragmentActivity -> ComponentActivity -> A
 
 このような継承関係になっています。
 
-おそらく`ActivityThread`クラスにあるstaticな`sCurrentActivityThread`変数がActivityが破棄されても同じインスタンスが取得できる大元のインスタンスだと思います。
+おそらく`ActivityThread`クラスにあるstaticな`sCurrentActivityThread`変数がActivityが破棄されても同じインスタンスが取得できる大元のインスタンスだと思います。(これは間違っている可能性大です・・・（汗）)
 https://android.googlesource.com/platform/frameworks/base.git/+/refs/heads/android10-release/core/java/android/app/ActivityThread.java#351
 
 - アプリ起動時
@@ -162,8 +164,11 @@ Activity側のコードは[Step2](https://github.com/googlecodelabs/android-life
 
 # Step3 LiveData
 
-次は`Timer`クラスを使って、UIに1秒間隔で「~秒経過」と表示するようにしましょうという課題。
+次は`Timer`クラスを使って、UIを1秒間隔で「~秒経過」と表示するということを考えます。
 
+## 画面回転でメモリリークしない？
+
+ちょっとその前に気になることが、、、
 
 > To help avoid memory leaks, the ViewModel doesn't include references to the activity. For example, a configuration change, such as a screen rotation, might result in references in a ViewModel to an activity that should be garbage collected
 
@@ -208,7 +213,11 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 まぁメモリリークはするので、ViewModelでActivityやViewの参照はするべきではないと理解。
 
-ホントはViewModelにViewを渡して、次のような感じでViewModelでViewを更新できたら良かったんでしょうけど、上記の通りメモリリークするので、Activity側でUIを更新しないといけないので、それをどうするかっていうのがstep3の`LiveData`を使いましょうというお話。
+ホントはViewModelにViewを渡して、次のような感じでViewModelでViewを更新できたら良かったんでしょうけど、上記の通りメモリリークするので、Activity側でUIを更新しないといけないので、それをどうするかっていうのがstep3の[`LiveData`](https://developer.android.com/reference/android/arch/lifecycle/LiveData)を使いましょうというお話。
+
+## 本題に戻ります！
+
+UIを1秒間価格で更新したいということでしたね。
 
 ```kotlin
 class ChronoViewModel : ViewModel() {
@@ -224,11 +233,11 @@ class ChronoViewModel : ViewModel() {
 まず、LiveDataに値を設定できる`MutableLiveData`とそれをLiveDataとして返す関数を作成します。
 
 ```kotlin
-    private val elapsedTime = MutableLiveData<Long>()
-    fun getElapsedTime(): LiveData<Long> = elapsedTime
+private val elapsedTime = MutableLiveData<Long>()
+fun getElapsedTime(): LiveData<Long> = elapsedTime
 ```
 
-そして、1秒毎に更新したいので、Timerクラスを使って実装します。￥
+そして、1秒毎に更新したいので、Timerクラスを使って実装します。
 
 ```kotlin
 class ChronoViewModel : ViewModel() {
@@ -254,9 +263,9 @@ class ChronoViewModel : ViewModel() {
 ```kotlin
 val newValue = (SystemClock.elapsedRealtime() - initialTime) / 1000;
 elapsedTime.value = newValue
- ```
+```
 
- すると、`setValue`はバックグラウンドスレッドで呼び出すことができないエラーが出ます。
+すると、`setValue`はバックグラウンドスレッドで呼び出すことができないエラーが出ます。
 
 
 ```
@@ -302,7 +311,7 @@ private final Runnable mPostValueRunnable = new Runnable() {
 
 
 ぜんぶ`postValue`使ったら、使う側でスレッド意識しなくていいから、ぜんぶ`postValue`じゃダメなんですかね？  
-という疑問が最近怒っていますが、、、
+という疑問が最近あるのですが。。。
 
 
 さて、ViewModel側でMutableLiveDataにpostValue()するところまで来ました。
@@ -311,7 +320,7 @@ private final Runnable mPostValueRunnable = new Runnable() {
 Activityで、ViewModelのelapsedTime(MutableLiveData)を使って、
 
 ```kotlin
-viewModel.elapsedTime.getValue()
+viewModel.elapsedTime.value
 ```
 
 でpostValueされたデータは取得できます。しかし、今回は毎秒ごとに更新したいので、そのためにはLiveDataを監視するという実装が必要になります。具体的には次のようになります。
@@ -329,7 +338,8 @@ ViewModelのMutableLiveDataが`postValue`されたら、`onChanged`メソッド�
 
 
 余計なViewが入っていますが、実行することこうなります。
-<img src="images/2019/09/android-lifecycle-codelab/livedata.gif" width="300">
+
+<img src="/images/2019/09/android-lifecycle-codelab/livedata.gif" width="300">
 
 
 もう少しだけ補足が必要で、まず`viewModel.getElapsedTime()`は、`MutableLiveData`ではなく`LiveData`を返します。これは、Activity側では更新する必要がないため、不必要な更新ができてしまうことさけるためにこのようにしています。
@@ -345,7 +355,7 @@ class ChronoActivity extends AppCompatActivity extends FragmentActivity extends 
 ```
 
 注意）Activityがアクティブな状態でないと、UIは更新されないことに注意してください。
-仕組み的にはアクティブになっていない場合は、`onChaanged`が呼ばれ無いだけです。
+仕組み的にはアクティブになっていない場合は、`onChanged`が呼ばれ無いだけです。
 
 
 LiveDataのprivateメソッドに次のようなものがあり、`if (!observer.mActive)`で判断しています。
@@ -367,7 +377,7 @@ private void considerNotify(ObserverWrapper observer) {
 }
 ```
 
-ちなみに、Activityがアクティブでないときも`onChaged`を呼びたい場合は、[`observeForever`](https://developer.android.com/reference/android/arch/lifecycle/LiveData.html#observeForever(android.arch.lifecycle.Observer<T>))というメソッドが用意されてるので、そちらを使うと良さそうです。
+ちなみに、Activityがアクティブでないときも`onChanged`を呼びたい場合は、[`observeForever`](https://developer.android.com/reference/android/arch/lifecycle/LiveData.html#observeForever(android.arch.lifecycle.Observer<T>))というメソッドが用意されてるので、そちらを使うと良さそうです。
 
 
 また、observeの実装を説明のためにObserverのインターフェース実装のような形で書きましたが、次のようにlambdaを使って書くと少しスッキリします。
@@ -383,7 +393,7 @@ viewModel.getElapsedTime().observe(this, Observer {
 
 # step4 Lifecycle
 
-たとえば、現在地を取得するためには `LocationManager`を使うと思います。
+たとえば、現在地を取得するためには [`LocationManager`](https://developer.android.com/reference/kotlin/android/location/LocationManager)を使うと思います。
 このようなAPIは、使うために初期化したりsubscribeしたりし、使わなくなったらストップしたり、unsubscribeします。
 
 ```java
@@ -398,9 +408,9 @@ protected void onPause() {
 }
 ```
 
-AndroidのライブラリやAPIはこのような処理をすることが多く、ActivityやFragmentで処理を書くと煩雑になってしまい、読みにくくなってしまいます。このようなことを防ぐために`Lifecycle`を使うと便利ですよ、という話になります。
+AndroidのライブラリやAPIはこのような処理をすることが多く、ActivityやFragmentで処理を書くと煩雑になってしまい、読みにくくなってしまいます。このようなことを防ぐために[`Lifecycle`](https://developer.android.com/topic/libraries/architecture/lifecycle)を使うと便利ですよ、という話になります。
 
-簡単に言うと、ActivityやFragment以外のクラスでライフサイクルの変更を検知できます。
+簡単に言うと、ActivityやFragment以外のクラスでライフサイクルの変更を検知することができます。
 このコードラボでは、`BoundLocationListener`クラスがライフサイクルの変更を検知できるようになる予定なのですが、どのような仕組みかというと、まず`BoundLocationListener`にActivityの`lifecycleOwner`インスタンスを渡して、LifecCycleを次のように監視します。(`lifecycleOwner`は`ComponentActivity`が実装しているインターフェースでしたね)
 
 ```kotlin
@@ -428,8 +438,11 @@ fun removeLocationListener() {
 ここで少し気になるのが、`init`で`addObserver(this)`としているから、デストラクタとかで`removeObserver(this)`としなくていいのかということです。
 
 調べたところ、`removeObserver`はしなくて良いそうです。
-内部実装をみると、onDestroy時に`removeObserver`が呼ばれていました。
+
 https://github.com/googlecodelabs/android-lifecycles/issues/5
+
+内部実装をみると、onDestroy時に`removeObserver`が呼ばれていました。
+
 
 
 # step5 ViewModelの共有
@@ -486,7 +499,7 @@ mSeekBarViewModel.seekbarValue.observe(viewLifecycleOwner, Observer {
 
 次のような動画のように、片方動かすと片方も動くようになります。
 
-<img src="images/2019/09/android-lifecycle-codelab/share_viewmodel.gif" width="300">
+<img src="/images/2019/09/android-lifecycle-codelab/share_viewmodel.gif" width="300">
 
 
 
