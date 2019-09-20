@@ -233,7 +233,7 @@ class ChronoViewModel : ViewModel() {
 
 ## 本題に戻ります！
 
-UIを1秒間間隔で更新したいということでしたね。
+UIを1秒間隔で更新したいということでしたね。
 
 まず、LiveDataに値を設定できる`MutableLiveData`とそれをLiveDataとして返す関数を作成します。
 
