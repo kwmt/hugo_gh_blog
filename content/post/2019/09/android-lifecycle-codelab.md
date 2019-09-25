@@ -147,7 +147,7 @@ https://android.googlesource.com/platform/frameworks/base.git/+/refs/heads/andro
 画面回転時に、Activityのメンバ変数`mChangingConfigurations`に`true`がセットされます。
 https://android.googlesource.com/platform/frameworks/base.git/+/refs/heads/android10-release/core/java/android/app/ActivityThread.java#5165
 
-LifecycleのState変更が監視されていて、`onDestroy`にStateが変わると、onStateChengedが呼ばれて、`mChangingConfigurations`を返すメソッド `isChangingConfigurations()`で画面回転中か確認し、true(回転中)なら何もぜず、false(回転中でははないonDestory=Activity終了)なら、`onCleared`メソッドを呼ぶという仕組みになっています。
+LifecycleのState変更が監視されていて、`onDestroy`にStateが変わると、onStateChengedが呼ばれて、`mChangingConfigurations`を返すメソッド `isChangingConfigurations()`で画面回転中か確認し、true(回転中)なら何もぜず、false(回転中ではないonDestory=Activity終了)なら、`onCleared`メソッドを呼ぶという仕組みになっています。
 https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/activity/activity/src/main/java/androidx/activity/ComponentActivity.java#118
 
 
