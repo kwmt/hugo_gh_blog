@@ -14,10 +14,7 @@ SwiftUIでGoogleMapを表示する方法を調べたのでメモします。
 
 ## GoogleMapView.swiftを作成
 
-https://gist.github.com/kwmt/1df17577c59e33da1c4c2eb982f21bbf#file-googlemapview-swift
-
-
-{{< gist kwmt 1df17577c59e33da1c4c2eb982f21bbf#file-googlemapview-swift >}}
+{{< gist kwmt 1df17577c59e33da1c4c2eb982f21bbf "GoogleMapView.swift" >}}
 
 ### 補足
 
@@ -42,8 +39,7 @@ func updateUIView(Self.UIViewType, context: Self.Context)
 ## 作成したGoogleMapViewを表示したい場所に挿入
 
 
-https://gist.github.com/kwmt/1df17577c59e33da1c4c2eb982f21bbf#file-contentview-swift
-
+{{< gist kwmt 1df17577c59e33da1c4c2eb982f21bbf "ContentView.swift" >}}
 
 これだけです。
 
