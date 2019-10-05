@@ -17,6 +17,8 @@ SwiftUIでGoogleMapを表示する方法を調べたのでメモします。
 https://gist.github.com/kwmt/1df17577c59e33da1c4c2eb982f21bbf#file-googlemapview-swift
 
 
+{{< gist kwmt 1df17577c59e33da1c4c2eb982f21bbf#file-googlemapview-swift >}}
+
 ### 補足
 
 [UIViewRepresentable](https://developer.apple.com/documentation/swiftui/uiviewrepresentable)はUIKitを表すViewです。
