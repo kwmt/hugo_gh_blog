@@ -65,6 +65,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     binding = ActivityMapsBinding.inflate(layoutInflater)
     setContentView(binding.root)
+}
 ```
 
 すると、次のように参照できます。
