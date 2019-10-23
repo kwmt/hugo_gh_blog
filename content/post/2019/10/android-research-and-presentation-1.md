@@ -54,9 +54,11 @@ keywords = [""]
 
 
 続いて、組み込みAndroidの話です。20分予定がだいぶオーバーして1時間喋ってましたねｗ
+
 <img src="/images/2019/10/android-research-and-presentation-1/arap_androidthings.jpg" width="500">
 
 Android Thingsを持ってきて実演してくださったりもしました。
+
 <img src="/images/2019/10/android-research-and-presentation-1/arap_iot.jpg" width="500">  
 
 時間については短くなったりオーバーしたりしてもいいとは言ったものもの、ある程度調整は必要かと思いましたw
