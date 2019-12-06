@@ -8,7 +8,7 @@ author = "kwmt27"
 categories = ["Android研究&発表会"]
 tags = ["Android研究&発表会", "勉強会", "Android"]
 keywords = [""]
-twitterImage = "arap.png"
+twitterImage = "images/2019/12/android-research-and-presentation-3/arap.png"
 +++
 
 ## はじめに
