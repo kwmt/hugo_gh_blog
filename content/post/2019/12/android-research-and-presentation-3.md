@@ -27,17 +27,42 @@ keywords = [""]
 
 当日の勉強会の様子です。
 
-https://twitter.com/kwmt27/status/1200637716599205888?s=20
-
+まず、エントランスです。
 完結でわかりやすい会場の案内を書いてくださってて、とても嬉しかったです！
 
-おみやげのとおりもんも持っていきました！
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">スゴイ！案内を準備してくださってる〜 感謝感謝！　<a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a> <a href="https://t.co/DPQKfrxtKh">pic.twitter.com/DPQKfrxtKh</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1200637716599205888?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+おみやげの通りもんを持っていきました！
 無理やり感あったかもしれませんが、ぜんぶ食べて頂きました。
 
-
 <img src="/images/2019/12/android-research-and-presentation-3/torimon.png">
+
+### Kotlin Coroutines ことはじめ 
+
+14:30から10分ほど会場案内と、この勉強会についてを軽く説明したあと、早速最初の発表として「Kotlin Coroutines ことはじめ」というタイトルで発表頂きました。
+
+資料はこちらを参照ください。Coroutineの基本と仕組みが、わかりやすい図と一緒に説明いただき、理解が深まりました。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Kotlin Coroutines ことはじめ、というお題で登壇しました。発表資料はこちらです。<a href="https://t.co/2HqHVRmpkc">https://t.co/2HqHVRmpkc</a><a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a> <a href="https://twitter.com/hashtag/kotlin?src=hash&amp;ref_src=twsrc%5Etfw">#kotlin</a> <a href="https://twitter.com/hashtag/android?src=hash&amp;ref_src=twsrc%5Etfw">#android</a></p>&mdash; Mitsuhiro Inomata (@ino2222) <a href="https://twitter.com/ino2222/status/1200690398827409408?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+会場の雰囲気はこんな感じでした。
 <img src="/images/2019/12/android-research-and-presentation-3/presen_1.png">
 
+発表後、褒めタイムというのを設けているのですが、こちらではさまざまな褒め言葉でてきました。
+
+みなさん、褒めつつ質問するという感じで一言ずつ頂きました。
+<img src="/images/2019/12/android-research-and-presentation-3/presen_1_2.png">
+
+### Jetpack compose をちょっと触ってみた
+
+次に、「Jetpack compose をちょっと触ってみた」というタイトルで発表頂きました。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a><br>昨日、発表した資料です！<br>Jetpack compose をちょっと触ってみた<a href="https://t.co/KeBdG4vcPI">https://t.co/KeBdG4vcPI</a></p>&mdash; charcoJp (@charco_jp) <a href="https://twitter.com/charco_jp/status/1201154367740493824?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<img src="/images/2019/12/android-research-and-presentation-3/presen_1_2.png">
 
 ## 次回
 次回は第4回になりますが、12月末はやはり年末で参加者も少ないだろうと予想されるので、2020/01/25(土)を予定しております。
