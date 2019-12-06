@@ -48,9 +48,10 @@ keywords = [""]
 
 
 会場の雰囲気はこんな感じでした。
+
 <img src="/images/2019/12/android-research-and-presentation-3/presen_1.png">
 
-発表後、褒めタイムというのを設けているのですが、こちらではさまざまな褒め言葉でてきました。
+発表頂いたあと後、褒めタイムというのを設けているのですが、こちらではさまざまな褒め言葉でてきました。
 
 みなさん、褒めつつ質問するという感じで一言ずつ頂きました。
 <img src="/images/2019/12/android-research-and-presentation-3/presen_1_2.png">
@@ -61,10 +62,38 @@ keywords = [""]
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a><br>昨日、発表した資料です！<br>Jetpack compose をちょっと触ってみた<a href="https://t.co/KeBdG4vcPI">https://t.co/KeBdG4vcPI</a></p>&mdash; charcoJp (@charco_jp) <a href="https://twitter.com/charco_jp/status/1201154367740493824?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<img src="/images/2019/12/android-research-and-presentation-3/presen_2.png">
 
-<img src="/images/2019/12/android-research-and-presentation-3/presen_1_2.png">
+
+こちらの方は当初Motion Layoutについての予定だったので、褒めタイムのときに「Motion Layout楽しみにしてた」というご意見も頂いたりもしました。ちなみに僕も楽しみにしてましたｗ
+
+
+### Android本体の開発について
+
+申し込み時点では発表予定なかったのですが、当日の10時ぐらいから資料を作り始めたらしく、飛び込みで発表してくださいました。
+
+<img src="/images/2019/12/android-research-and-presentation-3/presen_3.png">
+
+Androidのコアな話が聞けて、とても勉強になりました。
+
+ということで、飛び込みLT大歓迎です！
+
+### Retrofit2の仕組み 〜CallAdapterを理解する〜
+
+最後は僕の発表です。RetrofitというライブラリのCallAdapterについて発表しました。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨日発表した資料です！<br>RetrofitのCallAdapter、完全に理解した！<a href="https://t.co/PD5vs25xic">https://t.co/PD5vs25xic</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1200993649716318208?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<img src="/images/2019/12/android-research-and-presentation-3/presen_4.png">
 
 ## 次回
 次回は第4回になりますが、12月末はやはり年末で参加者も少ないだろうと予想されるので、2020/01/25(土)を予定しております。
 イベント(connpass)は後ほど、[#arap_osaka](https://twitter.com/search?q=%23arap_osaka&src=typed_query&f=live)でお知らせしたいと思います。
+
+
+## 最後に
+
+今回は合計参加人数が7名で、初めて参加の方が4名、発表してくださった方が3名、過去に参加くださった方が1名という感じでした。
+その中で、ほんとにはじめましての方は1名でほかは面識ありでした。
+仲間うち感をできるだけ出さないようにしようとしたんですが、少し難しかったかもしれません。。
 
