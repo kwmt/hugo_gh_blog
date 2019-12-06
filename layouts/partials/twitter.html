@@ -1,9 +1,9 @@
 <!-- Modified from _internal/twitter_card.html -->
 {{ if .IsPage }}
   {{ with .Params.twitterImage }}
-  <!-- The Open Graph protocol data -->
+    <!-- The Open Graph protocol data -->
     <meta property="og:image" content="{{ print $.Permalink . }}"/>
-  <!-- Twitter summary card with large image must be at least 280x150px -->
+    <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image:src" content="{{ print $.Permalink . }}"/>
   {{ else }}
