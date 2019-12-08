@@ -30,7 +30,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-2/arap.png"
 僕の発表資料はこちらです。
 
 
-// TODO
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">発表資料 公開しました！<a href="https://t.co/RNnKxTuwl0">https://t.co/RNnKxTuwl0</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1187988081191706626?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ### 途中からモクモク会に変更
