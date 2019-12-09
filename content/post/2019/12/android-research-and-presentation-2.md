@@ -1,6 +1,6 @@
 +++
 title= "Android研究&発表会#2 開催レポート"
-date= 2019-12-08T14:25:00+09:00
+date= 2019-12-06T20:00:00+09:00
 draft = false
 toc = true
 slug = ""
