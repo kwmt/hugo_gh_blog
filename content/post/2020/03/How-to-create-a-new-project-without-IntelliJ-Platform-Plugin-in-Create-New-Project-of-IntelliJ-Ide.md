@@ -1,7 +1,7 @@
 
 +++
 title= "IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginが無い場合の出し方"
-date= 2020-03-26T02:00:00+09:00
+date= 2020-03-26T00:00:00+09:00
 draft = false
 toc = true
 slug = ""
