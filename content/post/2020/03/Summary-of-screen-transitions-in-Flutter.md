@@ -1,9 +1,3 @@
----
-title: Flutterでの画面遷移まとめ
-tags: Flutter
-author: kwmt@github
-slide: false
----
 +++
 title= "Flutterでの画面遷移まとめ"
 date= 2020-03-26T02:00:00+09:00
