@@ -24,6 +24,11 @@ GestureDetector(
 このようにタップイベントでキーボードのフォーカスを外すことで、キーボードを閉じるようです。
 listViewだけにGestureを設定しているのは、TextFormFieldを含むWidgetに対してGestureを設定すると、キーボードが上がってる状態でTextFormFiledをタップすると、一旦閉じてまたキーボードが立ち上がってしまうため、listViewのみに設定しています。
 
+## キーボードを閉じるには 別の方法(2020/04/07追記)
+```dart
+FocusScope.of(context).unfocus()
+```
+
 ## 参考
 
 - https://github.com/flutter/flutter/issues/7247#issuecomment-406178161
