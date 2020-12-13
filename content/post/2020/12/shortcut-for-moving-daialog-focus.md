@@ -8,8 +8,9 @@ slug = ""
 author = "kwmt27"
 categories = ["macOS"]
 tags = ["macOS", "ショートカットキー"]
-keywords = ["macOS", "ショートカットキー", "ダイアログ", "タブ"]
+keywords = ["macOS", "ショートカットキー", "ダイアログ", "タブ", "Big Sur"]
 +++
+
 
 macOSで保存していないときなど下のようなダイアログが出ると思いますが、`save`にフォーカスがあたっていてEnterキーを押すと保存されてしまいます。
 しかし保存したくないときは`Dont't Save`をクリックすればいいのですが、マウスやトラックパッドを使わずキーボードだけで`Dont't Save`を押したい場合ないですか？
@@ -30,3 +31,6 @@ Use Keyboard navigation to move focus between controls
 <img src="/images/2020/12/shortcut-for-moving-daialog-focus/move-focus.png">
 
 これでダイアログが出ている状態でタブを押すとフォーカスが移動してくれて、冒頭の例だと`Dont't Save`の位置にタブで移動し、Enterキーを押せばキーボードだけで保存しないようにできます。
+
+
+ちなみに、確認したOSはBig Surです。
