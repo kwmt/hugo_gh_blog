@@ -2,7 +2,7 @@
 +++
 title= "Python勉強"
 date= 2020-12-26T19:24:00+09:00
-draft = true
+draft = false
 toc = true
 slug = ""
 author = "kwmt27"
@@ -82,3 +82,22 @@ plt.show()
 
 Seaborn
 https://myenigma.hatenablog.com/entry/2015/10/09/223629
+
+
+### グラフに複数の線をプロットするには
+
+追加する線のデータとして、移動平均を計算してみます。
+いま`df`は1日ごとのclose時のデータなので、5日の移動平均を計算するには、次のようにするだけでよさそうです。
+
+```python
+data_short = df.rolling(5).mean()
+```
+
+この5日の移動平均データをプロットするには、`show`の前に`plt.plot` を書くだけです。
+
+```python
+import matplotlib.pyplot as plt
+plt.plot(df['close'])
+plt.plot(data_short, color='#f1c40f') # 追加
+plt.show()
+```
