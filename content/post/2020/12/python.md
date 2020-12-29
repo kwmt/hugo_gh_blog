@@ -101,3 +101,52 @@ plt.plot(df['close'])
 plt.plot(data_short, color='#f1c40f') # 追加
 plt.show()
 ```
+
+
+### Pythonの基本
+
+#### classのコンストラクタ
+
+このように書いたら
+```
+class Ml:
+    def __init__(self, df):
+        self.closeDataFrame = df
+```
+このように出来る。
+
+```
+Ml(df)
+```
+
+### PyTorch
+
+PyTorchをインストール
+
+```requirements.txt
+# PyTorch
+# https://pytorch.org/get-started/locally/#mac-anaconda
+torch==1.7.1
+torchvision==0.8.2
+```
+
+PyTorchインストールの確認
+
+```
+import torch
+
+
+def pytorch():
+    x = torch.rand(5, 3)
+    print(x)
+```
+
+実行すると、次のようになればインストールOK
+
+```
+tensor([[0.5370, 0.7126, 0.1732],
+        [0.5158, 0.6087, 0.3694],
+        [0.5605, 0.2149, 0.0579],
+        [0.3865, 0.1120, 0.1044],
+        [0.5769, 0.7161, 0.7334]])
+```
