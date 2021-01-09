@@ -153,6 +153,8 @@ tensor([[0.5370, 0.7126, 0.1732],
 
 #### PyTorch チュートリアル
 テンソルは、配列や行列に非常に似た特殊なデータ構造です。PyTorchでは、テンソルを使ってモデルの入力と出力、モデルのパラメータをエンコードします。
+
+##### Tensorの初期化
 テンソルの初期化にはいくつか方法があります。
 
 - データから直接
@@ -221,6 +223,26 @@ Zeros Tensor:
 tensor([[0., 0., 0.],
         [0., 0., 0.]])
 ```
+##### Tensor Attributes
+
+```
+tensor = torch.rand(3, 4)
+print(tensor)
+print(f"Shape of tensor: {tensor.shape}")
+print(f"DataType of tensor: {tensor.dtype}")
+print(f"Device tensor is stored on: {tensor.device}")
+```
+
+出力
+```
+tensor([[0.7128, 0.0874, 0.7596, 0.2232],
+        [0.6125, 0.2712, 0.7320, 0.2892],
+        [0.7133, 0.3881, 0.0178, 0.2333]])
+Shape of tensor: torch.Size([3, 4])
+DataType of tensor: torch.float32
+Device tensor is stored on: cpu
+```
+
 # 統計
 
 ### 四分位範囲(interquartile range, IQR)とは
