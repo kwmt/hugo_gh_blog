@@ -151,9 +151,85 @@ tensor([[0.5370, 0.7126, 0.1732],
         [0.5769, 0.7161, 0.7334]])
 ```
 
+#### PyTorch チュートリアル
+テンソルは、配列や行列に非常に似た特殊なデータ構造です。PyTorchでは、テンソルを使ってモデルの入力と出力、モデルのパラメータをエンコードします。
+テンソルの初期化にはいくつか方法があります。
+
+- データから直接
+```
+data = [[1, 2],[3, 4]]
+x_data = torch.tensor(data)
+```
+
+- Numpy arrayから
+
+```
+np_array = np.array(data)
+x_np = torch.from_numpy(np_array)
+```
+
+上記の出力はそれぞれ同じで
+
+```
+tensor([[1, 2],
+        [3, 4]])
+```
+となります。
+
+
+- 他のTensorから
+
+```
+x_ones = torch.ones_like(x_data)
+print(f"Ones Tensor:\n{x_ones}\n")
+x_rand = torch.rand_like(x_data, dtype=torch.float)
+print(f"Random Tensor:\n{x_rand}\n")
+```
+
+```
+Ones Tensor:
+tensor([[1, 1],
+        [1, 1]])
+
+Random Tensor:
+tensor([[0.0630, 0.8669],
+        [0.8863, 0.7345]])
+```
+
+見て分かるように、引数のTensorのプロパティ（形状とdata型）を保持し、値は保持しません。
+
+
+- ランダム、Constant Values
+```
+shape = (2, 3,)
+rand_tensor = torch.rand(shape)
+print(f"Random Tensor:\n{rand_tensor}")
+ones_tensor = torch.ones(shape)
+print(f"Ones Tensor:\n{ones_tensor}")
+zeros_tensor = torch.zeros(shape)
+print(f"Zeros Tensor:\n{zeros_tensor}")
+```
+出力
+```
+Random Tensor:
+tensor([[0.9787, 0.6661, 0.9095],
+        [0.3474, 0.8071, 0.5095]])
+Ones Tensor:
+tensor([[1., 1., 1.],
+        [1., 1., 1.]])
+Zeros Tensor:
+tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+```
 # 統計
 
-四分位範囲(IQR)とは
+### 四分位範囲(interquartile range, IQR)とは
+
+第3四分位数と第1四分位数の差のこと。
+
+四分位数とは、
+
+q 
 
 
 ### 中央値とは
