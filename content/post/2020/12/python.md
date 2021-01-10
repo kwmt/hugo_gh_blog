@@ -243,6 +243,89 @@ DataType of tensor: torch.float32
 Device tensor is stored on: cpu
 ```
 
+##### Tensor操作
+- Numpyのように操作できる
+```
+tensor = torch.ones(4, 4)
+tensor[:, 1] = 0
+print(tensor)
+```
+出力
+```
+tensor([[1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.]])
+```
+
+- tensorの結合
+
+```
+    t1 = torch.cat([tensor, tensor, tensor], dim=1)
+    print(t1)
+```
+
+```
+tensor([[1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.],
+        [1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.],
+        [1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.],
+        [1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.]])
+```
+
+- Tensorの掛け算
+
+```
+print(f"tensor.mul(tensor)\n{tensor.mul(tensor)}")
+print(f"tensor * tensor\n{tensor * tensor}")
+```
+```
+tensor.mul(tensor)
+tensor([[1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.]])
+tensor * tensor
+tensor([[1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.]])
+```
+
+- 行列の積
+```
+print(f"tensor.matmul(tensor.T) \n {tensor.matmul(tensor.T)} \n")
+# Alternative syntax:
+print(f"tensor @ tensor.T \n {tensor @ tensor.T}")
+```
+
+```
+tensor.matmul(tensor.T) 
+ tensor([[3., 3., 3., 3.],
+        [3., 3., 3., 3.],
+        [3., 3., 3., 3.],
+        [3., 3., 3., 3.]]) 
+
+tensor @ tensor.T 
+ tensor([[3., 3., 3., 3.],
+        [3., 3., 3., 3.],
+        [3., 3., 3., 3.],
+        [3., 3., 3., 3.]])
+```
+
+- Tensorの中身を変える
+
+suffix `_` がつく。
+```
+tensor.add_(5)
+print(tensor)
+```
+
+```
+tensor([[6., 5., 6., 6.],
+        [6., 5., 6., 6.],
+        [6., 5., 6., 6.],
+        [6., 5., 6., 6.]])
+```
 # 統計
 
 ### 四分位範囲(interquartile range, IQR)とは
