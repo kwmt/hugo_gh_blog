@@ -54,8 +54,9 @@ fun UserPhoto() {
 
 [Jetpack Compose - What is the Difference Between ambientOf and staticAmbientOf](https://lcdsmao.dev/jetpack-compose-what-is-the-difference-between-ambient-and-static-ambient/) こちらが詳しいです。
 
-[`ambientOf`](https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary#ambientof)
-[`staticAmbientOf`](https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary#staticambientof)
+各ドキュメントはこちら
+- [`ambientOf`](https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary#ambientof)
+- [`staticAmbientOf`](https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary#staticambientof)
 
 テーマの変更、端末の言語設定など変更機会が少なく、読み込みが書き込みより多い場合に `staticAmbientOf`を使うそうです。
 
