@@ -17,7 +17,7 @@ Jetpack Composeでステータスバーのカラーを変更するにはどう�
 
 ## Ambientとは
 
-[Ambinent](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Ambient)とは、Flutterの[Provider](https://pub.dev/packages/provider)のようなものです。
+[Ambient](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Ambient)とは、Flutterの[Provider](https://pub.dev/packages/provider)のようなものです。
 
 サンプルコードを見たほうがわかりやすいと思いますので、見てみましょう。
 
