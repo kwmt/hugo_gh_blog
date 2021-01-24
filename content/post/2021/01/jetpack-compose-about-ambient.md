@@ -1,14 +1,14 @@
 
 +++
-title= "Jetpack Composeを既存のアプリと共存するには"
-date= 2021-01-16T22:50:00+09:00
+title= "Jetpack ComposeのAmbientについて"
+date= 2021-01-17T22:50:00+09:00
 draft = false
 toc = true
 slug = ""
 author = "kwmt27"
 categories = ["Android"]
-tags = ["Android", "Jetpack", "Compose"]
-keywords = ["Android", "Jetpack", "Compose"]
+tags = ["Android", "Jetpack", "Compose","Ambient"]
+keywords = ["Android", "Jetpack", "Compose","Ambient"]
 +++
 
 # はじめに
