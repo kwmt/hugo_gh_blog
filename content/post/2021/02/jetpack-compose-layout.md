@@ -11,6 +11,14 @@ tags = ["Android", "Jetpack", "Compose","Layout"]
 keywords = ["Android", "Jetpack", "Compose","Layout"]
 +++
 
+# はじめに
+
+基本的には、こちらのコードラボをメモしたものです。
+https://developer.android.com/codelabs/jetpack-compose-layouts
+
+試したことは[こちら](https://github.com/kwmt/LayoutInJetpackCompose/)に置いてます。
+
+
 ### 縦に並べるには
 
 `Column` を使う
@@ -276,3 +284,108 @@ D/MyOwnColumn: yPosition:208
 ちなみに、標準の`Column`の場合は次のようになります。
 
 <img src="/images/2021/02/layout/column.png" width="300"/>
+
+
+### 複雑なカスタムレイアウト
+
+```kotlin
+@Composable
+fun StaggeredGrid(
+    modifier: Modifier = Modifier,
+    rows: Int = 3,
+    children: @Composable() () -> Unit
+) {
+    Layout(
+        modifier = modifier,
+        content = children
+    ) { measurables, constraints ->
+
+        // 行の各アイテムの幅
+        val rowWidths = IntArray(rows) { 0 }
+        // 各行の最大の高さ
+        val rowMaxHeights = IntArray(rows) { 0 }
+
+        val placeables = measurables.mapIndexed { index, measurable ->
+            val placeable = measurable.measure(constraints)
+
+            val row = index % rows
+            rowWidths[row] = rowWidths[row] + placeable.width
+            rowMaxHeights[row] = max(rowMaxHeights[row], placeable.height)
+            placeable
+        }
+
+        // Int.coerceIn(範囲)はIntの値を範囲内に強制します。
+        // Gridの幅が最大のRowの幅
+        val width =
+            rowWidths.maxOrNull()?.coerceIn(constraints.minWidth.rangeTo(constraints.maxWidth))
+                ?: constraints.minWidth
+
+        // 各業の高さを合計したものが、constraints.minHeightとconstraints.maxHeightの範囲内に収めたときの高さ
+        val height = rowMaxHeights.sumBy { it }
+            .coerceIn(constraints.minHeight.rangeTo(constraints.maxHeight))
+
+        Log.d("StaggeredGrid", "$width, $height")
+
+        // 各業の高さ
+        // 前の行の高さから計算する
+        val rowY = IntArray(rows) { 0 }
+        for (i in 1 until rows) {
+            rowY[i] = rowY[i - 1] + rowMaxHeights[i - 1]
+        }
+        layout(width, height) {
+            val rowX = IntArray(rows) { 0 }
+            placeables.forEachIndexed { index, placeable ->
+                val row = index % rows
+                placeable.placeRelative(
+                    x = rowX[row],
+                    y = rowY[row]
+                )
+                rowX[row] += placeable.width
+            }
+        }
+    }
+}
+```
+
+
+以下は動かすためのサンプルです。
+
+```kotlin
+@Composable
+fun Chip(modifier: Modifier = Modifier, text: String) {
+    Card(
+        modifier = modifier,
+        border = BorderStroke(color = Color.Black, width = Dp.Hairline),
+        shape = RoundedCornerShape(8.dp)
+    ) {
+        Row(
+            modifier = Modifier.padding(start = 8.dp, top = 4.dp, end = 8.dp, bottom = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .preferredSize(16.dp, 16.dp)
+                    .background(color = MaterialTheme.colors.secondary)
+            )
+            Spacer(Modifier.preferredWidth(4.dp))
+            Text(text = text)
+        }
+    }
+}
+
+val topics = listOf(
+    "Arts & Crafts", "Beauty", "Books", "Business", "Comics", "Culinary",
+    "Design", "Fashion", "Film", "History", "Maths", "Music", "People", "Philosophy",
+    "Religion", "Social sciences", "Technology", "TV", "Writing"
+)
+
+@Preview
+@Composable
+fun ChipPreview() {
+    LayoutInJetpackComposeTheme() {
+        BodyContent()
+    }
+}
+```
+
+<img src="/images/2021/02/layout/complecate_custom_layout.png" width="300" />
