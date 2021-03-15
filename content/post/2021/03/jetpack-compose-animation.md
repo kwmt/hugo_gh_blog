@@ -7,8 +7,8 @@ toc = true
 slug = ""
 author = "kwmt27"
 categories = ["Android"]
-tags = ["Android", "Jetpack", "Compose","State"]
-keywords = ["Android", "Jetpack", "Compose","State"]
+tags = ["Android", "Jetpack", "Compose","Animation"]
+keywords = ["Android", "Jetpack", "Compose","Animation"]
 +++
 
 # はじめに
