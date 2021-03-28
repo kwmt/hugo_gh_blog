@@ -1,7 +1,7 @@
 
 
 +++
-title= "Jetpack Compose Dev Challenge Week1で学んだことまとめ"
+title= "Jetpack Compose PlayGround"
 date= 2021-03-28T19:00:00+09:00
 draft = false
 toc = true
