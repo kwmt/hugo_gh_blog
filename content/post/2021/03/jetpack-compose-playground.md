@@ -328,6 +328,62 @@ fun CircleImageSample() {
 
 <img src="/images/2021/03/jetpack-compose-playground/image/circle_image.png" width="300"/>
 
+### 画面遷移するには
+
+Jetpack ComposeにもNavigation Componentをサポートしています。
+
+```gradle
+implementation "androidx.navigation:navigation-compose:1.0.0-alpha09"
+```
+
+`NavController`はNavigation Componentの中心的なAPIです。
+このAPIはステートフルであり、アプリ内の画面を構成するコンポーザブルのバックスタックと各画面の状態を追跡します。
+
+`NavController`を作成するには、`rememberNavController()`メソッドを使用します。
+
+```kotlin
+val navController = rememberNavController()
+```
+
+`NavController`は１つの`NavHost`コンポーザブルに関連付ける必要があります。
+
+
+```kotlin
+NavHost(navController, startDestination = "animals") {
+    composable("animals") { Animals(...) }
+    composable("animal/{animalId}") { AnimalDetail(...) }
+}
+```
+
+これは動物一覧を最初の画面(startDestination)として、リストの要素をタップしたら、動物詳細画面("animal_detail")に遷移することを想定しています。
+
+このようにNavHostを定義したら、コンポーザブル間を移動するには、`navigate()`メソッドを使用します。
+
+```kotlin
+fun Animals(navController: NavController) {
+    //省略
+    val animal: Animal  = // 省略
+    Button(onClick = { navController.navigate("animal/{animal.id}")}) {
+        // 省略
+    }
+}
+
+data class Animal(val id: String)
+```
+
+これだと、各画面がNavControllerを知ることになってしまうので、画面はクリックしたら何を渡すのかわたさないのかに関心があって、どこに遷移するかはNavGraph側で管理したいので、それを解決するのが、[こちらのMainActions](https://github.com/android/compose-samples/blob/main/Owl/app/src/main/java/com/example/owl/ui/NavGraph.kt#L75)が参考になるかと思います。
+
+
+####  前の画面にもどるには
+
+`NavController#navigateUp`メソッドを使用します。
+
+https://github.com/kwmt/android-dev-challenge-compose/blob/main/app/src/main/java/com/example/androiddevchallenge/NavGraph.kt#L44
+
+
+<img src="/images/2021/03/jetpack-compose-playground/navigation/navigation.gif" width="300"/>
+
+
 
 ### ローカルの画像を表示するには
 TODO
