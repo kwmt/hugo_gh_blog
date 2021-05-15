@@ -22,7 +22,7 @@ composeバージョンは 1.0.0-beta04 です。
 
 ## SearchBarのUIを作るには？
 
-{{< gist 6fbecb46bd621a451e28e1095f24f541#file-searchbar-kt >}}
+{{< gist 6fbecb46bd621a451e28e1095f24f541 "SearchBar.kt" >}}
 
 だいたいこんな感じで作れます。
 
@@ -44,13 +44,14 @@ interface QrResultDao {
 
 ## ViewModelの実装は
 
-{{< gist 6fbecb46bd621a451e28e1095f24f541#file-qrhistoryviewmodel-kt >}}
+{{< gist 6fbecb46bd621a451e28e1095f24f541 "QrHistoryViewModel.kt" >}}
+
 
 SearchQrResultUseCaseを使ってますが、基本的にはDaoのsearchまでの橋渡しなので省略。型変換とかはしています。
 
 ## SearchBarとリストをくっつけると
 
-{{< gist 6fbecb46bd621a451e28e1095f24f541#file-qrhistoryscreen-kt >}}
+{{< gist 6fbecb46bd621a451e28e1095f24f541 "QrHistoryScreen.kt" >}}
 
 
 listを監視して、検索されたらUIに通知するみたいな感じです。
