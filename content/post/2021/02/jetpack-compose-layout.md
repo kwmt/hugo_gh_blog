@@ -389,3 +389,10 @@ fun ChipPreview() {
 ```
 
 <img src="/images/2021/02/layout/complecate_custom_layout.png" width="300" />
+
+
+### Constraint Layout
+
+`ConstraintLayout`は、コンポーザブルを画面上に相対的に配置するのに役立ち、複数の行、列、およびボックスを使用する代替手段です。ConstraintLayoutは、より複雑な整列要件を持つ大規模なレイアウトを実装する場合に便利です。
+
+Note: ビューシステムでは、フラットなビュー階層の方がパフォーマンスに優れているため、大きくて複雑なレイアウトを作成するには ConstraintLayout が推奨されていました。しかし、深いレイアウト階層を効率的に扱えるComposeでは、この点は気になりません。

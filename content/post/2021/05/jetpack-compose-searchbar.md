@@ -8,7 +8,7 @@ slug = ""
 author = "kwmt27"
 categories = ["Android"]
 tags = ["Android", "Jetpack", "Compose","Room"]
-keywords = ["Android", "Jetpack", "Compose","SearchBar","インクリメンタルサーチ","インクリメンタル検索","検索バー",]
+keywords = ["Android", "Jetpack", "Compose","SearchBar","インクリメンタルサーチ","インクリメンタル検索","検索バー"]
 +++
 
 # はじめに

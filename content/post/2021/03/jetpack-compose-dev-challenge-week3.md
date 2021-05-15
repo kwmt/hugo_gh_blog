@@ -98,3 +98,34 @@ Row(
     horizontalArrangement = Arrangement.SpaceBetween
 )
 ```
+
+### 横方向にリストを作るには
+
+```kotlin
+LazyRow(
+    content = {
+        items(viewModel.themes) { theme ->
+            // Cardなど
+        }
+    }
+)
+```
+
+### LazyRowのパディングをつけるには
+
+- アイテム間のスペースを開けるには
+
+```kotlin
+horizontalArrangement = spacedBy(8.dp),
+```
+
+- LazyRowの左右のpaddingを開けるには
+
+```kotlin
+contentPadding = PaddingValues(start = 16.dp, end = 16.dp),
+```
+
+<img src="/images/2021/03/jetpack-compose-dev-challenge-week3/lazy_row.png" />
+
+
+### 縦方向にリストを作るには
