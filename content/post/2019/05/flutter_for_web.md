@@ -161,4 +161,4 @@ $ webdev serve
 
 ## ブラウザでlocalhost:8080にアクセス
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おー！flutter for webが動いた！感動！！ <a href="https://t.co/Nq6vqG3ABW">pic.twitter.com/Nq6vqG3ABW</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1126001578752655362?ref_src=twsrc%5Etfw">May 8, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おー！flutter for webが動いた！感動！！ <a href="https://t.co/Nq6vqG3ABW">pic.twitter.com/Nq6vqG3ABW</a></p>&mdash; yasi kawamoto (@yasi_kawamoto) <a href="https://twitter.com/yasi_kawamoto/status/1126001578752655362?ref_src=twsrc%5Etfw">May 8, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

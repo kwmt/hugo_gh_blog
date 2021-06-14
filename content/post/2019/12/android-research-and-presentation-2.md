@@ -30,7 +30,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-2/arap.png"
 僕の発表資料はこちらです。
 
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">発表資料 公開しました！<a href="https://t.co/RNnKxTuwl0">https://t.co/RNnKxTuwl0</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1187988081191706626?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">発表資料 公開しました！<a href="https://t.co/RNnKxTuwl0">https://t.co/RNnKxTuwl0</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@yasi_kawamoto) <a href="https://twitter.com/yasi_kawamoto/status/1187988081191706626?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ### 途中からモクモク会に変更
@@ -42,7 +42,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-2/arap.png"
 
 もくもく会の進め方としては、まずどんなことをもくもくするかいいあって、時間が経ったら最後にどうだったか成果のようなものを軽く発表するという形にしました。これは以前モクモク会だけのイベントをしたときにやってたことでした。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今日は発表者が僕一人だったため、残りの時間はもくもく会になってますー <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1188006247905124352?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今日は発表者が僕一人だったため、残りの時間はもくもく会になってますー <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@yasi_kawamoto) <a href="https://twitter.com/yasi_kawamoto/status/1188006247905124352?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 1人の参加者がやっていたことは、Android端末からラズパイだったかな？ちょっと忘れましたが、そういった端末にBloothoothでファイル送信して、送信したら通知がでるのを検知してアプリ上でダイアログとかを出したいとのことでした。
@@ -50,7 +50,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-2/arap.png"
 やられてることも興味深かったのですが、通知領域にくる通知を自分のアプリでしることができるというのをしらなかったので、勉強になりました。
 ついでにサンプル作ってみたので、ご興味ある方は見てみてください。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">NotificationLisntenerServiceで困ってた人がいたので、サンプル作った！ <a href="https://t.co/hvyEXvwMgR">https://t.co/hvyEXvwMgR</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1188006522015514625?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">NotificationLisntenerServiceで困ってた人がいたので、サンプル作った！ <a href="https://t.co/hvyEXvwMgR">https://t.co/hvyEXvwMgR</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@yasi_kawamoto) <a href="https://twitter.com/yasi_kawamoto/status/1188006522015514625?ref_src=twsrc%5Etfw">October 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 僕の方は、 Kotlin Multiplatform project(MPP)でAndroidアプリを作っていたので、その続きをしてました。
 MPPはAndroidアプリにGoogleMapを表示して、サーバーにあるストアを表示する簡単なものです。

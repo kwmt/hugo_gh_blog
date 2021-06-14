@@ -28,7 +28,7 @@ Exampleのあったので、確認のためRunしてみる。
 
 <blockquote class="twitter-tweet" width="550">
   <p lang="en" dir="ltr">
-    <a href="https://twitter.com/kwmt27">@kwmt27</a> All strings contain the empty string.
+    <a href="https://twitter.com/yasi_kawamoto">@yasi_kawamoto</a> All strings contain the empty string.
   </p>
   
   <p>

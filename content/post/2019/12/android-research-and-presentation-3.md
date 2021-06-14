@@ -31,7 +31,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-3/arap.png"
 まず、エントランスです。
 完結でわかりやすい会場の案内を書いてくださってて、とても嬉しかったです！
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">スゴイ！案内を準備してくださってる〜 感謝感謝！　<a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a> <a href="https://t.co/DPQKfrxtKh">pic.twitter.com/DPQKfrxtKh</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1200637716599205888?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">スゴイ！案内を準備してくださってる〜 感謝感謝！　<a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a> <a href="https://t.co/DPQKfrxtKh">pic.twitter.com/DPQKfrxtKh</a></p>&mdash; yasi kawamoto (@yasi_kawamoto) <a href="https://twitter.com/yasi_kawamoto/status/1200637716599205888?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 おみやげの通りもんを持っていきました！
@@ -80,7 +80,7 @@ Androidのコアな話が聞けて、とても勉強になりました。
 
 最後は僕の発表です。RetrofitというライブラリのCallAdapterについて発表しました。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨日発表した資料です！<br>RetrofitのCallAdapter、完全に理解した！<a href="https://t.co/PD5vs25xic">https://t.co/PD5vs25xic</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/1200993649716318208?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨日発表した資料です！<br>RetrofitのCallAdapter、完全に理解した！<a href="https://t.co/PD5vs25xic">https://t.co/PD5vs25xic</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@yasi_kawamoto) <a href="https://twitter.com/yasi_kawamoto/status/1200993649716318208?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <img src="/images/2019/12/android-research-and-presentation-3/presen_4.png">
 

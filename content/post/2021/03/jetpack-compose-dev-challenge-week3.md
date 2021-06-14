@@ -129,3 +129,14 @@ contentPadding = PaddingValues(start = 16.dp, end = 16.dp),
 
 
 ### 縦方向にリストを作るには
+
+
+### スクロール
+https://developer.android.com/jetpack/compose/gestures
+
+### 画像素材
+https://www.pexels.com/photo/scenic-view-of-mountains-during-dawn-1266810/
+
+### アイコン素材
+https://www.flaticon.com/free-icon/sunny_890347?term=weather&page=1&position=48&page=1&position=48&related_id=890347&origin=search
+

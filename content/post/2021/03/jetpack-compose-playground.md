@@ -41,7 +41,7 @@ fun SampleList() {
     LazyColumn {
         items(5) { index ->
             // 各要素で表示したいUIを書く。
-            ListItem(index) 
+            ListItem(index)     
         }
     }
 }

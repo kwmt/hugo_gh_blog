@@ -291,7 +291,7 @@ Can I get prepaid SIM card?っめ言ったら、何日滞在するか聞かれ�
 <img width="80%" src="/images/2018/05/googleio-20180504/IMG_2002.jpg" />
 </div>
 
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ローカルなスタバに来たけど、早すぎて聞き取れん。。ブラックコーヒーが良かったのに砂糖入ってる。 (@ Starbucks in San Bruno, CA) <a href="https://t.co/5ob9iLsSQB">https://t.co/5ob9iLsSQB</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/kwmt27/status/992482307213848577?ref_src=twsrc%5Etfw">2018年5月4日</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ローカルなスタバに来たけど、早すぎて聞き取れん。。ブラックコーヒーが良かったのに砂糖入ってる。 (@ Starbucks in San Bruno, CA) <a href="https://t.co/5ob9iLsSQB">https://t.co/5ob9iLsSQB</a></p>&mdash; yasi kawamoto (@kwmt27) <a href="https://twitter.com/yasi_kawamoto/status/992482307213848577?ref_src=twsrc%5Etfw">2018年5月4日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
