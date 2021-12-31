@@ -15,6 +15,8 @@ title = "2021年振り返り"
 - :x: やっぱりGoogle IOなどを英語でちゃんと理解したいので、英語の発音をちゃんと理解できるようになりたい。
   - 英語の勉強という勉強はやってない気がします。英語のYoutubeはいくつか見ましたが、英語の勉強というより動画の内容重視で見たので、勉強はしてないです。
 
+# 趣味
+趣味アプリでは[QRコードリーダー](https://play.google.com/store/apps/details?id=net.kwmt27.qrcode_reader)を公開していますが、それをJetpack Composeで置き換えたりしてました。まだ全部ではないですが、カメラ部分はCameraXとJetpackComposeの組み合わせてです。
 
 # 仕事関連
 
