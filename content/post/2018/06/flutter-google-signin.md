@@ -3,7 +3,7 @@ date = "2018-06-22T09:50:00+09:00"
 title = "flutter Google SignInのexampleをやってみた"
 draft = false
 categories = ["flutter"]
-tags = ["flutter", "Google SignIn"]
+tags = ["flutter", "Google SignIn"]
 +++
 
 

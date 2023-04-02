@@ -4,7 +4,7 @@ date = "2018-06-21T15:00:00+09:00"
 title = "flutter codelabをやってみた"
 draft = false
 categories = ["flutter"]
-tags = ["flutter", "codelab"]
+tags = ["flutter", "codelab"]
 +++
 
 # はじめに

@@ -3,7 +3,7 @@ date = "2018-06-23T15:30:00+09:00"
 title = "Dart2のコンストラクタがわからなかったのでメモ"
 draft = false
 categories = ["flutter"]
-tags = ["flutter", "dart2"]
+tags = ["flutter", "dart2"]
 +++
 
 # はじめに

@@ -3,7 +3,7 @@ date = "2018-06-24T16:30:00+09:00"
 title = "Building Layouts in Flutterを読んだときのメモ"
 draft = false
 categories = ["flutter"]
-tags = ["flutter", "layout"]
+tags = ["flutter", "layout"]
 +++
 
 # はじめに
