@@ -1,1 +1,1 @@
-[![wercker status](https://app.wercker.com/status/8da61a3340ca71679c1753f26cfbd646/s/master "wercker status")](https://app.wercker.com/project/byKey/8da61a3340ca71679c1753f26cfbd646)
+![deploy](https://github.com/kwmt/hugo_gh_blog/actions/workflows/gh-pages.yml/badge.svg)
