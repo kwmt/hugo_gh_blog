@@ -2,24 +2,39 @@
 baseurl = "https://kwmt27.net/"
 languageCode = "ja"
 title = "Androg"
-theme = "hugo-theme-crisp"
+theme = "puppet"
 enableEmoji = true
+# Google analytics
+googleAnalytics = "UA-39334884-1"
+disqusShortname = "kwmt27"
 
 [params]
   DateForm = "Jan 02 , 2006"
   languageCode = "ja"
   countryCode = "ja"
 
+
   # Warning Keys are case sensitives
 #  Subtitle = "Il existe moins bien mais c'est plus cher !"
 #  description = "Dévéloppeur, bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le web."
 #  cover = "/images/cover.jpg"
 
-  # Google analytics
-  ga = "UA-39334884-1"
+[params.social]
   twitter = "yasi_kawamoto"
   github = "kwmt"
-  disqus = "kwmt27"
+  
+[params.sidebar]
+enable = true
+avatar = "https://ja.gravatar.com/userimage/93860812/00b6ee3c5005fbd5ca9a4571908ce3ee.jpg?size=200"
+bio = "a personal website"
+
+
+[params.giscus]
+enable = true
+repo_id = "kwmt27"
+category = "General"
+input_position = "top"
+
 
 [indexes]
   category = "categories"
