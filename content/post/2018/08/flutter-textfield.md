@@ -11,7 +11,7 @@ tags = ["Flutter","TextFormField"]
 Flutterで、LINEでメッセージ入力するときのように、テキストフィールドが最大3行になるようにしたい。
 つまり、下の動画のようにしたい。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ALKp97TTAMM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{{< youtube ALKp97TTAMM >}}
 
 
 # コード例とポイント説明

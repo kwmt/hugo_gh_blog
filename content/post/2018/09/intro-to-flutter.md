@@ -29,7 +29,8 @@ tags = ["Flutter","登壇"]
 
 まず自己紹介でチャットアプリを作成中で下記の動画で紹介しました。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gNALr-zmpFY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{{< youtube gNALr-zmpFY >}}
+
 
 現在Flutterでチャットアプリを作成中でして、ちょっと動画あるので再生しますね。
 SNSログインして、チャットルームを作成します。このときチャットルームの写真を撮っています。チャットルーム名にGopherと入れて、Gopherという名前のチャットルームができました。
