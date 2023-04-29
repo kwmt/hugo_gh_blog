@@ -33,13 +33,13 @@ tags = ["Flutter","LT"]
 cached_network_imageプラグインというのが公式ドキュメントに載っているのが見つかります。
 
 
-<img src="/images/2018/08/flutter-workshop-gdgkobe/working_with_cached_images.png" />
+{{<figure src="/images/2018/08/flutter-workshop-gdgkobe/working_with_cached_images.png">}}
 
 
 これを使おうとして、flutter packages getすると、「cached_network_imageはuuidプラグインに依存していてバージョン0.5.3が必要です」というエラーが出てしまいました。これはuuidプラグインのバージョン1.0.0以上を使っている場合にエラーになります。
 
 
-<img src="/images/2018/08/flutter-workshop-gdgkobe/pacakges_get_fail.png" />
+{{<figure src="/images/2018/08/flutter-workshop-gdgkobe/pacakges_get_fail.png" >}}
 
 issueを見てみると、29日前にissueが上がってたり、
 
