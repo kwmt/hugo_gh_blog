@@ -20,11 +20,7 @@ GDD 2011 のDevQuizに初めてチャレンジしました。
   
 プログラム作って解答コードを取得してね。 
 
-<pre class="brush: java; title: ; notranslate" title="">package com.google.android.apps.gddquiz;
-interface IQuizService {
-String getCode();
-}
-</pre>
+{{< gist 6f374b229996e27fdbfbe82ee99bd025 >}}
 
 ※AIDL（Android Interface Definition Language）とは、IDLの一種で、プロセス間通信行うためのものです。 
 
@@ -51,65 +47,8 @@ IQuizService.aidl ファイルをsrcに作成し、上のコードをコピペ�
 
 ## Activity
 
-<pre class="brush: java; title: ; notranslate" title="">package com.google.android.apps.gddquiz;
-// import は省略
-public class MainActivity Extends Activity {
-TextView mTextView;
-Button mButton;
-@Override
-public void onCreate(Bundle savedInstanceState) {
-super.onCreate(savedInstanceState);
-setContentView(R.layout.main);
-mTextView = (TextView)findViewById(R.id.hello);
-mButton = (Button)findViewById(R.id.startservice);
-// ボタンにリスナーを設定
-mButton.setOnClickListener(new startClickListener());
-}
-// リスナー
-public class startClickListener implements OnClickListener {
-@Override
-public void onClick(View v) {
-// bindService()をコール
-serviceConnect();
-}
-}
-public void serviceConnect(){
-// public abstract boolean bindService (Intent service, ServiceConnection conn, int flags)
-bindService(new Intent(com.google.android.apps.gddquiz.IQuizService.class.getName()), // Intent
-conn, // ServiceConnection
-BIND_AUTO_CREATE); // int:automatically create the service as long as the binding exists.
-}
-// 以下はServiceにバインドするとき、バインドして何がしたいのかの設定
-IQuizService mQuizService;
-Boolean mStartedService=false;
-private ServiceConnection conn = new ServiceConnection() {
-@Override
-public void onServiceConnected(ComponentName name, IBinder service) {
-Log.d("ServiceConnection","onServiceConnected Start");
-mQuizService = com.google.android.apps.gddquiz.IQuizService.Stub.asInterface(service);
-mStartedService = true;
-getStringInQuizService();
-}
-@Override
-public void onServiceDisconnected(ComponentName name) {
-mQuizService = null;
-mStartedService = false;
-}
-};
-public void getStringInQuizService(){
-super.onResume();
-if( mQuizService != null ){
-try {
-String ans = mQuizService.getCode().toString();
-mTextView.setText((String)ans);
-Log.d("AnsCode",ans); // 答えをLogCatに出力
-//Toast.makeText(this, ans, Toast.LENGTH_LONG).show(); // 先にToast表示したけど、コピペできないじゃん。。。
-} catch (RemoteException e) {
-}
-}
-}
-}
-</pre>
+{{< gist e23004c96816ef08e600d279f69468c0 >}}
+
 
 ## Service
 
@@ -140,27 +79,6 @@ return null;
 
 serviceタグを記述する。
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.google.android.apps.gddquiz"
-android:versionCode="1"
-android:versionName="1.0"&gt;
-&lt;uses-sdk android:minSdkVersion="4" /&gt;
-&lt;application android:icon="@drawable/icon" android:label="@string/app_name"&gt;
-&lt;activity android:name="com.google.android.apps.gddquiz.MainActivity"
-android:label="@string/app_name"&gt;
-&lt;intent-filter&gt;
-&lt;action android:name="android.intent.action.MAIN" /&gt;
-&lt;category android:name="android.intent.category.LAUNCHER" /&gt;
-&lt;/intent-filter&gt;
-&lt;/activity&gt;
-&lt;service android:name="TestService"&gt;
-&lt;intent-filter&gt;
-&lt;action android:name="com.google.android.apps.gddquiz.IQuizService"/&gt;
-&lt;/intent-filter&gt;&gt;
-&lt;/service&gt;
-&lt;/application&gt;
-&lt;/manifest&gt;
-</pre>
+{{< gist 5e6fc34b1daab690b30d833d65862eb6 >}}
 
 以上です。AIDL自体は知識としては知っていたけど、初めて使ったなぁ。
