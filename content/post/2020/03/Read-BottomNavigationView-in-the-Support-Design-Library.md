@@ -20,7 +20,7 @@ keywords = [""]
 
 ちなみに、BottomNavigationというのはこのようなものです。
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/fa066bad-6be9-09be-bfa3-cceae7789771.gif" width="300">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/fa066bad-6be9-09be-bfa3-cceae7789771.gif" width="300" >}}
 
 
 # BottomNavigationViewを読む
@@ -32,7 +32,7 @@ keywords = [""]
 
 IllegalArgumentExceptionが出ます。
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/9411395c-ce05-9eef-2575-889a9a40ac24.png" width="300">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/9411395c-ce05-9eef-2575-889a9a40ac24.png" width="300" >}}
 
 
 
@@ -40,7 +40,7 @@ IllegalArgumentExceptionが出ます。
 
 Exceptionは出ずに、2個表示されます。
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/60b1d188-c79f-07e1-e1d8-7e41c8aa5b57.png" width="300">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/60b1d188-c79f-07e1-e1d8-7e41c8aa5b57.png" width="300" >}}
 
 
 
@@ -92,12 +92,12 @@ final MenuItem item = super.addInternal(group, id, categoryOrder, title);
 ```xml
 <color name="colorPrimary">#3F51B5</color>
 ```
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/f749b02d-f9d0-193a-8982-8bf9baf209df.png">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/f749b02d-f9d0-193a-8982-8bf9baf209df.png" >}}
 
 
 と青く表示されて、`colorPrimary`を変更するだけで下図のようにアイコンの色(とテキストの色)を変更できます。
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/89b25b00-cdb1-d35e-372c-6aef54e65646.png">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/89b25b00-cdb1-d35e-372c-6aef54e65646.png" >}}
 
 
 
@@ -183,7 +183,7 @@ return new ColorStateList(new int[][]{
 
 ## [ガイドライン]高さ: 56 dp
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/56511c3a-ee9d-ad90-6979-3c0cce1936c1.png" width="300">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/56511c3a-ee9d-ad90-6979-3c0cce1936c1.png" width="300" >}}
 
 
 
@@ -198,7 +198,7 @@ return new ColorStateList(new int[][]{
 ## [ガイドライン]アイコン: 24 x 24 dp、テキストの下に 10 dp、テキストサイズRoboto Regular 14sp (active view)、Roboto Regular 12sp (inactive view)
 
 ### アイコン: 24 x 24 dp
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/737f5870-2f08-8e40-c448-a9df566546bd.png" width="300">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/737f5870-2f08-8e40-c448-a9df566546bd.png" width="300" >}}
 
 
 メニュー1個を表すClassは`BottomNavigationItemView` になりますが、レイアウトは[design_bottom_navigation_item.xml](https://github.com/android/platform_frameworks_support/blob/master/design/res/layout/design_bottom_navigation_item.xml)で決めれています。
@@ -261,7 +261,7 @@ android:paddingBottom="10dp"
 
 この記事の最初と同じものですが、
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/fa066bad-6be9-09be-bfa3-cceae7789771.gif" width="300">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/fa066bad-6be9-09be-bfa3-cceae7789771.gif" width="300" >}}
 
 アイコンの動きをよく見ると、選択時にアイコンが少し上にアニメーションして動き、非選択時に下にアニメーションしているのがわかるかと思います。これをどのように実装しているかを見ていきます。
 
@@ -340,7 +340,7 @@ TransitionManager.beginDelayedTransition(view, mSet);
 
 ## [ガイドライン]アクションが4つまたは5つの場合は、アクティブではないビューにはアイコンしか表示しません。
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/22161/99de8cac-8ab0-404e-4664-f003d8366c64.png" width="300">
+{{< figure src="https://qiita-image-store.s3.amazonaws.com/0/22161/99de8cac-8ab0-404e-4664-f003d8366c64.png" width="300" >}}
 
 
 `BottomNavigationMenuView`がメニューを作成する際に`buildMenuView`メソッドが呼ばれますが、そこで`mShiftingMode = mMenu.size() > 3;`

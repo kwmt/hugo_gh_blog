@@ -18,7 +18,7 @@ tags = ["モバもく会", "勉強会", "Android"]
 <a target="_blank" href="https://github.com/trending/java?since=weekly">https://github.com/trending/java?since=weekly</a>
 
 
-<img src="/images/2017/07/mobamock/trending.png">
+{{< figure src="/images/2017/07/mobamock/trending.png" >}}
 
 
 
@@ -56,7 +56,7 @@ style="@style/AppTheme.Toolbar"
 
 サンプル動かしてみました。
 
-<img src="/images/2017/07/mobamock/before.png" width="300">
+{{< figure src="/images/2017/07/mobamock/before.png" width="300" >}}
 
 「下拉可以刷新」などの中国語で書かれてるところを変更したいなぁと思ってソースを見てみました。
 
@@ -88,7 +88,7 @@ index 2b056cd..fbdf4a7 100644
 
 下記のように変更出来ました。
 
-<img src="/images/2017/07/mobamock/after.png" width="300">
+{{< figure src="/images/2017/07/mobamock/after.png" width="300" >}}
 
 
 Pull to refreshとは直接関係ありません、サンプルソースを見ていてこれは使っていきたいなぁと思ったのが、

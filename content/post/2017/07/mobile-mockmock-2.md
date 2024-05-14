@@ -60,11 +60,11 @@ snowアプリみたいなことができるライブラリのようです。
 
 起動してスタンプを選択して、顔にカメラを向けると、
 
-<img src="/images/2017/07/mobamock2/PLDroidShortVideo_sample.png" width="300">
+{{< figure src="/images/2017/07/mobamock2/PLDroidShortVideo_sample.png" width="300" >}}
 
 このようになり、保存できます。
 
-<img src="/images/2017/07/mobamock2/PLDroidShortVideo_sample_image.png" width="300">
+{{< figure src="/images/2017/07/mobamock2/PLDroidShortVideo_sample_image.png" width="300" >}}
 
 
 あと動画も撮れるようですが、スタンプを入れたまま動画の作成は出来ませんでした。

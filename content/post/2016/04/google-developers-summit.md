@@ -6,7 +6,7 @@ title = "Google Developers Summit Tokyo 2016 | Android に行ってきた"
 
 +++
 
-<img src="http://kwmt27.net/images/2016/04/gds.jpg">
+{{< figure src="http://kwmt27.net/images/2016/04/gds.jpg" >}}
 
 # はじめに
 

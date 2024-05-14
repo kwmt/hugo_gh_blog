@@ -24,7 +24,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-2/arap.png"
 
 
 雰囲気です。
-<img src="/images/2019/12/android-research-and-presentation-2/presen.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-2/presen.png" >}}
 
 
 僕の発表資料はこちらです。

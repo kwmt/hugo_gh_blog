@@ -11,7 +11,7 @@ tags = ["Kotlin"]
 
 Kotlin + Dagger2を使って、下記のようなエラーが出た。
 
-<img src="/images/2017/10/kotlin-error/kaptDevelopDebugKotlin.png">
+{{< figure src="/images/2017/10/kotlin-error/kaptDevelopDebugKotlin.png" >}}
 
 
 >  See log for more details

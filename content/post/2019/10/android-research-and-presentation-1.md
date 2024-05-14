@@ -26,7 +26,7 @@ keywords = [""]
 参加人数としては、発表してくださる方が3人、聞きに来てくださった方が2人の合計5人です。
 
 ## 全体的な写真
-<img src="/images/2019/10/android-research-and-presentation-1/arap_osaka_1.png" width="500">
+{{< figure src="/images/2019/10/android-research-and-presentation-1/arap_osaka_1.png" width="500" >}}
 
 ## 勉強会の様子
 
@@ -35,13 +35,13 @@ keywords = [""]
 
 画像が全体が入ってないし、荒いのですが会場案内とこの勉強会について説明しているところがこんな感じです。
 
-<img src="/images/2019/10/android-research-and-presentation-1/arap_about.png" width="500">
+{{< figure src="/images/2019/10/android-research-and-presentation-1/arap_about.png" width="500" >}}
 
 毎月月末の土曜日に開催していきたいという話しをしているところあたりです。12月は28日だからめっちゃ月末やん、まぁ忘年会も一緒にやれたらいいかもですね、とかいう会話も混ざったりして、なごやかな雰囲気でした。
 
 続いて、僕のLifecycleについて発表しました。その時の写真ですが、ぜんぜん写ってない・・・。時間的には40分話しました。
 
-<img src="/images/2019/10/android-research-and-presentation-1/arap_lifecycle.png" width="500">
+{{< figure src="/images/2019/10/android-research-and-presentation-1/arap_lifecycle.png" width="500" >}}
 
 
 会場説明と発表が続いたので、休憩をいれました。
@@ -50,16 +50,16 @@ keywords = [""]
 そのあと、パフォーマンス・チューニングの話をしてくださいました。
 時間は20分ちょうどでしたね。
 
-<img src="/images/2019/10/android-research-and-presentation-1/arap_performance.png" width="500">  
+{{< figure src="/images/2019/10/android-research-and-presentation-1/arap_performance.png" width="500" >}}  
 
 
 続いて、組み込みAndroidの話です。20分予定がだいぶオーバーして1時間喋ってましたねｗ
 
-<img src="/images/2019/10/android-research-and-presentation-1/arap_androidthings.jpg" width="500">
+{{< figure src="/images/2019/10/android-research-and-presentation-1/arap_androidthings.jpg" width="500" >}}
 
 Android Thingsを持ってきて実演してくださったりもしました。
 
-<img src="/images/2019/10/android-research-and-presentation-1/arap_iot.jpg" width="500">  
+{{< figure src="/images/2019/10/android-research-and-presentation-1/arap_iot.jpg" width="500" >}}  
 
 時間については短くなったりオーバーしたりしてもいいとは言ったものもの、ある程度調整は必要かと思いましたw
 
@@ -68,7 +68,7 @@ Android Thingsを持ってきて実演してくださったりもしました。
 
 そのときのビールの写真ですｗこれしかなかった。。。
 
-<img src="/images/2019/10/android-research-and-presentation-1/arap_beer.png" width="300">  
+{{< figure src="/images/2019/10/android-research-and-presentation-1/arap_beer.png" width="300" >}}  
 
 
 

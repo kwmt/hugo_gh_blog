@@ -16,7 +16,7 @@ macOSで保存していないときなど下のようなダイアログが出る
 しかし保存したくないときは`Dont't Save`をクリックすればいいのですが、マウスやトラックパッドを使わずキーボードだけで`Dont't Save`を押したい場合ないですか？
 それがしばらく分からなかった（調べようともしてませんでしたが）のですが、ようやく調べたのでメモしておこうと思います。
 
-<img src="/images/2020/12/shortcut-for-moving-daialog-focus/mac-dialog.png">
+{{< figure src="/images/2020/12/shortcut-for-moving-daialog-focus/mac-dialog.png" >}}
 
 
 ```
@@ -28,7 +28,7 @@ Use Keyboard navigation to move focus between controls
 ```
 というチェックボックスがあるので、そこをチェックするだけです。
 
-<img src="/images/2020/12/shortcut-for-moving-daialog-focus/move-focus.png">
+{{< figure src="/images/2020/12/shortcut-for-moving-daialog-focus/move-focus.png" >}}
 
 これでダイアログが出ている状態でタブを押すとフォーカスが移動してくれて、冒頭の例だと`Dont't Save`の位置にタブで移動し、Enterキーを押せばキーボードだけで保存しないようにできます。
 

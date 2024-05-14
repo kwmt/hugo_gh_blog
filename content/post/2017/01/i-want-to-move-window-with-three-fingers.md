@@ -21,12 +21,12 @@ tags = ["トラックバッド"]
 システム環境設定→**アクセシビリティ**
 に行き、左側の「マウス/トラックパッド」を選択後、「トラックパッドオプション」をクリックする。
 
-<img src="/images/2017/01/three-fingers-01.png">
+{{< figure src="/images/2017/01/three-fingers-01.png" >}}
 
 
 「ドラッグを有効にする」にチェックが入っていないのでチェックを入れ、右側のリストで「3本指のドラッグ」を選択してOKを押せば3本指でウィンドウの移動が可能になる。
 
 
-<img src="/images/2017/01/three-fingers-02.png">
+{{< figure src="/images/2017/01/three-fingers-02.png" >}}
 
 以上

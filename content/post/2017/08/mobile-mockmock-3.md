@@ -24,7 +24,7 @@ tags = ["モバもく会", "勉強会"]
 
 ちなみに、BottomNavigationというのはこのようなものです。
 
-<img src="/images/2017/08/mobamock3/bottom_navigation.gif" width="300">
+{{< figure src="/images/2017/08/mobamock3/bottom_navigation.gif" width="300" >}}
 
 
 # まとめた内容

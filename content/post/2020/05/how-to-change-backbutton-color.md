@@ -16,7 +16,7 @@ FlutterでたとえばNavigator.pushした先の画面で、バックボタン�
 たとえば、下図の例では白色に変えていますが、このようにしたいという話です。
 
 
-<img src="/images/2020/05/how-to-change-backbutton-color/target.png">
+{{< figure src="/images/2020/05/how-to-change-backbutton-color/target.png" >}}
 
 
 
@@ -24,7 +24,7 @@ FlutterでたとえばNavigator.pushした先の画面で、バックボタン�
 
 [^1]: [theme_data.dart](https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/theme_data.dart#L320) を参照ください。`primaryIconTheme` は `primaryIsDark` によって白か黒かを決めていて、`primaryIsDark`は `estimateBrightnessForColor(primaryColor)` と `primaryColor`によって決まっているのが分かるかと思います。
 
-<img src="/images/2020/05/how-to-change-backbutton-color/default.png" width="75">
+{{< figure src="/images/2020/05/how-to-change-backbutton-color/default.png" width="75" >}}
 
 
 その色を変更する方法として、`AppBar` に `iconTheme` を設定できますので、そこに次のように`IconThemeData` を使って変更したいカラーを設定します。

@@ -44,7 +44,7 @@ HerokuにデプロイするためにHerokuに新規アプリを作成しまし�
 % heroku open --app heroku-with-go
 ```
 
-<img src="/images/2017/03/heroku-welcom.png">
+{{< figure src="/images/2017/03/heroku-welcom.png" >}}
 
 
 
@@ -182,7 +182,7 @@ heroku	https://git.heroku.com/heroku-with-go.git (push)
 
 とすると
 
-<img src="/images/2017/03/heroku-with-go.png">
+{{< figure src="/images/2017/03/heroku-with-go.png" >}}
 
 と期待どうりになっていることがわかるかと思います。
 
@@ -284,9 +284,9 @@ Dockerイメージ[`heroku/go`がGodepsに依存](https://github.com/heroku/dock
 
 
 
-<img src="/images/2017/03/heroku-with-docker.png">
+{{< figure src="/images/2017/03/heroku-with-docker.png" >}}
 
-<img src="/images/2017/03/heroku-with-docker2.png">
+{{< figure src="/images/2017/03/heroku-with-docker2.png" >}}
 
 
 

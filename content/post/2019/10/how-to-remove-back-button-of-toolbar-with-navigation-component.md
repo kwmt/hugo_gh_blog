@@ -22,6 +22,6 @@ keywords = [""]
 {{< gist e9307d8e0f37418d0a60b28269e307f2 >}}
 
 
-<img src="/images/2019/10/how-to-remove-back-button-of-toolbar-with-navigation-component/home.png" width="300">
-<img src="/images/2019/10/how-to-remove-back-button-of-toolbar-with-navigation-component/about.png" width="300">
+{{< figure src="/images/2019/10/how-to-remove-back-button-of-toolbar-with-navigation-component/home.png" width="300" >}}
+{{< figure src="/images/2019/10/how-to-remove-back-button-of-toolbar-with-navigation-component/about.png" width="300" >}}
 

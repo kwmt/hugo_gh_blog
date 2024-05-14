@@ -48,7 +48,7 @@ func updateUIView(Self.UIViewType, context: Self.Context)
 
 ## 完成
 
-<img src="/images/2019/10/googlemap-on-swiftui/googlemap-swiftui.png" width="300">
+{{< figure src="/images/2019/10/googlemap-on-swiftui/googlemap-swiftui.png" width="300" >}}
 
 ## 補足
 

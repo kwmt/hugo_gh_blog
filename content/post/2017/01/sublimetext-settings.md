@@ -21,7 +21,7 @@ macをクリーンインストールして、Sublime Text3を入れ直したは�
 Command＋Shift＋Pを押す（Tools→Command Pallet…でもOK）
 
 下図のようなもの
-<img src="/images/2017/01/command-pallet.png">
+{{< figure src="/images/2017/01/command-pallet.png" >}}
 
 ## 基本的なインストール方法
 
@@ -37,7 +37,7 @@ Command＋Shift＋Pを押す（Tools→Command Pallet…でもOK）
 
 <a href="https://packagecontrol.io/packages/Dockerfile%20Syntax%20Highlighting" target="_blank">Dockerfile syntax Highlighting</a>
 
-<img src="/images/2017/01/dockerfile-sytax.png">
+{{< figure src="/images/2017/01/dockerfile-sytax.png" >}}
 
 こんな感じになって快適！
 
@@ -53,7 +53,7 @@ Command＋Shift＋Pを押す（Tools→Command Pallet…でもOK）
 
 Monokai Extendedを入れたら、SublimeText→Preferences→Color Scheme→Monokai Extended→変更したいカラーテーマを選ぶ
 
-<img src="/images/2017/01/markdown-color-setting.png">
+{{< figure src="/images/2017/01/markdown-color-setting.png" >}}
 
 
 

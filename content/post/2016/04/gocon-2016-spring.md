@@ -6,7 +6,7 @@ title = "GoCon 2016 springに行ってきた"
 
 +++
 
-<img src="http://kwmt27.net/images/2016/04/gocon.jpg">
+{{< figure src="http://kwmt27.net/images/2016/04/gocon.jpg" >}}
 
 4/23(土)は、<a href="http://gocon.connpass.com/event/27521/" target="_blank">GoCon2016 Spring</a>に行ってきました。
 

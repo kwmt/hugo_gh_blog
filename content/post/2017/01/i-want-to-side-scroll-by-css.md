@@ -7,7 +7,7 @@ tags = ["CSS","Riot.js"]
 +++
 
 ## 横スクロールしたい
-<img src="/images/2017/01/side-scroll-sample.png">
+{{< figure src="/images/2017/01/side-scroll-sample.png" >}}
 
 
 ```html

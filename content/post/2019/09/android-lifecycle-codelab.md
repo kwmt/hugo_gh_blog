@@ -344,7 +344,7 @@ ViewModelのMutableLiveDataが`postValue`されたら、`onChanged`メソッド�
 
 余計なViewが入っていますが、実行することこうなります。
 
-<img src="/images/2019/09/android-lifecycle-codelab/livedata.gif" width="300">
+{{< figure src="/images/2019/09/android-lifecycle-codelab/livedata.gif" width="300" >}}
 
 
 もう少しだけ補足が必要で、まず`viewModel.getElapsedTime()`は、`MutableLiveData`ではなく`LiveData`を返します。これは、Activity側では更新する必要がないため、不必要な更新ができてしまうことさけるためにこのようにしています。
@@ -504,7 +504,7 @@ mSeekBarViewModel.seekbarValue.observe(viewLifecycleOwner, Observer {
 
 次のような動画のように、片方動かすと片方も動くようになります。
 
-<img src="/images/2019/09/android-lifecycle-codelab/share_viewmodel.gif" width="300">
+{{< figure src="/images/2019/09/android-lifecycle-codelab/share_viewmodel.gif" width="300" >}}
 
 
 

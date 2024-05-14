@@ -25,7 +25,7 @@ tags = ["モバもく会", "勉強会"]
 
 こちらはモバもく会のイメージです。GoogleHomeの素晴らしさについて語っています。
 
-<img src="/images/2017/11/mobamock8.jpg" width="300">
+{{< figure src="/images/2017/11/mobamock8.jpg" width="300" >}}
 
 
 

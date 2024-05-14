@@ -37,7 +37,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-3/arap.png"
 おみやげの通りもんを持っていきました！
 無理やり感あったかもしれませんが、ぜんぶ食べて頂きました。
 
-<img src="/images/2019/12/android-research-and-presentation-3/torimon.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/torimon.png" >}}
 
 ### Kotlin Coroutines ことはじめ 
 
@@ -50,9 +50,9 @@ twitterImage = "images/2019/12/android-research-and-presentation-3/arap.png"
 
 会場の雰囲気はこんな感じでした。
 
-<img src="/images/2019/12/android-research-and-presentation-3/presen_1.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/presen_1.png" >}}
 
-<img src="/images/2019/12/android-research-and-presentation-3/presen_1_2.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/presen_1_2.png" >}}
 
 ### Jetpack compose をちょっと触ってみた
 
@@ -60,7 +60,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-3/arap.png"
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a><br>昨日、発表した資料です！<br>Jetpack compose をちょっと触ってみた<a href="https://t.co/KeBdG4vcPI">https://t.co/KeBdG4vcPI</a></p>&mdash; charcoJp (@charco_jp) <a href="https://twitter.com/charco_jp/status/1201154367740493824?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<img src="/images/2019/12/android-research-and-presentation-3/presen_2.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/presen_2.png" >}}
 
 
 こちらの方は当初Motion Layoutについての予定だったので、褒めタイムのときに「Motion Layout楽しみにしてた」というご意見も頂いたりもしました。ちなみに僕も楽しみにしてましたｗ
@@ -70,7 +70,7 @@ twitterImage = "images/2019/12/android-research-and-presentation-3/arap.png"
 
 申し込み時点では発表予定なかったのですが、当日の10時ぐらいから資料を作り始めたらしく、飛び込みで発表してくださいました。
 
-<img src="/images/2019/12/android-research-and-presentation-3/presen_3.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/presen_3.png" >}}
 
 Androidのコアな話が聞けて、とても勉強になりました。
 
@@ -82,7 +82,7 @@ Androidのコアな話が聞けて、とても勉強になりました。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨日発表した資料です！<br>RetrofitのCallAdapter、完全に理解した！<a href="https://t.co/PD5vs25xic">https://t.co/PD5vs25xic</a> <a href="https://twitter.com/hashtag/arap_osaka?src=hash&amp;ref_src=twsrc%5Etfw">#arap_osaka</a></p>&mdash; yasi kawamoto (@yasi_kawamoto) <a href="https://twitter.com/yasi_kawamoto/status/1200993649716318208?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<img src="/images/2019/12/android-research-and-presentation-3/presen_4.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/presen_4.png" >}}
 
 ### 懇親会
 
@@ -91,7 +91,7 @@ Androidのコアな話が聞けて、とても勉強になりました。
 
 ただ、全員知っているという状況でしたがｗ
 
-<img src="/images/2019/12/android-research-and-presentation-3/konsinkai.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/konsinkai.png" >}}
 
 
 
@@ -125,4 +125,4 @@ Androidのコアな話が聞けて、とても勉強になりました。
 
 会場をお借りしました[akippa](https://akippa.co.jp/)様ありがとうございました！
 
-<img src="/images/2019/12/android-research-and-presentation-3/place.png">
+{{< figure src="/images/2019/12/android-research-and-presentation-3/place.png" >}}
