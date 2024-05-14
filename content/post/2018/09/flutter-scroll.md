@@ -12,7 +12,7 @@ tags = ["Flutter","スクロール"]
 
 Flutterで、下図のように上にスクロールしてある一定の位置まで来たらWidgetを表示させ、下にスクロールしてある一定の位置まで来たら表示したWidgetを消すというのをやりたい。
 
-<img src="/images/2018/09/flutter-scroll/scroll-test.gif" width="320" />
+{{< figure src="/images/2018/09/flutter-scroll/scroll-test.gif" >}}
 
 
 ## どうやって？
