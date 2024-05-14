@@ -246,7 +246,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-<img src="/images/2018/06/building-layouts-in-flutter/stack-sample.png"  width="300"/>
+{{< figure src="/images/2018/06/building-layouts-in-flutter/stack-sample.png"  width="300" >}}
 
 このコードの`Alignment`は、オーバーラップしているText(Container)の位置を決定しています。
 引数の値は-1~1の範囲で動き、画像の真ん中が0,0で左上が-1,-1となります。

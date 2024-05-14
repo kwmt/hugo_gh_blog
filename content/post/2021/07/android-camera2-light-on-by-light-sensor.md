@@ -105,4 +105,4 @@ camera-samplesで試したコードはこちら。
 
 次の動画は、周りが暗い状態（夜の部屋）で、カメラプレビュー中に電気を消して暗くしたらライトがONし、電気をつけるとライトがOFFになる動画です。
 
-<img src="/images/2021/07/android-camera2-light-on-by-light-sensor/light.gif" width="300"/>
+{{< figure src="/images/2021/07/android-camera2-light-on-by-light-sensor/light.gif" width="300" >}}

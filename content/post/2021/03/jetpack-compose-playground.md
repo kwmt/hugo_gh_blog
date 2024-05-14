@@ -294,7 +294,7 @@ fun NetworkImageSample(
 
 これを実行すると、次のようになります。
 
-<img src="/images/2021/03/jetpack-compose-playground/image/networkimage.png" width="300"/>
+{{< figure src="/images/2021/03/jetpack-compose-playground/image/networkimage.png" width="300" >}}
 
 
 
@@ -326,7 +326,7 @@ fun CircleImageSample() {
 }
 ```
 
-<img src="/images/2021/03/jetpack-compose-playground/image/circle_image.png" width="300"/>
+{{< figure src="/images/2021/03/jetpack-compose-playground/image/circle_image.png" width="300" >}}
 
 ### 画面遷移するには
 
@@ -381,7 +381,7 @@ data class Animal(val id: String)
 https://github.com/kwmt/android-dev-challenge-compose/blob/main/app/src/main/java/com/example/androiddevchallenge/NavGraph.kt#L44
 
 
-<img src="/images/2021/03/jetpack-compose-playground/navigation/navigation.gif" width="300"/>
+{{< figure src="/images/2021/03/jetpack-compose-playground/navigation/navigation.gif" width="300" >}}
 
 
 

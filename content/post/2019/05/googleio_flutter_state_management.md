@@ -17,7 +17,7 @@ keywords = [""]
 
 たとえば３つのWidgetがあったとき、MySliderからMyChartの状態を変更する場合、下図のようにしたくなるかもしれませんが、これにはいくつか問題があります。
 
-<img src="/images/2019/05/flutter_state_management/directry-refrence.png"/>
+{{< figure src="/images/2019/05/flutter_state_management/directry-refrence.png" >}}
 
 
 1.widgetが強参照している(strongly coupling widget)
@@ -37,7 +37,7 @@ keywords = [""]
 
 下図は、UI is a functional of stateです。UI=レイアウトは、現在のアプリケーションの状態がビルドメソッドを介して決まります。
 
-<img src="/images/2019/05/flutter_state_management/ui_f_state.png"/>
+{{< figure src="/images/2019/05/flutter_state_management/ui_f_state.png" >}}
 
 つまりは、UIは他のUIから変更されません。
 findViewByIdのようなものはありません。

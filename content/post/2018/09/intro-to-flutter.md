@@ -109,7 +109,7 @@ Flutterはハイパフォーマンスのレンダリングエンジンを持っ�
 <table >
 <tr>
 <td valign="top">
-<img src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" width="300"/>
+{{< figure src="/images/2018/09/intro-to-flutter/flutter-ui-1.gif" width="300" >}}
 </td>
 <td valign="top">
 <img src="/images/2018/09/intro-to-flutter/flutter-ui-2.gif" width="300" /> 

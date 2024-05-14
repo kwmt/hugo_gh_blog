@@ -263,7 +263,7 @@ class MainActivity : AppCompatActivity() {
 
 次のようにレイアウトされ、
 
-<img src="/images/2021/02/layout/myowncolumn_complete.png" width="300"/>
+{{< figure src="/images/2021/02/layout/myowncolumn_complete.png" width="300" >}}
 
 
 上記で仕込んだログは次のようになります。
@@ -283,7 +283,7 @@ D/MyOwnColumn: yPosition:208
 
 ちなみに、標準の`Column`の場合は次のようになります。
 
-<img src="/images/2021/02/layout/column.png" width="300"/>
+{{< figure src="/images/2021/02/layout/column.png" width="300" >}}
 
 
 ### 複雑なカスタムレイアウト

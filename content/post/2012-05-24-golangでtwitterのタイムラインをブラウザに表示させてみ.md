@@ -168,7 +168,7 @@ gotweet_changeプロジェクトであれば、`gotweet_change/template/tweet.ht
 
 これを実行すると、下図のように、ユーザータイムラインを取得することができました。 
 
-<img src="http://kwmt27.net/images/2012/05/gotweet-447x300.png" alt="gotweet" width="447" height="300"/>
+{{< figure src="http://kwmt27.net/images/2012/05/gotweet-447x300.png" alt="gotweet" width="447" height="300" >}}
 
 ## 参考
 
