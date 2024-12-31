@@ -35,3 +35,21 @@ jobs:
           publish_dir: ./public
           publish_branch: master
           cname: kwmt27.net
+
+      - name: Slack Notification
+        if: always()
+        run: |
+          if [ '${{ job.status }}' = 'success' ]; then
+            COLOR="good"
+          else
+            COLOR="danger"
+          fi
+
+          jq -n --arg jobLink '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}' --arg color "${COLOR}" '{
+            attachments: [{
+              pretext: "結果 ${{ job.status }}",
+              color: $color,
+              title: $jobLink,
+              title_link: $jobLink
+            }]
+          }' | curl ${{ secrets.SLACK_WEBHOOK_URL }} -X POST -H 'Content-Type: application/json' -d @-
