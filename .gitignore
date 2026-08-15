@@ -12,3 +12,11 @@ cover.out
 .DS_Store
 *~
 /public
+
+# Hugo のビルド生成物
+/.hugo_build.lock
+/resources
+
+# GitHub Pages デプロイ用の鍵（秘密鍵をコミットしないこと）
+/gh-pages
+/gh-pages.pub
