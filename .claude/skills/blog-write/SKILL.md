@@ -1,6 +1,6 @@
 ---
 name: blog-write
-description: kwmt27.net（Hugo）の新規記事の下書きを本人の文体で書く。テーマ・メモ・ターミナルログ・スクショの説明から「調べたのでメモしておく」調の記事にし、front matter 付きで content/post/YYYY/MM/ に draft として置く。「記事書いて」「これをブログにして」「下書き作って」「Zenn 用に書いて」のときに使う。
+description: kwmt27.net（Hugo）と Zenn の新規記事の下書きを本人の文体で書く。テーマ・メモ・ターミナルログ・スクショの説明から「調べたのでメモしておく」調の記事にし、front matter 付きで Hugo なら content/post/YYYY/MM/ に、Zenn なら zenn-content リポジトリの articles/ に draft として置く。「記事書いて」「これをブログにして」「下書き作って」「Zenn 用に書いて」のときに使う。
 argument-hint: [テーマ or 元メモのパス] [--zenn]
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash(ls:*), Bash(mkdir:*), Bash(date:*), Bash(git status:*)
 ---
@@ -21,6 +21,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash(ls:*), Bash(mkdir:*), Bash(da
 ### 1. 材料を集める
 
 - `$ARGUMENTS` を見る。テーマだけ / メモファイルのパス / ターミナルログ / URL のどれか
+- 出力先を決める。`--zenn` か「Zenn 用に」と言われたら Zenn（手順 5）。指定がなく技術記事なら、本人の方針（技術記事は Zenn、振り返り・目標・業務外活動・Zenn の転載はこのブログ）に沿って Zenn でよいか、下の質問と一緒に聞く
 - 元メモがあれば全部読む。ログ・コード・エラー文は **一字も変えずに** 記事に貼る材料にする
 - 足りない材料は一度にまとめて聞く。聞くのは次のうち本文に必要なものだけ
   - 何が気になって始めたか（はじめに の材料）
@@ -67,16 +68,22 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash(ls:*), Bash(mkdir:*), Bash(da
 
 ### 5. Zenn 向け（`--zenn` または「Zenn 用に」と言われたとき）
 
-- 出力先は `content/` ではなく `$ARGUMENTS` で指定された場所。指定がなければ聞く
-- front matter は template.md の Zenn 用（YAML）。`published: false`
-- 本文は同じ。画像は Zenn にアップロードする前提で `![](<!-- TODO: zenn-user-upload の URL -->)`
-- Hugo のショートコードは使わない（`{{< figure >}}` → `![]()`、`{{< youtube >}}` → URL 直貼り）
+- 出力先は Zenn のリポジトリ `/Users/kwmt/personal/blog/zenn/zenn-content/articles/<slug>.md`。`content/` には置かない。`$ARGUMENTS` で別の場所を指定されたらそちら
+- slug は Hugo と同じ英小文字 kebab-case。ただし Zenn の制約で **英小文字・数字・ハイフン・アンダースコアの 12〜50 文字**。短い題材でも 12 文字は必要（`learn-nextjs` でちょうど 12）。ファイル名がそのまま `https://zenn.dev/yasi/articles/<slug>` になる
+- 書く前に `ls /Users/kwmt/personal/blog/zenn/zenn-content/articles/` で同名がないか確認する。あれば聞く
+- front matter は template.md の Zenn 用（YAML）。`published: false`。`emoji` は内容に合う絵文字 1 文字、`topics` は本文から 2〜4 個で既存記事の表記に合わせる（`Android`, `Kotlin`, `JetpackCompose`, `MCP`, `TypeScript`, `nextjs`, `gradle` など）
+- 本文の書き方は Hugo 向けと同じ。違いは次だけ
+  - 画像は Zenn にアップロードする前提で `![](<!-- TODO: zenn-user-upload の URL -->)`
+  - Hugo のショートコードは使わない（`{{< figure >}}` → `![]()`、`{{< youtube >}}` → URL 直貼り。Zenn は URL を 1 行で置くとカードになる）
+  - ファイル名付きコードブロック（` ```kotlin:build.gradle.kts `）と `:::message` 〜 `:::` は本人が Zenn で使っているので使ってよい
+  - 過去記事へのリンクは `/YYYY/MM/DD/slug/` ではなく `https://zenn.dev/yasi/articles/<slug>`
+- 文体・形式の正解はこのリポジトリの `.claude/rules/` にしかない（zenn-content には `.claude/` がない）。「最初に読むもの」を飛ばさない
 
 ### 6. 報告
 
 - 作ったファイルのパス
 - 本文に残した `TODO` の一覧（行番号付き）
-- 確認方法: `hugo server -D` → `http://localhost:1313/YYYY/MM/DD/<slug>/`
+- 確認方法: Hugo なら `hugo server -D` → `http://localhost:1313/YYYY/MM/DD/<slug>/`。Zenn なら zenn-content で `npx zenn preview` → `http://localhost:8000/articles/<slug>`
 - 次は `/blog-review` で公開前チェック
 
 ## やらないこと

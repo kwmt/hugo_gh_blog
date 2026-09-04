@@ -15,6 +15,7 @@ Hugo 製の個人ブログ。テーマは `themes/puppet`（git submodule）。`
 - どちらも `content/` 配下の Markdown を読むと自動で読み込まれる。新規記事を書くときは先に読むこと
 - 新規記事の下書き: `/blog-write`
 - 公開前レビュー: `/blog-review`
+- Zenn 向けの記事は別リポジトリ `/Users/kwmt/personal/blog/zenn/zenn-content/articles/` に置く（`/blog-write --zenn`、または「Zenn 用に」と言う）。プレビューはそのディレクトリで `npx zenn preview` → http://localhost:8000/ 。文体・形式の rules はこのリポジトリのものを使う
 
 ## 注意
 
