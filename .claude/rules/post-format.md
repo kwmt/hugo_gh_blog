@@ -54,8 +54,11 @@ keywords = ["Android", "Jetpack", "Compose"]
 | 画像 | `{{< figure src="/images/..." >}}`、幅指定は `width="300"` |
 | GIF | `<img src="/images/..." />` の直書きでもよい |
 | YouTube | `{{< youtube VIDEO_ID >}}` |
-| Gist | `{{< gist GIST_ID "File.kt" >}}`（`layouts/shortcodes/gist.html`。第 1 引数は gist ID、第 2 引数はファイル名） |
-| GitHub 上のファイル | `{{< gistit user/repo/blob/branch/path.kt "10:20" >}}`（gist-it.appspot.com 経由。第 2 引数は行範囲） |
+| Gist（旧記事のみ） | `{{< gist GIST_ID "File.kt" >}}`（`layouts/shortcodes/gist.html`） |
+| GitHub 上のファイル（旧記事のみ） | `{{< gistit user/repo/blob/branch/path.kt "10:20" >}}`（gist-it.appspot.com 経由） |
+
+- Gist と gistit は 2019〜2021 の記事で使っていたもの。2023 年以降はコードを本文のコードブロックに直接書いているので、新規記事でも Gist に置かず直接書く
+- 試したコード全体を見せたいときは、リポジトリや PR の URL を貼る（例: `https://github.com/kwmt/camera-samples/pull/1/`）
 
 ## コードブロック
 
