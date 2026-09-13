@@ -1,6 +1,6 @@
 ---
 name: blog-review
-description: kwmt27.net の記事（content/post 配下の Hugo Markdown）を公開前にレビューする。誤字・誤変換、front matter の不整合、機密情報の混入、画像・リンク切れ、文章のねじれを行番号付きで指摘し、本人らしい口語・括弧の補足・ぼかし表現は直さない。「記事をレビューして」「この記事見て」「公開前チェック」「typo チェック」のときに使う。
+description: kwmt27.net の記事（content/post 配下の Hugo Markdown）と Zenn の記事（zenn-content/articles 配下）を公開前にレビューする。誤字・誤変換、front matter の不整合、機密情報の混入、画像・リンク切れ、文章のねじれを行番号付きで指摘し、本人らしい口語・括弧の補足・ぼかし表現は直さない。「記事をレビューして」「この記事見て」「公開前チェック」「typo チェック」のときに使う。
 argument-hint: [記事のパス]
 allowed-tools: Read, Grep, Glob, Bash(ls:*), Bash(test:*), Bash(git status:*), Bash(git diff:*), WebFetch
 ---
@@ -14,7 +14,8 @@ allowed-tools: Read, Grep, Glob, Bash(ls:*), Bash(test:*), Bash(git status:*), B
 
 1. 対象を決める
    - `$ARGUMENTS` にパスがあればそれ。なければ `git status --short content/` で未コミット・変更中の記事を探す。複数あれば新しいものを対象にし、どれを見たか明記する
-   - Zenn の URL や別ファイルのパスが渡されたら、その内容を対象にする。front matter と画像パスの観点は Hugo 用なので Zenn 記事には適用しない
+   - Zenn 記事（`/Users/kwmt/personal/blog/zenn/zenn-content/articles/*.md`、または Zenn の URL）が渡されたら、その内容を対象にする。引数なしで `content/` に変更がなければ、`ls -t /Users/kwmt/personal/blog/zenn/zenn-content/articles/` で一番新しいものを候補にし、どれを見たか明記する
+   - Zenn 記事には Hugo 固有の観点（rules.md の 2. front matter、4. の `static/images` 存在確認と過去記事リンク、10. Hugo 固有）を適用しない。代わりに rules.md の「2b. Zenn front matter」を見る
 2. 記事を最初から最後まで読む。front matter とディレクトリ（`content/post/YYYY/MM/`）を突き合わせる
 3. rules.md の観点を上から順に確認する。**必須** の観点（機密情報・front matter・誤字・リンク切れ・Hugo 固有）は全文を機械的に見る
    - 画像は `static/images/...` にファイルがあるか `ls` で確認する

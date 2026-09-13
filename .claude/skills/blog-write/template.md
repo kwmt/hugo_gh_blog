@@ -20,15 +20,25 @@ keywords = ["<tag1>", "<tag2>"]
 
 ## Zenn front matter（`--zenn` のとき）
 
+置き場所は `/Users/kwmt/personal/blog/zenn/zenn-content/articles/<slug>.md`。slug は英小文字・数字・ハイフン・アンダースコアの 12〜50 文字。
+
 ```yaml
 ---
 title: "<タイトル>"
-emoji: "<1 文字>"
-type: "tech"
-topics: ["<android>", "<kotlin>"]
+emoji: "<内容に合う絵文字 1 文字>"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: ["<Android>", "<Kotlin>"]
 published: false
 ---
 ```
+
+- `type` の行のコメントは Zenn CLI が生成する形で、本人の既存記事もそのまま残している
+- 予約公開するときは `published_at: 2024-06-19 08:00` を足す（本人は 2 回使っている）。下書き段階では書かない
+- Zenn で使える書き方（本人の既存記事で使用実績あり）
+  - ファイル名付きコードブロック: ` ```kotlin:build.gradle.kts `
+  - 補足枠: `:::message` 〜 `:::`
+  - URL を 1 行で置くとリンクカードになる（`[text](URL)` にしなくてよい）
+  - 画像はアップロード後の `![](https://storage.googleapis.com/zenn-user-upload/...)`
 
 ## タイトルの付け方（本人の実例）
 

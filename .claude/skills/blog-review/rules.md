@@ -16,10 +16,12 @@
 | プロンプトのホスト名 | `[kwmt@MacBook-Pro]` | 行頭の `%` や `$` だけ残す |
 | 個人特定できるサブドメイン・ID | `https://xxx.<name>.workers.dev`, KV namespace id, Version ID | `<name>`, `xxxxxxxx`（本人の既存表記） |
 | 会社名・案件名 | 業務で触った固有名 | 「T社」「P社」（本人の既存表記） |
+| 伏せると決めたアプリ名 | 「ねこのまいにち」、`nekonomainichi`（bundle ID `jp.nekonomainichi.*`、ドメイン `nekonomainichi.jp`、Lambda 名、ストアの商品表示名「にゃんこ〜」「Neko 〜 (Monthly)」） | 「個人で作っているアプリ」「猫育成ゲーム」に言い換え、ID は `jp.example.app` |
 | メールアドレス・電話番号 | | 削除 |
 
 - 伏せ字（`xxxxxxxx`, `<createしたid>`, `<path>`）になっていれば OK
-- Play Store の自分のアプリ ID（`net.kwmt27.*`）、GitHub ID `kwmt`、ブログ URL、X の ID は公開情報なので指摘しない
+- GitHub ID `kwmt`、ブログ URL、X の ID、ブログで公開済みのアプリ（QRCodeReader `net.kwmt27.*`、インコネ）は公開情報なので指摘しない
+- 「ねこのまいにち」は本人の指示で名前を伏せる。Apple やストアからの引用文の中にあっても伏せる（引用であることを一言添える）。`NekoWidget` / `NekoTheme` のようなコード内の識別子はアプリ名そのものではないので、引用コードの中では残してよい
 
 ## 2. front matter（必須）
 
@@ -29,6 +31,21 @@
 - `tags` / `keywords` が本文と関係あるか。`keywords = ["Android", "Jetpack", "Compose","performance"]` が Next.js の記事に付いていたら指摘
 - `draft` の値。公開前レビューなら `draft = true` のままかを確認して一言添える
 - `slug = ""`, `author = "kwmt27"`, `toc = true` があるか
+
+## 2b. Zenn front matter（必須。Zenn 記事のみ）
+
+対象が `/Users/kwmt/personal/blog/zenn/zenn-content/articles/` の記事のときは、2. の代わりにこちらを見る。
+
+- ファイル名（= slug = URL）が英小文字・数字・ハイフン・アンダースコアの 12〜50 文字か。日本語ファイル名（`ライブラリをmaven publishする方法.md` の実例あり）は Zenn にデプロイできない。公開済みなら変えないよう注意書きする
+- `title` が空でないか（`title: ""` のままの下書きが複数ある）。本文と合っているか。他記事からコピーした front matter が残っていないか（Supabase のメモに `title: "ライブラリをmaven publishする方法"` が付いていた実例あり）
+- `emoji` が絵文字 1 文字か
+- `type` が `tech` か `idea` か
+- `topics` が 5 個以内で本文と関係あるか。`[]` のまま公開しようとしていたら指摘
+- `published` の値。公開前レビューなら `false` のままかを確認して一言添える
+- `published_at` があるなら `YYYY-MM-DD HH:MM` 形式か
+- `---` が 2 つ揃っていて YAML として壊れていないか
+- 本文に Hugo のショートコード（`{{< figure >}}`, `{{< youtube >}}`）や `/YYYY/MM/DD/slug/` 形式の内部リンクが残っていないか。Hugo 記事を Zenn に持ってきたときに混ざる
+- `![](<!-- TODO: zenn-user-upload の URL -->)` が残っていないか
 
 ## 3. 誤字・誤変換（提案。ただし明らかな typo は必須）
 
